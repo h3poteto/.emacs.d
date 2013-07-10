@@ -3,20 +3,8 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
 
-;;for Mac 
-(setq mac-allow-anti-aliasing nil)
-(setq mac-option-modifier 'meta)
-;;(mac-key-mode 1)
 
-;;for Japanese
-(set-language-environment 'Japanese)
-(set-default-coding-systems 'utf-8-unix)
-(set-terminal-coding-system 'utf-8-unix)
-(set-keyboard-coding-system 'sjis-mac)
-(set-clipboard-coding-system 'sjis-mac)
-(setq-default buffer-file-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-(add-to-list 'default-frame-alist '(font . "fontset-default"))
+
 
 (show-paren-mode t)
 (column-number-mode t)
@@ -33,44 +21,13 @@
 ;; title full path
 (setq frame-title-fomat "%f")
 
-;;; フォントセットを作る
-(let* ((fontset-name "myfonts") ; フォントセットの名前
-       (size 12) ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
-       (asciifont "Menlo") ; ASCIIフォント
-       (jpfont "Hiragino Maru Gothic ProN") ; 日本語フォント
-       (font (format "%s-%d:weight=normal:slant=normal" asciifont size))
-       (fontspec (font-spec :family asciifont))
-       (jp-fontspec (font-spec :family jpfont)) 
-       (fsn (create-fontset-from-ascii-font font nil fontset-name)))
-  (set-fontset-font fsn 'japanese-jisx0213.2004-1 jp-fontspec)
-  (set-fontset-font fsn 'japanese-jisx0213-2 jp-fontspec)
-  (set-fontset-font fsn 'katakana-jisx0201 jp-fontspec) ; 半角カナ
-  (set-fontset-font fsn '(#x0080 . #x024F) fontspec) ; 分音符付きラテン
-  (set-fontset-font fsn '(#x0370 . #x03FF) fontspec) ; ギリシャ文字
-  )
- 
-;;; デフォルトのフレームパラメータでフォントセットを指定
-(add-to-list 'default-frame-alist '(font . "fontset-myfonts"))
- 
-;;; フォントサイズの比を設定
-(dolist (elt '(("^-apple-hiragino.*" . 1.2)
-	       (".*osaka-bold.*" . 1.2)
-	       (".*osaka-medium.*" . 1.2)
-	       (".*courier-bold-.*-mac-roman" . 1.0)
-	       (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
-	       (".*monaco-bold-.*-mac-roman" . 0.9)))
-  (add-to-list 'face-font-rescale-alist elt))
- 
-;;; デフォルトフェイスにフォントセットを設定
-;;; (これは起動時に default-frame-alist に従ったフレームが作成されない現象への対処)
-(set-face-font 'default "fontset-myfonts")
 
 
 ;; color setting
 ;; set window status
 
 (if window-system (progn
- (setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
+ ;(setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
  (set-background-color "Black")
  (set-foreground-color "White")
  (set-cursor-color "Gray")
@@ -86,7 +43,7 @@
 ;; auto-install
 (require 'auto-install)
 (setq auto-install-directory "~/.emacs.d/auto-install/")
-;(auto-install-update-emacswiki-package-name t)
+;;(auto-install-update-emacswiki-package-name t)
 (auto-install-compatibility-setup) ;install-elisp.el
 
 ;; anything
@@ -101,6 +58,12 @@
 ;; yaml-mode
 (when (require 'yaml-mode nil t)
   (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode)))
+
+;; php-mode
+(require 'php-mode)
+
+(setq php-mode-force-pear t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
 
 
 ;; rinari
