@@ -221,3 +221,6 @@ are always included."
 
 ;;コメントアウト
 (define-key global-map(kbd "C-c /") 'comment-or-uncomment-region)
+
+;; Finderから開く際に新しいウィンドウを生成しない
+(setq ns-pop-up-frames nil)
