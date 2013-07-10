@@ -1,5 +1,6 @@
 ;; set load path
 (setq load-path(cons "~/.emacs.d/" load-path))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
 
 ;;for Mac 
@@ -117,13 +118,11 @@
     (lambda () (rinari-launch)))
 
 ;; scss
-(add-to-list 'load-path "~/.emacs.d/scss-mode")
 (require 'scss-mode )
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (setq scss-compile-at-save nil)
 
-;; tabbar
-(add-to-list 'load-path "~/.emacs.d/tabbar")
+
 ;; tabbar.el
 (require 'tabbar)
 (tabbar-mode 1)
@@ -207,7 +206,7 @@ are always included."
 
 
 ;; coffee-mode
-(add-to-list 'load-path "~/.emacs.d/coffee-mode")
+;;(add-to-list 'load-path "~/.emacs.d/coffee-mode")
 (require 'coffee-mode )
 
 (defun coffee-custom ()
@@ -219,8 +218,24 @@ are always included."
   '(lambda() (coffee-custom)))
 
 
-;;コメントアウト
+;; 一括コメントアウト
 (define-key global-map(kbd "C-c /") 'comment-or-uncomment-region)
+
+;; 一括インデント
+(define-key global-map(kbd "C-c ;") 'indent-region)
 
 ;; Finderから開く際に新しいウィンドウを生成しない
 (setq ns-pop-up-frames nil)
+
+;; popwin
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+
+;; direx
+(require 'direx)
+(setq direx:leaf-icon "  "
+      direx:open-icon "- "
+      direx:closed-icon "+ ")
+(push '(direx:direx-mode :position left :width 25 :dedicated t)
+      popwin:special-display-config)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
