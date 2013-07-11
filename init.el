@@ -57,7 +57,8 @@
 
 ;; yaml-mode
 (when (require 'yaml-mode nil t)
-  (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode)))
+  (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.yml.production$". yaml-mode)))
 
 ;; php-mode
 (require 'php-mode)
@@ -73,6 +74,12 @@
 ;; Rinari
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
+
+(setq auto-mode-alist
+      (append '(("\\.rb$" . ruby-mode)
+                ("[Rr]akefile" . ruby-mode)
+                ("\\.rake$" . ruby-mode))
+                auto-mode-alist))
 
 ;;; rhtml-mode
 (add-to-list 'load-path "~/.emacs.d/rhtml")
