@@ -5,7 +5,6 @@
 
 
 
-
 (show-paren-mode t)
 (column-number-mode t)
 
@@ -21,10 +20,11 @@
 ;; title full path
 (setq frame-title-fomat "%f")
 
-
+;; toggle line
+(setq default-truncate-lines t)
 
 ;; color setting
-;; set window status
+;; seto window status
 
 (if window-system (progn
  ;(setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
