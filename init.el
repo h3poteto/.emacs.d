@@ -22,6 +22,7 @@
 
 ;; toggle line
 (setq default-truncate-lines t)
+(global-set-key "\C-c\C-o" 'toggle-truncate-lines)
 
 ;; color setting
 ;; seto window status
@@ -78,7 +79,8 @@
 (setq auto-mode-alist
       (append '(("\\.rb$" . ruby-mode)
                 ("[Rr]akefile" . ruby-mode)
-                ("\\.rake$" . ruby-mode))
+                ("\\.rake$" . ruby-mode)
+		("\\.feature" . ruby-mode))
                 auto-mode-alist))
 
 ;;; rhtml-mode
@@ -181,8 +183,8 @@ are always included."
 
 (defun coffee-custom ()
   "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 4)
- (setq coffee-tab-width 4))
+ (set (make-local-variable 'tab-width) 2)
+ (setq coffee-tab-width 2))
 
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
