@@ -22,7 +22,7 @@
 
 ;; toggle line
 (setq default-truncate-lines t)
-(global-set-key "\C-c\C-o" 'toggle-truncate-lines)
+(global-set-key "\C-c\C-y" 'toggle-truncate-lines)
 
 ;; color setting
 ;; seto window status
