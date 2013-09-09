@@ -215,3 +215,6 @@ are always included."
 
 ;; js-indent
 (setq js-indent-level 2)
+
+;; jamp goto line
+(global-set-key (kbd "C-x :") 'goto-line)
