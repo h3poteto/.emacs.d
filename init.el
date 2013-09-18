@@ -218,3 +218,6 @@ are always included."
 
 ;; jamp goto line
 (global-set-key (kbd "C-x :") 'goto-line)
+
+(add-to-list 'auto-mode-alist '("\\.js.erb$" . javascript-mode ))
+(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode ))
