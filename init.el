@@ -219,5 +219,9 @@ are always included."
 ;; jamp goto line
 (global-set-key (kbd "C-x :") 'goto-line)
 
+;; javascript-mode
 (add-to-list 'auto-mode-alist '("\\.js.erb$" . javascript-mode ))
 (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode ))
+
+;; grep-edit
+(require 'grep-edit)
