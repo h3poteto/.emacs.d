@@ -38,7 +38,8 @@
  (set-frame-parameter nil 'alpha 80)
 
 ;; newline and indent
- (global-set-key "\C-m" 'newline-and-indent)
+(setq indent-line-function 'indent-relative-maybe)
+(global-set-key "\C-m" 'newline-and-indent)
 
 
 ;; auto-install
