@@ -21,7 +21,7 @@
 (setq frame-title-fomat "%f")
 
 ;; toggle line
-(setq default-truncate-lines t)
+(setq default-truncate-lines nil)
 (global-set-key "\C-c\C-y" 'toggle-truncate-lines)
 
 ;; color setting
@@ -264,3 +264,7 @@ are always included."
     (if file-name
         (find-alternate-file (concat "/sudo::" file-name))
       (error "Cannot get a file name"))))
+
+(require 'exec-path-from-shell) 
+;;(when (memq window-system '(mac ns))
+(exec-path-from-shell-initialize)
