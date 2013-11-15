@@ -1,0 +1,128 @@
+ls
+cd ..
+ls
+cd config/
+ls
+find-file routes.rb 
+find-file routes.rb 
+cd ..
+cd app/controllers/
+ls
+cd clients/
+ls
+find-file notices_controller.rb 
+cd ../.../
+ls
+cd config/
+find-file routes.rb 
+cd ../app/assets/javascripts/advertisements/
+cd ..
+admi
+cd admins/
+ls
+find-file entries.js.coffee 
+exit
+cd ../../../
+cd views/admins/
+ls
+cd enumerations/
+cd ../entries/
+ls
+find-file notice.html.erb
+cd ../../../
+ls
+cd controllers/admins/
+ls
+cd brands/
+ls
+cd ..
+ls
+find-file entries_controller.rb
+cd ..
+cd ..
+cd .
+cd ..
+ls
+cd views/
+ls
+cd mailers/
+ls
+cd ..
+ls
+cd entry_brand_mailer/
+ls
+find-file notice_brand_to_user.text.erb 
+cd ../../../
+cd app/controllers/
+ls
+cd clients/
+ls
+cd brands/
+ls
+find-file
+find-file entry_brands_controller.rb
+cd interfirm/
+ls
+cd akira_test/
+ls
+cd akira/
+ls
+cd config/
+ls
+find-file database.yml 
+cd ../../
+cd ..
+ls
+cd views/clients/
+ls
+cd mailer_templates/
+ls
+cd ..
+ls
+cd mailer_templates/
+cd ../mailer
+ls
+cd ..
+ls
+cd brands/
+ls
+cd entry_brands/
+ls
+find-file noticemail.html.erb 
+cd ../../
+cd ../../
+cd assets/
+ls
+cd stylesheets/
+ls
+cd clients/
+ls
+find-file entry_brands.css.scss
+cd interfirm/www.bikehikaku.com/
+cd config/
+ls
+find-file
+find-file ~/.emacs.d/init.el 
+f
+ls
+f settings_local.yml
+find-file settings_local.yml
+ls
+rm settings_local.yml
+ls
+cp settings.yml settings_local.yml
+find-file settings_local.yml
+cd ../../api.interfirm.co.jp/
+ls
+cd config/
+ls
+find-file settings_local.yml
+cd .emacs.d
+ls
+find-file init.el 
+alias f 'find-file $1'
+f
+ls
+f sidekiq.yml
+ls
+f init.el 
