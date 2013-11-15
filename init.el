@@ -268,5 +268,3 @@ are always included."
 (require 'exec-path-from-shell) 
 ;;(when (memq window-system '(mac ns))
 (exec-path-from-shell-initialize)
-
-(add-to-list 'eshell-command-aliases-list (list "f" "find-file"))
