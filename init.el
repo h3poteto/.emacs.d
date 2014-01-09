@@ -91,6 +91,7 @@
     (lambda () (rinari-launch)))
 (add-to-list 'auto-mode-alist '("\\.ctp\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.text.erb\\'" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
 
 ;; scss
 (require 'scss-mode )
