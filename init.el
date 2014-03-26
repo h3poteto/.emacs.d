@@ -3,7 +3,9 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
 
-
+;; set editorconfig
+(add-to-list 'load-path "~/.emacs.d/editorconfig-emacs/")
+(load "editorconfig")
 
 (show-paren-mode t)
 (column-number-mode t)

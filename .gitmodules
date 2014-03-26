@@ -1,0 +1,9 @@
+[submodule "editorconfig-emacs"]
+	path = editorconfig-emacs
+	url = git://github.com/editorconfig/editorconfig-emacs.git
+[submodule "rhtml"]
+	path = rhtml
+	url = git://github.com/eschulte/rhtml.git
+[submodule "rinari"]
+	path = rinari
+	url = git://github.com/eschulte/rinari.git
