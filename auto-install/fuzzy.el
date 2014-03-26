@@ -21,7 +21,7 @@
 
 ;;; Commentary:
 
-;;
+;; 
 
 ;;; Code:
 
@@ -133,8 +133,7 @@ http://en.wikipedia.org/wiki/Jaro-Winkler_distance."
         dw))))
 
 ;; Make sure byte-compiled.
-(eval-when (eval)
-  (byte-compile 'fuzzy-jaro-winkler-distance))
+(byte-compile 'fuzzy-jaro-winkler-distance)
 
 (defalias 'fuzzy-jaro-winkler-score 'fuzzy-jaro-winkler-distance)
 
@@ -351,8 +350,7 @@ scoring between S1 and S2. The score must be between 0.0 and
    (t 0.0)))
 
 ;; Make sure byte-compiled.
-(eval-when (eval)
-  (byte-compile 'fuzzy-quicksilver-abbrev-score-nocache))
+(byte-compile 'fuzzy-quicksilver-abbrev-score-nocache)
 
 (defvar fuzzy-quicksilver-abbrev-score-cache
   (make-hash-table :test 'equal :weakness t))
