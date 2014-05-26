@@ -15,8 +15,15 @@
 
 ;; flycheck
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
-;; Ruby
 (add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'php-mode-hook 'flycheck-mode)
+(add-hook 'coffee-mode-hook 'flycheck-mode)
+(add-hook 'javascript-mode-hook 'flycheck-mode)
+(add-hook 'scss-mode-hook 'flycheck-mode)
+(add-hook 'css-mode-hook 'flycheck-mode)
+(add-hook 'yaml-mode-hook 'flycheck-mode)
+;;(add-hook 'html-mode-hook 'flycheck-mode)
+
 
 (show-paren-mode t)
 (column-number-mode t)
@@ -249,8 +256,8 @@ are always included."
 (global-set-key (kbd "C-x :") 'goto-line)
 
 ;; javascript-mode
-(add-to-list 'auto-mode-alist '("\\.js.erb$" . javascript-mode ))
-(add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode ))
+;; (add-to-list 'auto-mode-alist '("\\.js.erb$" . javascript-mode ))
+;; (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode ))
 
 ;; grep-edit
 (require 'grep-edit)
@@ -298,3 +305,8 @@ are always included."
 
 ;; less-css-mode
 (require 'less-mode)
+
+
+;; js2-mode
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
