@@ -18,7 +18,7 @@
 (add-hook 'ruby-mode-hook 'flycheck-mode)
 (add-hook 'php-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
-(add-hook 'javascript-mode-hook 'flycheck-mode)
+(add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'scss-mode-hook 'flycheck-mode)
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'yaml-mode-hook 'flycheck-mode)
@@ -309,4 +309,5 @@ are always included."
 
 ;; js2-mode
 (autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js.erb$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
