@@ -14,9 +14,9 @@
 (package-initialize)
 
 ;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
 ;; Ruby
-;;(add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'ruby-mode-hook 'flycheck-mode)
 
 (show-paren-mode t)
 (column-number-mode t)
