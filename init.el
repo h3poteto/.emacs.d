@@ -7,6 +7,17 @@
 (add-to-list 'load-path "~/.emacs.d/editorconfig-emacs/")
 (load "editorconfig")
 
+;; package.el
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;; Ruby
+;;(add-hook 'ruby-mode-hook 'flycheck-mode)
+
 (show-paren-mode t)
 (column-number-mode t)
 
@@ -116,26 +127,26 @@
 ;; tabbar.el
 (require 'tabbar)
 (tabbar-mode 1)
- 
+
 ;; タブ上でマウスホイール操作無効
 (tabbar-mwheel-mode -1)
- 
+
 ;; グループ化しない
 (setq tabbar-buffer-groups-function nil)
- 
+
 ;; 左に表示されるボタンを無効化
 (dolist (btn '(tabbar-buffer-home-button
                tabbar-scroll-left-button
                tabbar-scroll-right-button))
   (set btn (cons (cons "" nil)
                  (cons "" nil))))
- 
+
 ;; ウインドウからはみ出たタブを省略して表示
 (setq tabbar-auto-scroll-flag nil)
- 
+
 ;; タブとタブの間の長さ
 (setq tabbar-separator '(1.5))
- 
+
 ;; 外観変更
 (set-face-attribute
  'tabbar-default nil
@@ -159,7 +170,7 @@
 (set-face-attribute
  'tabbar-separator nil
  :height 1.2)
- 
+
 ;; タブに表示させるバッファの設定
 (defvar my-tabbar-displayed-buffers
  '("scratch*" "*Messages*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-")
@@ -184,14 +195,14 @@ are always included."
         tabs
       (cons cur-buf tabs))))
 (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
- 
+
 ;; タブ移動キーバインド
 (global-set-key (kbd "<M-right>") 'tabbar-forward-tab)
 (global-set-key (kbd "<M-left>") 'tabbar-backward-tab)
- 
+
 ;; タブモードのオン/オフをトグル
 (global-set-key (kbd "M-4") 'tabbar-mode)
- 
+
 (put 'upcase-region 'disabled nil)
 
 
@@ -269,7 +280,7 @@ are always included."
           (message "%s" mess)))
     nil ))
 
-(global-set-key "\C-ci" 'file-info) 
+(global-set-key "\C-ci" 'file-info)
 
 ;; tramp
 (defun reopen-with-sudo ()
@@ -280,7 +291,7 @@ are always included."
         (find-alternate-file (concat "/sudo::" file-name))
       (error "Cannot get a file name"))))
 
-(require 'exec-path-from-shell) 
+(require 'exec-path-from-shell)
 ;;(when (memq window-system '(mac ns))
 (exec-path-from-shell-initialize)
 
