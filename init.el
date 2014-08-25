@@ -232,6 +232,9 @@ are always included."
 ;; 一括インデント
 (define-key global-map(kbd "C-c ;") 'indent-region)
 
+;; バックスラッシュ
+(define-key global-map [?¥] [?\\])
+
 ;; Finderから開く際に新しいウィンドウを生成しない
 (setq ns-pop-up-frames nil)
 
