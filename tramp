@@ -1,22 +1,21 @@
-;; -*- emacs-lisp -*- <14/04/15 15:52:26 /Users/akirafukushima/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/09/08 10:53:29 /Users/akirafukushima/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
 ((["sudo" "root" "h3poteto-mac.local" nil nil]
-  ("uname" "Darwin 12.5.0")
+  ("uname" "Darwin 13.3.0")
   ("test" "test")
   ("remote-path"
-   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/opt/local/bin"))
+   ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin"))
   ("remote-shell" "/bin/sh")
   ("busybox" nil)
+  ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
-  ("ls" "/bin/ls")
-  ("ls-dired" nil)
-  ("stat" nil)
   ("id" "/usr/bin/id")
   ("gid-integer" 0)
   ("readlink" nil)
   ("file-exists" "test -e")
-  ("uid-integer" 0)))
+  ("uid-integer" 0)
+  ("ls" "/bin/ls")))
