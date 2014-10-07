@@ -116,6 +116,9 @@
 (add-to-list 'auto-mode-alist '("\\.text.erb\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
 
+;;; slim mode
+(require 'slim-mode)
+
 ;; scss
 (require 'scss-mode )
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
