@@ -326,3 +326,7 @@ are always included."
 
 ;; ruby indent
 (setq ruby-deep-indent-paren-style nil)
+
+
+(add-to-list 'load-path "~/.emacs.d/twittering-mode")
+(require 'twittering-mode)
