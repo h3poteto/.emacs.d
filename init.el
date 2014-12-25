@@ -121,6 +121,15 @@
 ;;; slim mode
 (require 'slim-mode)
 
+;; ruby-block
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+
+;; ruby-electric
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+
 ;; scss
 (require 'scss-mode )
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
