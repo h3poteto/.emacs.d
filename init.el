@@ -105,7 +105,8 @@
       (append '(("\\.rb$" . ruby-mode)
                 ("[Rr]akefile" . ruby-mode)
                 ("\\.rake$" . ruby-mode)
-		("\\.feature" . ruby-mode))
+		("\\.feature" . ruby-mode)
+		("\\.jbuilder" . ruby-mode))
                 auto-mode-alist))
 
 ;;; rhtml-mode
