@@ -99,6 +99,7 @@
 ;; Rinari
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
+(global-rinari-mode)
 
 (setq auto-mode-alist
       (append '(("\\.rb$" . ruby-mode)
@@ -233,7 +234,7 @@ are always included."
 (define-key global-map(kbd "C-c /") 'comment-or-uncomment-region)
 
 ;; 一括インデント
-(define-key global-map(kbd "C-c ;") 'indent-region)
+(define-key global-map(kbd "C-c i") 'indent-region)
 
 ;; バックスラッシュ
 (define-key global-map [?¥] [?\\])
@@ -330,3 +331,6 @@ are always included."
 
 (add-to-list 'load-path "~/.emacs.d/twittering-mode")
 (require 'twittering-mode)
+
+;; Warning の抑制
+(setq large-file-warning-threshold nil)
