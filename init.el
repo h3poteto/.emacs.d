@@ -1,5 +1,5 @@
 ;; set load path
-(setq load-path(cons "~/.emacs.d/" load-path))
+;;(setq load-path(cons "~/.emacs.d/" load-path))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
 
