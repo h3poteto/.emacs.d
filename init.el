@@ -379,6 +379,7 @@ are always included."
 (set-face-background 'highlight-indentation-current-column-face "#303030")
 
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
 
 ;; カーソル行をハイライト
