@@ -123,6 +123,7 @@
 (add-to-list 'auto-mode-alist '("\\.text.erb\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
 
+
 ;;; slim mode
 (require 'slim-mode)
 
@@ -342,6 +343,9 @@ are always included."
 
 ;; ruby indent
 (setq ruby-deep-indent-paren-style nil)
+
+;; common indent
+(setq-default indent-tabs-mode nil)
 
 
 (add-to-list 'load-path "~/.emacs.d/twittering-mode")
