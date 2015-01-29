@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/11/19 11:06:12 /Users/akirafukushima/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <15/01/27 13:46:54 /Users/akirafukushima/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -18,4 +18,9 @@
   ("readlink" nil)
   ("file-exists" "test -e")
   ("uid-integer" 0)
-  ("ls" "/bin/ls")))
+  ("ls" "/bin/ls")
+  ("locale" "LC_ALL=C")
+  ("gid-string" "wheel")
+  ("tmpdir" "/sudo:root@h3poteto-mac.local:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))

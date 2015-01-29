@@ -2,16 +2,27 @@
 ;;(setq load-path(cons "~/.emacs.d/" load-path))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
+(let ((default-directory (expand-file-name "~/.emacs.d/vendor")))
+  (add-to-list 'load-path default-directory)
+  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+      (normal-top-level-add-subdirs-to-load-path)))
 
 ;; set editorconfig
 (add-to-list 'load-path "~/.emacs.d/editorconfig-emacs/")
 (load "editorconfig")
 
+;; auto-install
+(require 'auto-install)
+(setq auto-install-directory "~/.emacs.d/auto-install/")
+;;(auto-install-update-emacswiki-package-name t)
+(auto-install-compatibility-setup) ;install-elisp.el
+
 ;; package.el
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+;;(require 'melpa)
 
 ;; flycheck
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
@@ -64,12 +75,6 @@
 ;; delete whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-
-;; auto-install
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
-;;(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup) ;install-elisp.el
 
 ;; anything
 (global-set-key (kbd "C-x b") 'anything)
@@ -366,3 +371,7 @@ are always included."
      )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
+
+;; highlight-indentation
+(require 'highlight-indentation)
+(setq highlight-indentation-offset 2)

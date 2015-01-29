@@ -10,3 +10,33 @@
 [submodule "twittering-mode"]
 	path = twittering-mode
 	url = git://github.com/hayamiz/twittering-mode.git
+[submodule "vendor/Highlight-Indentation-for-Emacs"]
+	path = vendor/Highlight-Indentation-for-Emacs
+	url = https://github.com/antonj/Highlight-Indentation-for-Emacs
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule "vendor/exec-path-from-shell"]
+	path = vendor/exec-path-from-shell
+	url = https://github.com/purcell/exec-path-from-shell.git
+[submodule "vendor/less-mode"]
+	path = vendor/less-mode
+	url = https://github.com/myfreeweb/less-mode.git
+[submodule "vendor/popwin"]
+	path = vendor/popwin
+	url = https://github.com/m2ym/popwin-el.git
+[submodule "vendor/scss-mode"]
+	path = vendor/scss-mode
+	url = https://github.com/antonj/scss-mode.git
+[submodule "vendor/direx"]
+	path = vendor/direx
+	url = https://github.com/m2ym/direx-el.git
+[submodule "vendor/php-mode"]
+	path = vendor/php-mode
+	url = https://github.com/ejmr/php-mode.git
+[submodule "vendor/ruby-electric"]
+	path = vendor/ruby-electric
+	url = https://github.com/qoobaa/ruby-electric.git
+[submodule "vendor/tabbar"]
+	path = vendor/tabbar
+	url = https://github.com/dholm/tabbar.git
