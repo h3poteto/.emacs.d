@@ -40,3 +40,21 @@
 [submodule "vendor/tabbar"]
 	path = vendor/tabbar
 	url = https://github.com/dholm/tabbar.git
+[submodule "vendor/emacs-slim"]
+	path = vendor/emacs-slim
+	url = https://github.com/slim-template/emacs-slim.git
+[submodule "vendor/auto-complete"]
+	path = vendor/auto-complete
+	url = https://github.com/auto-complete/auto-complete.git
+[submodule "vendor/ruby-block.el"]
+	path = vendor/ruby-block.el
+	url = https://github.com/adolfosousa/ruby-block.el.git
+[submodule "vendor/flycheck"]
+	path = vendor/flycheck
+	url = https://github.com/flycheck/flycheck.git
+[submodule "vendor/popup-el"]
+	path = vendor/popup-el
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "vendor/ruby-block"]
+	path = vendor/ruby-block
+	url = https://github.com/adolfosousa/ruby-block.el.git

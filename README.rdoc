@@ -1,3 +1,0 @@
-=== emacs.d
-個人的なemacsの設定になります。
-auto-completeに関してはauto-install経由で入れています。
