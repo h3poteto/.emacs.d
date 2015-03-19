@@ -1,0 +1,32 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/akira/Vagrant/centos/start_crowdworks/" . "cookbooks/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/akira/Vagrant/centos/start_crowdworks/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "crowdworks.jp.conf"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/akira/Vagrant/centos/start_crowdworks/cookbooks/" (21767 64436 0 0) "roles/" "rbenv/" ".DS_Store" "../" "./")
+
+ ("/Users/akira/Vagrant/centos/start_crowdworks/" (21768 62311 0 0) "Vagrantfile" "cookbooks/" "Berksfile.lock" "Berksfile" ".vagrant/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/akira/Vagrant/centos/" (21768 56553 0 0) "start_crowdworks/" "server.key" "server.csr" "server.crt" "crowdworks/" ".DS_Store" ".bundle/" "../" "./")
+
+ ("/Users/akira/Vagrant/" (21767 50711 0 0) "centos/" ".DS_Store" "../" "./")
+
+ ("/Users/akira/" (21768 63072 0 0) "VirtualBox VMs/" "Vagrant/" "test.rb~" "test.rb" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Applications/" ".zshrc~" ".zshrc" ".zsh_history" ".zsh.d/" ".zcompdump" ".viminfo" ".vagrant.d/" ".Trash/" ".subversion/" ".ssh/" ".rnd" ".rbenv/" ".gitconfig~" ".gitconfig.d/" ".gitconfig" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".config/" ".chpwd-recent-dirs" ".CFUserTextEncoding" ".berkshelf/" ".bash_history" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

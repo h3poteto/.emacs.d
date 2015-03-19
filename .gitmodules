@@ -58,3 +58,6 @@
 [submodule "vendor/ruby-block"]
 	path = vendor/ruby-block
 	url = https://github.com/adolfosousa/ruby-block.el.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git

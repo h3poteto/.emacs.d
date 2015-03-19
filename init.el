@@ -400,3 +400,11 @@ are always included."
 (setq hl-line-face 'hlline-face)
 ;; (setq hl-line-face 'underline) ; 下線
 (global-hl-line-mode)
+
+
+;; markdown mode
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
