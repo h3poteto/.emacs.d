@@ -3,6 +3,7 @@
 
 ## packageで入れているもの
 - flycheck
+- magit
 
 ## submoduleの中でさらにsubmodule呼び出ししているもの
 - rinari

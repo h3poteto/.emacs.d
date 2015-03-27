@@ -236,7 +236,7 @@ are always included."
 ;; coffee-mode
 ;;(add-to-list 'load-path "~/.emacs.d/coffee-mode")
 (require 'coffee-mode )
-
+(add-to-list 'auto-mode-alist '("\\.coffee.erb\\'" . coffee-mode))
 (defun coffee-custom ()
   "coffee-mode-hook"
  (set (make-local-variable 'tab-width) 2)
@@ -408,3 +408,11 @@ are always included."
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; css mode hook
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq css-indent-offset 2)
+            ))
+;; magit
+(require 'magit)
