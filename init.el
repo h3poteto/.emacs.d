@@ -416,3 +416,8 @@ are always included."
             ))
 ;; magit
 (require 'magit)
+
+;; ag
+(require 'ag)
+(require 'wgrep)
+(require 'wgrep-ag)

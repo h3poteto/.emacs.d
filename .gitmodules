@@ -61,3 +61,21 @@
 [submodule "vendor/markdown-mode"]
 	path = vendor/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule "vendor/ag.el"]
+	path = vendor/ag.el
+	url = https://github.com/Wilfred/ag.el.git
+[submodule "vendor/Emacs-wgrep"]
+	path = vendor/Emacs-wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "vendor/s.el"]
+	path = vendor/s.el
+	url = https://github.com/magnars/s.el
+[submodule "vendor/s"]
+	path = vendor/s
+	url = https://github.com/magnars/s.el
+[submodule "vendor/wgrep"]
+	path = vendor/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep
+[submodule "vendor/ag"]
+	path = vendor/ag
+	url = https://github.com/Wilfred/ag.el
