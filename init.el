@@ -1,3 +1,5 @@
+;; init setting
+
 ;; set load path
 ;;(setq load-path(cons "~/.emacs.d/" load-path))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
@@ -78,73 +80,6 @@
 (require 'auto-complete-config)
 (global-auto-complete-mode t)
 (setq ac-auto-start t)
-
-;; yaml-mode
-(when (require 'yaml-mode nil t)
-  (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode))
-  (add-to-list 'auto-mode-alist '("\\.yml.production$". yaml-mode)))
-
-;; php-mode
-(require 'php-mode)
-
-(setq php-mode-force-pear t)
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
-
-
-;; rinari
-;; Interactively Do Things (highly recommended, but not strictly required)
-(require 'ido)
-(ido-mode t)
-;; Rinari
-(add-to-list 'load-path "~/.emacs.d/rinari")
-(require 'rinari)
-(global-rinari-mode)
-
-(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-(setq auto-mode-alist
-      (append '(("\\.rb$" . enh-ruby-mode)
-                ("[Rr]akefile" . enh-ruby-mode)
-                ("\\.rake$" . enh-ruby-mode)
-                ("\\.feature" . enh-ruby-mode)
-                ("\\.jbuilder" . enh-ruby-mode))
-                auto-mode-alist))
-
-;;; rhtml-mode
-(add-to-list 'load-path "~/.emacs.d/rhtml")
-(require 'rhtml-mode)
-(add-hook 'rhtml-mode-hook
-    (lambda () (rinari-launch)))
-(add-to-list 'auto-mode-alist '("\\.ctp\\'" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.text.erb\\'" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
-
-
-;;; slim mode
-(require 'slim-mode)
-
-;; ruby-block
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
-
-;; ruby-electric
-(require 'ruby-electric)
-(add-hook 'enh-ruby-mode-hook '(lambda () (ruby-electric-mode t)))
-
-;; scss
-(require 'scss-mode )
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-(setq scss-compile-at-save nil)
-(defun scss-custom ()
-  "scss-mode-hook"
-  (and
-   (set (make-local-variable 'css-indent-offset) 2)
-   (set (make-local-variable 'scss-compile-at-save) nil)
-   )
-  )
-(add-hook 'scss-mode-hook
-  '(lambda() (scss-custom)))
 
 
 ;; tabbar.el
@@ -229,18 +164,6 @@ are always included."
 (put 'upcase-region 'disabled nil)
 
 
-;; coffee-mode
-;;(add-to-list 'load-path "~/.emacs.d/coffee-mode")
-(require 'coffee-mode )
-(add-to-list 'auto-mode-alist '("\\.coffee.erb\\'" . coffee-mode))
-(defun coffee-custom ()
-  "coffee-mode-hook"
- (set (make-local-variable 'tab-width) 2)
- (setq coffee-tab-width 2))
-
-(add-hook 'coffee-mode-hook
-  '(lambda() (coffee-custom)))
-
 
 ;; 一括コメントアウト
 (define-key global-map(kbd "C-c /") 'comment-or-uncomment-region)
@@ -267,16 +190,6 @@ are always included."
       popwin:special-display-config)
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
-
-;; js-indent
-(setq js-indent-level 2)
-
-;; jamp goto line
-(global-set-key (kbd "C-x :") 'goto-line)
-
-;; javascript-mode
-;; (add-to-list 'auto-mode-alist '("\\.js.erb$" . javascript-mode ))
-;; (add-to-list 'auto-mode-alist '("\\.js$" . javascript-mode ))
 
 ;; grep-edit
 (require 'grep-edit)
@@ -321,73 +234,17 @@ are always included."
 ;;(when (memq window-system '(mac ns))
 (exec-path-from-shell-initialize)
 
-
-;; less-css-mode
-(require 'less-mode)
-
-
-;; js2-mode
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js.erb$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
-
-;; csv-mode
-(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
-(autoload 'csv-mode "csv-mode"
-   "Major mode for editing comma-separated value files." t)
-
-;; ruby settings
-(setq ruby-deep-indent-paren-style nil)
-(defadvice ruby-indent-line (after unindent-closing-paren activate)
-  (let ((column (current-column))
-        indent offset)
-    (save-excursion
-      (back-to-indentation)
-      (let ((state (syntax-ppss)))
-        (setq offset (- column (current-column)))
-        (when (and (eq (char-after) ?\))
-                   (not (zerop (car state))))
-          (goto-char (cadr state))
-          (setq indent (current-indentation)))))
-    (when indent
-      (indent-line-to indent)
-      (when (> offset 0) (forward-char offset)))))
-
-;; enh-ruby
-;; 保存時にmagic commentを追加しないようにする
-(defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
-  "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
-  (if (and (boundp 'enh-ruby-not-insert-magic-comment)
-           (not enh-ruby-not-insert-magic-comment))
-      ad-do-it))
-(ad-activate 'enh-ruby-mode-set-encoding)
-(setq-default enh-ruby-not-insert-magic-comment t)
-
-;; hideshow
-(let ((ruby-mode-hs-info
-       '(enh-ruby-mode
-          "class\\|module\\|def\\|if\\|unless\\|case\\|while\\|until\\|for\\|begin\\|do"
-          "end"
-          "#"
-          ruby-move-to-block
-          nil)))
-  (if (not (member ruby-mode-hs-info hs-special-modes-alist))
-      (setq hs-special-modes-alist
-            (cons ruby-mode-hs-info hs-special-modes-alist))))
-(add-hook 'enh-ruby-mode-hook
-          '(lambda ()
-             (hs-minor-mode 1)))
+;; jamp goto line
+(global-set-key (kbd "C-x :") 'goto-line)
 
 ;; common indent
 (setq-default indent-tabs-mode nil)
 
-
-(add-to-list 'load-path "~/.emacs.d/twittering-mode")
-(require 'twittering-mode)
-
 ;; Warning の抑制
 (setq large-file-warning-threshold nil)
+
+;; find
+(global-set-key "\C-c\C-f" 'find-name-dired)
 
 
 ;; タブ、全角スペースのハイライト
@@ -438,18 +295,22 @@ are always included."
 (global-hl-line-mode)
 
 
-;; markdown mode
-(autoload 'markdown-mode "markdown-mode"
-   "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; hideshow
+(let ((ruby-mode-hs-info
+       '(enh-ruby-mode
+          "class\\|module\\|def\\|if\\|unless\\|case\\|while\\|until\\|for\\|begin\\|do"
+          "end"
+          "#"
+          ruby-move-to-block
+          nil)))
+  (if (not (member ruby-mode-hs-info hs-special-modes-alist))
+      (setq hs-special-modes-alist
+            (cons ruby-mode-hs-info hs-special-modes-alist))))
+(add-hook 'enh-ruby-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)))
 
-;; css mode hook
-(add-hook 'css-mode-hook
-          (lambda ()
-            (setq css-indent-offset 2)
-            ))
+
 ;; magit
 (require 'magit)
  (setq magit-last-seen-setup-instructions "1.4.0")
@@ -467,8 +328,168 @@ are always included."
                            (setq wgrep-enable-key "r")      ; "r" キーで編集モードに
                            (wgrep-ag-setup)))
 
-;; find
-(global-set-key "\C-c\C-f" 'find-name-dired)
+
+
+
+
+
+;; each languages mode
+
+;; yaml-mode
+(when (require 'yaml-mode nil t)
+  (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode))
+  (add-to-list 'auto-mode-alist '("\\.yml.production$". yaml-mode)))
+
+;; php-mode
+(require 'php-mode)
+
+(setq php-mode-force-pear t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
+
+
+
+;; ruby
+;; rinari
+;; Interactively Do Things (highly recommended, but not strictly required)
+(require 'ido)
+(ido-mode t)
+;; Rinari
+(add-to-list 'load-path "~/.emacs.d/rinari")
+(require 'rinari)
+(global-rinari-mode)
+
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(setq auto-mode-alist
+      (append '(("\\.rb$" . enh-ruby-mode)
+                ("[Rr]akefile" . enh-ruby-mode)
+                ("\\.rake$" . enh-ruby-mode)
+                ("\\.feature" . enh-ruby-mode)
+                ("\\.jbuilder" . enh-ruby-mode))
+                auto-mode-alist))
+
+;;; rhtml-mode
+(add-to-list 'load-path "~/.emacs.d/rhtml")
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook
+    (lambda () (rinari-launch)))
+(add-to-list 'auto-mode-alist '("\\.ctp\\'" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.text.erb\\'" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
+
+
+;;; slim mode
+(require 'slim-mode)
+
+;; ruby-block
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+
+;; ruby-electric
+(require 'ruby-electric)
+(add-hook 'enh-ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+
+;; ruby settings
+(setq ruby-deep-indent-paren-style nil)
+(defadvice ruby-indent-line (after unindent-closing-paren activate)
+  (let ((column (current-column))
+        indent offset)
+    (save-excursion
+      (back-to-indentation)
+      (let ((state (syntax-ppss)))
+        (setq offset (- column (current-column)))
+        (when (and (eq (char-after) ?\))
+                   (not (zerop (car state))))
+          (goto-char (cadr state))
+          (setq indent (current-indentation)))))
+    (when indent
+      (indent-line-to indent)
+      (when (> offset 0) (forward-char offset)))))
+
+;; enh-ruby
+;; 保存時にmagic commentを追加しないようにする
+(defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
+  "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
+  (if (and (boundp 'enh-ruby-not-insert-magic-comment)
+           (not enh-ruby-not-insert-magic-comment))
+      ad-do-it))
+(ad-activate 'enh-ruby-mode-set-encoding)
+(setq-default enh-ruby-not-insert-magic-comment t)
+
+
+
+
+
+;; scss-mode
+(require 'scss-mode )
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(setq scss-compile-at-save nil)
+(defun scss-custom ()
+  "scss-mode-hook"
+  (and
+   (set (make-local-variable 'css-indent-offset) 2)
+   (set (make-local-variable 'scss-compile-at-save) nil)
+   )
+  )
+(add-hook 'scss-mode-hook
+  '(lambda() (scss-custom)))
+
+
+;; coffee-mode
+(require 'coffee-mode )
+(add-to-list 'auto-mode-alist '("\\.coffee.erb\\'" . coffee-mode))
+(defun coffee-custom ()
+  "coffee-mode-hook"
+ (set (make-local-variable 'tab-width) 2)
+ (setq coffee-tab-width 2))
+
+(add-hook 'coffee-mode-hook
+  '(lambda() (coffee-custom)))
+
+
+;; css mode hook
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq css-indent-offset 2)
+            ))
+
+
+;; js-indent
+(setq js-indent-level 2)
+
+
+;; less-css-mode
+(require 'less-mode)
+
+
+;; js2-mode
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js.erb$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+
+;; csv-mode
+(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+(autoload 'csv-mode "csv-mode"
+   "Major mode for editing comma-separated value files." t)
+
+
+;; twittering-mode
+(add-to-list 'load-path "~/.emacs.d/twittering-mode")
+(require 'twittering-mode)
+
+
+;; markdown mode
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+
+
+
 
 
 
