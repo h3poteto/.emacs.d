@@ -1,4 +1,4 @@
-;; init setting
+;;;; init setting
 
 ;; set load path
 ;;(setq load-path(cons "~/.emacs.d/" load-path))
@@ -244,7 +244,7 @@ are always included."
 (setq large-file-warning-threshold nil)
 
 ;; find
-(global-set-key "\C-c\C-f" 'find-name-dired)
+(global-set-key "\C-x\C-f" 'find-name-dired)
 
 
 ;; タブ、全角スペースのハイライト
@@ -333,7 +333,7 @@ are always included."
 
 
 
-;; each languages mode
+;;;; each languages mode
 
 ;; yaml-mode
 (when (require 'yaml-mode nil t)
@@ -492,6 +492,7 @@ are always included."
 
 
 
+;;;; check
 
 ;; flycheck
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
