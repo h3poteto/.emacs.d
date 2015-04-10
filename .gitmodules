@@ -46,9 +46,6 @@
 [submodule "vendor/auto-complete"]
 	path = vendor/auto-complete
 	url = https://github.com/auto-complete/auto-complete.git
-[submodule "vendor/ruby-block.el"]
-	path = vendor/ruby-block.el
-	url = https://github.com/adolfosousa/ruby-block.el.git
 [submodule "vendor/flycheck"]
 	path = vendor/flycheck
 	url = https://github.com/flycheck/flycheck.git
