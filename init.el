@@ -364,6 +364,21 @@ are always included."
 (ad-activate 'enh-ruby-mode-set-encoding)
 (setq-default enh-ruby-not-insert-magic-comment t)
 
+;; hideshow
+(let ((ruby-mode-hs-info
+       '(enh-ruby-mode
+          "class\\|module\\|def\\|if\\|unless\\|case\\|while\\|until\\|for\\|begin\\|do"
+          "end"
+          "#"
+          ruby-move-to-block
+          nil)))
+  (if (not (member ruby-mode-hs-info hs-special-modes-alist))
+      (setq hs-special-modes-alist
+            (cons ruby-mode-hs-info hs-special-modes-alist))))
+(add-hook 'enh-ruby-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)))
+
 ;; common indent
 (setq-default indent-tabs-mode nil)
 
