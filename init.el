@@ -24,17 +24,6 @@
 (package-initialize)
 ;;(require 'melpa)
 
-;; flycheck
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'ruby-mode-hook 'flycheck-mode)
-(add-hook 'php-mode-hook 'flycheck-mode)
-(add-hook 'coffee-mode-hook 'flycheck-mode)
-(add-hook 'js2-mode-hook 'flycheck-mode)
-(add-hook 'scss-mode-hook 'flycheck-mode)
-(add-hook 'css-mode-hook 'flycheck-mode)
-(add-hook 'yaml-mode-hook 'flycheck-mode)
-;;(add-hook 'html-mode-hook 'flycheck-mode)
-
 
 (show-paren-mode t)
 (column-number-mode t)
@@ -106,12 +95,15 @@
 (require 'rinari)
 (global-rinari-mode)
 
+;; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+;; ;;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+;; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 (setq auto-mode-alist
       (append '(("\\.rb$" . ruby-mode)
                 ("[Rr]akefile" . ruby-mode)
                 ("\\.rake$" . ruby-mode)
-		("\\.feature" . ruby-mode)
-		("\\.jbuilder" . ruby-mode))
+                ("\\.feature" . ruby-mode)
+                ("\\.jbuilder" . ruby-mode))
                 auto-mode-alist))
 
 ;;; rhtml-mode
@@ -129,7 +121,7 @@
 
 ;; ruby-block
 (require 'ruby-block)
-(ruby-block-mode t)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-block-mode t)))
 (setq ruby-block-highlight-toggle t)
 
 ;; ruby-electric
@@ -343,7 +335,20 @@ are always included."
 
 ;; ruby indent
 (setq ruby-deep-indent-paren-style nil)
-
+(defadvice ruby-indent-line (after unindent-closing-paren activate)
+  (let ((column (current-column))
+        indent offset)
+    (save-excursion
+      (back-to-indentation)
+      (let ((state (syntax-ppss)))
+        (setq offset (- column (current-column)))
+        (when (and (eq (char-after) ?\))
+                   (not (zerop (car state))))
+          (goto-char (cadr state))
+          (setq indent (current-indentation)))))
+    (when indent
+      (indent-line-to indent)
+      (when (> offset 0) (forward-char offset)))))
 ;; common indent
 (setq-default indent-tabs-mode nil)
 
@@ -382,6 +387,7 @@ are always included."
 (set-face-background 'highlight-indentation-face "#202020")
 (set-face-background 'highlight-indentation-current-column-face "#303030")
 
+(add-hook 'ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
@@ -433,3 +439,16 @@ are always included."
 
 ;; find
 (global-set-key "\C-c\C-f" 'find-name-dired)
+
+
+
+;; flycheck
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'php-mode-hook 'flycheck-mode)
+(add-hook 'coffee-mode-hook 'flycheck-mode)
+(add-hook 'js2-mode-hook 'flycheck-mode)
+(add-hook 'scss-mode-hook 'flycheck-mode)
+(add-hook 'css-mode-hook 'flycheck-mode)
+(add-hook 'yaml-mode-hook 'flycheck-mode)
+;;(add-hook 'html-mode-hook 'flycheck-mode)

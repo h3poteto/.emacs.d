@@ -79,3 +79,6 @@
 [submodule "vendor/ag"]
 	path = vendor/ag
 	url = https://github.com/Wilfred/ag.el
+[submodule "vendor/enhanced-ruby-mode"]
+	path = vendor/enhanced-ruby-mode
+	url = https://github.com/zenspider/enhanced-ruby-mode.git
