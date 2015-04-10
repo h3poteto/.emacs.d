@@ -76,3 +76,6 @@
 [submodule "vendor/enhanced-ruby-mode"]
 	path = vendor/enhanced-ruby-mode
 	url = https://github.com/zenspider/enhanced-ruby-mode.git
+[submodule "vendor/ruby-block"]
+	path = vendor/ruby-block
+	url = https://github.com/h3poteto/ruby-block.el.git
