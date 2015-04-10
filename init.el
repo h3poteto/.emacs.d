@@ -22,7 +22,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-(require 'melpa)
+;;(require 'melpa)
 
 
 ;; encoding
@@ -125,7 +125,7 @@
 
 ;; ruby-block
 (require 'ruby-block)
-(add-hook 'enh-ruby-mode-hook '(lambda () (ruby-block-mode t)))
+(ruby-block-mode t)
 (setq ruby-block-highlight-toggle t)
 
 ;; ruby-electric
