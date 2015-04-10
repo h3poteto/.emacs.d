@@ -353,21 +353,6 @@ are always included."
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
-(add-hook 'enh-ruby-mode-hook
-  '(lambda ()
-     (key-combo-mode t)
-     (electric-indent-mode t)
-     (electric-layout-mode t)))
-
-(defadvice ruby-indent-line (after closing-indent activate)
-  (let ((column (current-column))
-        indent offset)
-    (when indent
-      ;; インデントする
-      (indent-line-to indent)
-      ;; オフセットが存在する場合、その分だけポイントを移動する
-      ;; つまり、インデント修正後のポイントのあるべき場所に戻る
-      (when (> offset 0) (forward-char offset)))))
 
 ;; enh-ruby
 ;; 保存時にmagic commentを追加しないようにする
