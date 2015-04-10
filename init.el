@@ -22,8 +22,13 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-;;(require 'melpa)
+(require 'melpa)
 
+
+;; encoding
+(prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
 
 (show-paren-mode t)
 (column-number-mode t)
@@ -95,15 +100,14 @@
 (require 'rinari)
 (global-rinari-mode)
 
-;; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-;; ;;(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
-;; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 (setq auto-mode-alist
-      (append '(("\\.rb$" . ruby-mode)
-                ("[Rr]akefile" . ruby-mode)
-                ("\\.rake$" . ruby-mode)
-                ("\\.feature" . ruby-mode)
-                ("\\.jbuilder" . ruby-mode))
+      (append '(("\\.rb$" . enh-ruby-mode)
+                ("[Rr]akefile" . enh-ruby-mode)
+                ("\\.rake$" . enh-ruby-mode)
+                ("\\.feature" . enh-ruby-mode)
+                ("\\.jbuilder" . enh-ruby-mode))
                 auto-mode-alist))
 
 ;;; rhtml-mode
@@ -121,12 +125,12 @@
 
 ;; ruby-block
 (require 'ruby-block)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-block-mode t)))
+(add-hook 'enh-ruby-mode-hook '(lambda () (ruby-block-mode t)))
 (setq ruby-block-highlight-toggle t)
 
 ;; ruby-electric
 (require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+(add-hook 'enh-ruby-mode-hook '(lambda () (ruby-electric-mode t)))
 
 ;; scss
 (require 'scss-mode )
@@ -333,7 +337,7 @@ are always included."
 (autoload 'csv-mode "csv-mode"
    "Major mode for editing comma-separated value files." t)
 
-;; ruby indent
+;; ruby settings
 (setq ruby-deep-indent-paren-style nil)
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
   (let ((column (current-column))
@@ -349,6 +353,32 @@ are always included."
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
+(add-hook 'enh-ruby-mode-hook
+  '(lambda ()
+     (key-combo-mode t)
+     (electric-indent-mode t)
+     (electric-layout-mode t)))
+
+(defadvice ruby-indent-line (after closing-indent activate)
+  (let ((column (current-column))
+        indent offset)
+    (when indent
+      ;; インデントする
+      (indent-line-to indent)
+      ;; オフセットが存在する場合、その分だけポイントを移動する
+      ;; つまり、インデント修正後のポイントのあるべき場所に戻る
+      (when (> offset 0) (forward-char offset)))))
+
+;; enh-ruby
+;; 保存時にmagic commentを追加しないようにする
+(defadvice enh-ruby-mode-set-encoding (around stop-enh-ruby-mode-set-encoding)
+  "If enh-ruby-not-insert-magic-comment is true, stops enh-ruby-mode-set-encoding."
+  (if (and (boundp 'enh-ruby-not-insert-magic-comment)
+           (not enh-ruby-not-insert-magic-comment))
+      ad-do-it))
+(ad-activate 'enh-ruby-mode-set-encoding)
+(setq-default enh-ruby-not-insert-magic-comment t)
+
 ;; common indent
 (setq-default indent-tabs-mode nil)
 
@@ -387,7 +417,7 @@ are always included."
 (set-face-background 'highlight-indentation-face "#202020")
 (set-face-background 'highlight-indentation-current-column-face "#303030")
 
-(add-hook 'ruby-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
@@ -444,7 +474,7 @@ are always included."
 
 ;; flycheck
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
 (add-hook 'php-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook 'flycheck-mode)
