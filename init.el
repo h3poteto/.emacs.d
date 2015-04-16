@@ -419,6 +419,8 @@ are always included."
 (setq-default enh-ruby-not-insert-magic-comment t)
 
 
+(ac-config-default)
+(add-to-list 'ac-modes 'enh-ruby-mode)
 
 
 
