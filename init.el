@@ -166,7 +166,7 @@ are always included."
 
 
 ;; 一括コメントアウト
-(define-key global-map(kbd "C-c /") 'comment-or-uncomment-region)
+(define-key global-map(kbd "C-c :") 'comment-or-uncomment-region)
 
 ;; 一括インデント
 (define-key global-map(kbd "C-c i") 'indent-region)
