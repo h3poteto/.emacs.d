@@ -194,6 +194,9 @@ are always included."
 ;; grep-edit
 (require 'grep-edit)
 
+;; fiplr
+(require 'fiplr)
+
 ;;file-info
 (defun file-info () "
 カレントバッファのファイル情報を表示する。"

@@ -79,3 +79,9 @@
 [submodule "vendor/ruby-block"]
 	path = vendor/ruby-block
 	url = https://github.com/h3poteto/ruby-block.el.git
+[submodule "vendor/fiplr"]
+	path = vendor/fiplr
+	url = https://github.com/grizzl/fiplr.git
+[submodule "vendor/grizzl"]
+	path = vendor/grizzl
+	url = https://github.com/grizzl/grizzl.git
