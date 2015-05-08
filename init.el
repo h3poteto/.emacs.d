@@ -1,4 +1,4 @@
-;;;; init setting
+;;; init setting
 
 ;; set load path
 ;;(setq load-path(cons "~/.emacs.d/" load-path))
@@ -196,6 +196,10 @@ are always included."
 
 ;; fiplr
 (require 'fiplr)
+(setq fiplr-root-markers '(".git" ".svn"))
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "public" "uploaded_files" "log"))
+                            (files ("*~" ".*"))))
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 ;;file-info
 (defun file-info () "
