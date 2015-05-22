@@ -515,3 +515,8 @@ are always included."
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'yaml-mode-hook 'flycheck-mode)
 ;;(add-hook 'html-mode-hook 'flycheck-mode)
+
+(require 'flycheck-color-mode-line)
+
+(eval-after-load "flycheck"
+  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))

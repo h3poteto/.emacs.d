@@ -85,3 +85,6 @@
 [submodule "vendor/grizzl"]
 	path = vendor/grizzl
 	url = https://github.com/grizzl/grizzl.git
+[submodule "vendor/flycheck-color-mode-line"]
+	path = vendor/flycheck-color-mode-line
+	url = https://github.com/flycheck/flycheck-color-mode-line.git
