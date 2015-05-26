@@ -31,3 +31,4 @@
 (depends-on "scss-mode")
 (depends-on "tabbar")
 (depends-on "wgrep")
+(depends-on "go-mode")

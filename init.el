@@ -482,8 +482,8 @@ are always included."
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 
-
-
+;; go-mode
+(require 'go-mode)
 
 
 ;;;; check
