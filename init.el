@@ -1,23 +1,12 @@
 ;;; init setting
+(require 'cask "~/.emacs.d/.cask/cask.el")
+(cask-initialize)
 
-;; set load path
-;;(setq load-path(cons "~/.emacs.d/" load-path))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/auto-install"))
-(let ((default-directory (expand-file-name "~/.emacs.d/vendor")))
-  (add-to-list 'load-path default-directory)
-  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-      (normal-top-level-add-subdirs-to-load-path)))
 
 ;; set editorconfig
 (add-to-list 'load-path "~/.emacs.d/editorconfig-emacs/")
 (load "editorconfig")
 
-;; auto-install
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
-;;(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup) ;install-elisp.el
 
 ;; package.el
 (require 'package)
@@ -191,9 +180,6 @@ are always included."
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
 
-;; grep-edit
-(require 'grep-edit)
-
 ;; fiplr
 (require 'fiplr)
 (setq fiplr-root-markers '(".git" ".svn"))
@@ -362,7 +348,6 @@ are always included."
 (require 'ido)
 (ido-mode t)
 ;; Rinari
-(add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
 (global-rinari-mode)
 
@@ -377,7 +362,6 @@ are always included."
                 auto-mode-alist))
 
 ;;; rhtml-mode
-(add-to-list 'load-path "~/.emacs.d/rhtml")
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
     (lambda () (rinari-launch)))
@@ -471,7 +455,7 @@ are always included."
 
 
 ;; less-css-mode
-(require 'less-mode)
+(require 'less-css-mode)
 
 
 ;; js2-mode
@@ -487,7 +471,6 @@ are always included."
 
 
 ;; twittering-mode
-(add-to-list 'load-path "~/.emacs.d/twittering-mode")
 (require 'twittering-mode)
 
 
