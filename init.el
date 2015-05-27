@@ -40,6 +40,8 @@
 (setq default-truncate-lines nil)
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
 
+(delete-selection-mode t)
+
 ;; color setting
 ;; seto window status
 
