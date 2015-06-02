@@ -33,3 +33,4 @@
 (depends-on "wgrep")
 (depends-on "wgrep-ag")
 (depends-on "go-mode")
+(depends-on "ruby-end")
