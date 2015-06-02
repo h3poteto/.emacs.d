@@ -56,8 +56,8 @@
  (set-frame-parameter nil 'alpha 80)
 
 ;; newline and indent
-;;(setq indent-line-function 'indent-relative-maybe)
-;;(global-set-key "\C-m" 'newline-and-indent)
+(setq indent-line-function 'indent-relative-maybe)
+(global-set-key "\C-m" 'newline-and-indent)
 
 ;; delete whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
