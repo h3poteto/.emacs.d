@@ -181,10 +181,12 @@ are always included."
       popwin:special-display-config)
 (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
 
-;; ace-jump
-(unless (package-installed-p 'ace-jump-mode)
-  (package-refresh-contents) (package-install 'ace-jump-mode))
 
+;; neotree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;; ace-jump
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 

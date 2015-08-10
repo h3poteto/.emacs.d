@@ -35,3 +35,4 @@
 (depends-on "go-mode")
 (depends-on "ruby-end")
 (depends-on "ace-jump-mode")
+(depends-on "neotree")
