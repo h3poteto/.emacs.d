@@ -316,8 +316,8 @@ are always included."
 
 
 ;; magit
-(require 'magit)
- (setq magit-last-seen-setup-instructions "1.4.0")
+;; (require 'magit)
+;;  (setq magit-last-seen-setup-instructions "1.4.0")
 
 ; ag
 (setq default-process-coding-system 'utf-8-unix)  ; ag 検索結果のエンコード指定

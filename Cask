@@ -7,7 +7,6 @@
 (depends-on "csv-mode")
 (depends-on "scss-mode")
 (depends-on "yaml-mode")
-(depends-on "magit")
 (depends-on "flycheck")
 (depends-on "js2-mode")
 (depends-on "rinari")
