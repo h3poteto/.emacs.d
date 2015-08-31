@@ -486,6 +486,9 @@ are always included."
 ;; go-mode
 (require 'go-mode)
 
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 
 ;;;; check
 
