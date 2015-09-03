@@ -72,6 +72,12 @@
 (global-auto-complete-mode t)
 (setq ac-auto-start t)
 
+; robe
+(autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
+(autoload 'ac-robe-setup "ac-robe" "auto-complete robe" nil nil)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
+(add-hook 'enh-ruby-mode-hook '(lambda()
+                                 (robe-mode)))
 
 ;; tabbar.el
 (require 'tabbar)

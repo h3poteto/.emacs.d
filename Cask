@@ -36,3 +36,4 @@
 (depends-on "ace-jump-mode")
 (depends-on "neotree")
 (depends-on "web-mode")
+(depends-on "robe")
