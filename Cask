@@ -37,3 +37,5 @@
 (depends-on "neotree")
 (depends-on "web-mode")
 (depends-on "robe")
+(depends-on "exec-path-from-shell")
+(depends-on "go-autocomplete")

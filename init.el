@@ -63,6 +63,10 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 
+(require 'exec-path-from-shell)
+(let ((envs '("PATH" "GOPATH")))
+  (exec-path-from-shell-copy-envs envs))
+
 ;; anything
 (global-set-key (kbd "C-x b") 'anything)
 
@@ -199,7 +203,7 @@ are always included."
 ;; fiplr
 (require 'fiplr)
 (setq fiplr-root-markers '(".git" ".svn"))
-(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules"))
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor"))
                             (files ("*~" ".*" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-x c") 'fiplr-clear-cache)
@@ -504,7 +508,16 @@ are always included."
 
 
 ;; go-mode
+;; this mode demand gocode, godef and godoc in $GOPATH
 (require 'go-mode)
+(eval-after-load "go-mode" '(progn (require 'go-autocomplete)))
+(add-hook 'go-mode-hook
+          '(lambda()
+             (setq c-basic-offset 4)
+             (setq indent-tabs-mode t)
+             (local-set-key (kbd "M-.") 'godef-jump)
+             (local-set-key (kbd "C-c d") 'godoc)
+             (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
 
 ;; web-mode
 (require 'web-mode)
