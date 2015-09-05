@@ -517,7 +517,9 @@ are always included."
              (setq indent-tabs-mode t)
              (local-set-key (kbd "M-.") 'godef-jump)
              (local-set-key (kbd "C-c d") 'godoc)
+             (go-eldoc-setup)
              (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
+
 
 ;; web-mode
 (require 'web-mode)

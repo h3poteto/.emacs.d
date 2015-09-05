@@ -39,3 +39,4 @@
 (depends-on "robe")
 (depends-on "exec-path-from-shell")
 (depends-on "go-autocomplete")
+(depends-on "go-eldoc")
