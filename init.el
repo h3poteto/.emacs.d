@@ -370,6 +370,7 @@ are always included."
 (require 'helm-files)
 (require 'helm-ag)
 (global-set-key (kbd "M-g .") 'helm-ag)
+(global-set-key (kbd "M-g r") 'helm-ag-project-root)
 (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
 
 ; wgrep
