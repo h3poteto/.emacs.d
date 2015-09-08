@@ -19,3 +19,9 @@ cask install
 ## 別途必要になるもの
 - silver-searcher-ag
 - editorconfig
+- ctags
+
+ctags更新
+```
+ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
+```
