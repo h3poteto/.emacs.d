@@ -41,3 +41,4 @@
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
 (depends-on "fuzzy")
+(depends-on "helm-ag")

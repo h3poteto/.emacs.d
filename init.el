@@ -364,6 +364,14 @@ are always included."
 (setq ag-highlight-search t)  ; 検索キーワードをハイライト
 (setq ag-reuse-buffers t)     ; 検索用バッファを使い回す (検索ごとに新バッファを作らない)
 
+; helm
+; helm-ag
+(require 'helm-config)
+(require 'helm-files)
+(require 'helm-ag)
+(global-set-key (kbd "M-g .") 'helm-ag)
+(global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
+
 ; wgrep
 (add-hook 'ag-mode-hook '(lambda ()
                            (require 'wgrep-ag)
