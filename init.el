@@ -215,13 +215,6 @@ are always included."
 (require 'ace-jump-mode)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-;; fiplr
-(require 'fiplr)
-(setq fiplr-root-markers '(".git" ".svn"))
-(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor"))
-                            (files ("*~" ".*" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))
-(global-set-key (kbd "C-x f") 'fiplr-find-file)
-(global-set-key (kbd "C-x g") 'fiplr-clear-cache)
 
 ;;file-info
 (defun file-info () "
@@ -382,7 +375,13 @@ are always included."
 
 
 
-
+;; fiplr
+(require 'fiplr)
+(setq fiplr-root-markers '(".git" ".svn"))
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor"))
+                            (files ("*~" ".*" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
+(global-set-key (kbd "C-x c") 'fiplr-clear-cache)
 
 
 ;;;; each languages mode
