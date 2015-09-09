@@ -221,7 +221,7 @@ are always included."
 (setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor"))
                             (files ("*~" ".*" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
-(global-set-key (kbd "C-x c") 'fiplr-clear-cache)
+(global-set-key (kbd "C-x g") 'fiplr-clear-cache)
 
 ;;file-info
 (defun file-info () "
