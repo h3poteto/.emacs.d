@@ -542,6 +542,7 @@ are always included."
              (local-set-key (kbd "C-c d") 'godoc)
              (go-eldoc-setup)
              (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 
 ;; web-mode
@@ -558,6 +559,9 @@ are always included."
   (setq indent-tabs-mode nil)
   (setq tab-width 2))
 (add-hook 'web-mode-hook 'my-web-mode-hook)
+
+;; elm-mode
+(require 'elm-mode)
 
 ;;;; check
 
