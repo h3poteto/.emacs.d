@@ -365,6 +365,8 @@ are always included."
 (global-set-key (kbd "M-g .") 'helm-ag)
 (global-set-key (kbd "M-g r") 'helm-ag-project-root)
 (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
+(custom-set-variables
+ '(helm-ag-use-grep-ignore-list "*~"))
 
 ; wgrep
 (add-hook 'ag-mode-hook '(lambda ()
@@ -510,6 +512,12 @@ are always included."
 ;;(autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js.erb$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-hook 'js2-mode-hook
+          '(lambda ()
+             (setq js2-basic-offset 2
+                   indent-tabs-mode nil)
+             ))
+
 
 
 ;; csv-mode
