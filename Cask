@@ -43,3 +43,4 @@
 (depends-on "fuzzy")
 (depends-on "helm-ag")
 (depends-on "elm-mode")
+(depends-on "terraform-mode")

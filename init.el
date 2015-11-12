@@ -557,6 +557,7 @@ are always included."
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-attr-indent-offset nil)
@@ -591,3 +592,7 @@ are always included."
      (add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode)
      (setq flycheck-disabled-checkers '(javascirpt-jshint))
      (setq flycheck-checkers '(javascript-eslint))))
+
+;; cua
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
