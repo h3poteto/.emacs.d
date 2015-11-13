@@ -44,3 +44,6 @@
 (depends-on "helm-ag")
 (depends-on "elm-mode")
 (depends-on "terraform-mode")
+(depends-on "json-mode")
+(depends-on "flymake-easy")
+(depends-on "flymake-json")

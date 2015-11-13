@@ -20,6 +20,7 @@ cask install
 - silver-searcher-ag
 - editorconfig
 - ctags
+- jsonLint
 
 ctags更新
 ```

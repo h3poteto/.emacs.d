@@ -596,3 +596,11 @@ are always included."
 ;; cua
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
+
+(setq default-tab-width 4)
+
+(require 'json-mode)
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+
+(require 'flymake-json)
+(add-hook 'json-mode-hook 'flymake-json-load)
