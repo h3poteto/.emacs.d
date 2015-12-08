@@ -593,6 +593,12 @@ are always included."
      (setq flycheck-disabled-checkers '(javascirpt-jshint))
      (setq flycheck-checkers '(javascript-eslint))))
 
+(setq js2-include-browser-externs nil)
+(setq js2-mode-show-parse-errors nil)
+(setq js2-mode-show-strict-warnings nil)
+(setq js2-highlight-external-variables nil)
+(setq js2-include-jslint-globals nil)
+
 ;; cua
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
