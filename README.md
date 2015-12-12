@@ -25,7 +25,7 @@ cask install
 
 ### eslint準備
 ```
-$ npm install -g eslint bable-eslint eslint-plugin-react
+$ npm install -g eslint babel-eslint eslint-plugin-react
 ```
 
 `.eslintrc`
