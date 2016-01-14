@@ -193,30 +193,18 @@ are always included."
 ;; Finderから開く際に新しいウィンドウを生成しない
 (setq ns-pop-up-frames nil)
 
-;; popwin
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-
-;; direx
-;; (require 'direx)
-;; (setq direx:leaf-icon "  "
-;;       direx:open-icon "- "
-;;       direx:closed-icon "+ ")
-;; (push '(direx:direx-mode :position left :width 25 :dedicated t)
-;;       popwin:special-display-config)
-;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
-(require 'sr-speedbar)
-(global-set-key (kbd "C-x C-j") 'sr-speedbar-toggle)
-(setq sr-speedbar-right-side nil)
-(setq speedbar-use-images nil)
-(custom-set-variables
- '(speedbar-show-unknown-files t)
-)
-
 
 ;; neotree
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+;; 隠しファイルをデフォルトで表示
+(setq neo-show-hidden-files t)
+;; neotree でファイルを新規作成した後、自動的にファイルを開く
+(setq neo-create-file-auto-open t)
+;; キーバインドをシンプルにする
+(setq neo-keymap-style 'concise)
+;; neotree ウィンドウを表示する毎に current file のあるディレクトリを表示する
+(setq neo-smart-open t)
 
 ;; ace-jump
 (require 'ace-jump-mode)
