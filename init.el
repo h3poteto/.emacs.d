@@ -208,6 +208,10 @@ are always included."
 (require 'sr-speedbar)
 (global-set-key (kbd "C-x C-j") 'sr-speedbar-toggle)
 (setq sr-speedbar-right-side nil)
+(setq speedbar-use-images nil)
+(custom-set-variables
+ '(speedbar-show-unknown-files t)
+)
 
 
 ;; neotree
