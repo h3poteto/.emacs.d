@@ -14,7 +14,6 @@
 (depends-on "twittering-mode")
 (depends-on "ag")
 (depends-on "coffee-mode")
-(depends-on "direx")
 (depends-on "slim-mode")
 (depends-on "enh-ruby-mode")
 (depends-on "exec-path-from-shell")
@@ -47,3 +46,4 @@
 (depends-on "json-mode")
 (depends-on "flymake-easy")
 (depends-on "flymake-json")
+(depends-on "sr-speedbar")

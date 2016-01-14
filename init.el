@@ -198,13 +198,16 @@ are always included."
 (setq display-buffer-function 'popwin:display-buffer)
 
 ;; direx
-(require 'direx)
-(setq direx:leaf-icon "  "
-      direx:open-icon "- "
-      direx:closed-icon "+ ")
-(push '(direx:direx-mode :position left :width 25 :dedicated t)
-      popwin:special-display-config)
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+;; (require 'direx)
+;; (setq direx:leaf-icon "  "
+;;       direx:open-icon "- "
+;;       direx:closed-icon "+ ")
+;; (push '(direx:direx-mode :position left :width 25 :dedicated t)
+;;       popwin:special-display-config)
+;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+(require 'sr-speedbar)
+(global-set-key (kbd "C-x C-j") 'sr-speedbar-toggle)
+(setq sr-speedbar-right-side nil)
 
 
 ;; neotree
