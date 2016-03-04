@@ -22,6 +22,7 @@ cask install
 - ctags
 - jsonLint
 - eslint, babel-eslint, eslint-plugin-react
+- gocode
 
 ### eslint準備
 ```
