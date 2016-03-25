@@ -57,8 +57,47 @@
 (setq indent-line-function 'indent-relative-maybe)
 (global-set-key "\C-m" 'newline-and-indent)
 
-;; delete whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(require 'whitespace)
+(setq whitespace-style '(face           ; faceで可視化
+                         trailing       ; 行末
+                         tabs           ; タブ
+                         spaces         ; スペース
+                         space-mark     ; 表示のマッピング
+                         tab-mark
+                         ))
+
+(setq whitespace-display-mappings
+      '((space-mark ?\u3000 [?\u25a1])
+        ;; WARNING: the mapping below has a problem.
+        ;; When a TAB occupies exactly one column, it will display the
+        ;; character ?\xBB at that column followed by a TAB which goes to
+        ;; the next TAB column.
+        ;; If this is a problem for you, please, comment the line below.
+        (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
+
+;; スペースは全角のみを可視化
+(setq whitespace-space-regexp "\\(\u3000+\\)")
+
+;; 保存前に自動でクリーンアップ
+(setq whitespace-action '(auto-cleanup))
+
+(global-whitespace-mode 1)
+
+(defvar my/bg-color "#232323")
+(set-face-attribute 'whitespace-trailing nil
+                    :background my/bg-color
+                    :foreground "DeepPink"
+                    :underline t)
+(set-face-attribute 'whitespace-tab nil
+                    :background my/bg-color
+                    :foreground "LightSkyBlue"
+                    :underline t)
+(set-face-attribute 'whitespace-space nil
+                    :background my/bg-color
+                    :foreground "GreenYellow"
+                    :weight 'bold)
+(set-face-attribute 'whitespace-empty nil
+                    :background my/bg-color)
 
 
 (require 'exec-path-from-shell)
@@ -276,26 +315,6 @@ are always included."
 ;; reload buffer
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
 
-;; タブ、全角スペースのハイライト
-(defface my-face-r-1 '((t (:background "gray15"))) nil)
-(defface my-face-b-1 '((t (:background "gray"))) nil)
-(defface my-face-b-2 '((t (:background "gray26"))) nil)
-(defface my-face-u-1 '((t (:foreground "red" :underline t))) nil)
-(defvar my-face-r-1 'my-face-r-1)
-(defvar my-face-b-1 'my-face-b-1)
-(defvar my-face-b-2 'my-face-b-2)
-(defvar my-face-u-1 'my-face-u-1)
-(defadvice font-lock-mode (before my-font-lock-mode())
-  (font-lock-add-keywords
-   major-mode
-   '(
-     ("\t" 0 my-face-b-2 append)
-     ("　" 0 my-face-b-2 append)
-     ("[ \t]+$" 0 my-face-u-1 append)
-     (" [\r]*\n" 0 my-face-r-1 append)
-     )))
-(ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
-(ad-activate 'font-lock-mode)
 
 ;; highlight-indentation
 (require 'highlight-indentation)
@@ -603,3 +622,4 @@ are always included."
 
 (require 'flymake-json)
 (add-hook 'json-mode-hook 'flymake-json-load)
+
