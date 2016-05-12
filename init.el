@@ -40,6 +40,9 @@
 
 (delete-selection-mode t)
 
+;; backspace
+(keyboard-translate ?\C-h ?\C-?)
+
 ;; color setting
 ;; seto window status
 
