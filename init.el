@@ -327,6 +327,8 @@ are always included."
 (add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
 
 ;; カーソル行をハイライト
