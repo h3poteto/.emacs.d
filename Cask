@@ -47,3 +47,6 @@
 (depends-on "flymake-easy")
 (depends-on "flymake-json")
 (depends-on "sr-speedbar")
+(depends-on "elixir-mode")
+(depends-on "alchemist")
+(depends-on "ac-alchemist")
