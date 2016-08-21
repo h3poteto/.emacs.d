@@ -396,7 +396,7 @@ are always included."
 ;; fiplr
 (require 'fiplr)
 (setq fiplr-root-markers '(".git" ".svn"))
-(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor" "coverage"))
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor" "coverage" "_build" "deps"))
                             (files ("*~" ".*" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
 (global-set-key (kbd "C-x c") 'fiplr-clear-cache)
@@ -574,6 +574,7 @@ are always included."
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-attr-indent-offset nil)
