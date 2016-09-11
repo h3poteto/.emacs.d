@@ -382,7 +382,9 @@ are always included."
 (global-set-key (kbd "M-g r") 'helm-ag-project-root)
 (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
 (custom-set-variables
- '(helm-ag-use-grep-ignore-list "*~"))
+ '(helm-ag-use-grep-ignore-list "*~")
+ '(helm-ag-use-agignore t)
+ )
 
 ; wgrep
 (add-hook 'ag-mode-hook '(lambda ()
