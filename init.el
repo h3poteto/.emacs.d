@@ -1,20 +1,74 @@
-;;; init setting
-(require 'cask "~/.emacs.d/.cask/cask.el")
-(cask-initialize)
+;; el-get
+(when load-file-name
+  (setq user-emacs-directory (file-name-directory load-file-name)))
+
+(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
 
-;; set editorconfig
-(add-to-list 'load-path "~/.emacs.d/editorconfig-emacs/")
-(load "editorconfig")
+;; el-get packages
 
+(el-get-bundle anything)
+(el-get-bundle auto-complete)
+(el-get-bundle csv-mode)
+(el-get-bundle scss-mode)
+(el-get-bundle yaml-mode)
+(el-get-bundle flycheck)
+(el-get-bundle js2-mode)
+(el-get-bundle eschulte/rinari)
+(el-get-bundle rhtml-mode)
+(el-get-bundle twittering-mode)
+(el-get-bundle ag)
+(el-get-bundle coffee-mode)
+(el-get-bundle slim-mode)
+(el-get-bundle enh-ruby-mode)
+(el-get-bundle exec-path-from-shell)
+(el-get-bundle fiplr)
+(el-get-bundle flycheck-color-mode-line)
+(el-get-bundle highlight-indentation)
+(el-get-bundle less-css-mode)
+(el-get-bundle markdown-mode)
+(el-get-bundle php-mode)
+(el-get-bundle popwin)
+(el-get-bundle h3poteto/ruby-block.el
+  :name ruby-block)
+(el-get-bundle ruby-electric)
+(el-get-bundle scss-mode)
+(el-get-bundle tabbar)
+(el-get-bundle wgrep)
+(el-get-bundle go-mode)
+(el-get-bundle ruby-end)
+(el-get-bundle ace-jump-mode)
+(el-get-bundle neotree)
+(el-get-bundle web-mode)
+(el-get-bundle dgutov/robe)
+(el-get-bundle go-autocomplete)
+(el-get-bundle go-eldoc)
+(el-get-bundle fuzzy)
+(el-get-bundle helm-ag)
+(el-get-bundle elm-mode)
+(el-get-bundle terraform-mode)
+(el-get-bundle json-mode)
+(el-get-bundle flymake-easy)
+(el-get-bundle purcell/flymake-json)
+(el-get-bundle sr-speedbar)
+(el-get-bundle elixir-lang/emacs-elixir
+  :named elixir-mode)
+(el-get-bundle alchemist)
+(el-get-bundle syohex/emacs-ac-alchemist
+  :name ac-alchemist)
+(el-get-bundle jedi)
 
 ;; package.el
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
-;;(require 'melpa)
-
 
 ;; encoding
 (prefer-coding-system 'utf-8)
@@ -237,7 +291,8 @@ are always included."
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 ;; 隠しファイルをデフォルトで表示
-(setq neo-show-hidden-files t)
+(setq-default neo-show-hidden-files t)
+(define-key global-map(kbd "C-c n") 'neotree-hidden-file-toggle)
 ;; neotree でファイルを新規作成した後、自動的にファイルを開く
 (setq neo-create-file-auto-open t)
 ;; キーバインドをシンプルにする
