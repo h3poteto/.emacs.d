@@ -23,6 +23,7 @@ cask install
 - jsonLint
 - eslint, babel-eslint, eslint-plugin-react
 - gocode
+- python
 
 ### eslint準備
 ```
@@ -74,3 +75,15 @@ $ npm install -g eslint babel-eslint eslint-plugin-react
 ```
 $ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
 ```
+
+### python
+python用のjediを動かすためにpython3の実行環境が必要になります．
+pyenvを使って，python3をインストールしておいてください．
+
+その上で，
+```
+M-x jedi:install-server
+```
+
+とすることでjediがインストールされます．
+このとき，virtualenvが依存に含まれており，インストールされない場合には，自分で `pip install virutalenv` しておく必要があります．

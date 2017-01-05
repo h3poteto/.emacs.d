@@ -50,3 +50,4 @@
 (depends-on "elixir-mode")
 (depends-on "alchemist")
 (depends-on "ac-alchemist")
+(depends-on "jedi")
