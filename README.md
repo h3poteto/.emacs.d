@@ -1,35 +1,29 @@
 # emacs.d
 個人的なemacsの設定になります．
 
-## Cask
+## el-get
 
-[Cask](https://github.com/cask/cask)で必要なものをすべてインストールするので，Caskの設定をする必要があります．
-`.cask`はこのディレクトリの直下に配置し，`.cask/cask.el`と`.cask/cask-bootstrap.el`のシンボリックリンクを貼っておく必要があります．
-自動でシンボリックリンクを貼ってくれないので，以下を参考に自前で貼る必要があります．
-http://willnet.in/132
+packageのインストールにはel-getを使います．el-get自体がインストールされていない場合には，起動時に自動的にインストールを行います．
+そのため，特に設定の必要はありません．初回起動時に必要なパッケージ群のインストールが走ります．
 
-Linuxの場合は，`~/.cask`に`cask.el`ファイルが生成されています．
+ただし，package.elで既にパッケージをインストールしている場合，warningが出ます．予めpackage.elでインストールしたものは全て削除しておいてください．
 
-```
-cask install
-```
-
-`editorconfig`のみ，Caskだけでは作業領域を確保できなかったので，submoduleで導入しています．
 
 ## 別途必要になるもの
 - silver-searcher-ag
-- editorconfig
 - ctags
 - jsonLint
 - eslint, babel-eslint, eslint-plugin-react
-- gocode
+- gocode, godoc
 - python
 
-### eslint準備
+### eslint関連
+
 ```
 $ npm install -g eslint babel-eslint eslint-plugin-react
 ```
 
+プロジェクトフォルダには以下のような`.eslintrc` を用意しておくと，emacsから読み込んでくれます．
 `.eslintrc`
 
 ```
@@ -76,7 +70,16 @@ $ npm install -g eslint babel-eslint eslint-plugin-react
 $ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
 ```
 
+### gocode, godoc
+goのソースを触る際には必要となります．
+
+```
+$ go get github.com/nsf/gocode
+$ go get golang.org/x/tools/cmd/godoc
+```
+
 ### python
+pythonのソースを開くときに必要になります．
 python用のjediを動かすためにpython3の実行環境が必要になります．
 pyenvを使って，python3をインストールしておいてください．
 
