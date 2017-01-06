@@ -15,6 +15,7 @@
 
 (el-get-bundle anything)
 (el-get-bundle auto-complete)
+(el-get-bundle editorconfig)
 (el-get-bundle csv-mode)
 (el-get-bundle scss-mode)
 (el-get-bundle yaml-mode)
@@ -64,11 +65,8 @@
   :name ac-alchemist)
 (el-get-bundle jedi)
 
-;; package.el
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+;; editorconfig
+(editorconfig-mode t)
 
 ;; encoding
 (prefer-coding-system 'utf-8)
