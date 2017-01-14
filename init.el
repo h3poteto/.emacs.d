@@ -331,6 +331,8 @@ are always included."
 (global-set-key "\C-ci" 'file-info)
 
 ;; tramp
+(require 'tramp)
+
 (defun reopen-with-sudo ()
   "Reopen current buffer-file with sudo using tramp."
   (interactive)
