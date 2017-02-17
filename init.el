@@ -670,6 +670,9 @@ are always included."
              (local-set-key (kbd "C-c d") 'jedi:show-doc)
              (local-set-key (kbd "C-<tab>") 'jedi:complete)))
 
+;; terraform-mode
+(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
+
 
 ;;;; check
 
