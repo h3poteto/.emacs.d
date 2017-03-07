@@ -17,7 +17,6 @@
 (el-get-bundle auto-complete)
 (el-get-bundle editorconfig)
 (el-get-bundle csv-mode)
-(el-get-bundle scss-mode)
 (el-get-bundle yaml-mode)
 (el-get-bundle flycheck)
 (el-get-bundle js2-mode)
@@ -39,7 +38,6 @@
 (el-get-bundle h3poteto/ruby-block.el
   :name ruby-block)
 (el-get-bundle ruby-electric)
-(el-get-bundle scss-mode)
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
 (el-get-bundle go-mode)
@@ -64,6 +62,7 @@
 (el-get-bundle syohex/emacs-ac-alchemist
   :name ac-alchemist)
 (el-get-bundle jedi)
+(el-get-bundle sass-mode)
 
 ;; editorconfig
 (editorconfig-mode t)
@@ -381,7 +380,7 @@ are always included."
 
 (add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
-(add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'sass-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
@@ -538,20 +537,9 @@ are always included."
 
 
 
-;; scss-mode
-(require 'scss-mode )
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-(setq scss-compile-at-save nil)
-(defun scss-custom ()
-  "scss-mode-hook"
-  (and
-   (set (make-local-variable 'css-indent-offset) 2)
-   (set (make-local-variable 'scss-compile-at-save) nil)
-   )
-  )
-(add-hook 'scss-mode-hook
-  '(lambda() (scss-custom)))
-
+;; sass-mode
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
 
 ;; coffee-mode
 (require 'coffee-mode )
@@ -682,7 +670,7 @@ are always included."
 (add-hook 'php-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook 'flycheck-mode)
-(add-hook 'scss-mode-hook 'flycheck-mode)
+(add-hook 'sass-mode-hook 'flycheck-mode)
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'yaml-mode-hook 'flycheck-mode)
 ;;(add-hook 'html-mode-hook 'flycheck-mode)
