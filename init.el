@@ -63,6 +63,7 @@
   :name ac-alchemist)
 (el-get-bundle jedi)
 (el-get-bundle sass-mode)
+(el-get-bundle ensime)
 
 ;; editorconfig
 (editorconfig-mode t)
