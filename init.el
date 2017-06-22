@@ -62,7 +62,7 @@
 (el-get-bundle syohex/emacs-ac-alchemist
   :name ac-alchemist)
 (el-get-bundle jedi)
-(el-get-bundle sass-mode)
+(el-get-bundle scss-mode)
 (el-get-bundle ensime)
 
 ;; editorconfig
@@ -381,7 +381,7 @@ are always included."
 
 (add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
-(add-hook 'sass-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
@@ -539,8 +539,10 @@ are always included."
 
 
 ;; sass-mode
-(require 'sass-mode)
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
+;;(require 'sass-mode)
+;;(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
+(require 'scss-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 ;; coffee-mode
 (require 'coffee-mode )
@@ -575,10 +577,12 @@ are always included."
 (add-to-list 'auto-mode-alist '("\\.js.erb$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook
-          '(lambda ()
-             (setq js2-basic-offset 2
-                   indent-tabs-mode nil)
-             ))
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq my-js-mode-indent-num 2)
+            (setq js2-basic-offset my-js-mode-indent-num)
+            (setq js-switch-indent-offset my-js-mode-indent-num)
+            ))
 
 
 
@@ -672,7 +676,7 @@ are always included."
 (add-hook 'php-mode-hook 'flycheck-mode)
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook 'flycheck-mode)
-(add-hook 'sass-mode-hook 'flycheck-mode)
+(add-hook 'scss-mode-hook 'flycheck-mode)
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'yaml-mode-hook 'flycheck-mode)
 ;;(add-hook 'html-mode-hook 'flycheck-mode)
