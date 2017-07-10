@@ -154,6 +154,14 @@
                     :background my/bg-color)
 
 
+;; 多くのアプリのようにCommand + (+|-|0)でズームイン/アウトを行えるようにする
+; ズームイン
+(global-set-key (kbd "s-+") (lambda () (interactive) (text-scale-increase 1)))
+; ズームアウト
+(global-set-key (kbd "s--") (lambda () (interactive) (text-scale-decrease 1)))
+; デフォルトに戻す
+(global-set-key (kbd "s-0") (lambda () (interactive) (text-scale-increase 0)))
+
 (require 'exec-path-from-shell)
 (let ((envs '("PATH" "GOPATH")))
   (exec-path-from-shell-copy-envs envs))
