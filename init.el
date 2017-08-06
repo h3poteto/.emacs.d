@@ -1,3 +1,8 @@
+;; emacs-server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 ;; el-get
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
@@ -63,6 +68,7 @@
   :name ac-alchemist)
 (el-get-bundle jedi)
 (el-get-bundle scss-mode)
+(el-get-bundle sass-mode)
 (el-get-bundle ensime)
 
 ;; editorconfig
@@ -390,6 +396,7 @@ are always included."
 (add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
+(add-hook 'sass-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
 (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
@@ -547,10 +554,10 @@ are always included."
 
 
 ;; sass-mode
-;;(require 'sass-mode)
-;;(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
-(require 'scss-mode)
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
+;; (require 'scss-mode)
+;; (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 
 ;; coffee-mode
 (require 'coffee-mode )
@@ -685,6 +692,7 @@ are always included."
 (add-hook 'coffee-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'scss-mode-hook 'flycheck-mode)
+(add-hook 'sass-mode-hook 'flycheck-mode)
 (add-hook 'css-mode-hook 'flycheck-mode)
 (add-hook 'yaml-mode-hook 'flycheck-mode)
 ;;(add-hook 'html-mode-hook 'flycheck-mode)
