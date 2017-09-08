@@ -70,12 +70,10 @@
 (el-get-bundle scss-mode)
 (el-get-bundle sass-mode)
 (el-get-bundle ensime)
+(el-get-bundle magit)
 
 ;; editorconfig
 (editorconfig-mode t)
-
-;; encoding
-(prefer-coding-system 'utf-8)
 
 (show-paren-mode t)
 (column-number-mode t)
@@ -433,12 +431,8 @@ are always included."
              (hs-minor-mode 1)))
 
 
-;; magit
-;; (require 'magit)
-;;  (setq magit-last-seen-setup-instructions "1.4.0")
-
 ; ag
-(setq default-process-coding-system 'utf-8-unix)  ; ag 検索結果のエンコード指定
+;;(setq default-process-coding-system 'utf-8-unix)  ; ag 検索結果のエンコード指定
 (require 'ag)
 (setq ag-highlight-search t)  ; 検索キーワードをハイライト
 (setq ag-reuse-buffers t)     ; 検索用バッファを使い回す (検索ごとに新バッファを作らない)
@@ -722,3 +716,6 @@ are always included."
 
 (require 'flymake-json)
 (add-hook 'json-mode-hook 'flymake-json-load)
+
+;; encoding
+(prefer-coding-system 'utf-8)
