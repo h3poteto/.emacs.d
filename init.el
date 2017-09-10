@@ -70,7 +70,11 @@
 (el-get-bundle scss-mode)
 (el-get-bundle sass-mode)
 (el-get-bundle ensime)
-(el-get-bundle magit)
+(el-get-bundle magit
+        :name magit
+        :info nil
+        :build (("touch" "lisp/magit-autoloads.el"))
+        :build/berkeley-unix nil)
 
 ;; editorconfig
 (editorconfig-mode t)
