@@ -75,6 +75,7 @@
         :info nil
         :build (("touch" "lisp/magit-autoloads.el"))
         :build/berkeley-unix nil)
+(el-get-bundle protobuf-mode)
 
 ;; editorconfig
 (editorconfig-mode t)
