@@ -76,6 +76,8 @@
         :build (("touch" "lisp/magit-autoloads.el"))
         :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
+(el-get-bundle vue-mode)
+(el-get-bundle vue-html-mode)
 
 ;; editorconfig
 (editorconfig-mode t)
@@ -633,11 +635,13 @@ are always included."
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 
+;; vue-mode
+(require 'vue-mode)
+
 ;; web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.vue\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.scala.html\\'" . web-mode))
 (defun my-web-mode-hook ()
