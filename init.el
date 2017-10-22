@@ -77,7 +77,6 @@
         :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle vue-mode)
-(el-get-bundle vue-html-mode)
 
 ;; editorconfig
 (editorconfig-mode t)
