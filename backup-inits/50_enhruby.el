@@ -28,30 +28,30 @@
 
 
 ;; enh-ruby-mode
-; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-; (use-package enh-ruby-mode
-;              :ensure t
-;              :mode
-;              (("Capfile" . enh-ruby-mode)
-;               ("Gemfile\\" . enh-ruby-mode)
-;               ("[Rr]akefile" . enh-ruby-mode)
-;               ("\\.rb" . enh-ruby-mode)
-;               ("\\.ru" . enh-ruby-mode)
-;               ("\\.rake$" . enh-ruby-mode)
-;               ("\\.feature" . enh-ruby-mode)
-;               ("\\.jbuilder" . enh-ruby-mode))
+ (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+ (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+ (use-package enh-ruby-mode
+              :ensure t
+              :mode
+              (("Capfile" . enh-ruby-mode)
+               ("Gemfile\\" . enh-ruby-mode)
+               ("[Rr]akefile" . enh-ruby-mode)
+               ("\\.rb" . enh-ruby-mode)
+               ("\\.ru" . enh-ruby-mode)
+               ("\\.rake$" . enh-ruby-mode)
+               ("\\.feature" . enh-ruby-mode)
+               ("\\.jbuilder" . enh-ruby-mode))
 
-;              :config
-;              (use-package smartparens-ruby :ensure smartparens)
-;              (use-package inf-ruby)
+              :config
+              (use-package smartparens-ruby :ensure smartparens)
+              (use-package inf-ruby)
 
-;              (setq enh-ruby-add-encoding-comment-on-save nil
-;                    enh-ruby-deep-indent-paren nil
-;                    enh-ruby-hanging-brace-indent-level 2
-;                    ruby-insert-encoding-magic-comment nil)
+              (setq enh-ruby-add-encoding-comment-on-save nil
+                    enh-ruby-deep-indent-paren nil
+                    enh-ruby-hanging-brace-indent-level 2
+                    ruby-insert-encoding-magic-comment nil)
 
-;              (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode)))
+              (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode)))
 
 
 ;;; rhtml-mode
