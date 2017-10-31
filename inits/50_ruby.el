@@ -38,6 +38,7 @@
    ("\\.feature" . enh-ruby-mode)
    ("\\.jbuilder" . enh-ruby-mode))
 
+  :config
   (setq ruby-insert-encoding-magic-comment nil)
   ;; flycheck
   (add-hook 'ruby-mode-hook 'flycheck-mode))

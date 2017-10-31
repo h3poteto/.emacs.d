@@ -76,6 +76,8 @@
 (el-get-bundle protobuf-mode)
 (el-get-bundle AdamNiederer/vue-mode)
 
+(require 'use-package)
+
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
