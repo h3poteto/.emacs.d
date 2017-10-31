@@ -2,4 +2,4 @@
 (use-package csv-mode
   :ensure t
   :mode
-  (("\\.[Cc][Ss][Vv]\\'" . csv-mode))
+  (("\\.[Cc][Ss][Vv]\\'" . csv-mode)))

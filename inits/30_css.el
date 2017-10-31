@@ -3,4 +3,4 @@
   :ensure t
   :config
   (setq css-indent-offset 2)
-  (add-hook 'css-mode-hook 'flycheck-mode)
+  (add-hook 'css-mode-hook 'flycheck-mode))
