@@ -76,10 +76,9 @@
 (el-get-bundle protobuf-mode)
 (el-get-bundle vue-mode)
 
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
-
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
+;; encodingのmagicコメントを無効化する
+;; ここで上書きしないと有効にならない
+(setq enh-ruby-add-encoding-comment-on-save nil)

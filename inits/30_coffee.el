@@ -1,5 +1,4 @@
 ;; coffee-mode
-(require 'coffee-mode )
 (add-to-list 'auto-mode-alist '("\\.coffee.erb\\'" . coffee-mode))
 (defun coffee-custom ()
   "coffee-mode-hook"
