@@ -1,7 +1,9 @@
 ;; yaml-mode
-(when (require 'yaml-mode nil t)
-  (add-to-list 'auto-mode-alist '("¥¥.yml$" . yaml-mode))
-  (add-to-list 'auto-mode-alist '("\\.yml.production$". yaml-mode)))
+(use-package yaml-mode
+  :mode
+  (("\\.yml$" . yaml-mode)
+   ("\\.yml.production$". yaml-mode))
+  :config
+  ;; flycheck
+  (add-hook 'yaml-mode-hook 'flycheck-mode)  )
 
-;; flycheck
-(add-hook 'yaml-mode-hook 'flycheck-mode)
