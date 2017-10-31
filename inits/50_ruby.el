@@ -19,13 +19,11 @@
           '(lambda ()
              (hs-minor-mode 1)))
 
-;; ruby
-;; rinari
-;; Interactively Do Things (highly recommended, but not strictly required)
-(ido-mode t)
 ;; Rinari
-(global-rinari-mode)
+;;(global-rinari-mode)
 
+;; projectile
+(projectile-rails-global-mode)
 
 ;; ruby-mode
 (use-package ruby-mode
@@ -40,33 +38,9 @@
    ("\\.feature" . enh-ruby-mode)
    ("\\.jbuilder" . enh-ruby-mode))
 
-  (setq ruby-insert-encoding-magic-comment nil))
-
-;; enh-ruby-mode
-; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
-; (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
-; (use-package enh-ruby-mode
-;              :ensure t
-;              :mode
-;              (("Capfile" . enh-ruby-mode)
-;               ("Gemfile\\" . enh-ruby-mode)
-;               ("[Rr]akefile" . enh-ruby-mode)
-;               ("\\.rb" . enh-ruby-mode)
-;               ("\\.ru" . enh-ruby-mode)
-;               ("\\.rake$" . enh-ruby-mode)
-;               ("\\.feature" . enh-ruby-mode)
-;               ("\\.jbuilder" . enh-ruby-mode))
-
-;              :config
-;              (use-package smartparens-ruby :ensure smartparens)
-;              (use-package inf-ruby)
-
-;              (setq enh-ruby-add-encoding-comment-on-save nil
-;                    enh-ruby-deep-indent-paren nil
-;                    enh-ruby-hanging-brace-indent-level 2
-;                    ruby-insert-encoding-magic-comment nil)
-
-;              (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode)))
+  (setq ruby-insert-encoding-magic-comment nil)
+  ;; flycheck
+  (add-hook 'ruby-mode-hook 'flycheck-mode))
 
 
 ;;; rhtml-mode
@@ -87,6 +61,3 @@
     (electric-pair-mode t)
     (electric-indent-mode t)
     (electric-layout-mode t)))
-
-;; flycheck
-(add-hook 'ruby-mode-hook 'flycheck-mode)

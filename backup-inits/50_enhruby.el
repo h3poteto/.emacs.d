@@ -22,14 +22,12 @@
 ;; ruby
 ;; rinari
 ;; Interactively Do Things (highly recommended, but not strictly required)
-(ido-mode t)
 ;; Rinari
 (global-rinari-mode)
 
 
 ;; enh-ruby-mode
  (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
- (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
  (use-package enh-ruby-mode
               :ensure t
               :mode
@@ -51,6 +49,8 @@
                     enh-ruby-hanging-brace-indent-level 2
                     ruby-insert-encoding-magic-comment nil)
 
+              ;; flycheck
+              (add-hook 'enh-ruby-mode-hook 'flycheck-mode)
               (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode)))
 
 
@@ -73,5 +73,3 @@
     (electric-indent-mode t)
     (electric-layout-mode t)))
 
-;; flycheck
-(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
