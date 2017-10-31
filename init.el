@@ -17,11 +17,11 @@
 
 
 ;; el-get packages
+(el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
 (el-get-bundle anything)
 (el-get-bundle auto-complete)
 (el-get-bundle editorconfig)
-(el-get-bundle csv-mode)
 (el-get-bundle yaml-mode)
 (el-get-bundle flycheck)
 (el-get-bundle js2-mode)
@@ -31,7 +31,7 @@
 (el-get-bundle ag)
 (el-get-bundle coffee-mode)
 (el-get-bundle slim-mode)
-(el-get-bundle enh-ruby-mode)
+;;(el-get-bundle zenspider/enhanced-ruby-mode, :branch "v20150711")
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle fiplr)
 (el-get-bundle flycheck-color-mode-line)
@@ -40,8 +40,7 @@
 (el-get-bundle markdown-mode)
 (el-get-bundle php-mode)
 (el-get-bundle popwin)
-(el-get-bundle h3poteto/ruby-block.el
-  :name ruby-block)
+(el-get-bundle ruby-block)
 (el-get-bundle ruby-electric)
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
@@ -69,16 +68,13 @@
 (el-get-bundle sass-mode)
 (el-get-bundle ensime)
 (el-get-bundle magit
-        :name magit
-        :info nil
-        :build (("touch" "lisp/magit-autoloads.el"))
-        :build/berkeley-unix nil)
+  :name magit
+  :info nil
+  :build (("touch" "lisp/magit-autoloads.el"))
+  :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
-(el-get-bundle vue-mode)
+(el-get-bundle AdamNiederer/vue-mode)
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
-;; encodingのmagicコメントを無効化する
-;; ここで上書きしないと有効にならない
-(setq enh-ruby-add-encoding-comment-on-save nil)

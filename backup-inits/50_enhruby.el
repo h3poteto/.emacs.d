@@ -1,12 +1,12 @@
-;; 全体的にruby-modeを使う
+;; 全体的にenh-ruby-modeを使う
 
 ;; autocomplete for ruby
-(add-hook 'ruby-mode-hook '(lambda()
-                             (add-to-list 'ac-sources 'ac-source-abbrev)))
+(add-hook 'enh-ruby-mode-hook '(lambda()
+                                 (add-to-list 'ac-sources 'ac-source-abbrev)))
 
 ;; hideshow for ruby
 (let ((ruby-mode-hs-info
-       '(ruby-mode
+       '(enh-ruby-mode
           "class\\|module\\|def\\|if\\|unless\\|case\\|while\\|until\\|for\\|begin\\|do"
           "end"
           "#"
@@ -15,7 +15,7 @@
   (if (not (member ruby-mode-hs-info hs-special-modes-alist))
       (setq hs-special-modes-alist
             (cons ruby-mode-hs-info hs-special-modes-alist))))
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
           '(lambda ()
              (hs-minor-mode 1)))
 
@@ -26,21 +26,6 @@
 ;; Rinari
 (global-rinari-mode)
 
-
-;; ruby-mode
-(use-package ruby-mode
-  :ensure t
-  :mode
-  (("Capfile" . enh-ruby-mode)
-   ("Gemfile\\" . enh-ruby-mode)
-   ("[Rr]akefile" . enh-ruby-mode)
-   ("\\.rb" . enh-ruby-mode)
-   ("\\.ru" . enh-ruby-mode)
-   ("\\.rake$" . enh-ruby-mode)
-   ("\\.feature" . enh-ruby-mode)
-   ("\\.jbuilder" . enh-ruby-mode))
-
-  (setq ruby-insert-encoding-magic-comment nil))
 
 ;; enh-ruby-mode
 ; (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
@@ -81,7 +66,7 @@
 (setq ruby-block-highlight-toggle t)
 
 ;; ruby-end
-(add-hook 'ruby-mode-hook
+(add-hook 'enh-ruby-mode-hook
   '(lambda ()
     (abbrev-mode 1)
     (electric-pair-mode t)
@@ -89,4 +74,4 @@
     (electric-layout-mode t)))
 
 ;; flycheck
-(add-hook 'ruby-mode-hook 'flycheck-mode)
+(add-hook 'enh-ruby-mode-hook 'flycheck-mode)
