@@ -1,6 +1,5 @@
 ;; go-mode
 ;; this mode demand gocode, godef and godoc in $GOPATH
-(require 'go-mode)
 (eval-after-load "go-mode" '(progn (require 'go-autocomplete)))
 (add-hook 'go-mode-hook
           '(lambda()

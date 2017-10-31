@@ -1,14 +1,6 @@
 ;; autocomplete for ruby
 (add-hook 'enh-ruby-mode-hook '(lambda()
                                  (add-to-list 'ac-sources 'ac-source-abbrev)))
-;; robe
-(autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-(autoload 'ac-robe-setup "ac-robe" "auto-complete robe" nil nil)
-(add-hook 'robe-mode-hook 'ac-robe-setup)
-(add-hook 'enh-ruby-mode-hook '(lambda()
-                                 (robe-mode)))
-(setq robe-mode-map nil)
-
 
 ;; hideshow for ruby
 (let ((ruby-mode-hs-info
@@ -34,6 +26,7 @@
 (require 'rinari)
 (global-rinari-mode)
 
+;; enh-ruby-mode
 (autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
 (add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
 (setq auto-mode-alist
@@ -84,8 +77,8 @@
 (setq-default enh-ruby-not-insert-magic-comment t)
 
 
-(ac-config-default)
-(add-to-list 'ac-modes 'enh-ruby-mode)
+;;(ac-config-default)
+;;(add-to-list 'ac-modes 'enh-ruby-mode)
 
 
 ;; flycheck

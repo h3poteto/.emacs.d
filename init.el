@@ -50,7 +50,6 @@
 (el-get-bundle ace-jump-mode)
 (el-get-bundle neotree)
 (el-get-bundle web-mode)
-(el-get-bundle dgutov/robe)
 (el-get-bundle go-autocomplete)
 (el-get-bundle go-eldoc)
 (el-get-bundle fuzzy)
@@ -76,6 +75,10 @@
         :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle vue-mode)
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
