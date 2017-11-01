@@ -32,3 +32,6 @@
 
 ;; タブ
 (setq default-tab-width 4)
+
+;; delete region
+(delete-selection-mode t)

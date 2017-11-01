@@ -53,6 +53,8 @@
 
   ;; スペースは全角のみを可視化
   (setq whitespace-space-regexp "\\(\u3000+\\)")
+  ;; 保存前に自動でクリーンアップ
+  (setq whitespace-action '(auto-cleanup))
 
   (defvar my/bg-color "#232323")
   (set-face-attribute 'whitespace-trailing nil
@@ -68,3 +70,6 @@
                       :weight 'bold)
   (set-face-attribute 'whitespace-empty nil
                       :background my/bg-color))
+
+
+(global-whitespace-mode 1)
