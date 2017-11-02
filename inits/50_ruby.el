@@ -24,6 +24,9 @@
 
 ;; projectile
 (projectile-rails-global-mode)
+;; projectile with hem
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
 
 ;; ruby-mode
 (use-package ruby-mode
