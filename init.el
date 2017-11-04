@@ -78,5 +78,8 @@
 
 (require 'use-package)
 
+(custom-set-variables
+ '(init-loader-show-log-after-init 'error-only))
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+

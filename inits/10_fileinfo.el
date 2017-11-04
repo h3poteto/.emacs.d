@@ -23,4 +23,4 @@
           (message "%s" mess)))
     nil ))
 
-(global-set-key "\C-c i" 'file-info)
+(global-set-key (kbd "C-c i") 'file-info)

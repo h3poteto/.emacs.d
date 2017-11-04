@@ -17,7 +17,8 @@
 (define-key global-map(kbd "C-c :") 'comment-or-uncomment-region)
 
 ;; 一括インデント
-(define-key global-map(kbd "C-c i") 'indent-region)
+;; file-infoとかぶるし使わないので無効化する
+;; (define-key global-map(kbd "C-c i") 'indent-region)
 
 ;; jamp goto line
 (global-set-key (kbd "C-x :") 'goto-line)
