@@ -30,7 +30,7 @@
 (el-get-bundle rhtml-mode)
 (el-get-bundle twittering-mode)
 (el-get-bundle ag)
-(el-get-bundle coffee-mode)
+(el-get-bundle defunkt/coffee-mode)
 (el-get-bundle slim-mode)
 ;;(el-get-bundle zenspider/enhanced-ruby-mode, :branch "v20150711")
 (el-get-bundle exec-path-from-shell)
@@ -75,6 +75,10 @@
   :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle AdamNiederer/vue-mode)
+
+;; 初期化
+(require 'package)
+(package-initialize)
 
 (require 'use-package)
 

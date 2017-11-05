@@ -26,20 +26,19 @@
 (projectile-rails-global-mode)
 ;; projectile with hem
 (setq projectile-completion-system 'helm)
-(helm-projectile-on)
 
-;; ruby-mode
+ruby-mode
 (use-package ruby-mode
   :ensure t
   :mode
-  (("Capfile" . enh-ruby-mode)
-   ("Gemfile\\" . enh-ruby-mode)
-   ("[Rr]akefile" . enh-ruby-mode)
-   ("\\.rb" . enh-ruby-mode)
-   ("\\.ru" . enh-ruby-mode)
-   ("\\.rake$" . enh-ruby-mode)
-   ("\\.feature" . enh-ruby-mode)
-   ("\\.jbuilder" . enh-ruby-mode))
+  (("\\Capfile\\'" . ruby-mode)
+   ("\\Gemfile\\'" . ruby-mode)
+   ("\\[Rr]akefile\\'" . ruby-mode)
+   ("\\.rb\\'" . ruby-mode)
+   ("\\.ru\\'" . ruby-mode)
+   ("\\.rake\\'" . ruby-mode)
+   ("\\.feature\\'" . ruby-mode)
+   ("\\.jbuilder\\'" . ruby-mode))
 
   :config
   (setq ruby-insert-encoding-magic-comment nil)
@@ -55,6 +54,7 @@
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . rhtml-mode))
 
 ;; ruby-block
+(require 'ruby-block)
 (ruby-block-mode t)
 (setq ruby-block-highlight-toggle t)
 

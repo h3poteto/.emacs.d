@@ -1,8 +1,7 @@
 ;; sass-mode
-(use-package sass-mode
-  :ensure t
-  :mode
-  (("\\.scss\\" . sass-mode))
-  :config
-  (add-hook 'sass-mode-hook 'flycheck-mode)
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
+
+;; flycheck
+(add-hook 'sass-mode-hook 'flycheck-mode)
 
