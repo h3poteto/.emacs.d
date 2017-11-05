@@ -27,7 +27,7 @@
 ;; projectile with hem
 (setq projectile-completion-system 'helm)
 
-ruby-mode
+;; ruby-mode
 (use-package ruby-mode
   :ensure t
   :mode
