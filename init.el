@@ -79,6 +79,10 @@
   :build (("touch" "lisp/magit-autoloads.el"))
   :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
+(el-get-bundle purcell/mmm-mode)
+(el-get-bundle AdamNiederer/vue-html-mode)
+(el-get-bundle AdamNiederer/ssass-mode)
+(el-get-bundle Fanael/edit-indirect)
 (el-get-bundle AdamNiederer/vue-mode)
 (el-get-bundle Fuco1/smartparens)
 
