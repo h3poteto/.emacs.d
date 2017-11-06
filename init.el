@@ -68,7 +68,11 @@
 (el-get-bundle jedi)
 (el-get-bundle scss-mode)
 (el-get-bundle sass-mode)
-(el-get-bundle ensime)
+;; https://github.com/ensime/ensime-emacs/issues/669
+;; この対応のため，一時的に古いensimeを使う
+(el-get-bundle ensime/ensime-emacs
+  :name ensime
+  :branch "v1.0.1")
 (el-get-bundle magit
   :name magit
   :info nil

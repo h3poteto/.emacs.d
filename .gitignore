@@ -5,6 +5,7 @@ el-get/
 elpa/
 tramp
 ido.last
+ensime
 .cask
 recentf
 .python-environments
