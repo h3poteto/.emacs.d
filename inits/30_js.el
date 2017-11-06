@@ -16,6 +16,8 @@
 
 ;; flycheck
 (add-hook 'js2-mode-hook 'flycheck-mode)
+;; smartparens
+(add-hook 'js2-mode-hook #'smartparens-mode)
 
 (setq js2-include-browser-externs nil)
 (setq js2-mode-show-parse-errors nil)

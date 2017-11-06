@@ -10,4 +10,4 @@
              (go-eldoc-setup)
              (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
 (add-hook 'before-save-hook 'gofmt-before-save)
-
+(add-hook 'go-mode-hook #'smartparens-mode)

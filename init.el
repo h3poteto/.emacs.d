@@ -43,7 +43,7 @@
 (el-get-bundle csv-mode)
 (el-get-bundle popwin)
 (el-get-bundle ruby-block)
-(el-get-bundle ruby-electric)
+;;(el-get-bundle ruby-electric)
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
 (el-get-bundle go-mode)
@@ -80,6 +80,8 @@
   :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle AdamNiederer/vue-mode)
+(el-get-bundle Fuco1/smartparens)
+
 
 ;; 初期化
 (require 'package)
@@ -91,4 +93,5 @@
  '(init-loader-show-log-after-init 'error-only))
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+
 
