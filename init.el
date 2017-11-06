@@ -40,6 +40,7 @@
 (el-get-bundle less-css-mode)
 (el-get-bundle markdown-mode)
 (el-get-bundle php-mode)
+(el-get-bundle csv-mode)
 (el-get-bundle popwin)
 (el-get-bundle ruby-block)
 (el-get-bundle ruby-electric)
