@@ -29,7 +29,6 @@
 
 ;; ruby-mode
 (use-package ruby-mode
-  :ensure t
   :mode
   (("\\Capfile\\'" . ruby-mode)
    ("\\Gemfile\\'" . ruby-mode)
