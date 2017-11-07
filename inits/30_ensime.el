@@ -5,7 +5,8 @@
 ;; for scalariform in ensime
 ;;(add-hook 'before-save-hook 'ensime-format-source)
 
-(add-hook 'after-save-hook 'scalafmt-after-save)
+;; TODO: プロジェクトごとのscalafmt.confを読むことができない
+;; (add-hook 'after-save-hook 'scalafmt-after-save)
 
 ;; for scalafmt in brew command
 (defcustom scalafmt-command "scalafmt"
