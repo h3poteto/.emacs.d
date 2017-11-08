@@ -43,7 +43,7 @@
 (el-get-bundle csv-mode)
 (el-get-bundle popwin)
 (el-get-bundle ruby-block)
-;;(el-get-bundle ruby-electric)
+(el-get-bundle ruby-electric)
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
 (el-get-bundle go-mode)
