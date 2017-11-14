@@ -14,7 +14,7 @@ packageのインストールにはel-getを使います．el-get自体がイン�
 - ctags
 - jsonLint
 - eslint, babel-eslint, eslint-plugin-react
-- gocode, godoc
+- gocode, godoc, godef
 - python
 
 ### eslint関連
@@ -76,6 +76,7 @@ goのソースを触る際には必要となります．
 ```
 $ go get github.com/nsf/gocode
 $ go get golang.org/x/tools/cmd/godoc
+$ go get github.com/rogpeppe/godef
 ```
 
 ### python
