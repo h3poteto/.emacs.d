@@ -35,3 +35,17 @@
 
 ;; delete region
 (delete-selection-mode t)
+
+;; path
+(require 'exec-path-from-shell)
+(let ((envs '("PATH" "GOPATH")))
+  (exec-path-from-shell-copy-envs envs))
+
+(exec-path-from-shell-initialize)
+
+;; editorconfig
+(editorconfig-mode t)
+
+;; ace-jump
+(use-package ace-jump-mode
+  :bind ("C-c SPC" . ace-jump-mode))
