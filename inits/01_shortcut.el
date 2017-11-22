@@ -28,3 +28,6 @@
 
 ;; reload buffer
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
+
+;; helm-imenu
+(global-set-key "\M-a" 'helm-imenu)
