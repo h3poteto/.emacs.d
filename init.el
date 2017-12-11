@@ -84,6 +84,7 @@
 (el-get-bundle Fanael/edit-indirect)
 (el-get-bundle AdamNiederer/vue-mode)
 (el-get-bundle Fuco1/smartparens)
+(el-get-bundle ajc/nginx-mode)
 
 
 ;; 初期化
