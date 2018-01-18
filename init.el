@@ -88,7 +88,7 @@
 ;; smart-mode-lineでpowerline themaを使う場合は必要
 ;; (el-get-bundle milkypostman/powerline)
 (el-get-bundle Malabarba/smart-mode-line)
-
+(el-get-bundle davidmiller/pony-mode)
 
 ;; 初期化
 (require 'package)

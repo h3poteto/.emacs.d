@@ -17,3 +17,5 @@
              (local-set-key (kbd "C-c d") 'jedi:show-doc)
              (local-set-key (kbd "C-<tab>") 'jedi:complete)))
 (add-hook 'python-mode-hook #'smartparens-mode)
+
+(require 'pony-mode)
