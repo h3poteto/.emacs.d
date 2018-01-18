@@ -85,6 +85,9 @@
 (el-get-bundle AdamNiederer/vue-mode)
 (el-get-bundle Fuco1/smartparens)
 (el-get-bundle ajc/nginx-mode)
+;; smart-mode-lineでpowerline themaを使う場合は必要
+;; (el-get-bundle milkypostman/powerline)
+(el-get-bundle Malabarba/smart-mode-line)
 
 
 ;; 初期化
@@ -97,3 +100,4 @@
  '(init-loader-show-log-after-init 'error-only))
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+
