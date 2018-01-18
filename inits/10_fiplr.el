@@ -6,5 +6,5 @@
   :config
   (progn
     (setq fiplr-root-markers '(".git" ".svn" ".hg"))
-    (setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor" "coverage" "_build" "deps" "el-get"))
+    (setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor" "coverage" "_build" "deps" "el-get" "python3.*"))
                                (files ("*~" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))))
