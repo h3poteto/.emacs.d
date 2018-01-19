@@ -18,3 +18,11 @@
              (local-set-key (kbd "C-<tab>") 'jedi:complete)))
 (add-hook 'python-mode-hook #'smartparens-mode)
 
+
+;; django-mode
+(require 'django-mode)
+(use-package django-html-mode
+  :mode
+  (("\\.djhtml\\'" . django-html-mode)
+   ("\\.html\\'" . django-html-mode))
+  )

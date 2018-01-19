@@ -89,6 +89,12 @@
 ;; (el-get-bundle milkypostman/powerline)
 (el-get-bundle Malabarba/smart-mode-line)
 (el-get-bundle zk-phi/sky-color-clock)
+;; djang-modeに必要な依存
+(el-get-bundle abo-abo/helm-make)
+;; djang-modeに必要な依存
+(el-get-bundle joaotavora/yasnippet)
+(el-get-bundle myfreeweb/django-mode)
+
 
 ;; 初期化
 (require 'package)
