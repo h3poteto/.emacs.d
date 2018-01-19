@@ -89,7 +89,6 @@
 ;; (el-get-bundle milkypostman/powerline)
 (el-get-bundle Malabarba/smart-mode-line)
 (el-get-bundle zk-phi/sky-color-clock)
-(el-get-bundle davidmiller/pony-mode)
 
 ;; 初期化
 (require 'package)
