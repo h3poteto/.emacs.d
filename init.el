@@ -94,6 +94,7 @@
 ;; djang-modeに必要な依存
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle myfreeweb/django-mode)
+(el-get-bundle spotify/dockerfile-mode)
 
 
 ;; 初期化
