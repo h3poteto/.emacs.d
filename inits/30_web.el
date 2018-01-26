@@ -4,7 +4,8 @@
   (("\\.tpl\\'" . web-mode)
    ("\\.jsx\\'" . web-mode)
    ("\\.eex\\'" . web-mode)
-   ("\\.scala.html\\'" . web-mode))
+   ("\\.scala.html\\'" . web-mode)
+   ("\\.html\\'" . web-mode))
   :config
   (defun my-web-mode-hook ()
     "Hooks for Web mode."

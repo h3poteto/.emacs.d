@@ -23,6 +23,5 @@
 (require 'django-mode)
 (use-package django-html-mode
   :mode
-  (("\\.djhtml\\'" . django-html-mode)
-   ("\\.html\\'" . django-html-mode))
+  (("\\.djhtml\\'" . django-html-mode))
   )
