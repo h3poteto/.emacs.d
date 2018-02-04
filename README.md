@@ -15,7 +15,7 @@ packageのインストールにはel-getを使います．el-get自体がイン�
 - jsonLint
 - eslint, babel-eslint, eslint-plugin-react
 - gocode, godoc, godef
-- python
+- python, flake8
 
 ### eslint関連
 
@@ -91,3 +91,11 @@ M-x jedi:install-server
 
 とすることでjediがインストールされます．
 このとき，virtualenvが依存に含まれており，インストールされない場合には，自分で `pip install virutalenv` しておく必要があります．
+
+また，pythonのLintツールとしてflake8を有効化しています．
+
+```
+$ pip install flake8
+```
+
+しておくと，emacs上でもLintを実行してくれます．

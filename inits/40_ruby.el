@@ -40,9 +40,7 @@
    ("\\.jbuilder\\'" . ruby-mode))
 
   :config
-  (setq ruby-insert-encoding-magic-comment nil)
-  ;; flycheck
-  (add-hook 'ruby-mode-hook 'flycheck-mode))
+  (setq ruby-insert-encoding-magic-comment nil))
 
 
 ;;; rhtml-mode

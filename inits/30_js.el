@@ -14,8 +14,6 @@
             (setq js-switch-indent-offset my-js-mode-indent-num)
             ))
 
-;; flycheck
-(add-hook 'js2-mode-hook 'flycheck-mode)
 ;; smartparens
 (add-hook 'js2-mode-hook #'smartparens-mode)
 

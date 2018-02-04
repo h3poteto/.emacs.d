@@ -1,5 +1,7 @@
 ;; flycheck
 (require 'flycheck-color-mode-line)
+;; flycheckを全体でonにする
+(global-flycheck-mode)
 
 ;; eslintがしたいのでjshintを無効化する
 (eval-after-load "flycheck"

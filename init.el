@@ -91,10 +91,12 @@
 (el-get-bundle zk-phi/sky-color-clock)
 ;; djang-modeに必要な依存
 (el-get-bundle abo-abo/helm-make)
-;; djang-modeに必要な依存
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle myfreeweb/django-mode)
+;;
 (el-get-bundle spotify/dockerfile-mode)
+(el-get-bundle purcell/flymake-python-pyflakes)
+
 
 
 ;; 初期化
