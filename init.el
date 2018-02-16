@@ -96,7 +96,7 @@
 ;;
 (el-get-bundle spotify/dockerfile-mode)
 (el-get-bundle purcell/flymake-python-pyflakes)
-
+(el-get-bundle undo-tree)
 
 
 ;; 初期化
@@ -109,4 +109,3 @@
  '(init-loader-show-log-after-init 'error-only))
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
-
