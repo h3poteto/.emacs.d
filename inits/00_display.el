@@ -80,7 +80,7 @@
 (sml/setup)
 
 ;; sky-color-clock
-(require 'sky-color-clock)
-(sky-color-clock-initialize 35) ;; 東京の緯度で初期化
-(setq sky-color-clock-format "%m/%d %H:%M")
-(setq global-mode-string (append global-mode-string '(:eval (sky-color-clock)))) ;; global-mode-stringに追加
+;; (require 'sky-color-clock)
+;; (sky-color-clock-initialize 35) ;; 東京の緯度で初期化
+;; (setq sky-color-clock-format "%m/%d %H:%M")
+;; (setq global-mode-string (append global-mode-string '(:eval (sky-color-clock)))) ;; global-mode-stringに追加

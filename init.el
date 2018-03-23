@@ -88,7 +88,7 @@
 ;; smart-mode-lineでpowerline themaを使う場合は必要
 ;; (el-get-bundle milkypostman/powerline)
 (el-get-bundle Malabarba/smart-mode-line)
-(el-get-bundle zk-phi/sky-color-clock)
+;; (el-get-bundle zk-phi/sky-color-clock)
 ;; djang-modeに必要な依存
 (el-get-bundle abo-abo/helm-make)
 (el-get-bundle joaotavora/yasnippet)
