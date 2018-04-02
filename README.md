@@ -1,6 +1,14 @@
 # emacs.d
 個人的なemacsの設定になります．
 
+## 導入
+
+emacsをインストール後，`~/.emacs` を作成し，以下のようにして読み込みます．
+
+```elisp
+(load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init")))
+```
+
 ## el-get
 
 packageのインストールにはel-getを使います．el-get自体がインストールされていない場合には，起動時に自動的にインストールを行います．
