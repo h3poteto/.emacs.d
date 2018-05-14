@@ -97,6 +97,7 @@
 (el-get-bundle spotify/dockerfile-mode)
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle undo-tree)
+(el-get-bundle rust-mode)
 
 
 ;; 初期化
