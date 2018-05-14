@@ -98,6 +98,7 @@
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle undo-tree)
 (el-get-bundle rust-mode)
+(el-get-bundle iedit)
 
 
 ;; 初期化
