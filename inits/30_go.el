@@ -9,5 +9,6 @@
              (local-set-key (kbd "C-c d") 'godoc)
              (go-eldoc-setup)
              (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook #'smartparens-mode)
