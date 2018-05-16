@@ -1,7 +1,7 @@
 ;; web-mode
 (use-package web-mode
   :mode
-  (("\\.tpl\\'" . web-mode)
+  (("\\.html.tpl\\'" . web-mode)
    ("\\.jsx\\'" . web-mode)
    ("\\.eex\\'" . web-mode)
    ("\\.scala.html\\'" . web-mode)
