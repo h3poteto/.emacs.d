@@ -99,7 +99,7 @@
 (el-get-bundle undo-tree)
 (el-get-bundle rust-mode)
 (el-get-bundle iedit)
-
+(el-get-bundle codic)
 
 ;; 初期化
 (require 'package)
