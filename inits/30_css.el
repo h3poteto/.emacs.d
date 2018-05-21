@@ -3,5 +3,7 @@
 (setq css-indent-offset 2)
 (use-package css-mode
   :mode
-  ("\\.scss\\'" . css-mode))
+  ("\\.scss\\'" . css-mode)
+  :config
+  (add-hook 'css-mode-hook 'rainbow-mode))
 

@@ -3,3 +3,4 @@
 (add-hook 'vue-mode-hook
           (lambda ()
             (setq css-indent-offset 2)))
+(add-hook 'vue-mode-hook 'rainbow-mode)

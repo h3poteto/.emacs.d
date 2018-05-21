@@ -100,6 +100,7 @@
 (el-get-bundle rust-mode)
 (el-get-bundle iedit)
 (el-get-bundle codic)
+(el-get-bundle rainbow-mode)
 
 ;; 初期化
 (require 'package)

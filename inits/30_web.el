@@ -16,5 +16,6 @@
     (setq web-mode-sql-indent-offset 2)
     (setq indent-tabs-mode nil)
     (setq tab-width 2))
-  (add-hook 'web-mode-hook 'my-web-mode-hook))
+  (add-hook 'web-mode-hook 'my-web-mode-hook)
+  (add-hook 'web-mode-hook 'rainbow-mode))
 
