@@ -58,3 +58,6 @@
 ;; ruby-electric
 (add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
 
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)))

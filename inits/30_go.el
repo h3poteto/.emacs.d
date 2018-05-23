@@ -12,3 +12,6 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook #'smartparens-mode)
+(add-hook 'go-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)))

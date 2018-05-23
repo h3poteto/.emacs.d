@@ -28,3 +28,7 @@
   :mode
   (("\\.djhtml\\'" . django-html-mode))
   )
+
+(add-hook 'python-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)))
