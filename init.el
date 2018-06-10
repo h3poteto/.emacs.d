@@ -101,6 +101,9 @@
 (el-get-bundle iedit)
 (el-get-bundle codic)
 (el-get-bundle rainbow-mode)
+(el-get-bundle typescript-mode)
+(el-get-bundle tide)
+(el-get-bundle company)
 
 ;; 初期化
 (require 'package)
