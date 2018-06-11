@@ -103,7 +103,7 @@
 (el-get-bundle rainbow-mode)
 (el-get-bundle typescript-mode)
 (el-get-bundle tide)
-(el-get-bundle company)
+(el-get-bundle company-mode/company-mode)
 
 ;; 初期化
 (require 'package)
