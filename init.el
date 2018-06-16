@@ -99,7 +99,7 @@
 (el-get-bundle undo-tree)
 (el-get-bundle rust-mode)
 (el-get-bundle iedit)
-(el-get-bundle codic)
+(el-get-bundle syohex/emacs-codic)
 (el-get-bundle rainbow-mode)
 (el-get-bundle typescript-mode)
 (el-get-bundle tide)
