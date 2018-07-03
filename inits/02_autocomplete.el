@@ -13,3 +13,6 @@
   (let ((contain-japanese (lambda (s) (string-match (rx (category japanese)) s))))
     (setq ad-return-value
           (remove-if contain-japanese ad-return-value))))
+
+;; undo-tree
+(global-undo-tree-mode)
