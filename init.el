@@ -104,6 +104,7 @@
 (el-get-bundle typescript-mode)
 (el-get-bundle tide)
 (el-get-bundle company-mode/company-mode)
+(el-get-bundle highlight-symbol)
 
 ;; 初期化
 (require 'package)
