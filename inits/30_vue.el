@@ -1,7 +1,8 @@
 ;; vue-mode
-;; 内部でcss-modeを使用するときにオフセットを変更したい
-(add-hook 'vue-mode-hook
-          (lambda ()
-            (setq css-indent-offset 2)
-            (setq js-switch-indent-offset 2)))
-(add-hook 'vue-mode-hook 'rainbow-mode)
+(use-package vue-mode
+  :config
+  (setq css-indent-offset 2)
+  (setq js-switch-indent-offset 2)
+  (setq mmm-submode-decoration-level 0)
+  :hook
+  (vue-mode . rainbow-mode))
