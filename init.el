@@ -105,6 +105,7 @@
 (el-get-bundle tide)
 (el-get-bundle company-mode/company-mode)
 (el-get-bundle highlight-symbol)
+(el-get-bundle Fanael/rainbow-delimiters)
 
 ;; 初期化
 (require 'package)

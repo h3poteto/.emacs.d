@@ -91,3 +91,5 @@
 (add-hook 'prog-mode-hook 'highlight-symbol-mode)
 ;; ソースコードにおいてM-p/M-nでシンボル間を移動
 (add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
