@@ -106,6 +106,7 @@
 (el-get-bundle company-mode/company-mode)
 (el-get-bundle highlight-symbol)
 (el-get-bundle Fanael/rainbow-delimiters)
+(el-get-bundle syohex/emacs-fluentd-mode)
 
 ;; 初期化
 (require 'package)
