@@ -31,6 +31,7 @@
 (setq cua-enable-cua-keys nil)
 
 ;; タブ
+(setq-default tab-width 4)
 (setq default-tab-width 4)
 
 ;; delete region
