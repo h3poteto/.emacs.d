@@ -110,3 +110,7 @@
 (tool-bar-mode 0)
 ;; メニューバーを非表示にする
 (menu-bar-mode 0)
+
+;; タイトルバーをカスタマイズ
+(set-frame-parameter nil 'ns-appearance 'dark)
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
