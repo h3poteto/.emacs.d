@@ -105,3 +105,8 @@
    (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
     (cl-callf color-saturate-name (face-foreground face) 30))))
 (add-hook 'emacs-startup-hook 'rainbow-delimiters-using-stronger-colors)
+
+;; ツールバーを非表示にする
+(tool-bar-mode 0)
+;; メニューバーを非表示にする
+(menu-bar-mode 0)
