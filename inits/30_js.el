@@ -1,6 +1,7 @@
 ;; js-indent
 (setq js-indent-level 2)
-
+;; method-chain indent
+(advice-add 'js--multi-line-declaration-indentation :around (lambda (orig-fun &rest args) nil))
 
 ;; js2-mode
 ;;(autoload 'js2-mode "js2" nil t)

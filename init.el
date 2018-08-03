@@ -24,7 +24,7 @@
 (el-get-bundle editorconfig)
 (el-get-bundle yaml-mode)
 (el-get-bundle flycheck)
-(el-get-bundle js2-mode)
+(el-get-bundle mooz/js2-mode)
 ;;(el-get-bundle eschulte/rinari)
 (el-get-bundle asok/projectile-rails)
 (el-get-bundle rhtml-mode)
