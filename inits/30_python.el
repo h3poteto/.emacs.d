@@ -12,8 +12,7 @@
 
 (add-hook 'python-mode-hook
           '(lambda ()
-             (local-set-key (kbd "C-.") 'jedi:jump-to-definition)
-             (local-set-key (kbd "C-,") 'jedi:jump-back)
+             (local-set-key (kbd "M-.") 'jedi:goto-definition)
              (local-set-key (kbd "C-c d") 'jedi:show-doc)
              (local-set-key (kbd "C-<tab>") 'jedi:complete)))
 (add-hook 'python-mode-hook #'smartparens-mode)
