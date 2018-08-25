@@ -54,6 +54,7 @@
 (el-get-bundle go-autocomplete)
 (el-get-bundle go-eldoc)
 (el-get-bundle fuzzy)
+(el-get-bundle async)
 (el-get-bundle helm-ag)
 (el-get-bundle terraform-mode)
 (el-get-bundle json-mode)
