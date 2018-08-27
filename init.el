@@ -109,6 +109,10 @@
 (el-get-bundle highlight-symbol)
 (el-get-bundle Fanael/rainbow-delimiters)
 (el-get-bundle syohex/emacs-fluentd-mode)
+;; pyrimpotで使う
+(el-get-bundle cask/shut-up)
+(el-get-bundle Wilfred/pyimport)
+
 
 ;; 初期化
 (require 'package)

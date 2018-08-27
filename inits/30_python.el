@@ -17,6 +17,8 @@
              (local-set-key (kbd "C-<tab>") 'jedi:complete)))
 (add-hook 'python-mode-hook #'smartparens-mode)
 
+(add-hook 'before-save-hook #'pyimport-remove-unused)
+
 ;; flymake-python-pyflakes
 (setq flymake-python-pyflakes-executable "flake8")
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
