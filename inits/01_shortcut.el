@@ -34,3 +34,6 @@
 
 ;; hs-minor-mode
 (global-set-key (kbd "C-c h") 'hs-toggle-hiding)
+
+;; query-replaceを別のキーに変更
+(global-set-key (kbd "C-c r") 'query-replace)
