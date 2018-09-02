@@ -36,4 +36,4 @@
 (global-set-key (kbd "C-c h") 'hs-toggle-hiding)
 
 ;; query-replaceを別のキーに変更
-(global-set-key (kbd "C-c r") 'query-replace)
+(global-set-key (kbd "C-c C-r") 'query-replace)
