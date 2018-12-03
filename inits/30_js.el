@@ -27,3 +27,5 @@
 (add-hook 'js2-mode-hook
           '(lambda ()
              (hs-minor-mode 1)))
+
+(add-hook 'js2-mode-hook 'prettier-js-mode)

@@ -112,7 +112,7 @@
 ;; pyrimpotで使う
 (el-get-bundle cask/shut-up)
 (el-get-bundle Wilfred/pyimport)
-
+(el-get-bundle prettier-js)
 
 ;; 初期化
 (require 'package)
