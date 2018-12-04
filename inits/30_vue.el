@@ -5,4 +5,5 @@
   (setq js-switch-indent-offset 2)
   (setq mmm-submode-decoration-level 0)
   :hook
-  (vue-mode . rainbow-mode))
+  (vue-mode . rainbow-mode)
+  (vue-mode . prettier-js-mode))
