@@ -1,6 +1,12 @@
-;; (use-package dracula-theme
+;; (use-package alect-themes
 ;;   :load-path "themes"
-;;   :config (load-theme 'dracula t))
+;;   :config (load-theme 'alect-dark-alt t))
+(use-package spacemacs-common
+  :load-path "themes"
+  :config
+  (setq spacemacs-theme-comment-bg nil)
+  (load-theme 'spacemacs-dark t)
+ )
 
 (use-package all-the-icons)
 
@@ -28,7 +34,7 @@
 ;; color setting
 ;; seto window status
 (if window-system (progn
- ;(setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
+;; (setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
  (set-background-color "Black")
  (set-foreground-color "White")
  (set-cursor-color "Gray")

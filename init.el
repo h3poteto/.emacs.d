@@ -119,7 +119,6 @@
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
 ;; カスタマイズテーマ
-(el-get-bundle dracula/emacs)
 (el-get-bundle nashamri/spacemacs-theme)
 
 ;; 初期化
