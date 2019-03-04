@@ -1,12 +1,12 @@
 ;; (use-package alect-themes
 ;;   :load-path "themes"
 ;;   :config (load-theme 'alect-dark-alt t))
-(use-package spacemacs-common
-  :load-path "themes"
-  :config
-  (setq spacemacs-theme-comment-bg nil)
-  (load-theme 'spacemacs-dark t)
- )
+;; (use-package spacemacs-common
+;;   :load-path "themes"
+;;   :config
+;;   (setq spacemacs-theme-comment-bg nil)
+;;   (load-theme 'spacemacs-dark t)
+;;  )
 
 (use-package all-the-icons)
 
