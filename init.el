@@ -113,6 +113,8 @@
 (el-get-bundle cask/shut-up)
 (el-get-bundle Wilfred/pyimport)
 (el-get-bundle prettier-js)
+(el-get-bundle which-key)
+(el-get-bundle DarwinAwardWinner/amx)
 
 ;; 初期化
 (require 'package)

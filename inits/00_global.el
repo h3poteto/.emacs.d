@@ -54,3 +54,11 @@
 (setq rainbow-x-colors t)
 (setq rainbow-latex-colors t)
 (setq rainbow-ansi-colors t)
+
+;; which-key
+(use-package which-key
+    :diminish which-key-mode
+    :hook (after-init . which-key-mode))
+
+;; amx
+(amx-mode t)
