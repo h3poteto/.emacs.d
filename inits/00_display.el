@@ -1,6 +1,6 @@
-(use-package spacemacs-common
-  :load-path "themes"
-  :config (load-theme 'spacemacs-dark t))
+;; (use-package dracula-theme
+;;   :load-path "themes"
+;;   :config (load-theme 'dracula t))
 
 (use-package all-the-icons)
 
@@ -118,7 +118,3 @@
 ;; タイトルバーをカスタマイズ
 (set-frame-parameter nil 'ns-appearance 'dark)
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
-
-(use-package powerline
-  :config (powerline-default-theme)
-  )
