@@ -118,3 +118,7 @@
 ;; タイトルバーをカスタマイズ
 (set-frame-parameter nil 'ns-appearance 'dark)
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
+
+(use-package powerline
+  :config (powerline-default-theme)
+  )
