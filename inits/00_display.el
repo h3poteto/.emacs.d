@@ -1,3 +1,9 @@
+(use-package spacemacs-common
+  :load-path "themes"
+  :config (load-theme 'spacemacs-dark t))
+
+(use-package all-the-icons)
+
 ;; カーソル位置の表示
 (show-paren-mode t)
 (column-number-mode t)

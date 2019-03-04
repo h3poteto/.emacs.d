@@ -16,6 +16,14 @@ packageのインストールにはel-getを使います．el-get自体がイン�
 
 ただし，package.elで既にパッケージをインストールしている場合，warningが出ます．予めpackage.elでインストールしたものは全て削除しておいてください．
 
+## フォントのインストール
+
+neotreeをiconsで表示しているためall-the-iconsを利用しています．これは起動後にフォントをインストールする必要があります．
+
+```
+M-x all-the-icons-install-fonts
+```
+
 
 ## 別途必要になるもの
 - silver-searcher-ag
