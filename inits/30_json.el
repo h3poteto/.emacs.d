@@ -1,6 +1,8 @@
 ;; json
-(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
-(add-to-list 'auto-mode-alist '("\\.json.tpl$" . json-mode))
-;; smartparens
-(add-hook 'json-mode-hook #'smartparens-mode)
-(add-hook 'json-mode-hook 'flymake-json-load)
+(use-package json-mode
+  :mode
+  ("\\.json$" . json-mode)
+  ("\\.json.tpl$" . json-mode)
+  :hook
+  (json-mode . flymake-json-load)
+  )
