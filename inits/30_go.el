@@ -14,7 +14,6 @@
   (go-eldoc-setup)
   (setq gofmt-command "goimports")
   :hook
-  (go-mode . smartparens-mode)
   (before-save . gofmt-before-save)
   (go-mode . (lambda ()
                (hs-minor-mode 1)))

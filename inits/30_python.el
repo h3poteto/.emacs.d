@@ -20,7 +20,6 @@
   ("C-c d" . jedi:show-doc)
   ("C-<tab>" . jedi:complete))
   :hook
-  (python-mode . smartparens-mode)
   (before-save . pyimport-remove-unused)
   (python-mode . (lambda ()
                    (hs-minor-mode 1))))

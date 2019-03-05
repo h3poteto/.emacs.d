@@ -17,7 +17,6 @@
   (setq js2-highlight-external-variables nil)
   (setq js2-include-jslint-globals nil)
   :hook
-  (js2-mode . smartparens-mode)
   (js2-mode . prettier-js-mode)
   (js2-mode . (lambda ()
                 (hs-minor-mode 1)))

@@ -216,3 +216,20 @@
   (setq neo-keymap-style 'concise)
   (setq neo-smart-open t)
   (setq neo-theme 'icons))
+
+;;-------------------------------------------
+;; smartparens
+;;-------------------------------------------
+(use-package smartparens
+  :config
+  (require 'smartparens-config)
+  :hook
+  (go-mode . smartparens-mode)
+  (elixir-mode . smartparens-mode)
+  (python-mode . smartparens-mode)
+  (json-mode . smartparens-mode)
+  (scala-mode . smartparens-mode)
+  (terraform-mode . smartparens-mode)
+  (emacs-lisp-mode . smartparens-mode)
+  (js2-mode . smartparens-mode)
+  )

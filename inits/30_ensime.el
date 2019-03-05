@@ -1,7 +1,4 @@
 ;; ensime
-;; smartparens
-(add-hook 'scala-mode-hook #'smartparens-mode)
-
 ;; for scalariform in ensime
 ;;(add-hook 'before-save-hook 'ensime-format-source)
 
