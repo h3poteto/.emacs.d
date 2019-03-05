@@ -111,7 +111,7 @@
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
 ;; カスタマイズテーマ
-;; (el-get-bundle nashamri/spacemacs-theme)
+(el-get-bundle h3poteto/monokai-emacs)
 (el-get-bundle jschaf/esup)
 
 ;; 初期化

@@ -1,6 +1,6 @@
-;; (use-package alect-themes
-;;   :load-path "themes"
-;;   :config (load-theme 'alect-dark-alt t))
+(use-package monokai-theme
+  :load-path "themes"
+  :config (load-theme 'monokai t))
 ;; (use-package spacemacs-common
 ;;   :load-path "themes"
 ;;   :config
