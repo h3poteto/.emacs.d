@@ -13,7 +13,6 @@
   )
 
 (use-package python
-  :ensure t
   :mode ("\\.py" . python-mode)
   :bind
   (:map python-mode-map

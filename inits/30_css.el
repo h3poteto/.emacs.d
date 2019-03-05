@@ -5,7 +5,6 @@
   :mode
   ("\\.scss\\'" . css-mode)
   :hook
-  (css-mode . rainbow-mode)
   (css-mode . (lambda ()
                 (hs-minor-mode 1))))
 
