@@ -1,7 +1,4 @@
-;; emacs-server
-(require 'server)
-(unless (server-running-p)
-  (server-start))
+(setq gc-cons-threshold (* 128 1024 1024))
 
 ;; el-get
 (when load-file-name
@@ -114,7 +111,8 @@
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
 ;; カスタマイズテーマ
-(el-get-bundle nashamri/spacemacs-theme)
+;; (el-get-bundle nashamri/spacemacs-theme)
+(el-get-bundle jschaf/esup)
 
 ;; 初期化
 (require 'package)

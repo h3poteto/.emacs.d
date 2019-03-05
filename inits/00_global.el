@@ -31,8 +31,9 @@
 
 ;; path
 (use-package exec-path-from-shell
-  :init (exec-path-from-shell-initialize)
+  :if (memq window-system '(mac ns x))
   :config
+  (exec-path-from-shell-initialize)
   (let ((envs '("PATH" "GOPATH")))
     (exec-path-from-shell-copy-envs envs)))
 
@@ -49,13 +50,19 @@
     :hook (after-init . which-key-mode))
 
 ;; amx
-(amx-mode t)
+(use-package amx
+  :config
+  (amx-mode t))
 
 ;; undo-tree
-(global-undo-tree-mode)
+(use-package undo-tree
+  :config
+  (global-undo-tree-mode))
 
 ;; yasnippet
-(yas-global-mode 1)
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
 
 ;; fiplr
 (use-package fiplr
@@ -101,7 +108,7 @@
 ;; find
 (global-set-key "\C-x\C-f" 'find-name-dired)
 
-;; reload buffer
+;; ;; reload buffer
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
 
 ;; helm-imenu
