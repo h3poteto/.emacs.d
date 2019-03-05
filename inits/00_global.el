@@ -38,10 +38,11 @@
 (delete-selection-mode t)
 
 ;; path
-(require 'exec-path-from-shell)
-(exec-path-from-shell-initialize)
-(let ((envs '("PATH" "GOPATH")))
-  (exec-path-from-shell-copy-envs envs))
+(use-package exec-path-from-shell
+  :init (exec-path-from-shell-initialize)
+  :config
+  (let ((envs '("PATH" "GOPATH")))
+    (exec-path-from-shell-copy-envs envs)))
 
 ;; editorconfig
 (editorconfig-mode t)
@@ -62,3 +63,6 @@
 
 ;; amx
 (amx-mode t)
+
+;; undo-tree
+(global-undo-tree-mode)

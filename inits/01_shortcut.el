@@ -32,8 +32,5 @@
 ;; helm-imenu
 (global-set-key "\M-a" 'helm-imenu)
 
-;; hs-minor-mode
-(global-set-key (kbd "C-c h") 'hs-toggle-hiding)
-
 ;; query-replaceを別のキーに変更
 (global-set-key (kbd "C-c C-r") 'query-replace)

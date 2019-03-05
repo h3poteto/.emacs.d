@@ -1,3 +1,5 @@
 ;; terraform
-(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
-(add-hook 'terraform-mode-hook #'smartparens-mode)
+(use-package terraform-mode
+  :hook
+  (terraform-mode . terraform-format-on-save-mode)
+  (terraform-mode-hook . smartparens-mode))

@@ -8,8 +8,6 @@
 ;;   (load-theme 'spacemacs-dark t)
 ;;  )
 
-(use-package all-the-icons)
-
 ;; カーソル位置の表示
 (show-paren-mode t)
 (column-number-mode t)
@@ -90,12 +88,6 @@
 (setq sml/no-confirm-load-theme t)
 (setq sml/theme 'dark)
 (sml/setup)
-
-;; sky-color-clock
-;; (require 'sky-color-clock)
-;; (sky-color-clock-initialize 35) ;; 東京の緯度で初期化
-;; (setq sky-color-clock-format "%m/%d %H:%M")
-;; (setq global-mode-string (append global-mode-string '(:eval (sky-color-clock)))) ;; global-mode-stringに追加
 
 ;; 1秒後自動ハイライトされるようになる
 (setq highlight-symbol-idle-delay 1.0)

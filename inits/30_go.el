@@ -1,17 +1,21 @@
 ;; go-mode
 ;; this mode demand gocode, godef and godoc in $GOPATH
-(eval-after-load "go-mode" '(progn (require 'go-autocomplete)))
-(add-hook 'go-mode-hook
-          '(lambda()
-             (setq c-basic-offset 4)
-             (setq indent-tabs-mode t)
-             (local-set-key (kbd "M-.") 'godef-jump)
-             (local-set-key (kbd "C-c d") 'godoc)
-             (go-eldoc-setup)
-             (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)))
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook 'gofmt-before-save)
-(add-hook 'go-mode-hook #'smartparens-mode)
-(add-hook 'go-mode-hook
-          '(lambda ()
-             (hs-minor-mode 1)))
+(use-package go-mode
+  :bind
+  (:map go-mode-map
+   ("M-." . godef-jump)
+   ("C-c d" . godoc))
+  :config
+  (require 'go-autocomplete)
+  (require 'go-eldoc)
+  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+  (setq c-basic-offset 4)
+  (setq indent-tabs-mode t)
+  (go-eldoc-setup)
+  (setq gofmt-command "goimports")
+  :hook
+  (go-mode . smartparens-mode)
+  (before-save . gofmt-before-save)
+  (go-mode . (lambda ()
+               (hs-minor-mode 1)))
+  )

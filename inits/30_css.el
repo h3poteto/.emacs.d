@@ -4,9 +4,8 @@
 (use-package css-mode
   :mode
   ("\\.scss\\'" . css-mode)
-  :config
-  (add-hook 'css-mode-hook 'rainbow-mode)
-  (add-hook 'css-mode-hook
-          '(lambda ()
-             (hs-minor-mode 1))))
+  :hook
+  (css-mode . rainbow-mode)
+  (css-mode . (lambda ()
+                (hs-minor-mode 1))))
 

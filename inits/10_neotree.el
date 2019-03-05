@@ -1,3 +1,6 @@
+;; neotreeでiconsを使う場合に必須
+(use-package all-the-icons)
+
 ;; neotree
 (use-package neotree
   :bind

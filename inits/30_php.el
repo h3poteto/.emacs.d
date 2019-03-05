@@ -1,4 +1,9 @@
 ;; php-mode
-(setq php-mode-force-pear t)
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode ))
+(use-package php-mode
+  :mode
+  ("\\.php$" . php-mode)
+  :config
+  (setq php-mode-force-pear t))
+
+
 
