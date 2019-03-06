@@ -19,7 +19,7 @@
 (el-get-bundle anything)
 (el-get-bundle auto-complete)
 (el-get-bundle editorconfig)
-(el-get-bundle yaml-mode)
+(el-get-bundle yoshiki/yaml-mode)
 (el-get-bundle flycheck)
 (el-get-bundle mooz/js2-mode)
 (el-get-bundle bbatsov/projectile)
