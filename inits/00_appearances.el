@@ -119,6 +119,7 @@
 
 ;; common indent
 (setq-default indent-tabs-mode nil)
+(setq standard-indent 2)
 
 ;; タブ
 (setq-default tab-width 4)

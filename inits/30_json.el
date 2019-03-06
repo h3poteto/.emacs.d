@@ -3,6 +3,9 @@
   :mode
   ("\\.json$" . json-mode)
   ("\\.json.tpl$" . json-mode)
+  :config
+  ;; json-modeは内部でjs-modeを利用しておりindentの設定もjsのものを利用する
+  (setq js-indent-level 2)
   :hook
   (json-mode . flymake-json-load)
   )
