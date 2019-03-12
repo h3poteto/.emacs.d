@@ -87,6 +87,11 @@
 ;; newline and indent
 (setq indent-line-function 'indent-relative-maybe)
 
+;; *.~を作成しない
+(setq make-backup-files nil)
+;; *.#を作成しない
+(setq auto-save-default nil)
+
 ;;----------------------------------
 ;; autocmoplete
 ;;----------------------------------
