@@ -26,8 +26,6 @@
 
 ;; toggle line
 (setq default-truncate-lines nil)
-(global-set-key "\C-c\C-l" 'toggle-truncate-lines)
-
 
 ;; color setting
 ;; seto window status
@@ -85,9 +83,11 @@
 (global-whitespace-mode 1)
 
 ;; smart-mode-line
-(setq sml/no-confirm-load-theme t)
-(setq sml/theme 'dark)
-(sml/setup)
+(use-package smart-mode-line
+  :config
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/theme 'dark)
+  (sml/setup))
 
 ;; 1秒後自動ハイライトされるようになる
 (setq highlight-symbol-idle-delay 1.0)
@@ -99,16 +99,20 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; 括弧の色を強調する設定
-(require 'cl-lib)
-(require 'color)
-(defun rainbow-delimiters-using-stronger-colors ()
-  (interactive)
-  (cl-loop
-   for index from 1 to rainbow-delimiters-max-face-count
-   do
-   (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
-    (cl-callf color-saturate-name (face-foreground face) 30))))
-(add-hook 'emacs-startup-hook 'rainbow-delimiters-using-stronger-colors)
+(use-package rainbow-delimiters
+  :config
+  (require 'cl-lib)
+  (require 'color)
+  (defun rainbow-delimiters-using-stronger-colors ()
+    (interactive)
+    (cl-loop
+     for index from 1 to rainbow-delimiters-max-face-count
+     do
+     (let ((face (intern (format "rainbow-delimiters-depth-%d-face" index))))
+       (cl-callf color-saturate-name (face-foreground face) 30))))
+  :hook
+  (emacs-startup . rainbow-delimiters-using-stronger-colors))
+
 
 ;; ツールバーを非表示にする
 (tool-bar-mode 0)
@@ -171,81 +175,3 @@
   (setq hl-line-face 'hlline-face)
   ;; (setq hl-line-face 'underline) ; 下線
   (global-hl-line-mode))
-
-
-;;------------------------------------------
-;; tabbar
-;;------------------------------------------
-(require 'tabbar)
-(tabbar-mode 1)
-;; タブ上でマウスホイール操作無効
-(tabbar-mwheel-mode -1)
-;; グループ化しない
-(setq tabbar-buffer-groups-function nil)
-;; 左に表示されるボタンを無効化
-(dolist (btn '(tabbar-buffer-home-button
-               tabbar-scroll-left-button
-               tabbar-scroll-right-button))
-  (set btn (cons (cons "" nil)
-                 (cons "" nil))))
-;; ウインドウからはみ出たタブを省略して表示
-(setq tabbar-auto-scroll-flag nil)
-(setq tabbar-use-images nil)
-;; タブとタブの間の長さ
-(setq tabbar-separator '(1.5))
-
-;; 外観変更
-(set-face-attribute
- 'tabbar-default nil
- :family "Comic Sans MS"
- :background "black"
- :foreground "gray72"
- :height 1.0)
-(set-face-attribute
- 'tabbar-unselected nil
- :background "black"
- :foreground "grey72"
- :box nil)
-(set-face-attribute
- 'tabbar-selected nil
- :background "black"
- :foreground "#c82829"
- :box nil)
-(set-face-attribute
- 'tabbar-button nil
- :box nil)
-(set-face-attribute
- 'tabbar-separator nil
- :height 1.2)
-
-;; タブに表示させるバッファの設定
-(defvar my-tabbar-displayed-buffers
- '("scratch*" "*Messages*" "*Backtrace*" "*Colors*" "*Faces*" "*vc-")
-  "*Regexps matches buffer names always included tabs.")
-(defun my-tabbar-buffer-list ()
-  "Return the list of buffers to show in tabs.
-Exclude buffers whose name starts with a space or an asterisk.
-The current buffer and buffers matches `my-tabbar-displayed-buffers'
-are always included."
-  (let* ((hides (list ?\  ?\*))
-         (re (regexp-opt my-tabbar-displayed-buffers))
-         (cur-buf (current-buffer))
-         (tabs (delq nil
-                     (mapcar (lambda (buf)
-                               (let ((name (buffer-name buf)))
-                                 (when (or (string-match re name)
-                                           (not (memq (aref name 0) hides)))
-                                   buf)))
-                             (buffer-list)))))
-    ;; Always include the current buffer.
-    (if (memq cur-buf tabs)
-        tabs
-      (cons cur-buf tabs))))
-(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
-
-;; タブ移動キーバインド
-(global-set-key (kbd "<M-right>") 'tabbar-forward-tab)
-(global-set-key (kbd "<M-left>") 'tabbar-backward-tab)
-
-;; タブモードのオン/オフをトグル
-(global-set-key (kbd "M-4") 'tabbar-mode)
