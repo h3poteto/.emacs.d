@@ -215,4 +215,5 @@
   (terraform-mode . smartparens-mode)
   (emacs-lisp-mode . smartparens-mode)
   (js2-mode . smartparens-mode)
+  (typescript-mode . smartparens-mode)
   )
