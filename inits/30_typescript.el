@@ -14,4 +14,6 @@
                        ;; install it separately via package-install
                        ;; `M-x package-install [ret] company`
                        (company-mode +1)))
-  )
+  (typescript-mode . prettier-js-mode)
+  (typescript-mode . (lambda ()
+                (hs-minor-mode 1))))
