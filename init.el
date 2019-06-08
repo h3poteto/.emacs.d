@@ -68,11 +68,11 @@
 (el-get-bundle ensime/ensime-emacs
   :name ensime
   :branch "v1.0.1")
-(el-get-bundle magit
-  :name magit
-  :info nil
-  :build (("touch" "lisp/magit-autoloads.el"))
-  :build/berkeley-unix nil)
+;; (el-get-bundle magit
+;;   :name magit
+;;   :info nil
+;;   :build (("touch" "lisp/magit-autoloads.el"))
+;;   :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle purcell/mmm-mode)
 (el-get-bundle AdamNiederer/vue-html-mode)
