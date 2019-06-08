@@ -117,6 +117,9 @@
 ;; ツールバーを非表示にする
 (tool-bar-mode 0)
 
+;; スクロールバーを非表示にする
+(scroll-bar-mode -1)
+
 ;; タイトルバーをカスタマイズ
 (set-frame-parameter nil 'ns-appearance 'dark)
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
