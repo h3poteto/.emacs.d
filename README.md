@@ -18,7 +18,13 @@ packageのインストールにはel-getを使います．el-get自体がイン�
 
 ## フォントのインストール
 
-neotreeをiconsで表示しているためall-the-iconsを利用しています．これは起動後にフォントをインストールする必要があります．
+日本語フォントとしてRicty Diminishedを推奨しています．
+
+```
+$ sudo apt-get install fonts-ricty-diminished
+```
+
+また，neotreeをiconsで表示しているためall-the-iconsを利用しています．これは起動後にフォントをインストールする必要があります．
 
 ```
 M-x all-the-icons-install-fonts
@@ -28,15 +34,26 @@ M-x all-the-icons-install-fonts
 ## 別途必要になるもの
 - silver-searcher-ag
 - ctags
-- jsonLint
-- eslint, babel-eslint, eslint-plugin-react
+- eslint, babel-eslint, json-lint
 - gocode, godoc, godef, goimports
 - python, flake8
 
-### eslint関連
+### Ag
 
 ```
-$ npm install -g eslint babel-eslint eslint-plugin-react
+$ sudo apt-get install silversearcher-ag
+```
+
+
+### ctags
+```
+$ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
+```
+
+### eslint
+
+```
+$ npm install -g eslint babel-eslint json-lint
 ```
 
 プロジェクトフォルダには以下のような`.eslintrc` を用意しておくと，emacsから読み込んでくれます．
@@ -78,12 +95,6 @@ $ npm install -g eslint babel-eslint eslint-plugin-react
     "react/jsx-uses-vars": 1
   }
 }
-```
-
-
-### ctags更新
-```
-$ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
 ```
 
 ### gocode, godoc, goimports
