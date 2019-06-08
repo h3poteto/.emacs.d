@@ -113,6 +113,7 @@
 ;; カスタマイズテーマ
 (el-get-bundle h3poteto/monokai-emacs)
 (el-get-bundle jschaf/esup)
+(el-get-bundle voxpupuli/puppet-mode)
 
 ;; 初期化
 (require 'package)
