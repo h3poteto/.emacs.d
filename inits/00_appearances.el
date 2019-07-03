@@ -162,6 +162,11 @@
   (add-hook 'sass-mode-hook 'highlight-indentation-current-column-mode)
   (add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
   (add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
+  (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
+  (add-hook 'go-mode-hook 'highlight-indentation-current-column-mode)
+  (add-hook 'typescript-mode-hook 'highlight-indentation-current-column-mode)
+  (add-hook 'vue-mode-hook 'highlight-indentation-current-column-mode)
+  (add-hook 'elixir-mode-hook 'highlight-indentation-current-column-mode)
   (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
 
   ;; カーソル行をハイライト
