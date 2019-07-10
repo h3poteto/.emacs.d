@@ -32,11 +32,18 @@ M-x all-the-icons-install-fonts
 
 
 ## 別途必要になるもの
+- emacs-mozc-bin
 - silver-searcher-ag
 - ctags
 - eslint, babel-eslint, json-lint
 - gocode, godoc, godef, goimports
 - python, flake8
+
+### emacs-mozc
+
+```
+$ sudo apt-get install emacs-mozc-bin
+```
 
 ### Ag
 
