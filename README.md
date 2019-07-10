@@ -1,38 +1,49 @@
 # emacs.d
-個人的なemacsの設定になります．
+My Emacs setting for Linux and MacOS.
 
-## 導入
+## Introduction
 
-emacsをインストール後，`~/.emacs` を作成し，以下のようにして読み込みます．
+After you install Emacs, create a directory `~/.emacs` and wirte as below:
 
 ```elisp
 (load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init")))
 ```
 
+I have prepared example for each OS.
+
+- [Linux](emacs.linux)
+- [MacOS](emacs.darwin)
+
 ## el-get
 
-packageのインストールにはel-getを使います．el-get自体がインストールされていない場合には，起動時に自動的にインストールを行います．
-そのため，特に設定の必要はありません．初回起動時に必要なパッケージ群のインストールが走ります．
+This Emacs config use el-get as package management.
+If el-get is not yet installed, Emacs will automatically install el-get at first.
+So, you don't need to setup el-get.
 
-ただし，package.elで既にパッケージをインストールしている場合，warningが出ます．予めpackage.elでインストールしたものは全て削除しておいてください．
 
-## フォントのインストール
+But, you have already installed some packages using package.el, it will be warning.
+Please uninstall all packages which are installed by package.el.
 
-日本語フォントとしてRicty Diminishedを推奨しています．
+## Fonts
+
+I adopt Ricty Diminished as Japanese font.
+So please install this font in your OS.
+
 
 ```
 $ sudo apt-get install fonts-ricty-diminished
 ```
 
-また，neotreeをiconsで表示しているためall-the-iconsを利用しています．これは起動後にフォントをインストールする必要があります．
+And Emacs require all-the-icons to display icons in neotree.
+Please install `all-the-icons-install-fonts` on Emacs
 
 ```
 M-x all-the-icons-install-fonts
 ```
 
 
-## 別途必要になるもの
-- emacs-mozc-bin
+## Required libaries
+- emacs-mozc
 - silver-searcher-ag
 - ctags
 - eslint, babel-eslint, json-lint
@@ -40,6 +51,8 @@ M-x all-the-icons-install-fonts
 - python, flake8
 
 ### emacs-mozc
+
+I use emacs-mozc to write Japanese in Emacs, so install `emacs-mozc-bin`.
 
 ```
 $ sudo apt-get install emacs-mozc-bin
@@ -53,6 +66,7 @@ $ sudo apt-get install silversearcher-ag
 
 
 ### ctags
+
 ```
 $ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
 ```
@@ -63,10 +77,9 @@ $ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="publi
 $ npm install -g eslint babel-eslint json-lint
 ```
 
-プロジェクトフォルダには以下のような`.eslintrc` を用意しておくと，emacsから読み込んでくれます．
-`.eslintrc`
+If there is an eslint config in your project, like `.eslintrc.json`, Emacs automatically read this config.
 
-```
+```json
 {
   "parser": "babel-eslint",
   "plugins": [ "react" ],
@@ -105,7 +118,8 @@ $ npm install -g eslint babel-eslint json-lint
 ```
 
 ### gocode, godoc, goimports
-goのソースを触る際には必要となります．
+If you write golang, these package are required.
+
 
 ```
 $ go get github.com/nsf/gocode
@@ -115,22 +129,22 @@ $ go get github.com/rogpeppe/godef
 ```
 
 ### python
-pythonのソースを開くときに必要になります．
-python用のjediを動かすためにpython3の実行環境が必要になります．
-pyenvを使って，python3をインストールしておいてください．
+If you write python, Emacs needs `jedi` and python3 is required to run `jedi`.
+At first, install python3 using pyenv.
 
-その上で，
+Then install `jedi` on Emacs:
 ```
 M-x jedi:install-server
 ```
 
-とすることでjediがインストールされます．
-このとき，virtualenvが依存に含まれており，インストールされない場合には，自分で `pip install virutalenv` しておく必要があります．
+In this time, `jedi` needs `virtualenv` so you have to install `virtualenv`.
 
-また，pythonのLintツールとしてflake8を有効化しています．
+```
+$ pip install virtualenv
+```
+
+I use `falke8` as lint tool for python. Please install it.
 
 ```
 $ pip install flake8
 ```
-
-しておくと，emacs上でもLintを実行してくれます．
