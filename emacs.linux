@@ -7,21 +7,7 @@
 
 (load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init")))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2)
- '(init-loader-show-log-after-init (quote error-only))
- '(package-selected-packages (quote (rainbow-mode csv-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 ;; 色々試したけど標準フォントはUbuntu monoがやめられない
 ;; 日本語はいまいちなのでRictyにしておく
 (set-fontset-font t 'japanese-jisx0208 "Ricty Diminished Discord")
+
