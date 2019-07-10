@@ -92,6 +92,14 @@
 ;; *.#を作成しない
 (setq auto-save-default nil)
 
+;;; mozc
+(use-package mozc
+  :config
+  (set-language-environment "Japanese")           ; 言語環境を"japanese"に
+  (setq default-input-method "japanese-mozc")     ; IMEをjapanes-mozcに
+  (prefer-coding-system 'utf-8)                   ; デフォルトの文字コードをUTF-8
+  )
+
 ;;----------------------------------
 ;; autocmoplete
 ;;----------------------------------

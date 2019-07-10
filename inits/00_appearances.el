@@ -183,3 +183,5 @@
   (setq hl-line-face 'hlline-face)
   ;; (setq hl-line-face 'underline) ; 下線
   (global-hl-line-mode))
+
+(menu-bar-mode -1)
