@@ -39,3 +39,6 @@
 
 ;; toggle line
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
+
+;; mozc
+(global-set-key (kbd "<henkan>") (lambda () (interactive) (mozc-mode 1)))

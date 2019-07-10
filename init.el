@@ -115,6 +115,9 @@
 (el-get-bundle jschaf/esup)
 (el-get-bundle voxpupuli/puppet-mode)
 (el-get-bundle dryman/toml-mode.el)
+(el-get-bundle mozc
+  :type http
+  :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
 
 ;; 初期化
 (require 'package)
@@ -126,3 +129,4 @@
  '(init-loader-show-log-after-init 'error-only))
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
+
