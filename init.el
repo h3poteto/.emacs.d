@@ -1,5 +1,9 @@
 (setq gc-cons-threshold (* 128 1024 1024))
 
+;; Error message in inits
+(custom-set-variables
+ '(init-loader-show-log-after-init (quote error-only)))
+
 ;; el-get
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
