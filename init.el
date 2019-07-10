@@ -16,7 +16,6 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-
 ;; el-get packages
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
@@ -122,6 +121,7 @@
 (el-get-bundle mozc
   :type http
   :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
+(el-get-bundle d5884/mozc-popup)
 
 ;; 初期化
 (require 'package)

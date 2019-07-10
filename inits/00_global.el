@@ -100,6 +100,10 @@
   (prefer-coding-system 'utf-8)                   ; デフォルトの文字コードをUTF-8
   )
 
+(use-package mozc-popup
+  :config
+  (setq mozc-candidate-style 'popup))
+
 ;;----------------------------------
 ;; autocmoplete
 ;;----------------------------------
