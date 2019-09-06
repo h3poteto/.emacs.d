@@ -55,6 +55,7 @@
 (el-get-bundle async)
 (el-get-bundle helm-ag)
 (el-get-bundle terraform-mode)
+(el-get-bundle rafalcieslak/emacs-company-terraform)
 (el-get-bundle json-mode)
 (el-get-bundle flymake-easy)
 (el-get-bundle purcell/flymake-json)

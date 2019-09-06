@@ -125,7 +125,12 @@
       (setq ad-return-value
             (remove-if contain-japanese ad-return-value))))
   )
-
+;;-----------------------------------
+;; company-mode
+;;-----------------------------------
+(use-package company
+  :config
+  (global-company-mode t))
 ;;-----------------------------------
 ;; ag
 ;;-----------------------------------
