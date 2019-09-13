@@ -48,7 +48,7 @@
 ;; Language server protocol for golang
 (el-get-bundle joaotavora/eglot)
 ;; For Language server protocol
-(el-get-bundle jsonrpc)
+(el-get-bundle emacsmirror/jsonrpc)
 (el-get-bundle ruby-end)
 (el-get-bundle ace-jump-mode)
 (el-get-bundle neotree)
