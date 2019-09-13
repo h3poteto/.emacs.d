@@ -11,4 +11,7 @@
   (go-mode . (lambda ()
 
                (setq indent-tabs-mode t)))
+  (go-mode . lsp-deferred)
   )
+
+

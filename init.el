@@ -46,7 +46,9 @@
 (el-get-bundle wgrep)
 (el-get-bundle go-mode)
 ;; Language server protocol for golang
-(el-get-bundle joaotavora/eglot)
+(el-get-bundle emacs-lsp/lsp-mode)
+(el-get-bundle emacs-lsp/lsp-ui)
+(el-get-bundle tigersoldier/company-lsp)
 ;; For Language server protocol
 (el-get-bundle emacsmirror/jsonrpc)
 (el-get-bundle ruby-end)

@@ -236,14 +236,25 @@
   )
 
 ;;-------------------------------------------
-;; eglot for language server protocol
+;; language server protocol
 ;;-------------------------------------------
-(use-package eglot
-  :config
-  (define-key eglot-mode-map (kbd "M-.") 'xref-find-definitions)
-  (define-key eglot-mode-map (kbd "M-,") 'pop-tag-mark)
-  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
+(use-package lsp-mode
+  :custom
+  (
+   (lsp-inhibit-message t)
+   (lsp-message-project-root-warning t)
+   (create-lockfiles nil))
   :hook
-  (go-mode . eglot-ensure)
-  (js2-mode . eglot-ensure)
+  (prog-major-mode . lsp-prog-major-mode-enable)
   )
+
+(use-package lsp-ui
+  :after lsp-mode
+  :custom
+  (scroll-margin 0)
+  :hook
+  (lsp-mode . lsp-ui-mode)
+  )
+
+(use-package company-lsp
+  :after lsp-mode)
