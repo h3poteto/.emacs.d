@@ -20,4 +20,5 @@
   (js2-mode . prettier-js-mode)
   (js2-mode . (lambda ()
                 (hs-minor-mode 1)))
+  (js2-mode . lsp-deferred)
   )

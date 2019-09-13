@@ -16,4 +16,5 @@
                        (company-mode +1)))
   (typescript-mode . prettier-js-mode)
   (typescript-mode . (lambda ()
-                (hs-minor-mode 1))))
+                       (hs-minor-mode 1)))
+  )
