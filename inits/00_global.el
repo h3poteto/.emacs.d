@@ -234,3 +234,16 @@
   (js2-mode . smartparens-mode)
   (typescript-mode . smartparens-mode)
   )
+
+;;-------------------------------------------
+;; eglot for language server protocol
+;;-------------------------------------------
+(use-package eglot
+  :config
+  (define-key eglot-mode-map (kbd "M-.") 'xref-find-definitions)
+  (define-key eglot-mode-map (kbd "M-,") 'pop-tag-mark)
+  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
+  :hook
+  (go-mode . eglot-ensure)
+  (js2-mode . eglot-ensure)
+  )

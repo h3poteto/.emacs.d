@@ -41,6 +41,23 @@ Please install `all-the-icons-install-fonts` on Emacs
 M-x all-the-icons-install-fonts
 ```
 
+## Language Server Protocol
+Some minor mode uses language server protocol. So please install following packages for each language.
+
+- gopls
+- javascript-typescript-langserver
+
+### gopls
+
+```
+$ go get -u golang.org/x/tools/cmd/gopls
+```
+
+### javascript-typescript-langserver
+
+```
+$ npm install -g javascript-typescript-langserver
+```
 
 ## Required libaries
 - emacs-mozc
@@ -115,14 +132,6 @@ If there is an eslint config in your project, like `.eslintrc.json`, Emacs autom
     "react/jsx-uses-vars": 1
   }
 }
-```
-
-### gopls
-It is a Language server protocol for golang,
-
-
-```
-$ go get -u golang.org/x/tools/cmd/gopls
 ```
 
 ### python

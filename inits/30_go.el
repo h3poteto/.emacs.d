@@ -1,10 +1,3 @@
-(use-package eglot
-  :config
-  (define-key eglot-mode-map (kbd "M-.") 'xref-find-definitions)
-  (define-key eglot-mode-map (kbd "M-,") 'pop-tag-mark)
-  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
-  (add-hook 'go-mode-hook 'eglot-ensure))
-
 (use-package go-mode
   :config
   (setq indent-tabs-mode nil)
