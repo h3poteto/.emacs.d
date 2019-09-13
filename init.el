@@ -45,12 +45,14 @@
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
 (el-get-bundle go-mode)
+;; Language server protocol for golang
+(el-get-bundle joaotavora/eglot)
+;; For Language server protocol
+(el-get-bundle jsonrpc)
 (el-get-bundle ruby-end)
 (el-get-bundle ace-jump-mode)
 (el-get-bundle neotree)
 (el-get-bundle web-mode)
-(el-get-bundle go-autocomplete)
-(el-get-bundle go-eldoc)
 (el-get-bundle fuzzy)
 (el-get-bundle async)
 (el-get-bundle helm-ag)
@@ -72,11 +74,6 @@
 (el-get-bundle ensime/ensime-emacs
   :name ensime
   :branch "v1.0.1")
-;; (el-get-bundle magit
-;;   :name magit
-;;   :info nil
-;;   :build (("touch" "lisp/magit-autoloads.el"))
-;;   :build/berkeley-unix nil)
 (el-get-bundle protobuf-mode)
 (el-get-bundle purcell/mmm-mode)
 (el-get-bundle AdamNiederer/vue-html-mode)
@@ -86,7 +83,7 @@
 (el-get-bundle Fuco1/smartparens)
 (el-get-bundle ajc/nginx-mode)
 (el-get-bundle Malabarba/smart-mode-line)
-;; djang-modeに必要な依存
+;; For django-mode
 (el-get-bundle abo-abo/helm-make)
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle AndreaCrotti/yasnippet-snippets)
@@ -105,17 +102,19 @@
 (el-get-bundle highlight-symbol)
 (el-get-bundle Fanael/rainbow-delimiters)
 (el-get-bundle syohex/emacs-fluentd-mode)
-;; pyrimpotで使う
+;; For pyrimpot
 (el-get-bundle cask/shut-up)
 (el-get-bundle Wilfred/pyimport)
+;;
 (el-get-bundle prettier-js)
 (el-get-bundle which-key)
 (el-get-bundle DarwinAwardWinner/amx)
-;; neotreeでiconsするために必要
+;; To show icons in neotree
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
-;; カスタマイズテーマ
+;; My customize theme
 (el-get-bundle h3poteto/monokai-emacs)
+;;
 (el-get-bundle jschaf/esup)
 (el-get-bundle voxpupuli/puppet-mode)
 (el-get-bundle dryman/toml-mode.el)
@@ -124,7 +123,6 @@
   :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
 (el-get-bundle d5884/mozc-popup)
 
-;; 初期化
 (require 'package)
 (package-initialize)
 

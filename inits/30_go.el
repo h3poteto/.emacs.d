@@ -1,16 +1,15 @@
-;; go-mode
-;; this mode demand gocode, godef and godoc in $GOPATH
-(use-package go-mode
-  :bind
-  (:map go-mode-map
-   ("M-." . godef-jump)
-   ("C-c d" . godoc))
+(use-package eglot
   :config
-  (require 'go-autocomplete)
-  (require 'go-eldoc)
-  (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+  (define-key eglot-mode-map (kbd "M-.") 'xref-find-definitions)
+  (define-key eglot-mode-map (kbd "M-,") 'pop-tag-mark)
+  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
+  (add-hook 'go-mode-hook 'eglot-ensure))
+
+(use-package go-mode
+  :config
+  (setq indent-tabs-mode nil)
   (setq c-basic-offset 4)
-  (go-eldoc-setup)
+  (setq tab-width 4)
   (setq gofmt-command "goimports")
   :hook
   (before-save . gofmt-before-save)

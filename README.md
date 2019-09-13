@@ -47,7 +47,7 @@ M-x all-the-icons-install-fonts
 - silver-searcher-ag
 - ctags
 - eslint, babel-eslint, json-lint
-- gocode, godoc, godef, goimports
+- gopls
 - python, flake8
 
 ### emacs-mozc
@@ -117,15 +117,12 @@ If there is an eslint config in your project, like `.eslintrc.json`, Emacs autom
 }
 ```
 
-### gocode, godoc, goimports
-If you write golang, these package are required.
+### gopls
+It is a Language server protocol for golang,
 
 
 ```
-$ go get github.com/nsf/gocode
-$ go get golang.org/x/tools/cmd/godoc
-$ go get golang.org/x/tools/cmd/goimports
-$ go get github.com/rogpeppe/godef
+$ go get -u golang.org/x/tools/cmd/gopls
 ```
 
 ### python
