@@ -4,6 +4,8 @@
   (setq c-basic-offset 4)
   (setq tab-width 4)
   (setq gofmt-command "goimports")
+  ;; flycheck is better than flymake in lsp-mode, so disable flymake.
+  (setq lsp-prefer-flymake nil)
   :hook
   (before-save . gofmt-before-save)
   (go-mode . (lambda ()

@@ -23,6 +23,8 @@
     (if (not (member ruby-mode-hs-info hs-special-modes-alist))
         (setq hs-special-modes-alist
               (cons ruby-mode-hs-info hs-special-modes-alist))))
+  ;; flycheck is better than flymake in lsp-mode, so disable flymake.
+  (setq lsp-prefer-flymake nil)
   :hook
   (ruby-mode . (lambda()
                  (add-to-list 'ac-sources 'ac-source-abbrev)))

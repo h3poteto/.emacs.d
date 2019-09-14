@@ -5,6 +5,8 @@
   :config
   ;; js-indent
   (setq js-indent-level 2)
+  ;; flycheck is better than flymake in lsp-mode, so disable flymake.
+  (setq lsp-prefer-flymake nil)
   ;; method-chain indent
   (advice-add 'js--multi-line-declaration-indentation :around (lambda (orig-fun &rest args) nil))
   (setq indent-tabs-mode nil)
@@ -21,4 +23,5 @@
   (js2-mode . (lambda ()
                 (hs-minor-mode 1)))
   (js2-mode . lsp-deferred)
+  (js2-mode . flycheck-mode)
   )

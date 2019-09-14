@@ -19,6 +19,8 @@
   (typescript-mode . (lambda ()
                        (hs-minor-mode 1)))
   ;; Now I don't use lsp-mode for typescript.
-  ;; Because it can't customize indent-level.
+  ;; Because tide is better than lsp in some reasons:
+  ;; 1. Can't customize indent-level.
+  ;; 2. Can't resolve alias path, lile `@/some_package'
   ;; (typescript-mode . lsp-deferred)
   )
