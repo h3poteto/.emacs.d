@@ -9,6 +9,9 @@
   ;; https://github.com/AdamNiederer/vue-mode/issues/74#issuecomment-528560608
   (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
   (setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+  (flycheck-add-mode 'javascript-eslint 'vue-mode)
+  (flycheck-add-mode 'javascript-eslint 'vue-html-mode)
+  (flycheck-add-mode 'javascript-eslint 'css-mode)
   :hook
   (vue-mode . prettier-js-mode)
   (vue-mode . lsp-deferred)
