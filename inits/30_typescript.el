@@ -2,6 +2,7 @@
   :mode
   ("\\.ts\\'" . typescript-mode)
   :hook
+  ;; Now I use prettier so tide-format is unnecessary
   ;; (before-save . tide-format-before-save)
   (typescript-mode . (lambda ()
                        (setq typescript-indent-level 2)
@@ -17,4 +18,7 @@
   (typescript-mode . prettier-js-mode)
   (typescript-mode . (lambda ()
                        (hs-minor-mode 1)))
+  ;; Now I don't use lsp-mode for typescript.
+  ;; Because it can't customize indent-level.
+  ;; (typescript-mode . lsp-deferred)
   )
