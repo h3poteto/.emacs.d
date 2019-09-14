@@ -28,6 +28,8 @@
                  (add-to-list 'ac-sources 'ac-source-abbrev)))
   (ruby-mode . (lambda ()
                  (hs-minor-mode 1)))
+  (ruby-mode . lsp-deferred)
+  (ruby-mode . flycheck-mode)
   )
 
 

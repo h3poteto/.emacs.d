@@ -47,24 +47,36 @@ Some minor mode uses language server protocol. So please install following packa
 - gopls
 - javascript-typescript-langserver
 - pyls
+- solargraph
 
 ### gopls
+For golang.
 
 ```
 $ go get -u golang.org/x/tools/cmd/gopls
 ```
 
 ### javascript-typescript-langserver
+For javascript and typescript.
 
 ```
 $ npm install -g javascript-typescript-langserver
 ```
 
 ### pyls
+For python.
 
 ```
 $ pip install 'python-language-server[all]'
 ```
+
+### solargraph
+For ruby.
+
+```
+# gem install solargraph
+```
+
 
 ## Required libaries
 - emacs-mozc
