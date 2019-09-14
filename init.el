@@ -23,48 +23,84 @@
 (el-get-bundle auto-complete)
 (el-get-bundle editorconfig)
 (el-get-bundle yoshiki/yaml-mode)
-(el-get-bundle flycheck)
-(el-get-bundle mooz/js2-mode)
-(el-get-bundle bbatsov/projectile)
-(el-get-bundle rhtml-mode)
-(el-get-bundle twittering-mode)
+(el-get-bundle highlight-indentation)
 (el-get-bundle ag)
-(el-get-bundle defunkt/coffee-mode)
-(el-get-bundle slim-mode)
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle fiplr)
-(el-get-bundle flycheck-color-mode-line)
-(el-get-bundle highlight-indentation)
-(el-get-bundle less-css-mode)
-(el-get-bundle markdown-mode)
-(el-get-bundle php-mode)
-(el-get-bundle csv-mode)
-(el-get-bundle popwin)
-(el-get-bundle ruby-block)
-(el-get-bundle ruby-electric)
 (el-get-bundle tabbar)
 (el-get-bundle wgrep)
-(el-get-bundle go-mode)
-;; Language server protocol for golang
-(el-get-bundle emacs-lsp/lsp-mode)
-(el-get-bundle emacs-lsp/lsp-ui)
-(el-get-bundle tigersoldier/company-lsp)
-;; For Language server protocol
-(el-get-bundle emacsmirror/jsonrpc)
-(el-get-bundle ruby-end)
 (el-get-bundle ace-jump-mode)
-(el-get-bundle neotree)
-(el-get-bundle web-mode)
 (el-get-bundle fuzzy)
 (el-get-bundle async)
 (el-get-bundle helm-ag)
-(el-get-bundle terraform-mode)
-(el-get-bundle rafalcieslak/emacs-company-terraform)
-(el-get-bundle json-mode)
+(el-get-bundle sr-speedbar)
+(el-get-bundle Fuco1/smartparens)
+(el-get-bundle Malabarba/smart-mode-line)
+(el-get-bundle undo-tree)
+(el-get-bundle iedit)
+(el-get-bundle syohex/emacs-codic)
+(el-get-bundle rainbow-mode)
+(el-get-bundle company-mode/company-mode)
+(el-get-bundle highlight-symbol)
+(el-get-bundle Fanael/rainbow-delimiters)
+(el-get-bundle which-key)
+(el-get-bundle DarwinAwardWinner/amx)
+(el-get-bundle jschaf/esup)
+(el-get-bundle neotree)
+;; To show icons in neotree
+(el-get-bundle domtronn/all-the-icons.el)
+(el-get-bundle memoize)
+;; Japanese
+(el-get-bundle mozc
+  :type http
+  :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
+(el-get-bundle d5884/mozc-popup)
+;; My customize theme
+(el-get-bundle h3poteto/monokai-emacs)
+;; flycheck
+(el-get-bundle flycheck)
+(el-get-bundle flycheck-color-mode-line)
+;; flymake
 (el-get-bundle flymake-easy)
 (el-get-bundle purcell/flymake-json)
 (el-get-bundle meqif/flymake-diagnostic-at-point)
-(el-get-bundle sr-speedbar)
+;; Language server protocol
+(el-get-bundle emacs-lsp/lsp-mode)
+(el-get-bundle emacs-lsp/lsp-ui)
+(el-get-bundle tigersoldier/company-lsp)
+(el-get-bundle emacsmirror/jsonrpc)
+;; js, ts
+(el-get-bundle mooz/js2-mode)
+(el-get-bundle defunkt/coffee-mode)
+(el-get-bundle typescript-mode)
+(el-get-bundle tide)
+(el-get-bundle prettier-js)
+;; ruby, rails
+(el-get-bundle bbatsov/projectile)
+(el-get-bundle rhtml-mode)
+(el-get-bundle slim-mode)
+(el-get-bundle ruby-block)
+(el-get-bundle ruby-electric)
+(el-get-bundle ruby-end)
+;; css
+(el-get-bundle less-css-mode)
+(el-get-bundle sass-mode)
+;; markdown
+(el-get-bundle markdown-mode)
+;; php
+(el-get-bundle php-mode)
+;; csv
+(el-get-bundle csv-mode)
+;; golang
+(el-get-bundle go-mode)
+;; html
+(el-get-bundle web-mode)
+;; terraform
+(el-get-bundle terraform-mode)
+(el-get-bundle rafalcieslak/emacs-company-terraform)
+;; json
+(el-get-bundle json-mode)
+;; elixir
 (el-get-bundle elixir-lang/emacs-elixir
   :named elixir-mode)
 (el-get-bundle alchemist)
@@ -72,60 +108,35 @@
   :name ac-alchemist)
 (el-get-bundle lbolla/emacs-flycheck-elixir
   :name flycheck-elixir)
-(el-get-bundle sass-mode)
-;; https://github.com/ensime/ensime-emacs/issues/669
-;; この対応のため，一時的に古いensimeを使う
-(el-get-bundle ensime/ensime-emacs
-  :name ensime
-  :branch "v1.0.1")
+;; protocol buffer
 (el-get-bundle protobuf-mode)
+;; vue
 (el-get-bundle purcell/mmm-mode)
 (el-get-bundle AdamNiederer/vue-html-mode)
 (el-get-bundle AdamNiederer/ssass-mode)
 (el-get-bundle Fanael/edit-indirect)
 (el-get-bundle AdamNiederer/vue-mode)
-(el-get-bundle Fuco1/smartparens)
+;; nginx
 (el-get-bundle ajc/nginx-mode)
-(el-get-bundle Malabarba/smart-mode-line)
-;; For django-mode
+;; django
 (el-get-bundle abo-abo/helm-make)
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle AndreaCrotti/yasnippet-snippets)
 (el-get-bundle myfreeweb/django-mode)
-;;
-(el-get-bundle spotify/dockerfile-mode)
 (el-get-bundle purcell/flymake-python-pyflakes)
-(el-get-bundle undo-tree)
+;; docker
+(el-get-bundle spotify/dockerfile-mode)
+;; rust
 (el-get-bundle rust-mode)
-(el-get-bundle iedit)
-(el-get-bundle syohex/emacs-codic)
-(el-get-bundle rainbow-mode)
-(el-get-bundle typescript-mode)
-(el-get-bundle tide)
-(el-get-bundle company-mode/company-mode)
-(el-get-bundle highlight-symbol)
-(el-get-bundle Fanael/rainbow-delimiters)
+;; fluentd
 (el-get-bundle syohex/emacs-fluentd-mode)
 ;; For pyrimpot
 (el-get-bundle cask/shut-up)
 (el-get-bundle Wilfred/pyimport)
-;;
-(el-get-bundle prettier-js)
-(el-get-bundle which-key)
-(el-get-bundle DarwinAwardWinner/amx)
-;; To show icons in neotree
-(el-get-bundle domtronn/all-the-icons.el)
-(el-get-bundle memoize)
-;; My customize theme
-(el-get-bundle h3poteto/monokai-emacs)
-;;
-(el-get-bundle jschaf/esup)
+;; puppet
 (el-get-bundle voxpupuli/puppet-mode)
+;; toml
 (el-get-bundle dryman/toml-mode.el)
-(el-get-bundle mozc
-  :type http
-  :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
-(el-get-bundle d5884/mozc-popup)
 
 (require 'package)
 (package-initialize)
