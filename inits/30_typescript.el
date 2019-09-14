@@ -1,6 +1,10 @@
 (use-package typescript-mode
   :mode
   ("\\.ts\\'" . typescript-mode)
+  :bind
+  (
+   ("M-/" . tide-references)
+   )
   :hook
   ;; Now I use prettier so tide-format is unnecessary
   ;; (before-save . tide-format-before-save)
