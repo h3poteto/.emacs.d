@@ -48,6 +48,7 @@ Some minor mode uses language server protocol. So please install following packa
 - javascript-typescript-langserver
 - pyls
 - solargraph
+- rls
 
 ### gopls
 For golang.
@@ -74,9 +75,17 @@ $ pip install 'python-language-server[all]'
 For ruby.
 
 ```
-# gem install solargraph
+$ gem install solargraph
 ```
 
+
+### rls
+For rust.
+
+```
+$ rustup update
+$ rustup component add rls rust-analysis rust-src
+```
 
 ## Required libaries
 - emacs-mozc
