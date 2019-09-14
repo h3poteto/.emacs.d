@@ -245,6 +245,10 @@
    (lsp-message-project-root-warning t)
    (create-lockfiles nil)
    )
+  :bind
+  (
+   ("M-/" . lsp-find-references)
+   )
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
   )
