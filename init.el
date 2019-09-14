@@ -69,7 +69,6 @@
 (el-get-bundle alchemist)
 (el-get-bundle syohex/emacs-ac-alchemist
   :name ac-alchemist)
-(el-get-bundle jedi)
 (el-get-bundle sass-mode)
 ;; https://github.com/ensime/ensime-emacs/issues/669
 ;; この対応のため，一時的に古いensimeを使う

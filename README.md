@@ -46,6 +46,7 @@ Some minor mode uses language server protocol. So please install following packa
 
 - gopls
 - javascript-typescript-langserver
+- pyls
 
 ### gopls
 
@@ -59,13 +60,17 @@ $ go get -u golang.org/x/tools/cmd/gopls
 $ npm install -g javascript-typescript-langserver
 ```
 
+### pyls
+
+```
+$ pip install 'python-language-server[all]'
+```
+
 ## Required libaries
 - emacs-mozc
 - silver-searcher-ag
-- ctags
 - eslint, babel-eslint, json-lint
-- gopls
-- python, flake8
+- flake8
 
 ### emacs-mozc
 
@@ -79,13 +84,6 @@ $ sudo apt-get install emacs-mozc-bin
 
 ```
 $ sudo apt-get install silversearcher-ag
-```
-
-
-### ctags
-
-```
-$ ctags --exclude="*.js" --exclude=".git*" --exclude="vendor/*" --exclude="public/*" -eR
 ```
 
 ### eslint
@@ -134,20 +132,7 @@ If there is an eslint config in your project, like `.eslintrc.json`, Emacs autom
 }
 ```
 
-### python
-If you write python, Emacs needs `jedi` and python3 is required to run `jedi`.
-At first, install python3 using pyenv.
-
-Then install `jedi` on Emacs:
-```
-M-x jedi:install-server
-```
-
-In this time, `jedi` needs `virtualenv` so you have to install `virtualenv`.
-
-```
-$ pip install virtualenv
-```
+### flake8
 
 I use `falke8` as lint tool for python. Please install it.
 
