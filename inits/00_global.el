@@ -4,8 +4,6 @@
 ;; encoding
 (prefer-coding-system 'utf-8)
 
-;;(define-minor-mode (flymake-mode nil))
-
 ;; バックスラッシュ
 (define-key global-map [?¥] [?\\])
 

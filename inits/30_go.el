@@ -11,7 +11,6 @@
   (go-mode . (lambda ()
                (hs-minor-mode 1)))
   (go-mode . (lambda ()
-
                (setq indent-tabs-mode t)))
   (go-mode . lsp-deferred)
   (go-mode . flycheck-mode)
