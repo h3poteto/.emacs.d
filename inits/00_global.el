@@ -243,8 +243,7 @@
   (
    (lsp-inhibit-message t)
    (lsp-message-project-root-warning t)
-   (create-lockfiles nil)
-   )
+   (create-lockfiles nil))
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
   )

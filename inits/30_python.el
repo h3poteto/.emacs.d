@@ -5,6 +5,7 @@
   (python-mode . (lambda ()
                    (hs-minor-mode 1)))
   (python-mode . lsp-deferred)
+  (python-mode . flymake-python-pyflakes-load)
   )
 
 ;; django-mode
@@ -14,4 +15,3 @@
   :mode
   (("\\.djhtml\\'" . django-html-mode))
   )
-

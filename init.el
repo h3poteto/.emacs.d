@@ -63,12 +63,15 @@
 (el-get-bundle json-mode)
 (el-get-bundle flymake-easy)
 (el-get-bundle purcell/flymake-json)
+(el-get-bundle meqif/flymake-diagnostic-at-point)
 (el-get-bundle sr-speedbar)
 (el-get-bundle elixir-lang/emacs-elixir
   :named elixir-mode)
 (el-get-bundle alchemist)
 (el-get-bundle syohex/emacs-ac-alchemist
   :name ac-alchemist)
+(el-get-bundle lbolla/emacs-flycheck-elixir
+  :name flycheck-elixir)
 (el-get-bundle sass-mode)
 ;; https://github.com/ensime/ensime-emacs/issues/669
 ;; この対応のため，一時的に古いensimeを使う
