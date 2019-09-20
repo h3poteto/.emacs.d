@@ -100,6 +100,7 @@ $ rustup component add rls rust-analysis rust-src
 - silver-searcher-ag
 - eslint, babel-eslint, json-lint
 - flake8
+- go-fill-struct
 
 ### emacs-mozc
 
@@ -167,4 +168,9 @@ I use `falke8` as lint tool for python. Please install it.
 
 ```
 $ pip install flake8
+```
+
+### go-fill-struct
+```
+$ go get -u github.com/davidrjenni/reftools/cmd/fillstruct
 ```
