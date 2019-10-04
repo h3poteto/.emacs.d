@@ -5,6 +5,7 @@
   (elixir-mode . (lambda ()
                    (hs-minor-mode 1)))
   (elixir-mode . flycheck-mode)
+  (before-save . elixir-format)
   )
 
 (use-package alchemist
