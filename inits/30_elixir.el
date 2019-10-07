@@ -1,11 +1,13 @@
 ;; elixir-mode
 (use-package elixir-mode
+  :config
+  (add-hook 'elixir-mode-hook
+            (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
   :hook
   (elixir-mode . ac-alchemist-setup)
   (elixir-mode . (lambda ()
                    (hs-minor-mode 1)))
   (elixir-mode . flycheck-mode)
-  (before-save . elixir-format)
   )
 
 (use-package alchemist
