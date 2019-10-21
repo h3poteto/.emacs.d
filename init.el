@@ -119,12 +119,14 @@
 (el-get-bundle AdamNiederer/vue-mode)
 ;; nginx
 (el-get-bundle ajc/nginx-mode)
-;; django
+;; python
 (el-get-bundle abo-abo/helm-make)
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle AndreaCrotti/yasnippet-snippets)
 (el-get-bundle myfreeweb/django-mode)
 (el-get-bundle purcell/flymake-python-pyflakes)
+(el-get-bundle paetzke/py-autopep8.el)
+(el-get-bundle paetzke/py-isort.el)
 ;; docker
 (el-get-bundle spotify/dockerfile-mode)
 ;; rust

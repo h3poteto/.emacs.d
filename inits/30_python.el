@@ -4,6 +4,7 @@
   (setq lsp-pyls-plugins-pylint-enabled t)
   (setq lsp-pyls-plugins-pycodestyle-enabled nil)
   :hook
+  (before-save . pyimport-insert-missing)
   (before-save . pyimport-remove-unused)
   (python-mode . (lambda ()
                    (hs-minor-mode 1)))
@@ -17,4 +18,16 @@
 (use-package django-html-mode
   :mode
   (("\\.djhtml\\'" . django-html-mode))
+  )
+
+(use-package py-autopep8
+  :config
+  (setq py-autopep8-options '("--max-line-length=140"))
+  :hook
+  (python-mode . py-autopep8-enable-on-save)
+  )
+
+(use-package py-isort
+  :hook
+  (python-mode . (lambda () (add-hook 'before-save-hook 'py-isort-before-save)))
   )
