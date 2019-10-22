@@ -8,5 +8,5 @@
   (setq js-indent-level 2)
   (setq indent-tabs-mode nil)
   :hook
-  (json-mode . flymake-json-load)
+  (json-mode . flycheck-mode)
   )
