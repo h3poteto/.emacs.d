@@ -60,7 +60,8 @@
 (el-get-bundle h3poteto/monokai-emacs)
 (el-get-bundle nashamri/spacemacs-theme)
 (el-get-bundle santoshs/aanila)
-(el-get-bundle emacs-jp/replace-colorthemes)
+(el-get-bundle jonathanchu/atom-one-dark-theme)
+(el-get-bundle jonathanchu/atom-one-light-theme)
 ;; flycheck
 (el-get-bundle flycheck)
 (el-get-bundle flycheck-color-mode-line)

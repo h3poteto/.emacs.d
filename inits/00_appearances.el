@@ -6,10 +6,11 @@
   :load-path "themes"
   )
 (use-package aanila-theme)
-(use-package color-theme-modern)
+(use-package atom-one-dark-theme)
+(use-package atom-one-light-theme)
 
 ;; theme switch
-(setq my-themes (list 'monokai 'spacemacs-light 'aanila 'blue-gnus))
+(setq my-themes (list 'monokai 'aanila 'atom-one-dark 'spacemacs-light 'atom-one-light))
 (setq curr-theme my-themes)
 (defun switch-theme ()
   "Cycle custom theme."
@@ -18,7 +19,7 @@
     (setq curr-theme (cdr curr-theme))
     (if (null curr-theme) (setq curr-theme my-themes))
     (load-theme (car curr-theme) t)
-    (message "%s" (car curr-theme)))
+    (message "Theme is loaded: %s" (car curr-theme)))
 (global-set-key [f7] 'switch-theme)
 (setq curr-theme my-themes)
 (load-theme (car curr-theme) t)
