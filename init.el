@@ -24,6 +24,7 @@
 (el-get-bundle editorconfig)
 (el-get-bundle yoshiki/yaml-mode)
 (el-get-bundle highlight-indentation)
+(el-get-bundle DarthFennec/highlight-indent-guides)
 (el-get-bundle ag)
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle fiplr)

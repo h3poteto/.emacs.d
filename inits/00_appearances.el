@@ -160,39 +160,29 @@
   (css-mode . rainbow-mode)
   )
 
+;; highlight-indent-guides
+;; インデントを可視化する
+(use-package highlight-indent-guides
+  :config
+  (setq highlight-indent-guides-method 'character)
+  (setq highlight-indent-guides-auto-odd-face-perc 15)
+  (setq highlight-indent-guides-auto-even-face-perc 15)
+  (setq highlight-indent-guides-auto-character-face-perc 20)
+  :hook
+  (prog-mode . highlight-indent-guides-mode)
+  )
+
 ;; highlight-indentation
+;; 現在行をハイライトするためだけに入れている
 (use-package highlight-indentation
   :config
   (setq highlight-indentation-offset 2)
-  (set-face-background 'highlight-indentation-face "#202020")
+  ;; (set-face-background 'highlight-indentation-face "#202020")
   (set-face-background 'highlight-indentation-current-column-face "#303030")
 
-  (add-hook 'enh-ruby-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'coffee-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'scss-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'sass-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'yaml-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'web-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'python-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'go-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'typescript-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'vue-mode-hook 'highlight-indentation-current-column-mode)
-  (add-hook 'elixir-mode-hook 'highlight-indentation-current-column-mode)
   (add-hook 'highlight-indentation-mode-hook 'highlight-indentation-current-column-mode)
 
-  ;; カーソル行をハイライト
-  (defface hlline-face
-    '((((class color)
-        (background dark))
-       (:background "gray20"))
-      (((class color)
-        (background light))
-       (:background "ForestGreen"))
-      (t
-       ()))
-    "*Face used by hl-line.")
-  ;; (setq hl-line-face 'hlline-face)
-  ;; (setq hl-line-face 'underline) ; 下線
-  (global-hl-line-mode))
+  (global-hl-line-mode)
+  )
 
 (menu-bar-mode -1)
