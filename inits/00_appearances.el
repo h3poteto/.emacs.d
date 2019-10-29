@@ -4,8 +4,6 @@
   )
 (use-package spacemacs-common
   :load-path "themes"
-  :config
-  (setq spacemacs-theme-comment-bg nil)
   )
 (use-package aanila-theme)
 
