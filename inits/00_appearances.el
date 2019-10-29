@@ -1,12 +1,28 @@
 (use-package monokai-theme
   :load-path "themes"
-  :config (load-theme 'monokai t))
-;; (use-package spacemacs-common
-;;   :load-path "themes"
-;;   :config
-;;   (setq spacemacs-theme-comment-bg nil)
-;;   (load-theme 'spacemacs-dark t)
-;;  )
+  :config (load-theme 'monokai t)
+  )
+(use-package spacemacs-common
+  :load-path "themes"
+  :config
+  (setq spacemacs-theme-comment-bg nil)
+  )
+(use-package aanila-theme)
+
+;; theme switch
+(setq my-themes (list 'monokai 'spacemacs-light 'aanila))
+(setq curr-theme my-themes)
+(defun switch-theme ()
+  "Cycle custom theme."
+    (interactive)
+    (disable-theme (car curr-theme))
+    (setq curr-theme (cdr curr-theme))
+    (if (null curr-theme) (setq curr-theme my-themes))
+    (load-theme (car curr-theme) t)
+    (message "%s" (car curr-theme)))
+(global-set-key [f7] 'switch-theme)
+(setq curr-theme my-themes)
+(load-theme (car curr-theme) t)
 
 ;; カーソル位置の表示
 (show-paren-mode t)
@@ -27,16 +43,11 @@
 ;; toggle line
 (setq default-truncate-lines nil)
 
-;; color setting
-;; seto window status
-(if window-system (progn
-;; (setq initial-frame-alist '((width . 80)(height . 45)(top . 0)(left . 0)))
- (set-background-color "Black")
- (set-foreground-color "White")
- (set-cursor-color "Gray")
- ))
-
 ;; make window transparent
+(defun set-alpha (alpha-num)
+  "set frame parameter 'alpha"
+  (interactive "nAlpha: ")
+  (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
 (set-frame-parameter nil 'alpha 80)
 
 ;; whitespace
@@ -180,7 +191,7 @@
       (t
        ()))
     "*Face used by hl-line.")
-  (setq hl-line-face 'hlline-face)
+  ;; (setq hl-line-face 'hlline-face)
   ;; (setq hl-line-face 'underline) ; 下線
   (global-hl-line-mode))
 

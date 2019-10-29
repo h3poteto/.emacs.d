@@ -56,8 +56,10 @@
   :type http
   :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
 (el-get-bundle d5884/mozc-popup)
-;; My customize theme
+;; Themes
 (el-get-bundle h3poteto/monokai-emacs)
+(el-get-bundle nashamri/spacemacs-theme)
+(el-get-bundle santoshs/aanila)
 ;; flycheck
 (el-get-bundle flycheck)
 (el-get-bundle flycheck-color-mode-line)
