@@ -6,9 +6,10 @@
   :load-path "themes"
   )
 (use-package aanila-theme)
+(use-package color-theme-modern)
 
 ;; theme switch
-(setq my-themes (list 'monokai 'spacemacs-light 'aanila))
+(setq my-themes (list 'monokai 'spacemacs-light 'aanila 'blue-gnus))
 (setq curr-theme my-themes)
 (defun switch-theme ()
   "Cycle custom theme."
