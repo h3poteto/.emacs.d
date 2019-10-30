@@ -168,6 +168,8 @@
   (setq highlight-indent-guides-auto-character-face-perc 20)
   :hook
   (prog-mode . highlight-indent-guides-mode)
+  (yaml-mode . highlight-indent-guides-mode)
+  (json-mode . highlight-indent-guides-mode)
   )
 
 ;; highlight-indentation
