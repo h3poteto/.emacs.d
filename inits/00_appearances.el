@@ -30,10 +30,7 @@
 (column-number-mode t)
 
 ;; line number
-(line-number-mode t)
-
-;; line number
-(global-linum-mode)
+(global-display-line-numbers-mode)
 
 ;; init window
 (setq inhibit-startup-message t)
