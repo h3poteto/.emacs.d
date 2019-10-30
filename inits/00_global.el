@@ -216,7 +216,11 @@
   (setq neo-create-file-auto-open t)
   (setq neo-keymap-style 'concise)
   (setq neo-smart-open t)
-  (setq neo-theme 'icons))
+  (setq neo-theme 'icons)
+  :hook
+  (neo-after-create .
+            (lambda (&rest _) (display-line-numbers-mode -1)))
+  )
 
 ;;-------------------------------------------
 ;; smartparens
