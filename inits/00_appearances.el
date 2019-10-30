@@ -7,10 +7,11 @@
   )
 (use-package aanila-theme)
 (use-package atom-one-dark-theme)
-(use-package atom-one-light-theme)
+;; disable for company mode bg
+;; (use-package atom-one-light-theme)
 
 ;; theme switch
-(setq my-themes (list 'monokai 'aanila 'atom-one-dark 'spacemacs-light 'atom-one-light))
+(setq my-themes (list 'monokai 'aanila 'atom-one-dark 'spacemacs-light))
 (setq curr-theme my-themes)
 (defun switch-theme ()
   "Cycle custom theme."
