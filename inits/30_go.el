@@ -8,7 +8,7 @@
   ;; flycheck is better than flymake in lsp-mode, so disable flymake.
   (setq lsp-prefer-flymake nil)
   :hook
-  (before-save . gofmt-before-save)
+  (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
   (go-mode . (lambda ()
                (hs-minor-mode 1)))
   (go-mode . (lambda ()
