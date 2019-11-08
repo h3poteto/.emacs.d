@@ -63,6 +63,8 @@
 (el-get-bundle santoshs/aanila)
 (el-get-bundle jonathanchu/atom-one-dark-theme)
 (el-get-bundle jonathanchu/atom-one-light-theme)
+;; minimap
+(el-get-bundle dengste/minimap)
 ;; flycheck
 (el-get-bundle flycheck)
 (el-get-bundle flycheck-color-mode-line)

@@ -186,3 +186,11 @@
   )
 
 (menu-bar-mode -1)
+
+(use-package minimap
+  :config
+  (setq minimap-window-location 'right)
+  (setq minimap-update-delay 0.2)
+  (setq minimap-minimum-width 20)
+  (global-set-key (kbd "C-x m") 'minimap-mode)
+  )
