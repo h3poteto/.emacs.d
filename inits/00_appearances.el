@@ -47,6 +47,7 @@
   (interactive "nAlpha: ")
   (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
 (set-frame-parameter nil 'alpha 80)
+(global-set-key (kbd "C-c C-a") 'set-alpha)
 
 ;; whitespace
 (use-package whitespace

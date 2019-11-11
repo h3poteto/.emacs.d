@@ -30,13 +30,6 @@
 (global-set-key (kbd "C-c C-r") 'query-replace)
 (global-set-key (kbd "C-c r") 'query-replace)
 
-;; 透明度の変更
-(defun set-alpha (alpha-num)
-  "set frame parameter 'alpha"
-  (interactive "nAlpha: ")
-  (set-frame-parameter nil 'alpha (cons alpha-num '(80))))
-(global-set-key (kbd "C-c C-a") 'set-alpha)
-
 ;; toggle line
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
 
