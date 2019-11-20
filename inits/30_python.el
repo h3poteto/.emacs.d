@@ -4,7 +4,6 @@
   (setq lsp-pyls-plugins-pylint-enabled t)
   (setq lsp-pyls-plugins-pycodestyle-enabled nil)
   :hook
-  (python-mode . (lambda () (add-hook 'before-save-hook 'pyimport-insert-missing)))
   (python-mode . (lambda () (add-hook 'before-save-hook 'pyimport-remove-unused)))
   (python-mode . (lambda ()
                    (hs-minor-mode 1)))
