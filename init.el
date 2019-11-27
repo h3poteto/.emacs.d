@@ -1,5 +1,3 @@
-(setq gc-cons-threshold (* 128 1024 1024))
-
 ;; Error message in inits
 (custom-set-variables
  '(init-loader-show-log-after-init (quote error-only)))
@@ -147,6 +145,8 @@
 (el-get-bundle voxpupuli/puppet-mode)
 ;; toml
 (el-get-bundle dryman/toml-mode.el)
+;;
+(el-get-bundle m00natic/vlfi)
 
 (require 'package)
 (package-initialize)

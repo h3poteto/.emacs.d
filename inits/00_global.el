@@ -268,3 +268,14 @@
 
 (use-package company-lsp
   :after lsp-mode)
+
+;;------------------------------------------
+;; GC Settings
+;;------------------------------------------
+(setq gc-cons-threshold (* 128 1024 1024))
+(setq garbage-collection-messages t)
+
+(use-package vlf
+  :config
+  (require 'vlf-setup)
+  )

@@ -35,3 +35,5 @@
 
 ;; mozc
 (global-set-key (kbd "<henkan>") (lambda () (interactive) (mozc-mode 1)))
+
+(setq w32-alt-is-meta nil)
