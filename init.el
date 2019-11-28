@@ -15,6 +15,10 @@
     (eval-print-last-sexp)))
 
 ;; el-get packages
+(el-get-bundle tarao/el-get-lock
+  (el-get-lock)
+  (el-get-lock-unlock 'el-get-lock)
+  )
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
 (el-get-bundle anything)
