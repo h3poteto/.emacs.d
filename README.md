@@ -116,50 +116,16 @@ $ sudo apt-get install emacs-mozc-bin
 $ sudo apt-get install silversearcher-ag
 ```
 
-### eslint
+### prettier
 
 ```
-$ npm install -g eslint babel-eslint json-lint
+$ npm install -g prettier eslint
 ```
 
-If there is an eslint config in your project, like `.eslintrc.json`, Emacs automatically read this config.
+### json-lint
 
-```json
-{
-  "parser": "babel-eslint",
-  "plugins": [ "react" ],
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": true,
-    "modules": true,
-    "spread": true,
-    "templateStrings": true,
-    "jsx": true
-  },
-  "rules": {
-    "consistent-return": [0],
-    "key-spacing": [0],
-    "quotes": [0],
-    "new-cap": [0],
-    "no-multi-spaces": [0],
-    "no-shadow": [0],
-    "no-unused-vars": [1],
-    "no-use-before-define": [2, "nofunc"],
-    "react/jsx-no-undef": 1,
-    "react/jsx-uses-react": 1,
-    "react/jsx-uses-vars": 1
-  }
-}
+```
+$ npm install -g json-lint
 ```
 
 ### flake8
