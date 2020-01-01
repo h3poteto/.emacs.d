@@ -50,9 +50,11 @@
 (el-get-bundle DarwinAwardWinner/amx)
 (el-get-bundle jschaf/esup)
 (el-get-bundle s-kostyaev/go-fill-struct)
-(el-get-bundle neotree)
+(el-get-bundle magit)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
+;; To install emacs-dashboard
 (el-get-bundle purcell/page-break-lines)
+(el-get-bundle neotree)
 ;; To show icons in neotree
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
