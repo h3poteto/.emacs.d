@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((vlfi :checksum "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c")
+      '((org-mode :checksum "cff97c361af361f00f6123d35c7914cf12857155")
+        (vlfi :checksum "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c")
         (toml-mode\.el :checksum "f6c61817b00f9c4a3cab1bae9c309e0fc45cdd06")
         (puppet-mode :checksum "7dee1b5a5debac6e56f9107492a413b6c0edb94d")
         (pyimport :checksum "a6f63cf7ed93f0c0f7c207e6595813966f8852b9")
