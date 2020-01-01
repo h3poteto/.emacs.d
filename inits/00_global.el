@@ -279,3 +279,19 @@
   :config
   (require 'vlf-setup)
   )
+
+;;-------------------------------------------
+;; dashboard
+;;-------------------------------------------
+(use-package dashboard
+  :diminish
+  (dashboard-mode page-break-lines-mode)
+  :config
+  (dashboard-setup-startup-hook)
+  :custom
+  (dashboard-startup-banner 1)
+  (dashboard-items '((recents . 15)
+                     (projects . 5)
+                     (bookmarks . 5)
+                     (agenda . 5)))
+  )

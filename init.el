@@ -52,6 +52,8 @@
 (el-get-bundle s-kostyaev/go-fill-struct)
 (el-get-bundle neotree)
 (el-get-bundle abo-abo/org-mode)
+(el-get-bundle emacs-dashboard/emacs-dashboard)
+(el-get-bundle purcell/page-break-lines)
 ;; To show icons in neotree
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
