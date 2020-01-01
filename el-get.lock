@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((page-break-lines :checksum "2e1d274e11071bb8daea4d6f4c0369c84466de7a")
+      '((magit :checksum "dff0bca6f783d43ca3b116d5cbeda0fbed39246d")
+        (transient :checksum "93c9f2a251a4e5f37cd01793b88c1298a29b914e")
+        (with-editor :checksum "ba4ca8ab34c17fbc4c7af5b9b42c6d3836b48e1a")
+        (page-break-lines :checksum "2e1d274e11071bb8daea4d6f4c0369c84466de7a")
         (emacs-dashboard :checksum "87779af059b33559c88596793cc55504c418fd32")
         (vlfi :checksum "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c")
         (toml-mode\.el :checksum "f6c61817b00f9c4a3cab1bae9c309e0fc45cdd06")
