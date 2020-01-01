@@ -51,6 +51,7 @@
 (el-get-bundle jschaf/esup)
 (el-get-bundle s-kostyaev/go-fill-struct)
 (el-get-bundle neotree)
+(el-get-bundle abo-abo/org-mode)
 ;; To show icons in neotree
 (el-get-bundle domtronn/all-the-icons.el)
 (el-get-bundle memoize)
