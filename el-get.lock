@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((magit :checksum "dff0bca6f783d43ca3b116d5cbeda0fbed39246d")
+      '((dumb-jump :checksum "daddd9ba6ad3fba8dbf906327a6fe56cc1013e19")
+        (magit :checksum "dff0bca6f783d43ca3b116d5cbeda0fbed39246d")
         (transient :checksum "93c9f2a251a4e5f37cd01793b88c1298a29b914e")
         (with-editor :checksum "ba4ca8ab34c17fbc4c7af5b9b42c6d3836b48e1a")
         (page-break-lines :checksum "2e1d274e11071bb8daea4d6f4c0369c84466de7a")

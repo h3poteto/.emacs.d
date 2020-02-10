@@ -49,7 +49,7 @@
 (el-get-bundle which-key)
 (el-get-bundle DarwinAwardWinner/amx)
 (el-get-bundle jschaf/esup)
-(el-get-bundle s-kostyaev/go-fill-struct)
+(el-get-bundle jacktasia/dumb-jump)
 (el-get-bundle magit)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 ;; To install emacs-dashboard
@@ -107,6 +107,7 @@
 (el-get-bundle csv-mode)
 ;; golang
 (el-get-bundle go-mode)
+(el-get-bundle s-kostyaev/go-fill-struct)
 ;; html
 (el-get-bundle web-mode)
 ;; terraform
