@@ -3,6 +3,7 @@
   :mode
   (("\\.html.tpl\\'" . web-mode)
    ("\\.jsx\\'" . web-mode)
+   ("\\.tsx\\'" . web-mode)
    ("\\.eex\\'" . web-mode)
    ("\\.scala.html\\'" . web-mode)
    ("\\.html\\'" . web-mode))
@@ -16,5 +17,11 @@
     (setq web-mode-sql-indent-offset 2)
     (setq indent-tabs-mode nil)
     (setq tab-width 2))
-  (add-hook 'web-mode-hook 'my-web-mode-hook))
+  (add-hook 'web-mode-hook 'my-web-mode-hook)
+  :hook
+  (web-mode-hook .
+                 (lambda ()
+                   (when (string-equal "tsx" (file-name-extension buffer-file-name))
+                     (setup-tide-mode))))
+  )
 
