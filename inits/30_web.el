@@ -19,9 +19,12 @@
     (setq tab-width 2))
   (add-hook 'web-mode-hook 'my-web-mode-hook)
   :hook
-  (web-mode-hook .
-                 (lambda ()
-                   (when (string-equal "tsx" (file-name-extension buffer-file-name))
-                     (setup-tide-mode))))
+  (web-mode .
+            (lambda ()
+              (when (string-equal "tsx" (file-name-extension buffer-file-name))
+                (setup-tide-mode)
+                )
+              )
+            )
   )
 
