@@ -272,7 +272,7 @@
 ;;------------------------------------------
 ;; GC Settings
 ;;------------------------------------------
-(setq gc-cons-threshold (* 128 1024 1024))
+(setq gc-cons-threshold (* gc-cons-threshold 10))
 (setq garbage-collection-messages t)
 
 (use-package vlf

@@ -19,11 +19,12 @@
     (setq tab-width 2))
   (add-hook 'web-mode-hook 'my-web-mode-hook)
   :hook
-  (web-mode . prettier-js-mode)
+  ;;(web-mode . prettier-js-mode)
   (web-mode .
             (lambda ()
               (when (string-equal "tsx" (file-name-extension buffer-file-name))
                 (setup-tide-mode)
+                (prettier-js-mode)
                 )
               )
             )
