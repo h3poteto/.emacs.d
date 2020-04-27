@@ -145,6 +145,7 @@
 (el-get-bundle spotify/dockerfile-mode)
 ;; rust
 (el-get-bundle rust-mode)
+(el-get-bundle racer-rust/emacs-racer)
 ;; fluentd
 (el-get-bundle syohex/emacs-fluentd-mode)
 ;; For pyrimpot

@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((dumb-jump :checksum "daddd9ba6ad3fba8dbf906327a6fe56cc1013e19")
+      '((rust-racer :checksum "218682d3b8c79ede8fa1551182f7cacb30d35368")
+        (emacs-racer :checksum "a0bdf778f01e8c4b8a92591447257422ac0b455b")
+        (hydra :checksum "16fa8d109ec5799931a793b2e866ea9d593bee84")
+        (dumb-jump :checksum "daddd9ba6ad3fba8dbf906327a6fe56cc1013e19")
         (magit :checksum "dff0bca6f783d43ca3b116d5cbeda0fbed39246d")
         (transient :checksum "93c9f2a251a4e5f37cd01793b88c1298a29b914e")
         (with-editor :checksum "ba4ca8ab34c17fbc4c7af5b9b42c6d3836b48e1a")
