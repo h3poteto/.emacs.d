@@ -42,7 +42,7 @@
 
 ;; ace-jump
 (use-package ace-jump-mode
-  :bind ("C-c SPC" . ace-jump-mode))
+  :bind ("C-c C-j" . ace-jump-mode))
 
 ;; which-key
 (use-package which-key
@@ -144,6 +144,7 @@
   (add-hook 'ag-mode-hook 'wgrep-ag-setup))
 
 ;; helm
+(use-package helm)
 (use-package helm-config)
 (use-package helm-files)
 
