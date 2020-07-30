@@ -18,3 +18,4 @@ session.*
 .lsp-session*
 bookmarks
 transient/
+mozc/
