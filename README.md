@@ -46,7 +46,7 @@ Some minor mode uses language server protocol. So please install following packa
 
 - gopls
 - javascript-typescript-langserver
-- vue-language-server
+- vls
 - pyls
 - solargraph
 - rls
@@ -65,11 +65,11 @@ For javascript and typescript.
 $ npm install -g javascript-typescript-langserver
 ```
 
-### vue-language-server
+### vls
 For vue.
 
 ```
-$ npm install -g vue-language-server
+$ npm install -g vls
 ```
 
 ### pyls
