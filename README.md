@@ -14,6 +14,38 @@ I have prepared example for each OS.
 - [Linux](emacs.linux)
 - [MacOS](emacs.darwin)
 
+And I have prepared emacs client command for each OS.
+
+- [Linux](emacs-client.linux)
+- [MacOS](emacs-client.darwin)
+
+### Linux
+Please create an alias:
+
+```
+alias e='~/.emacs.d/emacs-client.linux'
+```
+
+### MacOS
+Please create emacs client binary in `/usr/local/bin/emacs-cli`,
+
+```bash
+#!/bin/bash
+
+if [ $# -eq 1 ]; then
+        open -n -a /Applications/Emacs.app $1
+else
+        open -n -a /Applications/Emacs.app
+fi
+```
+
+and create an alias this command:
+
+```
+alias e='~/.emacs.d/emacs-client.darwin'
+```
+
+
 ## el-get
 
 This Emacs config use el-get as package management.
