@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [ $# -eq 1 ]; then
-    emacsclient -a emacs $1 &
-else
-    emacsclient -a emacs -c &
-fi
