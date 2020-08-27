@@ -136,6 +136,7 @@ $ cargo +nightly install racer
 - eslint, babel-eslint, json-lint
 - flake8
 - go-fill-struct
+- goimports
 
 ### emacs-mozc
 
@@ -174,4 +175,9 @@ $ pip install flake8
 ### go-fill-struct
 ```
 $ go get -u github.com/davidrjenni/reftools/cmd/fillstruct
+```
+
+### goimports
+```
+$ go get golang.org/x/tools/cmd/goimports
 ```
