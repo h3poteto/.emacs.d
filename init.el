@@ -160,9 +160,6 @@
 ;;
 (el-get-bundle m00natic/vlfi)
 
-(require 'package)
-(package-initialize)
-
 (require 'use-package)
 
 (custom-set-variables
