@@ -1,11 +1,11 @@
 (setq el-get-lock-package-versions
-      '((rust-racer :checksum "a4bcf46c7a908eb53eeb69ec421c5ee44e879902")
+      '((awesome-tab :checksum "82d69f6e80204df9f735637a07dfe7f383f4a6c6")
+        (rust-racer :checksum "a4bcf46c7a908eb53eeb69ec421c5ee44e879902")
         (rust-mode :checksum "ca7d99c6fd90fc1e636aa9d4020a2f077786a0c3")
         (jsonrpc :checksum "8220ae7e235134d007240ae8f6049ec89df965b2")
         (emacs-racer :checksum "a0bdf778f01e8c4b8a92591447257422ac0b455b")
         (powerline :checksum "edbb464eef680efc9d408730288c716cd4cac404")
         (centaur-tabs :checksum "9114ef423e820eee3f9c6cb29e112fc22aee84dd")
-        (awesome-tab :checksum "053b1f3d2b70405a1addb3a9f5ca6f70fa26a19c")
         (protobuf-mode :checksum "e91db325b1b243b6c8026d98e76d05cc3e3cfd20")
         (sr-speedbar :checksum "44f51dff1c027581ed9ce2d28074e0358a2e6d3c")
         (hydra :checksum "16fa8d109ec5799931a793b2e866ea9d593bee84")
