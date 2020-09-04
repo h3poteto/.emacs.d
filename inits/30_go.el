@@ -7,6 +7,8 @@
   (define-key go-mode-map (kbd "C-c C-k") 'go-fill-struct)
   ;; flycheck is better than flymake in lsp-mode, so disable flymake.
   (setq lsp-prefer-flymake nil)
+  (eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
   :hook
   (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
   (go-mode . (lambda ()

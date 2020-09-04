@@ -110,6 +110,7 @@
 ;; golang
 (el-get-bundle go-mode)
 (el-get-bundle s-kostyaev/go-fill-struct)
+(el-get-bundle weijiangan/flycheck-golangci-lint)
 ;; html
 (el-get-bundle web-mode)
 ;; terraform
