@@ -130,8 +130,7 @@
 ;;-----------------------------------
 (use-package company
   :config
-  (global-company-mode t)
-  (push 'company-lsp company-backends))
+  (global-company-mode t))
 ;;-----------------------------------
 ;; ag
 ;;-----------------------------------
@@ -268,6 +267,8 @@
   )
 
 (use-package company-lsp
+  :config
+  (push 'company-lsp company-backends)
   :after lsp-mode)
 
 ;;------------------------------------------
