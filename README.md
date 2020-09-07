@@ -87,7 +87,7 @@ Some minor mode uses language server protocol. So please install following packa
 For golang.
 
 ```
-$ go get -u golang.org/x/tools/cmd/gopls
+$ go get -u golang.org/x/tools/gopls
 ```
 
 ### javascript-typescript-langserver
