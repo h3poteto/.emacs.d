@@ -81,10 +81,17 @@
 (el-get-bundle purcell/flymake-json)
 (el-get-bundle meqif/flymake-diagnostic-at-point)
 ;; Language server protocol
-(el-get-bundle emacs-lsp/lsp-mode)
-(el-get-bundle emacs-lsp/lsp-ui)
+;; I want to specify 6.3.1
+(el-get-bundle
+  emacs-lsp/lsp-mode
+  :checkout "bdbd2d0ccfe02f6721ea942e82e5178f4b216228")
+;; I want to specify 6.2
+(el-get-bundle
+  emacs-lsp/lsp-ui
+  :checkout "207bc8d61abff7c3024f8a484f63bc60bc4ad58b")
 (el-get-bundle tigersoldier/company-lsp)
 (el-get-bundle emacsmirror/jsonrpc)
+(el-get-bundle abo-abo/hydra)
 ;; js, ts
 (el-get-bundle mooz/js2-mode)
 (el-get-bundle defunkt/coffee-mode)
