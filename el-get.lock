@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((flycheck-golangci-lint :checksum "8e446c68311048f0b87febf8ef0379e29d358851")
+      '((mozc :checksum "90a0645d178e9149eb83249d41fae9d4ae8083dd")
+        (flycheck-golangci-lint :checksum "8e446c68311048f0b87febf8ef0379e29d358851")
         (go-mode :checksum "d17d21060b16a77f9ee28ff453e674225acbf1b1")
         (flycheck :checksum "806f2a8c21231a0dddd0a48d27fa4021729ee365")
         (awesome-tab :checksum "82d69f6e80204df9f735637a07dfe7f383f4a6c6")
@@ -82,7 +83,6 @@
         (spacemacs-theme :checksum "02c36aac44e0352d25741ab2abc988246e91b64f")
         (monokai-emacs :checksum "89461d7b2f8fc78c288a7dce64093644bf2de477")
         (mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
-        (mozc :checksum "fdd8870a1f440e0a4db7a7583314a9d2306d46b6")
         (memoize :checksum "c70773e0eb799a17f1f44334d14389c518ec14d4")
         (neotree :checksum "5e1271655170f4cdc6849258e383c548a4e6e3d0")
         (go-fill-struct :checksum "a613d0b378473eef39e8fd5724abe790aea84321")
