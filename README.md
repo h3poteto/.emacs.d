@@ -137,6 +137,7 @@ $ cargo +nightly install racer
 - flake8
 - go-fill-struct
 - goimports
+- golangci-lint
 
 ### emacs-mozc
 
@@ -181,3 +182,6 @@ $ go get -u github.com/davidrjenni/reftools/cmd/fillstruct
 ```
 $ go get golang.org/x/tools/cmd/goimports
 ```
+
+### golangci-lint
+Please refer [official page](https://github.com/golangci/golangci-lint).
