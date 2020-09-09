@@ -10,7 +10,7 @@
   (setq lsp-prefer-flymake nil)
   (eval-after-load 'flycheck
     '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
-  ;; (add-hook 'go-mode-hook #'lsp)  ;; lsp-mode
+  (require 'dap-go)
   :hook
   (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
   (go-mode . (lambda ()

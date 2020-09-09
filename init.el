@@ -81,17 +81,25 @@
 (el-get-bundle purcell/flymake-json)
 (el-get-bundle meqif/flymake-diagnostic-at-point)
 ;; Language server protocol
-;; I want to specify 6.3.1
-(el-get-bundle
-  emacs-lsp/lsp-mode
-  :checkout "bdbd2d0ccfe02f6721ea942e82e5178f4b216228")
-;; I want to specify 6.2
-(el-get-bundle
-  emacs-lsp/lsp-ui
-  :checkout "207bc8d61abff7c3024f8a484f63bc60bc4ad58b")
-(el-get-bundle tigersoldier/company-lsp)
+(el-get-bundle emacs-lsp/lsp-mode)
+(el-get-bundle emacs-lsp/lsp-ui)
 (el-get-bundle emacsmirror/jsonrpc)
 (el-get-bundle abo-abo/hydra)
+;; DAP mode
+(el-get-bundle tumashu/posframe)
+(el-get-bundle emacs-lsp/dap-mode)
+(el-get-bundle alezost/bui.el)
+(el-get-bundle abo-abo/ace-window
+  ;; It is required by treemacs
+  )
+(el-get-bundle Alexander-Miller/pfuture
+  ;; It is required by treemacs
+  )
+(el-get-bundle
+  Alexander-Miller/treemacs
+  ;; treemacs and lsp-treemacs is required by dap-mode
+  )
+(el-get-bundle emacs-lsp/lsp-treemacs)
 ;; js, ts
 (el-get-bundle mooz/js2-mode)
 (el-get-bundle defunkt/coffee-mode)
@@ -127,7 +135,7 @@
 (el-get-bundle json-mode)
 ;; elixir
 (el-get-bundle elixir-lang/emacs-elixir
-  :named elixir-mode)
+  :name elixir-mode)
 (el-get-bundle alchemist)
 (el-get-bundle syohex/emacs-ac-alchemist
   :name ac-alchemist)

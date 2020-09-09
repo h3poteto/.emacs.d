@@ -243,12 +243,15 @@
 ;;-------------------------------------------
 ;; language server protocol
 ;;-------------------------------------------
+;; lps-mode 7.0.1 moved clients under the directory, it is not root directory, so I have to add this directory to load path.
+(setq load-path (cons "~/.emacs.d/el-get/lsp-mode/clients/" load-path))
 (use-package lsp-mode
   :custom
   (
    (lsp-inhibit-message t)
    (lsp-message-project-root-warning t)
    (create-lockfiles nil)
+   (lsp-auto-configure t)
    )
   :bind
   (
@@ -266,10 +269,27 @@
   (lsp-mode . lsp-ui-mode)
   )
 
-(use-package company-lsp
+
+;; treemacs
+(setq load-path
+      (append '("~/.emacs.d/el-get/treemacs/src/elisp" "~/.emacs.d/el-get/treemacs/src/extra")
+              load-path))
+(use-package treemacs)
+
+(use-package dap-mode
+  :after (
+          lsp-mode
+          treemacs
+          )
+  :custom
+  (dap-auto-configure-features '(sessions locals breakpoints expressions repl controls tooltip))
   :config
-  (push 'company-lsp company-backends)
-  :after lsp-mode)
+  ;; https://github.com/emacs-lsp/dap-mode/pull/326
+  (custom-set-variables '(dap-go-debug-program `("node"
+                                                 ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
+  (dap-mode 1)
+  (dap-auto-configure-mode 1)
+  (require 'dap-hydra))
 
 ;;------------------------------------------
 ;; GC Settings
