@@ -292,6 +292,46 @@
   (require 'dap-hydra))
 
 ;;------------------------------------------
+;; hydra
+;;------------------------------------------
+(use-package hydra
+  :defer t
+  :commands
+  (hydra-main/body)
+  :bind
+  (("C-z" . hydra-main/body)
+   ("C-c h" . hydra-highlight-symbol/body))
+  :config
+  (defhydra hydra-main (:hint nil :exit t)
+"
+^Main^ ^Helm^ ^Other^
+^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+_e_: eval-buffer _a_: helm-do-ag _r_: anzu-query-replace
+_d_: describe-key _A_: helm-do-ag-project-root _f_: make-frame-command
+_g_: magit-status _l_: helm-ls-git-ls
+_p_: paradox-list-packages _i_: helm-imenu
+_b_: generate-buffer _m_: helm-mini_q_: exit
+"
+ ("e" eval-buffer)
+ ("d" describe-key)
+ ("g" magit-status)
+ ("P" prodigy)
+ ("p" paradox-list-packages)
+ ("b" generate-buffer)
+
+ ("a" helm-do-ag)
+ ("A" helm-do-ag-project-root)
+ ("l" helm-ls-git-ls)
+ ("i" helm-imenu)
+ ("m" helm-mini)
+
+ ("r" anzu-query-replace)
+ ("f" make-frame-command)
+
+ ("q" _exit)
+ ("z" nil "leave")))
+
+;;------------------------------------------
 ;; GC Settings
 ;;------------------------------------------
 (setq gc-cons-threshold (* gc-cons-threshold 10))

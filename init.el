@@ -80,11 +80,12 @@
 (el-get-bundle flymake-easy)
 (el-get-bundle purcell/flymake-json)
 (el-get-bundle meqif/flymake-diagnostic-at-point)
+;; hydra
+(el-get-bundle abo-abo/hydra)
 ;; Language server protocol
 (el-get-bundle emacs-lsp/lsp-mode)
 (el-get-bundle emacs-lsp/lsp-ui)
 (el-get-bundle emacsmirror/jsonrpc)
-(el-get-bundle abo-abo/hydra)
 ;; DAP mode
 (el-get-bundle tumashu/posframe)
 (el-get-bundle emacs-lsp/dap-mode)
