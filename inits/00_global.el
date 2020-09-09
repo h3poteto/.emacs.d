@@ -289,8 +289,7 @@
                                                  ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
   (dap-mode 1)
   (dap-auto-configure-mode 1)
-  (require 'dap-hydra)
-  (require 'dap-go))
+  (require 'dap-hydra))
 
 ;;------------------------------------------
 ;; GC Settings
