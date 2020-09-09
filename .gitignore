@@ -21,3 +21,5 @@ transient/
 mozc/
 emacs-client
 .extension
+.cache
+.dap-breakpoints
