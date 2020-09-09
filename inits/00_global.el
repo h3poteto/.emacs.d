@@ -107,8 +107,6 @@
 ;;----------------------------------
 ;; autocmoplete
 ;;----------------------------------
-;; auto-complete
-;;----------------------------------
 (use-package auto-complete
   :config
   (require 'auto-complete-config)
@@ -304,31 +302,34 @@
   :config
   (defhydra hydra-main (:hint nil :exit t)
 "
-^Main^ ^Helm^ ^Other^
+^Main^                   ^Helm^                    ^Other^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
-_e_: eval-buffer _a_: helm-do-ag _r_: anzu-query-replace
-_d_: describe-key _A_: helm-do-ag-project-root _f_: make-frame-command
-_g_: magit-status _l_: helm-ls-git-ls
-_p_: paradox-list-packages _i_: helm-imenu
-_b_: generate-buffer _m_: helm-mini_q_: exit
+_a_: ace-jump-mode       _a_: helm-ag              _n_: neotree-toggle
+_b_: magit-blame         _A_: helm-ag-project-root _q_: query-replace
+_g_: magit-status        _i_: helm-imenu
+_f_: fiplr-find-file     _m_: helm-mini
+_c_: fiplr-clear-cache
+_o_: comment-or-uncomment-region
+_j_: goto-line
+_l_: toggle-truncate-lines
 "
- ("e" eval-buffer)
- ("d" describe-key)
+ ("a" ace-jump-mode)
+ ("b" magit-blame)
  ("g" magit-status)
- ("P" prodigy)
- ("p" paradox-list-packages)
- ("b" generate-buffer)
+ ("f" fiplr-find-file)
+ ("c" fiplr-clear-cache)
+ ("o" comment-or-uncomment-region)
+ ("j" goto-line)
+ ("l" toggle-truncate-lines)
 
- ("a" helm-do-ag)
- ("A" helm-do-ag-project-root)
- ("l" helm-ls-git-ls)
+ ("a" helm-ag)
+ ("A" helm-ag-project-root)
  ("i" helm-imenu)
  ("m" helm-mini)
 
- ("r" anzu-query-replace)
- ("f" make-frame-command)
+ ("n" neotree-toggle)
+ ("q" query-replace)
 
- ("q" _exit)
  ("z" nil "leave")))
 
 ;;------------------------------------------
