@@ -262,6 +262,7 @@
   :bind
   (
    ("M-/" . lsp-ui-peek-find-references)
+   ("M-," . lsp-ui-peek-find-implementation)
    )
   :hook
   (lsp-mode . lsp-ui-mode)
@@ -307,16 +308,16 @@
   :config
   (defhydra hydra-main (:hint nil :exit t)
 "
-^Main^                   ^Helm^                    ^Other^
+^Main^                            ^Helm^                           ^Other^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
-_j_: ace-jump-mode       _a_: helm-ag              _n_: neotree-toggle
-_b_: magit-blame         _A_: helm-ag-project-root _q_: query-replace
-_g_: magit-status        _i_: helm-imenu
-_f_: fiplr-find-file     _m_: helm-mini
-_c_: fiplr-clear-cache
-_o_: comment-or-uncomment-region
-_t_: goto-line
-_l_: toggle-truncate-lines
+_j_: ace-jump-mode[C-c C-j]       _a_: helm-ag[M-g .]              _n_: neotree-toggle[f8]
+_b_: magit-blame                  _A_: helm-ag-project-root        _q_: query-replace[C-c r]
+_g_: magit-status                 _i_: helm-imenu[M-a]
+_f_: fiplr-find-file[C-x f]       _m_: helm-mini
+_c_: fiplr-clear-cache[C-x c]
+_o_: comment-or-uncomment-region[C-c :]
+_t_: goto-line[C-x :]
+_l_: toggle-truncate-lines[C-c C-l]
 "
  ("j" ace-jump-mode)
  ("b" magit-blame)
@@ -340,9 +341,10 @@ _l_: toggle-truncate-lines
 "
  Buffer^^               Server^^                   Symbol
 -------------------------------------------------------------------------------------
- _f_ format           _M-r_ restart            _d_ declaration  _i_ implementation  _o_ documentation
- _m_ imenu            _S_   shutdown           _D_ definition   _t_ type            _r_ rename
- _x_ execute action   _M-s_ describe session   _R_ references   _s_ signature"
+ _f_: format           _M-r_: restart            _d_: declaration       _i_: implementation[M-,]  _o_: documentation
+ _m_: imenu            _S_:   shutdown           _D_: definition[M-.]   _t_: type                 _r_: rename
+ _x_: execute action   _M-s_: describe session   _R_: references[M-/]   _s_: signature
+"
   ("d" lsp-find-declaration)
   ("D" lsp-ui-peek-find-definitions)
   ("R" lsp-ui-peek-find-references)
@@ -358,7 +360,9 @@ _l_: toggle-truncate-lines
 
   ("M-s" lsp-describe-session)
   ("M-r" lsp-restart-workspace)
-  ("S" lsp-shutdown-workspace))
+  ("S" lsp-shutdown-workspace)
+
+  ("z" nil "leave"))
   )
 
 ;;------------------------------------------
