@@ -262,7 +262,7 @@
   :bind
   (
    ("M-/" . lsp-ui-peek-find-references)
-   ("M-," . lsp-ui-peek-find-implementation)
+   ("M-]" . lsp-ui-peek-find-implementation)
    )
   :hook
   (lsp-mode . lsp-ui-mode)
@@ -341,7 +341,7 @@ _l_: toggle-truncate-lines[C-c C-l]
 "
  Buffer^^               Server^^                   Symbol
 -------------------------------------------------------------------------------------
- _f_: format           _M-r_: restart            _d_: declaration       _i_: implementation[M-,]  _o_: documentation
+ _f_: format           _M-r_: restart            _d_: declaration       _i_: implementation[M-]]  _o_: documentation
  _m_: imenu            _S_:   shutdown           _D_: definition[M-.]   _t_: type                 _r_: rename
  _x_: execute action   _M-s_: describe session   _R_: references[M-/]   _s_: signature
 "

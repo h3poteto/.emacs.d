@@ -11,22 +11,7 @@
   (eval-after-load 'flycheck
     '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
   (require 'dap-go)
-  :bind
-  ("C-z" . hydra-go-mode/body)
-  :hook
-  (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
-  (go-mode . (lambda ()
-               (hs-minor-mode 1)))
-  (go-mode . (lambda ()
-               (setq indent-tabs-mode t)))
-  (go-mode . lsp)
-  (go-mode . flycheck-mode)
-  )
-
-(use-package go-fill-struct)
-
-
-(defhydra hydra-go-mode (:hint nil :exit t)
+  (defhydra hydra-go-mode (:hint nil :exit t)
 "
 ^Main^
 ^^^^^^-----------------------------------------------------
@@ -50,5 +35,18 @@ _ggr_: go-goto-return-values[C-c C-f r]
 ("gd" godef-describe)
 ("gr" go-rename)
 
-("z" nil "leave")
+("z" nil "leave"))
+
+  :bind
+  ("C-z" . hydra-go-mode/body)
+  :hook
+  (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
+  (go-mode . (lambda ()
+               (hs-minor-mode 1)))
+  (go-mode . (lambda ()
+               (setq indent-tabs-mode t)))
+  (go-mode . lsp)
+  (go-mode . flycheck-mode)
   )
+
+(use-package go-fill-struct)

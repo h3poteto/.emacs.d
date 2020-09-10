@@ -27,4 +27,24 @@
   ;; 1. Can't customize indent-level.
   ;; 2. Can't resolve alias path, lile `@/some_package'
   ;; (typescript-mode . lsp-deferred)
+  :bind
+  ("C-z" . hydra-typescript-mode/body)
+   :config
+  (defhydra hydra-typescript-mode (:hint nil :exit t)
+"
+^Main^                      ^Symbol^
+^^^^^^--------------------------------------------------------
+_f_: tide-format              _r_: tide-rename-symbol      _D_: tide-jump-to-definition[M-.]
+_M-r_: tide-restart-server    _R_: tide-references[M-/]    _B_: tide-jump-back[M-,]
+"
+("f" tide-format)
+("M-r" tide-restart-server)
+
+("r" tide-rename-symbol)
+("D" tide-jump-to-definition)
+("R" tide-references)
+("B" tide-jump-back)
+
+("z" nil "leave")
+    )
   )
