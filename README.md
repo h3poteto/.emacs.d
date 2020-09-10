@@ -164,6 +164,8 @@ $ sudo /usr/sbin/DevToolsSecurity -enable
 - go-fill-struct
 - goimports
 - golangci-lint
+- gorename
+- godef
 
 ## emacs-mozc
 
@@ -208,3 +210,13 @@ $ go get golang.org/x/tools/cmd/goimports
 ## golangci-lint
 Please refer [official page](https://github.com/golangci/golangci-lint).
 
+
+## gorename
+```
+$ go get golang.org/x/tools/cmd/gorename
+```
+
+## godef
+```
+$ go get github.com/rogpeppe/godef
+```

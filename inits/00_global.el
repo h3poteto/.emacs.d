@@ -287,7 +287,10 @@
                                                  ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
   (dap-mode 1)
   (dap-auto-configure-mode 1)
-  (require 'dap-hydra))
+  (require 'dap-hydra)
+  :bind
+  ("C-c d" . dap-hydra/body)
+  )
 
 ;;------------------------------------------
 ;; hydra
@@ -298,28 +301,29 @@
   (hydra-main/body)
   :bind
   (("C-z" . hydra-main/body)
-   ("C-c h" . hydra-highlight-symbol/body))
+   ("C-c z" . hydra-main/body)
+   )
   :config
   (defhydra hydra-main (:hint nil :exit t)
 "
 ^Main^                   ^Helm^                    ^Other^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
-_a_: ace-jump-mode       _a_: helm-ag              _n_: neotree-toggle
+_j_: ace-jump-mode       _a_: helm-ag              _n_: neotree-toggle
 _b_: magit-blame         _A_: helm-ag-project-root _q_: query-replace
 _g_: magit-status        _i_: helm-imenu
 _f_: fiplr-find-file     _m_: helm-mini
 _c_: fiplr-clear-cache
 _o_: comment-or-uncomment-region
-_j_: goto-line
+_t_: goto-line
 _l_: toggle-truncate-lines
 "
- ("a" ace-jump-mode)
+ ("j" ace-jump-mode)
  ("b" magit-blame)
  ("g" magit-status)
  ("f" fiplr-find-file)
  ("c" fiplr-clear-cache)
  ("o" comment-or-uncomment-region)
- ("j" goto-line)
+ ("t" goto-line)
  ("l" toggle-truncate-lines)
 
  ("a" helm-ag)
