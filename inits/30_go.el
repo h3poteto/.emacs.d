@@ -11,6 +11,34 @@
   (eval-after-load 'flycheck
     '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
   (require 'dap-go)
+  (defhydra hydra-go-mode (:hint nil :exit t)
+"
+^Main^
+^^^^^^-----------------------------------------------------
+_gf_: gofmt                             _gjs_: godef-jump[C-c C-j]
+_gu_: go-remove-unused-imports          _gjo_: godef-jump-other-window[C-x 4 C-c C-j]
+_gga_: go-goto-arguments[C-c C-f a]     _gd_: godef-describe[C-c C-d]
+_ggd_: go-goto-docstring[C-c C-f d]     _gr_: go-rename
+_ggf_: go-goto-function[C-c C-f f]
+_ggr_: go-goto-return-values[C-c C-f r]
+"
+
+("gf" gofmt)
+("gu" go-remove-unused-imports)
+("gga" go-goto-arguments)
+("ggd" go-goto-docstring)
+("ggf" go-goto-function)
+("ggr" go-goto-return-values)
+
+("gjs" godef-jump)
+("gjo" godef-jump-other-window)
+("gd" godef-describe)
+("gr" go-rename)
+
+("z" nil "leave"))
+
+  :bind
+  ("C-z" . hydra-go-mode/body)
   :hook
   (go-mode . (lambda () (add-hook 'before-save-hook 'gofmt-before-save)))
   (go-mode . (lambda ()

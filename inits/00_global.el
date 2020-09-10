@@ -107,8 +107,6 @@
 ;;----------------------------------
 ;; autocmoplete
 ;;----------------------------------
-;; auto-complete
-;;----------------------------------
 (use-package auto-complete
   :config
   (require 'auto-complete-config)
@@ -253,10 +251,6 @@
    (create-lockfiles nil)
    (lsp-auto-configure t)
    )
-  :bind
-  (
-   ("M-/" . lsp-find-references)
-   )
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
   )
@@ -265,6 +259,11 @@
   :after lsp-mode
   :custom
   (scroll-margin 0)
+  :bind
+  (
+   ("M-/" . lsp-ui-peek-find-references)
+   ("M-]" . lsp-ui-peek-find-implementation)
+   )
   :hook
   (lsp-mode . lsp-ui-mode)
   )
@@ -289,7 +288,82 @@
                                                  ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
   (dap-mode 1)
   (dap-auto-configure-mode 1)
-  (require 'dap-hydra))
+  (require 'dap-hydra)
+  :bind
+  ("C-c d" . dap-hydra/body)
+  )
+
+;;------------------------------------------
+;; hydra
+;;------------------------------------------
+(use-package hydra
+  :defer t
+  :commands
+  (hydra-main/body)
+  :bind
+  (("C-z" . hydra-main/body)
+   ("C-c z" . hydra-main/body)
+   ("C-c l" . hydra-lsp/body)
+   )
+  :config
+  (defhydra hydra-main (:hint nil :exit t)
+"
+^Main^                            ^Helm^                           ^Other^
+^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+_j_: ace-jump-mode[C-c C-j]       _a_: helm-ag[M-g .]              _n_: neotree-toggle[f8]
+_b_: magit-blame                  _A_: helm-ag-project-root        _q_: query-replace[C-c r]
+_g_: magit-status                 _i_: helm-imenu[M-a]
+_f_: fiplr-find-file[C-x f]       _m_: helm-mini
+_c_: fiplr-clear-cache[C-x c]
+_o_: comment-or-uncomment-region[C-c :]
+_t_: goto-line[C-x :]
+_l_: toggle-truncate-lines[C-c C-l]
+"
+ ("j" ace-jump-mode)
+ ("b" magit-blame)
+ ("g" magit-status)
+ ("f" fiplr-find-file)
+ ("c" fiplr-clear-cache)
+ ("o" comment-or-uncomment-region)
+ ("t" goto-line)
+ ("l" toggle-truncate-lines)
+
+ ("a" helm-ag)
+ ("A" helm-ag-project-root)
+ ("i" helm-imenu)
+ ("m" helm-mini)
+
+ ("n" neotree-toggle)
+ ("q" query-replace)
+
+ ("z" nil "leave"))
+  (defhydra hydra-lsp (:exit t :hint nil)
+"
+ Buffer^^               Server^^                   Symbol
+-------------------------------------------------------------------------------------
+ _f_: format           _M-r_: restart            _d_: declaration       _i_: implementation[M-]]  _o_: documentation
+ _m_: imenu            _S_:   shutdown           _D_: definition[M-.]   _t_: type                 _r_: rename
+ _x_: execute action   _M-s_: describe session   _R_: references[M-/]   _s_: signature
+"
+  ("d" lsp-find-declaration)
+  ("D" lsp-ui-peek-find-definitions)
+  ("R" lsp-ui-peek-find-references)
+  ("i" lsp-ui-peek-find-implementation)
+  ("t" lsp-find-type-definition)
+  ("s" lsp-signature-help)
+  ("o" lsp-describe-thing-at-point)
+  ("r" lsp-rename)
+
+  ("f" lsp-format-buffer)
+  ("m" lsp-ui-imenu)
+  ("x" lsp-execute-code-action)
+
+  ("M-s" lsp-describe-session)
+  ("M-r" lsp-restart-workspace)
+  ("S" lsp-shutdown-workspace)
+
+  ("z" nil "leave"))
+  )
 
 ;;------------------------------------------
 ;; GC Settings
