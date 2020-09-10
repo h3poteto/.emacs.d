@@ -251,10 +251,6 @@
    (create-lockfiles nil)
    (lsp-auto-configure t)
    )
-  :bind
-  (
-   ("M-/" . lsp-find-references)
-   )
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
   )
@@ -263,6 +259,10 @@
   :after lsp-mode
   :custom
   (scroll-margin 0)
+  :bind
+  (
+   ("M-/" . lsp-ui-peek-find-references)
+   )
   :hook
   (lsp-mode . lsp-ui-mode)
   )
@@ -302,6 +302,7 @@
   :bind
   (("C-z" . hydra-main/body)
    ("C-c z" . hydra-main/body)
+   ("C-c l" . hydra-lsp/body)
    )
   :config
   (defhydra hydra-main (:hint nil :exit t)
@@ -334,7 +335,31 @@ _l_: toggle-truncate-lines
  ("n" neotree-toggle)
  ("q" query-replace)
 
- ("z" nil "leave")))
+ ("z" nil "leave"))
+  (defhydra hydra-lsp (:exit t :hint nil)
+"
+ Buffer^^               Server^^                   Symbol
+-------------------------------------------------------------------------------------
+ _f_ format           _M-r_ restart            _d_ declaration  _i_ implementation  _o_ documentation
+ _m_ imenu            _S_   shutdown           _D_ definition   _t_ type            _r_ rename
+ _x_ execute action   _M-s_ describe session   _R_ references   _s_ signature"
+  ("d" lsp-find-declaration)
+  ("D" lsp-ui-peek-find-definitions)
+  ("R" lsp-ui-peek-find-references)
+  ("i" lsp-ui-peek-find-implementation)
+  ("t" lsp-find-type-definition)
+  ("s" lsp-signature-help)
+  ("o" lsp-describe-thing-at-point)
+  ("r" lsp-rename)
+
+  ("f" lsp-format-buffer)
+  ("m" lsp-ui-imenu)
+  ("x" lsp-execute-code-action)
+
+  ("M-s" lsp-describe-session)
+  ("M-r" lsp-restart-workspace)
+  ("S" lsp-shutdown-workspace))
+  )
 
 ;;------------------------------------------
 ;; GC Settings
