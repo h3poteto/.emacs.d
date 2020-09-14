@@ -53,6 +53,7 @@
 (el-get-bundle jschaf/esup)
 (el-get-bundle jacktasia/dumb-jump)
 (el-get-bundle magit)
+(el-get-bundle shibayu36/emacs-open-github-from-here)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 ;; To install emacs-dashboard
 (el-get-bundle purcell/page-break-lines)

@@ -404,3 +404,5 @@ _l_: toggle-truncate-lines[C-c C-l]
   :config
   (dumb-jump-mode)
   )
+
+(use-package open-github-from-here)
