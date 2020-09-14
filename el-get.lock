@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((treemacs :checksum "e6252a6c5c8ec632f9882861c08d57763964d405")
+      '((emacs-open-github-from-here :checksum "0a8730c54e06525d2031501bb16bc21c69ea6c34")
+        (treemacs :checksum "e6252a6c5c8ec632f9882861c08d57763964d405")
         (pfuture :checksum "d7926de3ba0105a36cfd00811fd6278aea903eef")
         (ace-window :checksum "c7cb315c14e36fded5ac4096e158497ae974bec9")
         (avy :checksum "bbf1e7339eba06784dfe86643bb0fbddf5bb0342")
