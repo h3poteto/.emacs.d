@@ -11,14 +11,6 @@
   (python-mode . flymake-python-pyflakes-load)
   )
 
-;; django-mode
-(use-package django-mode)
-
-(use-package django-html-mode
-  :mode
-  (("\\.djhtml\\'" . django-html-mode))
-  )
-
 (use-package py-autopep8
   :config
   (setq py-autopep8-options '("--max-line-length=140"))

@@ -140,29 +140,37 @@
   (setq ag-reuse-buffers t)
   (add-hook 'ag-mode-hook 'wgrep-ag-setup))
 
-;; helm
-(use-package helm)
-(use-package helm-config)
-(use-package helm-files)
-
-;; helm-ag
-(use-package heml-ag
-  :bind
-  (("M-g ." . helm-ag)
-   ("M-g r" . helm-ag-project-root)
-   ("M-g /" . helm-ag-pop-stack))
-  :config
-  (custom-set-variables
-   '(helm-ag-use-grep-ignore-list "*~")
-   '(helm-ag-use-agignore t)
-   ))
-
 ;; wgrep-ag
 (use-package wgrep-ag
   :after ag
   :config
   (setq wgrep-auto-save-buffer t)  ; 編集完了と同時に保存
   (setq wgrep-enable-key "r"))      ; "r" キーで編集モードに
+
+;;------------------------------------
+;; ivy/counsel
+;;------------------------------------
+(use-package ivy
+  :config
+   (when (setq enable-recursive-minibuffers t)
+    (minibuffer-depth-indicate-mode 1))
+  (setq ivy-truncate-lines nil)
+  ;; リスト先頭で `C-p' するとき，リストの最後に移動する
+  (setq ivy-wrap t)
+  (ivy-mode))
+
+(use-package counsel
+  :after ivy
+  :bind
+  (("M-g ." . counsel-ag)
+   ("M-g r" . counsel-ag)
+   ("M-y" . counsel-yank-pop)
+   )
+  :config (counsel-mode))
+
+(use-package all-the-icons-ivy
+  :after ivy
+  :init (add-hook 'after-init-hook 'all-the-icons-ivy-setup))
 
 
 ;;-------------------------------------------
@@ -308,15 +316,15 @@
   :config
   (defhydra hydra-main (:hint nil :exit t)
 "
-^Main^                            ^Helm^                           ^Other^
+^Main^                                  ^ivy/counsel^                           ^Other^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
-_j_: ace-jump-mode[C-c C-j]       _a_: helm-ag[M-g .]              _n_: neotree-toggle[f8]
-_b_: magit-blame                  _A_: helm-ag-project-root        _q_: query-replace[C-c r]
-_g_: magit-status                 _i_: helm-imenu[M-a]
-_f_: fiplr-find-file[C-x f]       _m_: helm-mini
-_c_: fiplr-clear-cache[C-x c]
-_o_: comment-or-uncomment-region[C-c :]
-_t_: goto-line[C-x :]
+_j_: ace-jump-mode[C-c C-j]             _a_: counsel-ag[M-g .]              _n_: neotree-toggle[f8]
+_b_: magit-blame                        _i_: counsel-imenu[M-a]             _q_: query-replace[C-c r]
+_g_: magit-status                       _F_: counsel-find-file[C-x C-f]
+_f_: fiplr-find-file[C-x f]             _L_: counsel-info-lookup-symbol[C-h S]
+_c_: fiplr-clear-cache[C-x c]           _G_: counsel-git-grep
+_o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log
+_t_: goto-line[C-x :]                   _m_: counsel-minor
 _l_: toggle-truncate-lines[C-c C-l]
 "
  ("j" ace-jump-mode)
@@ -328,10 +336,13 @@ _l_: toggle-truncate-lines[C-c C-l]
  ("t" goto-line)
  ("l" toggle-truncate-lines)
 
- ("a" helm-ag)
- ("A" helm-ag-project-root)
- ("i" helm-imenu)
- ("m" helm-mini)
+ ("a" counsel-ag)
+ ("i" counsel-imenu)
+ ("F" counsel-fzf)
+ ("L" counsel-info-lookup-symbol)
+ ("G" counsel-git-grep)
+ ("H" counsel-git-log)
+ ("m" counsel-minor)
 
  ("n" neotree-toggle)
  ("q" query-replace)
