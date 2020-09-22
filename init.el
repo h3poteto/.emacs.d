@@ -36,8 +36,10 @@
 (el-get-bundle ace-jump-mode)
 (el-get-bundle fuzzy)
 (el-get-bundle async)
-(el-get-bundle helm)
-(el-get-bundle helm-ag)
+;; ivy/counsel
+(el-get-bundle ivy)
+(el-get-bundle abo-abo/swiper)
+(el-get-bundle asok/all-the-icons-ivy)
 (el-get-bundle sr-speedbar)
 (el-get-bundle Fuco1/smartparens)
 (el-get-bundle Malabarba/smart-mode-line)
@@ -154,10 +156,8 @@
 ;; nginx
 (el-get-bundle ajc/nginx-mode)
 ;; python
-(el-get-bundle abo-abo/helm-make)
 (el-get-bundle joaotavora/yasnippet)
 (el-get-bundle AndreaCrotti/yasnippet-snippets)
-(el-get-bundle myfreeweb/django-mode)
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle paetzke/py-autopep8.el)
 (el-get-bundle paetzke/py-isort.el)
