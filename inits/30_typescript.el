@@ -28,7 +28,8 @@
   ;; 2. Can't resolve alias path, lile `@/some_package'
   ;; (typescript-mode . lsp-deferred)
   :bind
-  ("C-z" . hydra-typescript-mode/body)
+  (:map typescript-mode-map
+   ("C-z" . hydra-typescript-mode/body))
    :config
   (defhydra hydra-typescript-mode (:hint nil :exit t)
 "

@@ -269,6 +269,7 @@
   (scroll-margin 0)
   :bind
   (
+   ("M-." . lsp-ui-peek-find-definitions)
    ("M-/" . lsp-ui-peek-find-references)
    ("M-]" . lsp-ui-peek-find-implementation)
    )
@@ -294,6 +295,7 @@
   ;; https://github.com/emacs-lsp/dap-mode/pull/326
   (custom-set-variables '(dap-go-debug-program `("node"
                                                  ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
+  (custom-set-variables `(dap-output-window-max-height 50))
   (dap-mode 1)
   (dap-auto-configure-mode 1)
   (require 'dap-hydra)
