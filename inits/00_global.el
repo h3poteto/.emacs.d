@@ -320,14 +320,14 @@
 "
 ^Main^                                  ^ivy/counsel^                           ^Other^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
-_j_: ace-jump-mode[C-c C-j]             _a_: counsel-ag[M-g .]              _n_: neotree-toggle[f8]
-_b_: magit-blame                        _i_: counsel-imenu[M-a]             _q_: query-replace[C-c r]
-_g_: magit-status                       _F_: counsel-find-file[C-x C-f]
-_f_: fiplr-find-file[C-x f]             _L_: counsel-info-lookup-symbol[C-h S]
+_j_: ace-jump-mode[C-c C-j]             _a_: counsel-ag[M-g .]                 _n_: neotree-toggle[f8]
+_b_: magit-blame                        _i_: counsel-imenu[M-a]                _q_: query-replace[C-c r]
+_g_: magit-status                       _F_: counsel-find-file[C-x C-f]        _O_: org-capture[C-c c]
+_f_: fiplr-find-file[C-x f]             _L_: counsel-info-lookup-symbol[C-h S] _A_: org-agenda[C-c a]
 _c_: fiplr-clear-cache[C-x c]           _G_: counsel-git-grep
 _o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log
 _t_: goto-line[C-x :]                   _m_: counsel-minor
-_l_: toggle-truncate-lines[C-c C-l]
+_l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
 "
  ("j" ace-jump-mode)
  ("b" magit-blame)
@@ -345,9 +345,12 @@ _l_: toggle-truncate-lines[C-c C-l]
  ("G" counsel-git-grep)
  ("H" counsel-git-log)
  ("m" counsel-minor)
+ ("R" counsel-buffer-or-recentf)
 
  ("n" neotree-toggle)
  ("q" query-replace)
+ ("O" org-capture)
+ ("A" org-agenda)
 
  ("z" nil "leave"))
   (defhydra hydra-lsp (:exit t :hint nil)
