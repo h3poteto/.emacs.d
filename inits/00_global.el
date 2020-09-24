@@ -258,6 +258,7 @@
    (lsp-message-project-root-warning t)
    (create-lockfiles nil)
    (lsp-auto-configure t)
+   (lsp-file-watch-threshold 2000)
    )
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
