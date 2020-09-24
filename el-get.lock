@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((all-the-icons-ivy :checksum "a70cbfa1effe36efc946a823a580cec686d5e88d")
+      '((jsonnet-mode :checksum "c8422a617438c79ade98f8d9eeb2086dacb0378c")
+        (all-the-icons-ivy :checksum "a70cbfa1effe36efc946a823a580cec686d5e88d")
         (all-the-icons :checksum "afca8e75a011650da3b9873f4084fea7937dff2f")
         (swiper :checksum "7e4c56776f811f78b8eb95210156f8fbbdba67e7")
         (emacs-open-github-from-here :checksum "0a8730c54e06525d2031501bb16bc21c69ea6c34")

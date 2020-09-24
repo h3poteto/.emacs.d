@@ -175,6 +175,8 @@
 (el-get-bundle voxpupuli/puppet-mode)
 ;; toml
 (el-get-bundle dryman/toml-mode.el)
+;; jsonnet
+(el-get-bundle tminor/jsonnet-mode)
 ;;
 (el-get-bundle m00natic/vlfi)
 
