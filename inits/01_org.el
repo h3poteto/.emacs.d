@@ -20,19 +20,29 @@
     "
 ^Main^
 ^^^^^^ — — — — — — — — — — — — — — — — — — — — — — — — —
-_ot_: org-todo[C-c C-t]
-_oc_: org-copy[C-c M-w]
-_oo_: org-open-at-point[C-c C-o]
-_ot_: org-time-stamp[C-c .]
-_os_: org-schedule[C-c C-s]
-_oa_: org-show-all
+_otd_: org-todo[C-c C-t]
+_ocp_: org-copy[C-c M-w]
+_oop_: org-open-at-point[C-c C-o]
+_ots_: org-time-stamp[C-c .]
+_odl_: org-deadline[C-c C-d]
+_osc_: org-schedule[C-c C-s]
+_osa_: org-show-all
+_osu_: org-shiftup[S-up]
+_osd_: org-shiftdown[S-down]
+_osl_: org_shiftleft[S-left]
+_osr_: org_shiftright[S-right]
 "
-    ("ot" org-todo)
-    ("oc" org-copy)
-    ("oo" org-open-at-point)
-    ("ot" org-time-stamp)
-    ("os" org-schedule)
-    ("oa" org-show-all)
+    ("otd" org-todo)
+    ("ocp" org-copy)
+    ("oop" org-open-at-point)
+    ("ots" org-time-stamp)
+    ("odl" org-deadline)
+    ("osc" org-schedule)
+    ("osa" org-show-all)
+    ("osu" org-shiftup)
+    ("osd" org-shiftdown)
+    ("osl" org-shiftleft)
+    ("osr" org-shiftright)
 
     ("z" nil "leave")
     )
