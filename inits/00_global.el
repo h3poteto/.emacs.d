@@ -422,4 +422,18 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
   (dumb-jump-mode)
   )
 
+;;-------------------------------------------
+;; open-github-from-here
+;;-------------------------------------------
 (use-package open-github-from-here)
+
+;;-------------------------------------------
+;; multi-cursor
+;;------------------------------------------
+(use-package multiple-cursors
+  :bind
+  (("C-S-c C-S-c" . mc/edit-lines)
+   ("C->" . mc/mark-next-like-this)
+   ("C-<" . mc/mark-previous-like-this)
+   ("C-c C-<" . mc/mark-all-like-this))
+  )

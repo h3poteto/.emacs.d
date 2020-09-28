@@ -57,6 +57,7 @@
 (el-get-bundle magit)
 (el-get-bundle shibayu36/emacs-open-github-from-here)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
+(el-get-bundle magnars/multiple-cursors.el)
 ;; To install emacs-dashboard
 (el-get-bundle purcell/page-break-lines)
 (el-get-bundle neotree)
