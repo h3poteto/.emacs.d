@@ -138,11 +138,8 @@
 ;; json
 (el-get-bundle json-mode)
 ;; elixir
-(el-get-bundle elixir-lang/emacs-elixir
-  :name elixir-mode)
+;; (el-get-bundle elixir-lang/emacs-elixir)
 (el-get-bundle alchemist)
-(el-get-bundle syohex/emacs-ac-alchemist
-  :name ac-alchemist)
 (el-get-bundle lbolla/emacs-flycheck-elixir
   :name flycheck-elixir)
 ;; protocol buffer
