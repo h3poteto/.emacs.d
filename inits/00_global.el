@@ -72,7 +72,30 @@
   :config
   (progn
     (setq fiplr-root-markers '(".git" ".svn" ".hg"))
-    (setq fiplr-ignored-globs '((directories (".git" ".svn" "vendor" "tmp" "uploaded_files" "log" "./public" "node_modules" "_vendor" "coverage" "_build" "deps" "el-get" "python3.*" "__pycache__"))
+    (setq fiplr-ignored-globs '((directories (
+                                              ".git"
+                                              ".terraform"
+                                              ".build"
+                                              ".bazelbuild"
+                                              "vendor"
+                                              "tmp"
+                                              "uploaded_files"
+                                              "log"
+                                              "./public"
+                                              "node_modules"
+                                              "_vendor"
+                                              "coverage"
+                                              "_build"
+                                              "deps"
+                                              "el-get"
+                                              "python3.*"
+                                              "__pycache__"
+                                              "_output"
+                                              "bazel-bin"
+                                              "bazel-genfiles"
+                                              "bazel-kops"
+                                              "bazel-out"
+                                              "bazel-testlogs"))
                                (files ("*~" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))))
 
 ;; リモートのファイルを手元のemacsからいじるtramp
@@ -244,6 +267,41 @@
    (lsp-auto-configure t)
    (lsp-file-watch-threshold 2000)
    )
+  :config
+  (custom-set-variables '(lsp-file-watch-ignored
+                          '(; SCM tools
+                            "[/\\\\]\\.git$"
+                            "[/\\\\]\\.hg$"
+                            "[/\\\\]\\.bzr$"
+                            "[/\\\\]_darcs$"
+                            "[/\\\\]\\.svn$"
+                            "[/\\\\]_FOSSIL_$"
+                            ;; IDE or build tools
+                            "[/\\\\]\\.idea$"
+                            "[/\\\\]\\.ensime_cache$"
+                            "[/\\\\]\\.eunit$"
+                            "[/\\\\]node_modules$"
+                            "[/\\\\]\\.fslckout$"
+                            "[/\\\\]\\.tox$"
+                            "[/\\\\]dist$"
+                            "[/\\\\]dist-newstyle$"
+                            "[/\\\\]\\.stack-work$"
+                            "[/\\\\]\\.bloop$"
+                            "[/\\\\]\\.metals$"
+                            "[/\\\\]target$"
+                            "[/\\\\]\\.ccls-cache$"
+                            "[/\\\\]\\.vscode$"
+                            ;; Autotools output
+                            "[/\\\\]\\.deps$"
+                            "[/\\\\]build-aux$"
+                            "[/\\\\]autom4te.cache$"
+                            "[/\\\\]\\.reference$"
+                            "[/\\\\]bazel-bin$"
+                            "[/\\\\]bazel-kops$"
+                            "[/\\\\]bazel-out$"
+                            "[/\\\\]bazel-testlogs$"
+                            )))
+
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable)
   )
