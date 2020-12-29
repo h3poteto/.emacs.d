@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((elixir :checksum "01b332495d3f44addeb236428041c4ffa0c2ca3b")
+      '((popup-el :checksum "13364d7674535db225789b03da766746734a4f28")
+        (elixir :checksum "01b332495d3f44addeb236428041c4ffa0c2ca3b")
         (alchemist :checksum "6f99367511ae209f8fe2c990779764bbb4ccb6ed")
         (multiple-cursors\.el :checksum "b880554d04b8f61165afba7d4de19ac9e39bb7ab")
         (jsonnet-mode :checksum "c8422a617438c79ade98f8d9eeb2086dacb0378c")

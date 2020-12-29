@@ -68,6 +68,7 @@
   :type http
   :url "https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el")
 (el-get-bundle d5884/mozc-popup)
+(el-get-bundle auto-complete/popup-el)
 ;; Themes
 (el-get-bundle h3poteto/monokai-emacs)
 (el-get-bundle nashamri/spacemacs-theme)
