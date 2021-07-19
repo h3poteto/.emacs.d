@@ -24,3 +24,4 @@ emacs-client
 .cache
 .dap-breakpoints
 .mc-lists.el
+.org-id-locations
