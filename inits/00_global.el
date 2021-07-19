@@ -37,9 +37,6 @@
   (let ((envs '("PATH" "GOPATH")))
     (exec-path-from-shell-copy-envs envs)))
 
-;; editorconfig
-(editorconfig-mode t)
-
 ;; ace-jump
 (use-package ace-jump-mode
   :bind ("C-c C-j" . ace-jump-mode))

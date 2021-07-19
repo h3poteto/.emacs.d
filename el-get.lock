@@ -123,7 +123,6 @@
         (highlight-indent-guides :checksum "0b10f38c54ffc099861ce8463e16a1b07ddbb203")
         (highlight-indentation :checksum "d03803f2c06749c430443a3d24e039cbafc9c58f")
         (yaml-mode :checksum "cecf4b106b0c4236931b14919fdf87ff3546e2c9")
-        (editorconfig :checksum "65f8244ffbeb9bf2720d922d4b5fc74849b9af82")
         (auto-complete :checksum "2e83566ddfa758c69afe50b8a1c62a66f47471e3")
         (popup :checksum "80829dd46381754639fb764da11c67235fe63282")
         (fuzzy :checksum "534d723ad2e06322ff8d9bd0ba4863d243f698e7")
