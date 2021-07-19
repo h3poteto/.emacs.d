@@ -31,7 +31,6 @@
 (load-theme (car curr-theme) t)
 
 
-
 ;; カーソル位置の表示
 (show-paren-mode t)
 (column-number-mode t)
@@ -102,12 +101,12 @@
 (use-package powerline
   :init (powerline-default-theme))
 
-;; 1秒後自動ハイライトされるようになる
-(setq highlight-symbol-idle-delay 1.0)
-;; 自動ハイライトをしたいならば
-(add-hook 'prog-mode-hook 'highlight-symbol-mode)
-;; ソースコードにおいてM-p/M-nでシンボル間を移動
-(add-hook 'prog-mode-hook 'highlight-symbol-nav-mode)
+(use-package highlight-symbole
+  :config
+  (setq highlight-symbol-idle-delay 1.0)
+  :hook
+  (prog-mode . highlight-symbol-mode)
+  )
 
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 

@@ -21,8 +21,6 @@
   )
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
-(el-get-bundle anything)
-(el-get-bundle editorconfig)
 (el-get-bundle yoshiki/yaml-mode)
 (el-get-bundle highlight-indentation)
 (el-get-bundle DarthFennec/highlight-indent-guides)
@@ -154,8 +152,6 @@
 ;; nginx
 (el-get-bundle ajc/nginx-mode)
 ;; python
-(el-get-bundle joaotavora/yasnippet)
-(el-get-bundle AndreaCrotti/yasnippet-snippets)
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle paetzke/py-autopep8.el)
 (el-get-bundle paetzke/py-isort.el)
