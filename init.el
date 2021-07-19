@@ -21,7 +21,6 @@
   )
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
-(el-get-bundle anything)
 (el-get-bundle yoshiki/yaml-mode)
 (el-get-bundle highlight-indentation)
 (el-get-bundle DarthFennec/highlight-indent-guides)

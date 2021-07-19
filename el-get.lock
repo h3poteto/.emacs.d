@@ -126,7 +126,6 @@
         (auto-complete :checksum "2e83566ddfa758c69afe50b8a1c62a66f47471e3")
         (popup :checksum "80829dd46381754639fb764da11c67235fe63282")
         (fuzzy :checksum "534d723ad2e06322ff8d9bd0ba4863d243f698e7")
-        (anything :checksum "9e2259fc779eef1a3e947e74cc7d301d1cea0ca6")
         (init-loader :checksum "5d3cea1004c11ff96b33020e337b03b925c67c42")
         (use-package :checksum "4b58ab78177f636f862a66c7a8fdcf9b070e0925")
         (all-the-icons\.el :checksum "1416f37984486a44c6c0cbe0a2c985e82f965b6b")

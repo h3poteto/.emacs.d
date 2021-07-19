@@ -31,7 +31,6 @@
 (load-theme (car curr-theme) t)
 
 
-
 ;; カーソル位置の表示
 (show-paren-mode t)
 (column-number-mode t)
