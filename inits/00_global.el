@@ -56,11 +56,6 @@
   :config
   (global-undo-tree-mode))
 
-;; yasnippet
-(use-package yasnippet
-  :config
-  (yas-global-mode 1))
-
 ;; fiplr
 (use-package fiplr
   :bind

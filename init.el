@@ -152,8 +152,6 @@
 ;; nginx
 (el-get-bundle ajc/nginx-mode)
 ;; python
-(el-get-bundle joaotavora/yasnippet)
-(el-get-bundle AndreaCrotti/yasnippet-snippets)
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle paetzke/py-autopep8.el)
 (el-get-bundle paetzke/py-isort.el)

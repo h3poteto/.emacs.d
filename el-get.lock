@@ -53,8 +53,6 @@
         (py-autopep8\.el :checksum "68e12d8788c91c7ec53a68acf1d23adb2ffa4788")
         (flymake-python-pyflakes :checksum "1d65c26bf65a5dcbd29fcd967e2feb90e1e7a33d")
         (django-mode :checksum "a71b8dd984e7f724b8321246e5c353a4ae5c986e")
-        (yasnippet-snippets :checksum "2cc5f35cd43941175981c8774debc8303d90c101")
-        (yasnippet :checksum "1bee3a33c77d1a61c331461750e01c4f6fa85417")
         (nginx-mode :checksum "a2bab83c2eb233d57d76b236e7c141c2ccc97005")
         (vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
         (edit-indirect :checksum "935ded353b9ed3da67bc61abf245c21b58d88864")
