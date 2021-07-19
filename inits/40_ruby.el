@@ -45,8 +45,10 @@
 ;; ruby-block
 (use-package ruby-block
   :config
-  (ruby-block-mode t)
-  (setq ruby-block-highlight-toggle t))
+  (setq ruby-block-highlight-toggle t)
+  :hook
+  (ruby-mode . ruby-block-mode)
+  )
 
 ;; ruby-electric
 (use-package ruby-electric
