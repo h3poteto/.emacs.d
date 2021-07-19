@@ -359,9 +359,9 @@ _j_: ace-jump-mode[C-c C-j]             _a_: counsel-ag[M-g .]                  
 _b_: magit-blame                        _i_: counsel-imenu[M-a]                  _me_: mc/edit-ends-of-lines[C-c e]         _q_: query-replace[C-c r]
 _g_: magit-status                       _F_: counsel-find-file[C-x C-f]          _mn_: mc/mark-next-like-this[C->]          _O_: org-capture[C-c c]
 _f_: fiplr-find-file[C-x f]             _L_: counsel-info-lookup-symbol[C-h S]   _mp_: mc/mark-previous-like-this[C-<]      _A_: org-agenda[C-c a]
-_c_: fiplr-clear-cache[C-x c]           _G_: counsel-git-grep                    _ma_: mc/mark-all-like-this[C-c C->]
-_o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log
-_t_: goto-line[C-x :]                   _M_: counsel-minor
+_c_: fiplr-clear-cache[C-x c]           _G_: counsel-git-grep                    _ma_: mc/mark-all-like-this[C-c C->]       _hh_: highlight-symbol-at-point
+_o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log                                                                _hn_: highlight-symbol-next
+_t_: goto-line[C-x :]                   _M_: counsel-minor                                                                  _hp_: highlight-symbol-prev
 _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
 "
  ("j" ace-jump-mode)
@@ -392,6 +392,9 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
  ("q" query-replace)
  ("O" org-capture)
  ("A" org-agenda)
+ ("hh" highlight-symbol-at-point)
+ ("hn" highlight-symbol-next)
+ ("hp" highlight-symbol-prev)
 
  ("z" nil "leave"))
   (defhydra hydra-lsp (:exit t :hint nil)
