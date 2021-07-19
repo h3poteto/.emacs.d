@@ -101,6 +101,42 @@
 (use-package powerline
   :init (powerline-default-theme))
 
+(defvar mode-line-cleaner-alist
+  '( ;; For minor-mode, first char is 'space'
+    (eldoc-mode . "") ;; Eldoc
+    (global-whitespace-mode . "")  ;; WS
+    (undo-tree-mode . "") ;; Undo-Tree
+    (highlight-symbol-mode . "")  ;; hl-s
+    (highlight-indent-guides-mode . "") ;; h-i-g
+    (which-key-mode . "")  ;; WK
+    (auto-revert-mode . "") ;; ARev
+    (smartparens-mode . "") ;; SP
+    (hs-minor-mode . "")  ;; hs
+    (ivy-mode . " i")  ;; ivy
+    (company-mode . " c") ;; company
+    (flycheck-mode . " f") ;; FlyC
+    ;; Major modes
+    ;; (lisp-interaction-mode . "Li")
+    ;; (python-mode . "Py")
+    ;; (ruby-mode   . "Rb")
+    ;; (emacs-lisp-mode . "El")
+    ;; (markdown-mode . "Md")
+    ))
+
+(defun clean-mode-line ()
+  (interactive)
+  (loop for (mode . mode-str) in mode-line-cleaner-alist
+        do
+        (let ((old-mode-str (cdr (assq mode minor-mode-alist))))
+          (when old-mode-str
+            (setcar old-mode-str mode-str))
+          ;; major mode
+          (when (eq mode major-mode)
+            (setq mode-name mode-str)))))
+
+(add-hook 'after-change-major-mode-hook 'clean-mode-line)
+
+
 (use-package highlight-symbole
   :config
   (setq highlight-symbol-idle-delay 1.0)
