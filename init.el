@@ -41,7 +41,7 @@
 (el-get-bundle asok/all-the-icons-ivy)
 (el-get-bundle sr-speedbar)
 (el-get-bundle Fuco1/smartparens)
-(el-get-bundle Malabarba/smart-mode-line)
+(el-get-bundle milkypostman/powerline)
 (el-get-bundle undo-tree)
 (el-get-bundle iedit)
 (el-get-bundle syohex/emacs-codic)
@@ -70,7 +70,7 @@
 (el-get-bundle d5884/mozc-popup)
 (el-get-bundle auto-complete/popup-el)
 ;; Themes
-(el-get-bundle h3poteto/monokai-emacs)
+(el-get-bundle oneKelvinSmith/monokai-emacs)
 (el-get-bundle nashamri/spacemacs-theme)
 (el-get-bundle santoshs/aanila)
 (el-get-bundle jonathanchu/atom-one-dark-theme)

@@ -1,6 +1,11 @@
 (use-package monokai-theme
   :load-path "themes"
-  :config (load-theme 'monokai t)
+  :config
+  (load-theme 'monokai t)
+  (setq monokai-background     "#000000"
+        monokai-comments       "#F19CA7"
+        monokai-highlight      "#434da2"
+   )
   )
 (use-package spacemacs-common
   :load-path "themes"
@@ -24,6 +29,8 @@
 (global-set-key [f7] 'switch-theme)
 (setq curr-theme my-themes)
 (load-theme (car curr-theme) t)
+
+
 
 ;; カーソル位置の表示
 (show-paren-mode t)
@@ -92,12 +99,8 @@
 
 (global-whitespace-mode 1)
 
-;; smart-mode-line
-(use-package smart-mode-line
-  :config
-  (setq sml/no-confirm-load-theme t)
-  (setq sml/theme 'dark)
-  (sml/setup))
+(use-package powerline
+  :init (powerline-default-theme))
 
 ;; 1秒後自動ハイライトされるようになる
 (setq highlight-symbol-idle-delay 1.0)
