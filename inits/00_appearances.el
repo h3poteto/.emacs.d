@@ -98,6 +98,14 @@
 
 (global-whitespace-mode 1)
 
+;; modeline
+(defface powerline-active3 '((t (:background "LightBlue1" :foreground "black" :bold t :inherit mode-line)))
+  "Powerline face 3."
+  :group 'powerline)
+(defface powerline-inactive3 '((t (:background "gray9" :foreground "LightBlue1" :bold t :inherit mode-line-inactive)))
+  "Powerline face 3."
+  :group 'powerline)
+
 (defun powerline-customized-theme ()
   "Setup the customized mode-line."
   (interactive)
@@ -110,29 +118,29 @@
                           (face0 (if active 'powerline-active0 'powerline-inactive0))
                           (face1 (if active 'powerline-active1 'powerline-inactive1))
                           (face2 (if active 'powerline-active2 'powerline-inactive2))
+                          (face3 (if active 'powerline-active3 'powerline-inactive3))
                           (separator-left (intern (format "powerline-%s-%s"
                                                           (powerline-current-separator)
                                                           (car powerline-default-separator-dir))))
                           (separator-right (intern (format "powerline-%s-%s"
                                                            (powerline-current-separator)
                                                            (cdr powerline-default-separator-dir))))
-                          (lhs (list (powerline-raw "%*" face0 'l)
-                                     (when powerline-display-mule-info
-                                       (powerline-raw mode-line-mule-info face0 'l))
-                                     (when (and (bound-and-true-p projectile-mode)
+                          (lhs (list (when (and (bound-and-true-p projectile-mode)
                                                 (projectile-project-p))
-                                       (powerline-raw (format "[%s]" (projectile-project-name)) face0 'l))
+                                       (powerline-raw (projectile-project-name) face3 'l))
+                                     (funcall separator-left face3 face0)
                                      (powerline-buffer-id `(mode-line-buffer-id ,face0) 'l)
                                      (when (and (boundp 'which-func-mode) which-func-mode)
                                        (powerline-raw which-func-format face0 'l))
                                      (powerline-raw " " face0)
                                      (funcall separator-left face0 face1)
-                                     (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
-                                       (powerline-raw erc-modified-channels-object face1 'l))
-                                     (powerline-major-mode face1 'l)
-                                     (powerline-process face1)
-                                     (powerline-minor-modes face1 'l)
-                                     (powerline-narrow face1 'l)
+                                     (powerline-raw "%4l" face1 'l)
+                                     (powerline-raw ":" face1 'l)
+                                     (powerline-raw "%3c" face1 'r)
+                                     (powerline-raw " " face1)
+                                     (powerline-raw "%6p" face1 'r)
+                                     (when powerline-display-hud
+                                       (powerline-hud face0 face2))
                                      (powerline-raw " " face1)
                                      (funcall separator-left face1 face2)
                                      (powerline-vc face2 'r)
@@ -142,14 +150,15 @@
                                      (funcall separator-right face2 face1)
                                      (unless window-system
                                        (powerline-raw (char-to-string #xe0a1) face1 'l))
-                                     (powerline-raw "%4l" face1 'l)
-                                     (powerline-raw ":" face1 'l)
-                                     (powerline-raw "%3c" face1 'r)
+                                     (when powerline-display-mule-info
+                                       (powerline-raw mode-line-mule-info face1 'l))
+                                     (when (and (boundp 'erc-track-minor-mode) erc-track-minor-mode)
+                                       (powerline-raw erc-modified-channels-object face1 'l))
+                                     (powerline-major-mode face1 'l)
+                                     (powerline-process face1)
+                                     (powerline-raw " " face1)
                                      (funcall separator-right face1 face0)
-                                     (powerline-raw " " face0)
-                                     (powerline-raw "%6p" face0 'r)
-                                     (when powerline-display-hud
-                                       (powerline-hud face0 face2))
+                                     (powerline-minor-modes face0 'l)
                                      (powerline-fill face0 0)
                                      )))
                      (concat (powerline-render lhs)
@@ -179,6 +188,7 @@
     (projectile-mode . "") ;; Projectile
     (yas-global-mode . "") ;; yas
     (yas-minor-mode . "") ;; yas
+    (counsel-mode . "") ;; counsel
     ;; Major modes
     ;; (lisp-interaction-mode . "Li")
     ;; (python-mode . "Py")
