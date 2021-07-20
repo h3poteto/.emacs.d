@@ -8,6 +8,7 @@
                            "~/OneDrive/org/todos.org"
                            "~/OneDrive/org/bugs.org"
                            ))
+  (setq org-support-shift-select t)
   (setq org-capture-templates
         '(("n" "Note" entry (file+headline "~/OneDrive/org/notes.org" "Notes")
            "* %? - %a\nEntered on %U\n %i\n")
