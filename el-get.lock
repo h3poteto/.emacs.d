@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((monokai-emacs :checksum "c5a7978bfc2ad2aa90882e6b2583668dc7b3e1a5")
+      '((yasnippet :checksum "5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6")
+        (monokai-emacs :checksum "c5a7978bfc2ad2aa90882e6b2583668dc7b3e1a5")
         (shrink-path :checksum "c14882c8599aec79a6e8ef2d06454254bb3e1e41")
         (eldoc-eval :checksum "f6e639047d9b3695877e63dd3de8f24e704d6d23")
         (emacs-racer :checksum "1e63e98626737ea9b662d4a9b1ffd6842b1c648c")

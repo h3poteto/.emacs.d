@@ -45,6 +45,8 @@
 (el-get-bundle syohex/emacs-codic)
 (el-get-bundle rainbow-mode)
 (el-get-bundle company-mode/company-mode)
+;; yasnippet is required to insert arguments in company-mode
+(el-get-bundle joaotavora/yasnippet)
 (el-get-bundle highlight-symbol)
 (el-get-bundle Fanael/rainbow-delimiters)
 (el-get-bundle which-key)
