@@ -177,6 +177,8 @@
     (company-mode . " c") ;; company
     (flycheck-mode . " f") ;; FlyC
     (projectile-mode . "") ;; Projectile
+    (yas-global-mode . "") ;; yas
+    (yas-minor-mode . "") ;; yas
     ;; Major modes
     ;; (lisp-interaction-mode . "Li")
     ;; (python-mode . "Py")
