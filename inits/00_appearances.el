@@ -99,6 +99,13 @@
 (global-whitespace-mode 1)
 
 ;; modeline
+(defface powerline-active3 '((t (:background "LightBlue1" :foreground "black" :bold t :inherit mode-line)))
+  "Powerline face 3."
+  :group 'powerline)
+(defface powerline-inactive3 '((t (:background "gray9" :foreground "LightBlue1" :bold t :inherit mode-line-inactive)))
+  "Powerline face 3."
+  :group 'powerline)
+
 (defun powerline-customized-theme ()
   "Setup the customized mode-line."
   (interactive)
@@ -111,6 +118,7 @@
                           (face0 (if active 'powerline-active0 'powerline-inactive0))
                           (face1 (if active 'powerline-active1 'powerline-inactive1))
                           (face2 (if active 'powerline-active2 'powerline-inactive2))
+                          (face3 (if active 'powerline-active3 'powerline-inactive3))
                           (separator-left (intern (format "powerline-%s-%s"
                                                           (powerline-current-separator)
                                                           (car powerline-default-separator-dir))))
@@ -119,7 +127,8 @@
                                                            (cdr powerline-default-separator-dir))))
                           (lhs (list (when (and (bound-and-true-p projectile-mode)
                                                 (projectile-project-p))
-                                       (powerline-raw (format "[%s]" (projectile-project-name)) face0 'l))
+                                       (powerline-raw (projectile-project-name) face3 'l))
+                                     (funcall separator-left face3 face0)
                                      (powerline-buffer-id `(mode-line-buffer-id ,face0) 'l)
                                      (when (and (boundp 'which-func-mode) which-func-mode)
                                        (powerline-raw which-func-format face0 'l))
