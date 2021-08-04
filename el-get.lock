@@ -36,7 +36,6 @@
         (powerline :checksum "edbb464eef680efc9d408730288c716cd4cac404")
         (centaur-tabs :checksum "9114ef423e820eee3f9c6cb29e112fc22aee84dd")
         (protobuf-mode :checksum "e91db325b1b243b6c8026d98e76d05cc3e3cfd20")
-        (sr-speedbar :checksum "44f51dff1c027581ed9ce2d28074e0358a2e6d3c")
         (hydra :checksum "16fa8d109ec5799931a793b2e866ea9d593bee84")
         (dumb-jump :checksum "daddd9ba6ad3fba8dbf906327a6fe56cc1013e19")
         (magit :checksum "dff0bca6f783d43ca3b116d5cbeda0fbed39246d")
