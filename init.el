@@ -37,7 +37,6 @@
 (el-get-bundle ivy)
 (el-get-bundle abo-abo/swiper)
 (el-get-bundle asok/all-the-icons-ivy)
-(el-get-bundle sr-speedbar)
 (el-get-bundle Fuco1/smartparens)
 (el-get-bundle milkypostman/powerline)
 (el-get-bundle undo-tree
