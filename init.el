@@ -40,7 +40,9 @@
 (el-get-bundle sr-speedbar)
 (el-get-bundle Fuco1/smartparens)
 (el-get-bundle milkypostman/powerline)
-(el-get-bundle undo-tree)
+(el-get-bundle undo-tree
+  :url "https://gitlab.com/tsc25/undo-tree.git")
+(el-get-bundle queue)
 (el-get-bundle iedit)
 (el-get-bundle syohex/emacs-codic)
 (el-get-bundle rainbow-mode)
