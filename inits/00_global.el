@@ -366,9 +366,9 @@ _b_: magit-blame                        _i_: counsel-imenu[M-a]                 
 _g_: magit-status                       _F_: counsel-find-file[C-x C-f]          _mn_: mc/mark-next-like-this[C->]          _O_: org-capture[C-c c]
 _f_: fiplr-find-file[C-x f]             _L_: counsel-info-lookup-symbol[C-h S]   _mp_: mc/mark-previous-like-this[C-<]      _A_: org-agenda[C-c a]
 _c_: fiplr-clear-cache[C-x c]           _G_: counsel-git-grep                    _ma_: mc/mark-all-like-this[C-c C->]       _hh_: highlight-symbol-at-point
-_o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log                                                                _hn_: highlight-symbol-next
-_t_: goto-line[C-x :]                   _M_: counsel-minor                                                                  _hp_: highlight-symbol-prev
-_l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
+_o_: comment-or-uncomment-region[C-c :] _H_: counsel-git-log                                                              _hn_: highlight-symbol-next
+_t_: goto-line[C-x :]                   _M_: counsel-minor                                                                _hp_: highlight-symbol-prev
+_l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf                                                    _wf_: which-function-mode
 "
  ("j" ace-jump-mode)
  ("b" magit-blame)
@@ -401,6 +401,7 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf
  ("hh" highlight-symbol-at-point)
  ("hn" highlight-symbol-next)
  ("hp" highlight-symbol-prev)
+ ("wf" which-function-mode)
 
  ("z" nil "leave"))
   (defhydra hydra-lsp (:exit t :hint nil)
