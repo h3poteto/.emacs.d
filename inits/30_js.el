@@ -1,3 +1,6 @@
+(el-get-bundle mooz/js2-mode)
+(el-get-bundle prettier-js)
+
 (use-package js2-mode
   :mode
   ("\\.js.erb$" . js2-mode)

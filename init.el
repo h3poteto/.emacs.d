@@ -19,10 +19,10 @@
   (el-get-lock)
   (el-get-lock-unlock 'el-get-lock)
   )
-;; needs for loop
-(el-get-bundle anything)
+
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
+(el-get-bundle anything)  ;; needs for loop
 (el-get-bundle yoshiki/yaml-mode)
 (el-get-bundle highlight-indentation)
 (el-get-bundle DarthFennec/highlight-indent-guides)
@@ -43,13 +43,12 @@
 (el-get-bundle milkypostman/powerline)
 (el-get-bundle undo-tree
   :url "https://gitlab.com/tsc25/undo-tree.git")
-(el-get-bundle queue)
+(el-get-bundle queue)  ;; needs for undo-tree
 (el-get-bundle iedit)
 (el-get-bundle syohex/emacs-codic)
 (el-get-bundle rainbow-mode)
 (el-get-bundle company-mode/company-mode)
-;; yasnippet is required to insert arguments in company-mode
-(el-get-bundle joaotavora/yasnippet)
+(el-get-bundle joaotavora/yasnippet)  ;; yasnippet is required to insert arguments in company-mode
 (el-get-bundle highlight-symbol)
 (el-get-bundle Fanael/rainbow-delimiters)
 (el-get-bundle which-key)
@@ -60,12 +59,11 @@
 (el-get-bundle shibayu36/emacs-open-github-from-here)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 (el-get-bundle magnars/multiple-cursors.el)
-;; To install emacs-dashboard
-(el-get-bundle purcell/page-break-lines)
+(el-get-bundle purcell/page-break-lines)  ;; To install emacs-dashboard
 (el-get-bundle neotree)
-;; To show icons in neotree
-(el-get-bundle domtronn/all-the-icons.el)
+(el-get-bundle domtronn/all-the-icons.el)  ;; To show icons in neotree
 (el-get-bundle memoize)
+(el-get-bundle m00natic/vlfi)
 ;; Japanese
 (el-get-bundle mozc
   :type http
@@ -108,76 +106,16 @@
   ;; treemacs and lsp-treemacs is required by dap-mode
   )
 (el-get-bundle emacs-lsp/lsp-treemacs)
-;; js, ts
-(el-get-bundle mooz/js2-mode)
-(el-get-bundle defunkt/coffee-mode)
-(el-get-bundle typescript-mode)
-(el-get-bundle tide)
-(el-get-bundle prettier-js)
-;; ruby, rails
-(el-get-bundle bbatsov/projectile)
-(el-get-bundle rhtml-mode)
-(el-get-bundle slim-mode)
-(el-get-bundle ruby-block)
-(el-get-bundle ruby-electric)
-(el-get-bundle ruby-end)
-;; css
-(el-get-bundle less-css-mode)
-(el-get-bundle sass-mode)
-;; markdown
-(el-get-bundle markdown-mode)
-;; php
-(el-get-bundle php-mode)
-;; csv
-(el-get-bundle csv-mode)
-;; golang
-(el-get-bundle go-mode)
-(el-get-bundle s-kostyaev/go-fill-struct)
-(el-get-bundle weijiangan/flycheck-golangci-lint)
-;; html
-(el-get-bundle web-mode)
-;; terraform
-(el-get-bundle terraform-mode)
-(el-get-bundle rafalcieslak/emacs-company-terraform)
-;; json
-(el-get-bundle json-mode)
-;; elixir
-;; (el-get-bundle elixir-lang/emacs-elixir)
-(el-get-bundle alchemist)
-(el-get-bundle lbolla/emacs-flycheck-elixir
-  :name flycheck-elixir)
-;; protocol buffer
-(el-get-bundle protobuf-mode)
-;; vue
-(el-get-bundle purcell/mmm-mode)
-(el-get-bundle AdamNiederer/vue-html-mode)
-(el-get-bundle AdamNiederer/ssass-mode)
-(el-get-bundle Fanael/edit-indirect)
-(el-get-bundle AdamNiederer/vue-mode)
+
 ;; nginx
 (el-get-bundle ajc/nginx-mode)
-;; python
-(el-get-bundle purcell/flymake-python-pyflakes)
-(el-get-bundle paetzke/py-autopep8.el)
-(el-get-bundle paetzke/py-isort.el)
-;; docker
-(el-get-bundle spotify/dockerfile-mode)
-;; rust
-(el-get-bundle rust-mode)
-(el-get-bundle racer-rust/emacs-racer)
 ;; fluentd
 (el-get-bundle syohex/emacs-fluentd-mode)
-;; For pyrimpot
-(el-get-bundle cask/shut-up)
-(el-get-bundle Wilfred/pyimport)
 ;; puppet
 (el-get-bundle voxpupuli/puppet-mode)
 ;; toml
 (el-get-bundle dryman/toml-mode.el)
-;; jsonnet
-(el-get-bundle tminor/jsonnet-mode)
-;;
-(el-get-bundle m00natic/vlfi)
+
 
 (require 'use-package)
 

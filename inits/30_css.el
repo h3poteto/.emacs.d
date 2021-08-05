@@ -1,5 +1,7 @@
-;; css mode hook
-;; この設定はcss-modeが読み込まれる前にする必要がある
+(el-get-bundle less-css-mode)
+(el-get-bundle sass-mode)
+
+;; This line is required before load css-mode
 (setq css-indent-offset 2)
 (use-package css-mode
   :mode

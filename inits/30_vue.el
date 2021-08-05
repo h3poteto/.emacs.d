@@ -1,4 +1,9 @@
-;; vue-mode
+(el-get-bundle purcell/mmm-mode)
+(el-get-bundle AdamNiederer/vue-html-mode)
+(el-get-bundle AdamNiederer/ssass-mode)
+(el-get-bundle Fanael/edit-indirect)
+(el-get-bundle AdamNiederer/vue-mode)
+
 (use-package vue-mode
   :config
   (setq css-indent-offset 2)

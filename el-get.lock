@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
+      '((emacs-elixir :checksum "6bbc1e5ac46064613c982cedc60566ed077e7a58")
+        (mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
         (mozc :checksum "98e6f556c0d29e6e96cc9d53df9a9e9227921bb5")
         (anything :checksum "9e2259fc779eef1a3e947e74cc7d301d1cea0ca6")
         (lsp-treemacs :checksum "905cc74726438cf06d8ad7cabb2efae75aeb2359")
