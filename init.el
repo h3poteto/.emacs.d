@@ -19,6 +19,8 @@
   (el-get-lock)
   (el-get-lock-unlock 'el-get-lock)
   )
+;; needs for loop
+(el-get-bundle anything)
 (el-get-bundle jwiegley/use-package)
 (el-get-bundle init-loader)
 (el-get-bundle yoshiki/yaml-mode)
