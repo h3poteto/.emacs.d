@@ -1,3 +1,5 @@
+(el-get-bundle protobuf-mode)
+
 (use-package protobuf-mode
   :mode
   ("\\.proto$" . protobuf-mode)

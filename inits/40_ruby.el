@@ -1,4 +1,10 @@
-;; ruby-mode
+(el-get-bundle bbatsov/projectile)
+(el-get-bundle rhtml-mode)
+(el-get-bundle slim-mode)
+(el-get-bundle ruby-block)
+(el-get-bundle ruby-electric)
+(el-get-bundle ruby-end)
+
 (use-package ruby-mode
   :mode
   (("\\Capfile\\'" . ruby-mode)

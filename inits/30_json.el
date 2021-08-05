@@ -1,4 +1,6 @@
-;; json
+(el-get-bundle json-mode)
+(el-get-bundle tminor/jsonnet-mode)
+
 (use-package json-mode
   :mode
   ("\\.json$" . json-mode)

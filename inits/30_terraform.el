@@ -1,4 +1,6 @@
-;; terraform
+(el-get-bundle terraform-mode)
+(el-get-bundle rafalcieslak/emacs-company-terraform)
+
 (use-package terraform-mode
   :hook
   (terraform-mode . terraform-format-on-save-mode))
