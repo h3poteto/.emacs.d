@@ -143,9 +143,15 @@
   (el-get-bundle tminor/jsonnet-mode))
 
 ;; markdown
-(el-get-bundle markdown-mode)
+(if (ignore-minor-mode 'ignore-markdown-mode)
+    (message "markdown-mode is ignored")
+  (el-get-bundle markdown-mode))
+
 ;; php
-(el-get-bundle php-mode)
+(if (ignore-minor-mode 'ignore-php-mode)
+    (message "php-mode is ignored")
+  (el-get-bundle php-mode))
+
 ;; protobuf
 (el-get-bundle protobuf-mode)
 ;; python
