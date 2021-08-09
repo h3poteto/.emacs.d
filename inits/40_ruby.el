@@ -1,4 +1,5 @@
 (use-package ruby-mode
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :mode
   (("\\Capfile\\'" . ruby-mode)
    ("\\Gemfile\\'" . ruby-mode)
@@ -36,6 +37,7 @@
 
 ;;; rhtml-mode
 (use-package rhtml-mode
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :mode
   ("\\.ctp\\'" . rhtml-mode)
   ("\\.text.erb\\'" . rhtml-mode)
@@ -43,6 +45,7 @@
 
 ;; ruby-block
 (use-package ruby-block
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :config
   (setq ruby-block-highlight-toggle t)
   :hook
@@ -51,8 +54,14 @@
 
 ;; ruby-electric
 (use-package ruby-electric
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :hook
   (ruby-mode . (lambda () (ruby-electric-mode t))))
 
-(use-package ruby-end)
-(use-package slim-mode)
+(use-package ruby-end
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
+  )
+
+(use-package slim-mode
+  :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
+  )

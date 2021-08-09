@@ -193,10 +193,13 @@
   (el-get-bundle web-mode))
 
 ;; ruby
-(el-get-bundle rhtml-mode)
-(el-get-bundle ruby-block)
-(el-get-bundle ruby-electric)
-(el-get-bundle ruby-end)
-(el-get-bundle slim-mode)
+(if (ignore-minor-mode 'ignore-ruby-mode)
+    (message "ruby-mode is ignored")
+  (el-get-bundle rhtml-mode)
+  (el-get-bundle ruby-block)
+  (el-get-bundle ruby-electric)
+  (el-get-bundle ruby-end)
+  (el-get-bundle slim-mode))
+
 ;; coffee
 (el-get-bundle defunkt/coffee-mode)
