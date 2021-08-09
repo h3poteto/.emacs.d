@@ -173,8 +173,11 @@
   (el-get-bundle racer-rust/emacs-racer))
 
 ;; terraform
-(el-get-bundle terraform-mode)
-(el-get-bundle rafalcieslak/emacs-company-terraform)
+(if (ignore-minor-mode 'ignore-terraform-mode)
+    (message "terraform-mode is ignored")
+  (el-get-bundle terraform-mode)
+  (el-get-bundle rafalcieslak/emacs-company-terraform))
+
 ;; vue
 (el-get-bundle purcell/mmm-mode)
 (el-get-bundle AdamNiederer/vue-html-mode)
