@@ -108,7 +108,10 @@
   (el-get-bundle csv-mode))
 
 ;; dockerfile
-(el-get-bundle spotify/dockerfile-mode)
+(if (ignore-minor-mode 'ignore-dockerfile-mode)
+    (message "dockerfile-mode is ignored")
+  (el-get-bundle spotify/dockerfile-mode))
+
 ;; elixir
 (el-get-bundle elixir-lang/emacs-elixir)
 (el-get-bundle alchemist)
