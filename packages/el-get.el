@@ -137,8 +137,11 @@
   (el-get-bundle tide))
 
 ;; json
-(el-get-bundle json-mode)
-(el-get-bundle tminor/jsonnet-mode)
+(if (ignore-minor-mode 'ignore-json-mode)
+    (message "json-mode is ignored")
+  (el-get-bundle json-mode)
+  (el-get-bundle tminor/jsonnet-mode))
+
 ;; markdown
 (el-get-bundle markdown-mode)
 ;; php
