@@ -1,4 +1,5 @@
 (use-package python
+  :if (eq (ignore-minor-mode 'ignore-python-mode) nil)
   :mode ("\\.py" . python-mode)
   :config
   (setq lsp-pyls-plugins-pylint-enabled t)
@@ -12,6 +13,7 @@
   )
 
 (use-package py-autopep8
+  :if (eq (ignore-minor-mode 'ignore-python-mode) nil)
   :config
   (setq py-autopep8-options '("--max-line-length=140"))
   :hook
@@ -19,6 +21,7 @@
   )
 
 (use-package py-isort
+  :if (eq (ignore-minor-mode 'ignore-python-mode) nil)
   :hook
   (python-mode . (lambda () (add-hook 'before-save-hook 'py-isort-before-save)))
   )

@@ -158,11 +158,14 @@
   (el-get-bundle protobuf-mode))
 
 ;; python
-(el-get-bundle purcell/flymake-python-pyflakes)
-(el-get-bundle cask/shut-up) ;; needs for pyimport
-(el-get-bundle Wilfred/pyimport)
-(el-get-bundle paetzke/py-autopep8.el)
-(el-get-bundle paetzke/py-isort.el)
+(if (ignore-minor-mode 'ignore-python-mode)
+    (message "python-mode is ignored")
+  (el-get-bundle purcell/flymake-python-pyflakes)
+  (el-get-bundle cask/shut-up) ;; needs for pyimport
+  (el-get-bundle Wilfred/pyimport)
+  (el-get-bundle paetzke/py-autopep8.el)
+  (el-get-bundle paetzke/py-isort.el))
+
 ;; rust
 (el-get-bundle rust-mode)
 (el-get-bundle racer-rust/emacs-racer)
