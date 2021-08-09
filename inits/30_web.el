@@ -1,4 +1,5 @@
 (use-package web-mode
+  :if (eq (ignore-minor-mode 'ignore-web-mode) nil)
   :mode
   (("\\.html.tpl\\'" . web-mode)
    ("\\.jsx\\'" . web-mode)

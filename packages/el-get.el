@@ -97,61 +97,112 @@
 (el-get-bundle dryman/toml-mode.el)
 
 ;; css
-(el-get-bundle less-css-mode)
-(el-get-bundle sass-mode)
+(if (ignore-minor-mode 'ignore-css-mode)
+    (message "css-mode is ignored")
+  (el-get-bundle less-css-mode)
+  (el-get-bundle sass-mode))
+
 ;; csv
-(el-get-bundle csv-mode)
+(if (ignore-minor-mode 'ignore-csv-mode)
+    (message "csv-mode is ignored")
+  (el-get-bundle csv-mode))
+
 ;; dockerfile
-(el-get-bundle spotify/dockerfile-mode)
+(if (ignore-minor-mode 'ignore-dockerfile-mode)
+    (message "dockerfile-mode is ignored")
+  (el-get-bundle spotify/dockerfile-mode))
+
 ;; elixir
-(el-get-bundle elixir-lang/emacs-elixir)
-(el-get-bundle alchemist)
-(el-get-bundle lbolla/emacs-flycheck-elixir
-  :name flycheck-elixir)
+(if (ignore-minor-mode 'ignore-elixir-mode)
+    (message "elixir-mode is ignored")
+  (el-get-bundle elixir-lang/emacs-elixir)
+  (el-get-bundle alchemist)
+  (el-get-bundle lbolla/emacs-flycheck-elixir
+    :name flycheck-elixir))
+
 ;; go
-(el-get-bundle go-mode)
-(el-get-bundle weijiangan/flycheck-golangci-lint)
-(el-get-bundle s-kostyaev/go-fill-struct)
+(if (ignore-minor-mode 'ignore-go-mode)
+    (message "go-mode is ignored")
+  (el-get-bundle go-mode)
+  (el-get-bundle weijiangan/flycheck-golangci-lint)
+  (el-get-bundle s-kostyaev/go-fill-struct)
+)
+
 ;; js
-(el-get-bundle mooz/js2-mode)
-(el-get-bundle prettier-js)
+(if (ignore-minor-mode 'ignore-js-mode)
+    (message "js-mode is ignored")
+  (el-get-bundle mooz/js2-mode)
+  (el-get-bundle prettier-js)
+  (el-get-bundle typescript-mode)
+  (el-get-bundle tide))
+
 ;; json
-(el-get-bundle json-mode)
-(el-get-bundle tminor/jsonnet-mode)
+(if (ignore-minor-mode 'ignore-json-mode)
+    (message "json-mode is ignored")
+  (el-get-bundle json-mode)
+  (el-get-bundle tminor/jsonnet-mode))
+
 ;; markdown
-(el-get-bundle markdown-mode)
+(if (ignore-minor-mode 'ignore-markdown-mode)
+    (message "markdown-mode is ignored")
+  (el-get-bundle markdown-mode))
+
 ;; php
-(el-get-bundle php-mode)
+(if (ignore-minor-mode 'ignore-php-mode)
+    (message "php-mode is ignored")
+  (el-get-bundle php-mode))
+
 ;; protobuf
-(el-get-bundle protobuf-mode)
+(if (ignore-minor-mode 'ignore-protobuf-mode)
+    (message "protobuf-mode is ignored")
+  (el-get-bundle protobuf-mode))
+
 ;; python
-(el-get-bundle purcell/flymake-python-pyflakes)
-(el-get-bundle cask/shut-up) ;; needs for pyimport
-(el-get-bundle Wilfred/pyimport)
-(el-get-bundle paetzke/py-autopep8.el)
-(el-get-bundle paetzke/py-isort.el)
+(if (ignore-minor-mode 'ignore-python-mode)
+    (message "python-mode is ignored")
+  (el-get-bundle purcell/flymake-python-pyflakes)
+  (el-get-bundle cask/shut-up) ;; needs for pyimport
+  (el-get-bundle Wilfred/pyimport)
+  (el-get-bundle paetzke/py-autopep8.el)
+  (el-get-bundle paetzke/py-isort.el))
+
 ;; rust
-(el-get-bundle rust-mode)
-(el-get-bundle racer-rust/emacs-racer)
+(if (ignore-minor-mode 'ignore-rust-mode)
+    (message "rust-mode is ignored")
+  (el-get-bundle rust-mode)
+  (el-get-bundle racer-rust/emacs-racer))
+
 ;; terraform
-(el-get-bundle terraform-mode)
-(el-get-bundle rafalcieslak/emacs-company-terraform)
-;; typescript
-(el-get-bundle typescript-mode)
-(el-get-bundle tide)
+(if (ignore-minor-mode 'ignore-terraform-mode)
+    (message "terraform-mode is ignored")
+  (el-get-bundle terraform-mode)
+  (el-get-bundle rafalcieslak/emacs-company-terraform))
+
 ;; vue
-(el-get-bundle purcell/mmm-mode)
-(el-get-bundle AdamNiederer/vue-html-mode)
-(el-get-bundle AdamNiederer/ssass-mode)
-(el-get-bundle Fanael/edit-indirect)
-(el-get-bundle AdamNiederer/vue-mode)
+(if (ignore-minor-mode 'ignore-vue-mode)
+    (message "vue-mode is ignored")
+  (el-get-bundle purcell/mmm-mode)
+  (el-get-bundle AdamNiederer/vue-html-mode)
+  (el-get-bundle AdamNiederer/ssass-mode)
+  (el-get-bundle Fanael/edit-indirect)
+  (el-get-bundle AdamNiederer/vue-mode))
+
 ;; web
-(el-get-bundle web-mode)
+(if (ignore-minor-mode 'ignore-web-mode)
+    (message "web-mode is ignored")
+  (el-get-bundle web-mode))
+
 ;; ruby
-(el-get-bundle rhtml-mode)
-(el-get-bundle ruby-block)
-(el-get-bundle ruby-electric)
-(el-get-bundle ruby-end)
-(el-get-bundle slim-mode)
+(if (ignore-minor-mode 'ignore-ruby-mode)
+    (message "ruby-mode is ignored")
+  (el-get-bundle rhtml-mode)
+  (el-get-bundle ruby-block)
+  (el-get-bundle ruby-electric)
+  (el-get-bundle ruby-end)
+  (el-get-bundle slim-mode))
+
 ;; coffee
-(el-get-bundle defunkt/coffee-mode)
+(if (ignore-minor-mode 'ignore-coffee-mode)
+    (message "coffee-mode is ignored")
+  (el-get-bundle defunkt/coffee-mode))
+

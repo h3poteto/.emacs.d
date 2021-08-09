@@ -1,4 +1,5 @@
 (use-package json-mode
+  :if (eq (ignore-minor-mode 'ignore-json-mode) nil)
   :mode
   ("\\.json$" . json-mode)
   ("\\.json.tpl$" . json-mode)
