@@ -1,4 +1,5 @@
 (use-package go-mode
+  :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
   :commands go-mode
   :config
   (setq indent-tabs-mode nil)
@@ -94,4 +95,6 @@ _ggr_: go-goto-return-values[C-c C-f r] _dd_: dap-debug
   (go-mode . flycheck-mode)
   )
 
-(use-package go-fill-struct)
+(use-package go-fill-struct
+  :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
+  )

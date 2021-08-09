@@ -10,13 +10,18 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+(defun ignore-minor-mode (ignored-mode)
+  (and (eq (boundp ignored-mode) t) (eq (symbol-value ignored-mode) t))
+  )
+
 ;; el-get packages
 (el-get-bundle tarao/el-get-lock
   (el-get-lock)
   (el-get-lock-unlock 'el-get-lock)
   )
-
-(load (locate-user-emacs-file "packages.el"))
+(add-to-list 'load-path (locate-user-emacs-file "packages"))
+(load "ignore.el")
+(load "el-get.el")
 
 (require 'use-package)
 

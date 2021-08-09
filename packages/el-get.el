@@ -109,9 +109,12 @@
 (el-get-bundle lbolla/emacs-flycheck-elixir
   :name flycheck-elixir)
 ;; go
-(el-get-bundle go-mode)
-(el-get-bundle weijiangan/flycheck-golangci-lint)
-(el-get-bundle s-kostyaev/go-fill-struct)
+(if (ignore-minor-mode 'ignore-go-mode)
+    (message "go-mode is ignored")
+  (el-get-bundle go-mode)
+  (el-get-bundle weijiangan/flycheck-golangci-lint)
+  (el-get-bundle s-kostyaev/go-fill-struct)
+)
 ;; js
 (el-get-bundle mooz/js2-mode)
 (el-get-bundle prettier-js)

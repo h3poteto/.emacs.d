@@ -17,4 +17,5 @@ bookmarks
 transient/
 mozc/
 emacs-client
+packages/ignore.el
 .*
