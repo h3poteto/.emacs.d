@@ -153,7 +153,10 @@
   (el-get-bundle php-mode))
 
 ;; protobuf
-(el-get-bundle protobuf-mode)
+(if (ignore-minor-mode 'ignore-protobuf-mode)
+    (message "protobuf-mode is ignored")
+  (el-get-bundle protobuf-mode))
+
 ;; python
 (el-get-bundle purcell/flymake-python-pyflakes)
 (el-get-bundle cask/shut-up) ;; needs for pyimport
