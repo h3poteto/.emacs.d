@@ -188,7 +188,10 @@
   (el-get-bundle AdamNiederer/vue-mode))
 
 ;; web
-(el-get-bundle web-mode)
+(if (ignore-minor-mode 'ignore-web-mode)
+    (message "web-mode is ignored")
+  (el-get-bundle web-mode))
+
 ;; ruby
 (el-get-bundle rhtml-mode)
 (el-get-bundle ruby-block)
