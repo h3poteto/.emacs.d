@@ -1,5 +1,3 @@
-(el-get-bundle php-mode)
-
 (use-package php-mode
   :mode
   ("\\.php$" . php-mode)

@@ -9,6 +9,17 @@
 
 (setq large-file-warning-threshold nil)
 
+;; server start for emacs-client
+(when window-system
+  (require 'server)
+  (unless (eq (server-running-p) 't)
+    (server-start)
+
+    (defun iconify-emacs-when-server-is-done ()
+      (unless server-clients (iconify-frame)))
+    )
+  )
+
 ;; revert-buffer
 (defun revert-buffer-no-confirm (&optional force-reverting)
   "Interactive call to revert-buffer. Ignoring the auto-save

@@ -1,6 +1,3 @@
-(el-get-bundle rust-mode)
-(el-get-bundle racer-rust/emacs-racer)
-
 (use-package rust-mode
   :config
   (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)

@@ -1,6 +1,3 @@
-(el-get-bundle less-css-mode)
-(el-get-bundle sass-mode)
-
 ;; This line is required before load css-mode
 (setq css-indent-offset 2)
 (use-package css-mode
