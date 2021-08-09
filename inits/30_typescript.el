@@ -1,6 +1,3 @@
-(el-get-bundle typescript-mode)
-(el-get-bundle tide)
-
 (defun setup-tide-mode ()
   (interactive)
   (setq typescript-indent-level 2)
@@ -16,6 +13,7 @@
   )
 
 (use-package typescript-mode
+  :init
   :mode
   ("\\.ts\\'" . typescript-mode)
   :hook

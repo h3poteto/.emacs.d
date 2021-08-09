@@ -1,7 +1,3 @@
-(el-get-bundle go-mode)
-(el-get-bundle s-kostyaev/go-fill-struct)
-(el-get-bundle weijiangan/flycheck-golangci-lint)
-
 (use-package go-mode
   :commands go-mode
   :config

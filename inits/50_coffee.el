@@ -1,5 +1,3 @@
-(el-get-bundle defunkt/coffee-mode)
-
 (use-package coffee-mode
   :mode
   ("\\.coffee.erb\\'" . coffee-mode)

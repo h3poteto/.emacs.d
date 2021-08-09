@@ -1,9 +1,3 @@
-(el-get-bundle purcell/flymake-python-pyflakes)
-(el-get-bundle paetzke/py-autopep8.el)
-(el-get-bundle paetzke/py-isort.el)
-(el-get-bundle cask/shut-up) ;; needs for pyimport
-(el-get-bundle Wilfred/pyimport)
-
 (use-package python
   :mode ("\\.py" . python-mode)
   :config

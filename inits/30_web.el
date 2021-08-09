@@ -1,5 +1,3 @@
-(el-get-bundle web-mode)
-
 (use-package web-mode
   :mode
   (("\\.html.tpl\\'" . web-mode)
