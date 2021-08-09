@@ -113,10 +113,13 @@
   (el-get-bundle spotify/dockerfile-mode))
 
 ;; elixir
-(el-get-bundle elixir-lang/emacs-elixir)
-(el-get-bundle alchemist)
-(el-get-bundle lbolla/emacs-flycheck-elixir
-  :name flycheck-elixir)
+(if (ignore-minor-mode 'ignore-elixir-mode)
+    (message "elixir-mode is ignored")
+  (el-get-bundle elixir-lang/emacs-elixir)
+  (el-get-bundle alchemist)
+  (el-get-bundle lbolla/emacs-flycheck-elixir
+    :name flycheck-elixir))
+
 ;; go
 (if (ignore-minor-mode 'ignore-go-mode)
     (message "go-mode is ignored")
