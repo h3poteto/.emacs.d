@@ -97,8 +97,12 @@
 (el-get-bundle dryman/toml-mode.el)
 
 ;; css
-(el-get-bundle less-css-mode)
-(el-get-bundle sass-mode)
+(if (ignore-minor-mode 'ignore-css-mode)
+    (message "css-mode is ignored")
+  (el-get-bundle less-css-mode)
+  (el-get-bundle sass-mode)
+)
+
 ;; csv
 (el-get-bundle csv-mode)
 ;; dockerfile
