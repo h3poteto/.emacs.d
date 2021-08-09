@@ -100,11 +100,13 @@
 (if (ignore-minor-mode 'ignore-css-mode)
     (message "css-mode is ignored")
   (el-get-bundle less-css-mode)
-  (el-get-bundle sass-mode)
-)
+  (el-get-bundle sass-mode))
 
 ;; csv
-(el-get-bundle csv-mode)
+(if (ignore-minor-mode 'ignore-csv-mode)
+    (message "csv-mode is ignored")
+  (el-get-bundle csv-mode))
+
 ;; dockerfile
 (el-get-bundle spotify/dockerfile-mode)
 ;; elixir
