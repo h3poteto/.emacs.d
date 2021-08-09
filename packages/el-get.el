@@ -202,4 +202,7 @@
   (el-get-bundle slim-mode))
 
 ;; coffee
-(el-get-bundle defunkt/coffee-mode)
+(if (ignore-minor-mode 'ignore-coffee-mode)
+    (message "coffee-mode is ignored")
+  (el-get-bundle defunkt/coffee-mode))
+
