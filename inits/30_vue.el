@@ -1,4 +1,5 @@
 (use-package vue-mode
+  :if (eq (ignore-minor-mode 'ignore-vue-mode) nil)
   :config
   (setq css-indent-offset 2)
   (setq js-switch-indent-offset 2)
