@@ -167,8 +167,11 @@
   (el-get-bundle paetzke/py-isort.el))
 
 ;; rust
-(el-get-bundle rust-mode)
-(el-get-bundle racer-rust/emacs-racer)
+(if (ignore-minor-mode 'ignore-rust-mode)
+    (message "rust-mode is ignored")
+  (el-get-bundle rust-mode)
+  (el-get-bundle racer-rust/emacs-racer))
+
 ;; terraform
 (el-get-bundle terraform-mode)
 (el-get-bundle rafalcieslak/emacs-company-terraform)
