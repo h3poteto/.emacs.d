@@ -127,9 +127,15 @@
   (el-get-bundle weijiangan/flycheck-golangci-lint)
   (el-get-bundle s-kostyaev/go-fill-struct)
 )
+
 ;; js
-(el-get-bundle mooz/js2-mode)
-(el-get-bundle prettier-js)
+(if (ignore-minor-mode 'ignore-js-mode)
+    (message "js-mode is ignored")
+  (el-get-bundle mooz/js2-mode)
+  (el-get-bundle prettier-js)
+  (el-get-bundle typescript-mode)
+  (el-get-bundle tide))
+
 ;; json
 (el-get-bundle json-mode)
 (el-get-bundle tminor/jsonnet-mode)
@@ -151,9 +157,6 @@
 ;; terraform
 (el-get-bundle terraform-mode)
 (el-get-bundle rafalcieslak/emacs-company-terraform)
-;; typescript
-(el-get-bundle typescript-mode)
-(el-get-bundle tide)
 ;; vue
 (el-get-bundle purcell/mmm-mode)
 (el-get-bundle AdamNiederer/vue-html-mode)

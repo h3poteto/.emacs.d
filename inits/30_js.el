@@ -1,4 +1,5 @@
 (use-package js2-mode
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   :mode
   ("\\.js.erb$" . js2-mode)
   ("\\.js$" . js2-mode)
@@ -41,7 +42,7 @@
   )
 
 (use-package typescript-mode
-  :init
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   :mode
   ("\\.ts\\'" . typescript-mode)
   :hook
