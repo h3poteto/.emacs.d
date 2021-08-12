@@ -1,16 +1,19 @@
 (use-package rust-mode
   :if (eq (ignore-minor-mode 'ignore-rust-mode) nil)
+  :custom rust-format-on-save t
   :config
   (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
   (setq company-tooltip-align-annotations t)
-  (use-package :racer-mode
-    :hook
-    (racer-mode . eldoc-mode)
-    (racer-mode . company-mode)
-    )
+  ;; We can use rls or rust-analyzer as lsp server.
+  (setq lsp-rust-server 'rls)
   :hook
   (rust-mode . (lambda ()
                (hs-minor-mode 1)))
   (rust-mode . lsp-deferred)
-  (rust-mode . racer-mode)
+  )
+
+(use-package cargo
+  :if (eq (ignore-minor-mode 'ignore-rust-mode) nil)
+  :hook
+  (rust-mode . cargo-minor-mode)
   )
