@@ -136,14 +136,11 @@ $ gem install solargraph
 
 
 ## rls
-For rust. Racer supports code completion.
+For rust.
 
 ```
 $ rustup update
-$ rustup component add rls rust-analysis rust-src
-$ rustup toolchain add nightly
-$ rustup component add rust-src
-$ cargo +nightly install racer
+$ rustup component add rls rust-analysis rust-src rustfmt clippy
 ```
 
 # DAP

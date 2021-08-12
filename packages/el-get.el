@@ -170,7 +170,7 @@
 (if (ignore-minor-mode 'ignore-rust-mode)
     (message "rust-mode is ignored")
   (el-get-bundle rust-mode)
-  (el-get-bundle racer-rust/emacs-racer))
+  (el-get-bundle cargo))
 
 ;; terraform
 (if (ignore-minor-mode 'ignore-terraform-mode)

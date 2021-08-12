@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((emacs-elixir :checksum "6bbc1e5ac46064613c982cedc60566ed077e7a58")
+      '((cargo :checksum "1dd9771853b4327ed161232b65520c13ffe3c0c6")
+        (emacs-elixir :checksum "6bbc1e5ac46064613c982cedc60566ed077e7a58")
         (mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
         (mozc :checksum "98e6f556c0d29e6e96cc9d53df9a9e9227921bb5")
         (anything :checksum "9e2259fc779eef1a3e947e74cc7d301d1cea0ca6")
@@ -11,7 +12,6 @@
         (monokai-emacs :checksum "c5a7978bfc2ad2aa90882e6b2583668dc7b3e1a5")
         (shrink-path :checksum "c14882c8599aec79a6e8ef2d06454254bb3e1e41")
         (eldoc-eval :checksum "f6e639047d9b3695877e63dd3de8f24e704d6d23")
-        (emacs-racer :checksum "1e63e98626737ea9b662d4a9b1ffd6842b1c648c")
         (popup-el :checksum "13364d7674535db225789b03da766746734a4f28")
         (elixir :checksum "01b332495d3f44addeb236428041c4ffa0c2ca3b")
         (alchemist :checksum "6f99367511ae209f8fe2c990779764bbb4ccb6ed")
@@ -36,7 +36,6 @@
         (company-lsp :checksum "f921ffa0cdc542c21dc3dd85f2c93df4288e83bd")
         (company-mode :checksum "0edc87d423b83c707e6c708f421d96f4d198803d")
         (awesome-tab :checksum "82d69f6e80204df9f735637a07dfe7f383f4a6c6")
-        (rust-racer :checksum "a4bcf46c7a908eb53eeb69ec421c5ee44e879902")
         (rust-mode :checksum "ca7d99c6fd90fc1e636aa9d4020a2f077786a0c3")
         (jsonrpc :checksum "8220ae7e235134d007240ae8f6049ec89df965b2")
         (powerline :checksum "edbb464eef680efc9d408730288c716cd4cac404")
