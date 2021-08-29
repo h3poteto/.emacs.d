@@ -1,5 +1,7 @@
 (use-package vue-mode
   :if (eq (ignore-minor-mode 'ignore-vue-mode) nil)
+  :after
+  flycheck
   :config
   (setq css-indent-offset 2)
   (setq js-switch-indent-offset 2)
@@ -13,6 +15,7 @@
   (flycheck-add-mode 'javascript-eslint 'vue-html-mode)
   (flycheck-add-mode 'javascript-eslint 'css-mode)
   :hook
+  (vue-mode . flycheck-mode)
   (vue-mode . prettier-js-mode)
   (vue-mode . lsp-deferred)
   )
