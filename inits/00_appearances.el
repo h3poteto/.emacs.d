@@ -269,6 +269,8 @@
   (web-mode . rainbow-mode)
   (vue-mode . rainbow-mode)
   (css-mode . rainbow-mode)
+  (emacs-lisp-mode . rainbow-mode)
+  (conf-mode . rainbow-mode)
   )
 
 ;; highlight-indent-guides
