@@ -505,4 +505,18 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
    ("C-c C-<" . mc/mark-all-like-this))
   )
 
+;;------------------------------------------
+;; spellcheck
+;;------------------------------------------
+(setq-default ispell-program-name "aspell")
+(with-eval-after-load "ispell"
+  (setq ispell-local-dictionary "en_US")
+  (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
+
+(use-package flyspell
+  :hook
+  ((go-mode . flyspell-mode)
+   (elixir-mode . flyspell-mode))
+  )
+
 (use-package flycheck)
