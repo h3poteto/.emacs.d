@@ -448,7 +448,7 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; GC Settings
 ;;------------------------------------------
 ;; Increase threshold to fire garbage collection
-(setq gc-cons-threshold 1073741824)
+(setq gc-cons-threshold (* gc-cons-threshold 10))
 (setq garbage-collection-messages t)
 
 ;; Run GC every 60 seconds if emacs is idle.
