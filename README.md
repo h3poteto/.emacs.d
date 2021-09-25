@@ -163,6 +163,7 @@ $ sudo /usr/sbin/DevToolsSecurity -enable
 - golangci-lint
 - gorename
 - godef
+- aspell
 
 ## emacs-mozc
 
@@ -216,4 +217,9 @@ $ go get golang.org/x/tools/cmd/gorename
 ## godef
 ```
 $ go get github.com/rogpeppe/godef
+```
+
+## Aspell
+```
+$ yay -S aspell
 ```
