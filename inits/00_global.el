@@ -513,10 +513,4 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   (setq ispell-local-dictionary "en_US")
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
-(use-package flyspell
-  :hook
-  ((go-mode . flyspell-mode)
-   (elixir-mode . flyspell-mode))
-  )
-
 (use-package flycheck)
