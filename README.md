@@ -98,6 +98,7 @@ Some minor mode uses language server protocol. So please install following packa
 - pyls
 - solargraph
 - rls
+- elixir-ls
 
 ## gopls
 For golang.
@@ -142,6 +143,19 @@ For rust.
 $ rustup update
 $ rustup component add rls rust-analysis rust-src rustfmt clippy
 ```
+
+## Elixir-ls
+For Elixir.
+
+```
+$ cd ~/.emacs.d
+$ wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.8.1/elixir-ls-1.12.zip -O elixir-ls.zip
+$ unzip elixir-ls.zip
+$ mv elixir-ls .elixir-ls
+```
+
+About more details, please refere official repository.
+https://github.com/elixir-lsp/elixir-ls#detailed-installation-instructions
 
 # DAP
 ## golang
