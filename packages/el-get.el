@@ -116,7 +116,6 @@
 (if (ignore-minor-mode 'ignore-elixir-mode)
     (message "elixir-mode is ignored")
   (el-get-bundle elixir-lang/emacs-elixir)
-  (el-get-bundle alchemist)
   (el-get-bundle lbolla/emacs-flycheck-elixir
     :name flycheck-elixir))
 
