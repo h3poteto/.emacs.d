@@ -269,6 +269,9 @@
 ;; lps-mode 7.0.1 moved clients under the directory, it is not root directory, so I have to add this directory to load path.
 (setq load-path (cons "~/.emacs.d/el-get/lsp-mode/clients/" load-path))
 (use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-l")
+  (setq lsp-headerline-breadcrumb-enable nil)
   :custom
   (
    (lsp-inhibit-message t)
@@ -311,10 +314,11 @@
                             "[/\\\\]bazel-out$"
                             "[/\\\\]bazel-testlogs$"
                             )))
-
-  :hook
-  (prog-major-mode . lsp-prog-major-mode-enable)
-  )
+  :hook (
+         (prog-major-mode . lsp-prog-major-mode-enable)
+         (lsp-mode . lsp-enable-which-key-integration)
+         )
+  :commands (lsp lsp-deferred))
 
 (use-package lsp-ui
   :after lsp-mode
@@ -328,14 +332,11 @@
    )
   :hook
   (lsp-mode . lsp-ui-mode)
+  :commands lsp-ui-mode
   )
 
-
-;; treemacs
-(setq load-path
-      (append '("~/.emacs.d/el-get/treemacs/src/elisp" "~/.emacs.d/el-get/treemacs/src/extra")
-              load-path))
-(use-package treemacs)
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
 (use-package dap-mode
   :after (
