@@ -33,7 +33,10 @@
 (el-get-bundle DarwinAwardWinner/amx)
 (el-get-bundle jschaf/esup)
 (el-get-bundle jacktasia/dumb-jump)
-(el-get-bundle magit)
+(el-get-bundle magit
+  :branch "v3.2.1")
+(el-get-bundle magit/with-editor
+  :branch "v3.0.4")
 (el-get-bundle shibayu36/emacs-open-github-from-here)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 (el-get-bundle magnars/multiple-cursors.el)
