@@ -57,6 +57,8 @@ _osr_: org_shiftright[S-right]
   :bind
   (:map org-mode-map
         ("C-z" . hydra-org/body))
+  :hook
+  (org-mode . (lambda () (outline-hide-sublevels 2)))
   )
 
 ;; https://qiita.com/takaxp/items/0b717ad1d0488b74429d
