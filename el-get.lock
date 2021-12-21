@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((magit :checksum "b70f660e36c024fa9319ea0e2977e45ef3c6f3ac")
+      '((coffee-mode :checksum "35a41c7d8233eac0b267d9593e67fb8b6235e134")
+        (magit :checksum "b70f660e36c024fa9319ea0e2977e45ef3c6f3ac")
         (with-editor :checksum "5519b6a67ecd66865b4fdd5447425eee900c54f4")
         (slim-mode :checksum "3636d18ab1c8b316eea71c4732eb44743e2ded87")
         (ruby-end :checksum "79b4ea788b9cae9282da809507d0a56aa9c057c8")
