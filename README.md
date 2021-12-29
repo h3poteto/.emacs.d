@@ -93,7 +93,7 @@ M-x all-the-icons-install-fonts
 Some minor mode uses language server protocol. So please install following packages for each language.
 
 - gopls
-- javascript-typescript-langserver
+- typescript-language-server
 - vls
 - pyls
 - solargraph
@@ -107,11 +107,17 @@ For golang.
 $ go get -u golang.org/x/tools/gopls
 ```
 
-## javascript-typescript-langserver
+## typescript-langserver
 For javascript and typescript.
 
 ```
-$ npm install -g javascript-typescript-langserver
+$ npm install -g typescript-language-server
+```
+
+Or install `ts-ls` on Emacs.
+
+```
+M-x lsp-install-server
 ```
 
 ## vls
