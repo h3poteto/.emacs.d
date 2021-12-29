@@ -28,7 +28,6 @@
         (json-mode :checksum "eedb4560034f795a7950fa07016bd4347c368873")
         (json-snatcher :checksum "b28d1c0670636da6db508d03872d96ffddbc10f2")
         (json-reformat :checksum "8eb6668ed447988aea06467ba8f42e1f2178246f")
-        (tide :checksum "28137ed904deb143dba8f8f67660966e11921c6d")
         (typescript-mode :checksum "e82416205158d4b21d42d6b60c4385f68f0ae1b1")
         (prettier-js :checksum "e9b73e81d3e1642aec682195f127a42dfb0b5774")
         (js2-mode :checksum "d18730505e4ab57ec2b036980a62f6c6a60381e9")
