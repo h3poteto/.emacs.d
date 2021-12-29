@@ -135,8 +135,7 @@
     (message "js-mode is ignored")
   (el-get-bundle mooz/js2-mode)
   (el-get-bundle prettier-js)
-  (el-get-bundle typescript-mode)
-  (el-get-bundle tide))
+  (el-get-bundle typescript-mode))
 
 ;; json
 (if (ignore-minor-mode 'ignore-json-mode)
