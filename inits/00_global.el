@@ -519,3 +519,16 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
 (use-package flycheck)
+
+;;-----------------------------------------
+;; Split window
+;;-----------------------------------------
+(defun split-window-horizontally-n (num_wins)
+  (interactive "p")
+  (dotimes (i (- num_wins 1))
+    (split-window-horizontally))
+  (balance-windows))
+
+(global-set-key "\C-x@" (lambda ()
+                           (interactive)
+                           (split-window-horizontally-n 3)))
