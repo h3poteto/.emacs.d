@@ -54,4 +54,6 @@
  (set-cursor-color "Gray")
  ))
 
+(defvar org-shared-directory "~/Library/CloudStorage/OneDrive-個人用/org")
+
 (load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init.el")))
