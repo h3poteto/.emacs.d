@@ -1,20 +1,20 @@
 (use-package org
   :config
-  (setq org-directory "~/OneDrive/org")
+  (setq org-directory "~/Dropbox/org")
   (setq org-default-notes-file "notes.org")
   (setq org-use-speed-commands t)
   (setq org-agenda-files '(
-                           "~/OneDrive/org/notes.org"
-                           "~/OneDrive/org/todos.org"
-                           "~/OneDrive/org/bugs.org"
+                           "~/Dropbox/org/notes.org"
+                           "~/Dropbox/org/todos.org"
+                           "~/Dropbox/org/bugs.org"
                            ))
   (setq org-support-shift-select t)
   (setq org-capture-templates
-        '(("n" "Note" entry (file+headline "~/OneDrive/org/notes.org" "Notes")
+        '(("n" "Note" entry (file+headline "~/Dropbox/org/notes.org" "Notes")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("t" "Todo" entry (file+headline "~/OneDrive/org/todos.org" "Todos")
+          ("t" "Todo" entry (file+headline "~/Dropbox/org/todos.org" "Todos")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("b" "Bug" entry (file+headline "~/OneDrive/org/bugs.org" "Bugs")
+          ("b" "Bug" entry (file+headline "~/Dropbox/org/bugs.org" "Bugs")
            "* %? - %a\nEntered on %U\n %i\n")
           ))
   (defhydra hydra-org (:hint nil :exit t)
@@ -69,4 +69,4 @@ _osr_: org_shiftright[S-right]
       (let ((buffer (get-buffer file)))
         (switch-to-buffer buffer)
         (message "%s" file))
-    (find-file (concat "~/OneDrive/org/" file))))
+    (find-file (concat "~/Dropbox/org/" file))))
