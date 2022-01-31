@@ -309,10 +309,15 @@
                             "[/\\\\]build-aux$"
                             "[/\\\\]autom4te.cache$"
                             "[/\\\\]\\.reference$"
+                            "[/\\\\].bazel-bin$"
                             "[/\\\\]bazel-bin$"
+                            "[/\\\\].bazelbuild$"
+                            "[/\\\\].bazel-kops$"
                             "[/\\\\]bazel-kops$"
-                            "[/\\\\]bazel-out$"
+                            "[/\\\\].bazel-out$"
+                            "[/\\\\].bazel-testlogs$"
                             "[/\\\\]bazel-testlogs$"
+                            "[/\\\\]vendor$"
                             )))
   :hook (
          (prog-major-mode . lsp-prog-major-mode-enable)
@@ -454,6 +459,8 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 
 ;; Run GC every 60 seconds if emacs is idle.
 (run-with-idle-timer 60.0 t #'garbage-collect)
+
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 (use-package vlf
   :config
