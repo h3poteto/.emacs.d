@@ -1,3 +1,5 @@
+(defvar org-shared-directory "~/OneDrive/org")
+
 (load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init")))
 
 ;; 色々試したけど標準フォントはUbuntu monoがやめられない

@@ -1,20 +1,16 @@
 (use-package org
   :config
-  (setq org-directory "~/Dropbox/org")
+  (setq org-directory org-shared-directory)
   (setq org-default-notes-file "notes.org")
   (setq org-use-speed-commands t)
-  (setq org-agenda-files '(
-                           "~/Dropbox/org/notes.org"
-                           "~/Dropbox/org/todos.org"
-                           "~/Dropbox/org/bugs.org"
-                           ))
+  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
   (setq org-support-shift-select t)
   (setq org-capture-templates
-        '(("n" "Note" entry (file+headline "~/Dropbox/org/notes.org" "Notes")
+        '(("n" "Note" entry (file+headline (concat org-directory "/notes.org") "Notes")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("t" "Todo" entry (file+headline "~/Dropbox/org/todos.org" "Todos")
+          ("t" "Todo" entry (file+headline (concat org-directory "/todos.org") "Todos")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("b" "Bug" entry (file+headline "~/Dropbox/org/bugs.org" "Bugs")
+          ("b" "Bug" entry (file+headline (concat org-directory "/bugs.org") "Bugs")
            "* %? - %a\nEntered on %U\n %i\n")
           ))
   (defhydra hydra-org (:hint nil :exit t)
@@ -50,9 +46,9 @@ _osr_: org_shiftright[S-right]
   :bind
   (("C-c c" . org-capture)
    ("C-c a" . org-agenda)
-   ("C-c C-o n" . (lambda () (interactive) (show-org-buffer "notes.org")))
-   ("C-c C-o t" . (lambda () (interactive) (show-org-buffer "todos.org")))
-   ("C-c C-o b" . (lambda () (interactive) (show-org-buffer "bugs.org")))
+   ("C-c C-o n" . (lambda () (interactive) (show-org-buffer "/notes.org")))
+   ("C-c C-o t" . (lambda () (interactive) (show-org-buffer "/todos.org")))
+   ("C-c C-o b" . (lambda () (interactive) (show-org-buffer "/bugs.org")))
    )
   :bind
   (:map org-mode-map
@@ -69,4 +65,4 @@ _osr_: org_shiftright[S-right]
       (let ((buffer (get-buffer file)))
         (switch-to-buffer buffer)
         (message "%s" file))
-    (find-file (concat "~/Dropbox/org/" file))))
+    (find-file (concat org-shared-directory file))))
