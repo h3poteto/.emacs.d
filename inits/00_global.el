@@ -101,11 +101,7 @@
                                               "python3.*"
                                               "__pycache__"
                                               "_output"
-                                              "bazel-bin"
-                                              "bazel-genfiles"
-                                              "bazel-kops"
-                                              "bazel-out"
-                                              "bazel-testlogs"))
+                                              "*bazel*"))
                                (files ("*~" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))))
 
 ;; リモートのファイルを手元のemacsからいじるtramp
@@ -309,14 +305,7 @@
                             "[/\\\\]build-aux$"
                             "[/\\\\]autom4te.cache$"
                             "[/\\\\]\\.reference$"
-                            "[/\\\\].bazel-bin$"
-                            "[/\\\\]bazel-bin$"
-                            "[/\\\\].bazelbuild$"
-                            "[/\\\\].bazel-kops$"
-                            "[/\\\\]bazel-kops$"
-                            "[/\\\\].bazel-out$"
-                            "[/\\\\].bazel-testlogs$"
-                            "[/\\\\]bazel-testlogs$"
+                            "[/\\\\]*bazel*"
                             "[/\\\\]vendor$"
                             )))
   :hook (
