@@ -3,7 +3,11 @@
   (setq org-directory org-shared-directory)
   (setq org-default-notes-file "notes.org")
   (setq org-use-speed-commands t)
-  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
+  ;;  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$")
+  (setq org-agenda-files
+        (mapcar (lambda (basename)
+                  (concat org-directory "/" (symbol-name basename) ".org"))
+                '(notes todos bugs)))
   (setq org-support-shift-select t)
   (setq org-capture-templates
         '(("n" "Note" entry (file+headline (concat org-directory "/notes.org") "Notes")
