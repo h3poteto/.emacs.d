@@ -1,6 +1,9 @@
 (use-package org
   :config
   (setq org-directory org-shared-directory)
+  (setq org-notes-path (concat org-directory "/notes.org"))
+  (setq org-todos-path (concat org-directory "/todos.org"))
+  (setq org-bugs-path (concat org-directory "/bugs.org"))
   (setq org-default-notes-file "notes.org")
   (setq org-use-speed-commands t)
   ;;  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$")
@@ -10,11 +13,11 @@
                 '(notes todos bugs)))
   (setq org-support-shift-select t)
   (setq org-capture-templates
-        '(("n" "Note" entry (file+headline (concat org-directory "/notes.org") "Notes")
+        '(("n" "Note" entry (file+headline org-notes-path "Notes")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("t" "Todo" entry (file+headline (concat org-directory "/todos.org") "Todos")
+          ("t" "Todo" entry (file+headline org-todos-path "Todos")
            "* %? - %a\nEntered on %U\n %i\n")
-          ("b" "Bug" entry (file+headline (concat org-directory "/bugs.org") "Bugs")
+          ("b" "Bug" entry (file+headline org-bugs-path "Bugs")
            "* %? - %a\nEntered on %U\n %i\n")
           ))
   (defhydra hydra-org (:hint nil :exit t)
