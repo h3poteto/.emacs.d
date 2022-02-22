@@ -50,7 +50,7 @@
 
 ;; ace-jump
 (use-package ace-jump-mode
-  :bind ("C-c C-j" . ace-jump-mode))
+  :bind ("C-c SPC" . ace-jump-mode))
 
 ;; which-key
 (use-package which-key
