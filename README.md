@@ -95,7 +95,7 @@ Some minor mode uses language server protocol. So please install following packa
 - gopls
 - typescript-language-server
 - vls
-- pyls
+- python-lsp-server
 - solargraph
 - rls
 - elixir-ls
@@ -127,11 +127,11 @@ For vue.
 $ npm install -g vls
 ```
 
-## pyls
+## python-lsp-server
 For python.
 
 ```
-$ pip install 'python-language-server[all]'
+$ pip install python-lsp-server
 ```
 
 ## solargraph
