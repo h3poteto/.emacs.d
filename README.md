@@ -92,66 +92,54 @@ M-x all-the-icons-install-fonts
 # Language Server Protocol
 Some minor mode uses language server protocol. So please install following packages for each language.
 
-- gopls
-- typescript-language-server
-- vls
-- python-lsp-server
-- solargraph
-- rls
-- elixir-ls
-
-## gopls
-For golang.
+## Golang
 
 ```
 $ go get -u golang.org/x/tools/gopls
 ```
 
-## typescript-langserver
-For javascript and typescript.
-
-```
-$ npm install -g typescript-language-server
-```
-
-Or install `ts-ls` on Emacs.
+## Typescript/Javascript
+Install `ts-ls` on Emacs.
 
 ```
 M-x lsp-install-server
 ```
 
-## vls
-For vue.
+## Vue2
+Install `vls` on Emacs.
 
 ```
-$ npm install -g vls
+M-x lsp-install-server
 ```
 
-## python-lsp-server
-For python.
+## Vue3
+Install `volar-api`, `volar-html`, `volar-doc`.
+
+```
+M-x lsp-install-server
+```
+
+## Python
 
 ```
 $ pip install python-lsp-server
 ```
 
-## solargraph
-For ruby.
+## Ruby
 
 ```
 $ gem install solargraph
 ```
 
 
-## rls
-For rust.
+## Rust
 
 ```
 $ rustup update
 $ rustup component add rls rust-analysis rust-src rustfmt clippy
 ```
 
-## Elixir-ls
-For Elixir.
+## Elixir
 
 ```
 $ cd ~/.emacs.d
