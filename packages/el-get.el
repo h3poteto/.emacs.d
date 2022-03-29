@@ -37,7 +37,7 @@
   :branch "v3.2.1")
 (el-get-bundle magit/with-editor
   :branch "v3.0.4")
-(el-get-bundle shibayu36/emacs-open-github-from-here)
+(el-get-bundle rmuslimov/browse-at-remote)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 (el-get-bundle magnars/multiple-cursors.el)
 (el-get-bundle purcell/page-break-lines)  ;; To install emacs-dashboard

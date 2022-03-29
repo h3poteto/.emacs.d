@@ -490,9 +490,9 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   )
 
 ;;-------------------------------------------
-;; open-github-from-here
+;; browse-at-remote
 ;;-------------------------------------------
-(use-package open-github-from-here)
+(use-package browse-at-remote)
 
 ;;-------------------------------------------
 ;; multi-cursor
