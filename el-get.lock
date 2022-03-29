@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
+      '((browse-at-remote :checksum "cef26f2c063f2473af42d0e126c8613fe2f709e4")
+        (vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
         (mmm-mode :checksum "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")
         (lsp-mode :checksum "efb301fee164c4d7eacb2ef875c9397bd2ee411c")
         (coffee-mode :checksum "35a41c7d8233eac0b267d9593e67fb8b6235e134")
@@ -81,7 +82,6 @@
         (page-break-lines :checksum "28783cd6b86b3cd41e51e6b2486173e2485a76cc")
         (multiple-cursors\.el :checksum "8a60fc7ef0ae6e5ca089a7c95264cd0ae83e7274")
         (emacs-dashboard :checksum "a19868f2fb8f7fc4132b4e9bfac5cdd65f245181")
-        (emacs-open-github-from-here :checksum "0a8730c54e06525d2031501bb16bc21c69ea6c34")
         (transient :checksum "129c2b1685368757ffe2b6fb2d57da4b06330968")
         (dumb-jump :checksum "dbb915441a2b66f2fbb954ff5de2723c5a4771d4")
         (popup :checksum "cf899f8012f4189e76a009bebb589ff71631b1e9")
