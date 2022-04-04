@@ -14,8 +14,13 @@
   (flycheck-add-mode 'javascript-eslint 'vue-mode)
   (flycheck-add-mode 'javascript-eslint 'vue-html-mode)
   (flycheck-add-mode 'javascript-eslint 'css-mode)
+  (defun remove-sgml-key-hook ()
+    (define-key sgml-mode-map (kbd "C-c <left>") nil)
+    (define-key sgml-mode-map (kbd "C-c <right>") nil)
+    )
   :hook
   (vue-mode . flycheck-mode)
   (vue-mode . prettier-js-mode)
   (vue-mode . lsp-deferred)
+  (sgml-mode . remove-sgml-key-hook)
   )
