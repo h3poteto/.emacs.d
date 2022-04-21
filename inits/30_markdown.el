@@ -12,3 +12,10 @@
   :hook
   (markdown-mode . remove-markdown-key-hook)
   )
+
+(use-package markdown-preview-mode
+  :if (eq (ignore-minor-mode 'ignore-markdown-mode) nil)
+  :config
+  (setq markdown-preview-stylesheets
+        (list "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"))
+  )

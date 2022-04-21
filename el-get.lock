@@ -1,5 +1,9 @@
 (setq el-get-lock-package-versions
-      '((browse-at-remote :checksum "cef26f2c063f2473af42d0e126c8613fe2f709e4")
+      '((markdown-preview-mode :checksum "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
+        (websocket :checksum "82b370602fa0158670b1c6c769f223159affce9b")
+        (uuidgen :checksum "7b728c1d92e196c3acf87a004949335cfc18eab3")
+        (web-server :checksum "6357a1c2d1718778503f7ee0909585094117525b")
+        (browse-at-remote :checksum "cef26f2c063f2473af42d0e126c8613fe2f709e4")
         (vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
         (mmm-mode :checksum "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")
         (lsp-mode :checksum "efb301fee164c4d7eacb2ef875c9397bd2ee411c")

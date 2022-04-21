@@ -146,7 +146,8 @@
 ;; markdown
 (if (ignore-minor-mode 'ignore-markdown-mode)
     (message "markdown-mode is ignored")
-  (el-get-bundle markdown-mode))
+  (el-get-bundle markdown-mode)
+  (el-get-bundle ancane/markdown-preview-mode))
 
 ;; php
 (if (ignore-minor-mode 'ignore-php-mode)
