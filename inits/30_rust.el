@@ -5,7 +5,7 @@
   (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
   (setq company-tooltip-align-annotations t)
   ;; We can use rls or rust-analyzer as lsp server.
-  (setq lsp-rust-server 'rls)
+  (setq lsp-rust-server 'rust-analyzer)
   :hook
   (rust-mode . (lambda ()
                (hs-minor-mode 1)))
