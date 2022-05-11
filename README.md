@@ -139,6 +139,12 @@ $ rustup update
 $ rustup component add rls rust-analysis rust-src rustfmt clippy
 ```
 
+And you need [rust-analyzer](https://rust-analyzer.github.io/).
+```
+$ yay -S rust-analyzer
+```
+
+
 ## Elixir
 
 ```
