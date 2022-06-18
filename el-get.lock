@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((markdown-preview-mode :checksum "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
+      '((magit :checksum "f44f6c14500476d918e9c01de8449edb20af4113")
+        (markdown-preview-mode :checksum "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
         (websocket :checksum "82b370602fa0158670b1c6c769f223159affce9b")
         (uuidgen :checksum "7b728c1d92e196c3acf87a004949335cfc18eab3")
         (web-server :checksum "6357a1c2d1718778503f7ee0909585094117525b")
@@ -11,7 +12,6 @@
         (mmm-mode :checksum "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")
         (lsp-mode :checksum "efb301fee164c4d7eacb2ef875c9397bd2ee411c")
         (coffee-mode :checksum "35a41c7d8233eac0b267d9593e67fb8b6235e134")
-        (magit :checksum "b70f660e36c024fa9319ea0e2977e45ef3c6f3ac")
         (slim-mode :checksum "3636d18ab1c8b316eea71c4732eb44743e2ded87")
         (ruby-end :checksum "79b4ea788b9cae9282da809507d0a56aa9c057c8")
         (ruby-electric :checksum "98ddec7ade4038306690e93b8c5ec73a7c3011cf")

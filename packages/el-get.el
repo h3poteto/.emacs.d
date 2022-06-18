@@ -34,7 +34,8 @@
 (el-get-bundle jschaf/esup)
 (el-get-bundle jacktasia/dumb-jump)
 (el-get-bundle magit
-  :branch "v3.2.1")
+  :branch "v3.3.0"
+  :info nil)
 (el-get-bundle magit/with-editor
   :branch "v3.0.4")
 (el-get-bundle rmuslimov/browse-at-remote)
