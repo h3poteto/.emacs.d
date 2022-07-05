@@ -1,5 +1,7 @@
 (setq el-get-lock-package-versions
-      '((magit :checksum "f44f6c14500476d918e9c01de8449edb20af4113")
+      '((elm-mode :checksum "1e277684d8a6681a2410cce2dd589ee30a998369")
+        (reformatter :checksum "84cff54b0873fcca6fc0314d7584284e86708e8d")
+        (magit :checksum "f44f6c14500476d918e9c01de8449edb20af4113")
         (markdown-preview-mode :checksum "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
         (websocket :checksum "82b370602fa0158670b1c6c769f223159affce9b")
         (uuidgen :checksum "7b728c1d92e196c3acf87a004949335cfc18eab3")

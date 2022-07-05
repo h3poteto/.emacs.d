@@ -237,3 +237,8 @@ $ go get github.com/rogpeppe/godef
 ```
 $ yay -S aspell
 ```
+
+## elm-format
+```
+$ npm install -g elm-format
+```
