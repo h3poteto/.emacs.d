@@ -209,3 +209,7 @@
     (message "coffee-mode is ignored")
   (el-get-bundle defunkt/coffee-mode))
 
+;; elm
+(if (ignore-minor-mode 'ignore-elm-mode)
+    (message "elm-mode is ignored")
+  (el-get-bundle jcollard/elm-mode))
