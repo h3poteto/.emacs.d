@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((elm-mode :checksum "1e277684d8a6681a2410cce2dd589ee30a998369")
+      '((js2-mode :checksum "841cfec9570ae06a67a131997e2aff32340e81d7")
+        (elm-mode :checksum "1e277684d8a6681a2410cce2dd589ee30a998369")
         (reformatter :checksum "84cff54b0873fcca6fc0314d7584284e86708e8d")
         (magit :checksum "f44f6c14500476d918e9c01de8449edb20af4113")
         (markdown-preview-mode :checksum "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
@@ -39,7 +40,6 @@
         (json-reformat :checksum "8eb6668ed447988aea06467ba8f42e1f2178246f")
         (typescript-mode :checksum "e82416205158d4b21d42d6b60c4385f68f0ae1b1")
         (prettier-js :checksum "e9b73e81d3e1642aec682195f127a42dfb0b5774")
-        (js2-mode :checksum "d18730505e4ab57ec2b036980a62f6c6a60381e9")
         (go-fill-struct :checksum "a613d0b378473eef39e8fd5724abe790aea84321")
         (flycheck-golangci-lint :checksum "8e446c68311048f0b87febf8ef0379e29d358851")
         (go-mode :checksum "32cbd78c0af29837ace3db04a224d6d01ec6851e")
