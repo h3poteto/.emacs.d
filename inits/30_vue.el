@@ -8,6 +8,7 @@
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
   (setq mmm-submode-decoration-level 0)
+  (setq lsp-volar-take-over-mode nil)
   ;; https://github.com/AdamNiederer/vue-mode/issues/74#issuecomment-528560608
   (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
   (setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
