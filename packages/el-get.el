@@ -121,7 +121,9 @@
     (message "elixir-mode is ignored")
   (el-get-bundle elixir-lang/emacs-elixir)
   (el-get-bundle lbolla/emacs-flycheck-elixir
-    :name flycheck-elixir))
+    :name flycheck-elixir)
+  (el-get-bundle aaronjensen/flycheck-credo)
+  )
 
 ;; go
 (if (ignore-minor-mode 'ignore-go-mode)

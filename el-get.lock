@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
+      '((flycheck-credo :checksum "e88f11ead53805c361ec7706e44c3dfee1daa19f")
+        (vue-mode :checksum "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
         (mmm-mode :checksum "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")
         (typescript-mode :checksum "83bf47e406761d951bd9eab2f0674e4fa3874a1b")
         (js2-mode :checksum "841cfec9570ae06a67a131997e2aff32340e81d7")
