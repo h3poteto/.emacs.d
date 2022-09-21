@@ -528,3 +528,11 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 (global-set-key "\C-x@" (lambda ()
                            (interactive)
                            (split-window-horizontally-n 3)))
+
+;;-----------------------------------------
+;; which function mode
+;;-----------------------------------------
+(use-package which-func
+  :config
+  (which-function-mode 1)
+  )
