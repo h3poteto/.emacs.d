@@ -122,7 +122,7 @@
   (el-get-bundle elixir-lang/emacs-elixir)
   (el-get-bundle lbolla/emacs-flycheck-elixir
     :name flycheck-elixir)
-  (el-get-bundle aaronjensen/flycheck-credo)
+  (el-get-bundle h3poteto/flycheck-credo)
   )
 
 ;; go
