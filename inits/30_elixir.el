@@ -48,5 +48,7 @@ _ed_: elixir-mode-open-docs-master
   :if (eq (ignore-minor-mode 'ignore-elixir-mode) nil)
   :after
   elixir-mode
+  :config
+  (setq flycheck-elixir-credo-checks-with-tag "target")
   )
 
