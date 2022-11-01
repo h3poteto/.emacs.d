@@ -42,3 +42,9 @@
   (typescript-mode . lsp-deferred)
   (typescript-mode . flycheck-mode)
   )
+
+(use-package tsx-mode
+  :if (eq (ignore-minor-mode 'ignore-tsx-mode) nil)
+  :mode
+  ("\\.tsx\\'" . tsx-mode)
+  )

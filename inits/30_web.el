@@ -3,7 +3,6 @@
   :mode
   (("\\.html.tpl\\'" . web-mode)
    ("\\.jsx\\'" . web-mode)
-   ("\\.tsx\\'" . web-mode)
    ("\\.eex\\'" . web-mode)
    ("\\.scala.html\\'" . web-mode)
    ("\\.html\\'" . web-mode))
