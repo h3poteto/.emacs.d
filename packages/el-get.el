@@ -192,6 +192,18 @@
   (el-get-bundle Fanael/edit-indirect)
   (el-get-bundle AdamNiederer/vue-mode))
 
+;; tsx
+(if (ignore-minor-mode 'ignore-tsx-mode)
+    (message "tsx-mode is ignored")
+  (el-get-bundle orzechowskid/tsx-mode.el)
+  (el-get-bundle orzechowskid/tsi.el)
+  (el-get-bundle twada/coverlay.el)
+  (el-get-bundle gregsexton/origami.el)
+  (el-get-bundle tree-sitter)
+  (el-get-bundle tree-sitter-langs)
+  (el-get-bundle davazp/graphql-mode)
+  )
+
 ;; web
 (if (ignore-minor-mode 'ignore-web-mode)
     (message "web-mode is ignored")
