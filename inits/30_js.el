@@ -47,4 +47,7 @@
   :if (eq (ignore-minor-mode 'ignore-tsx-mode) nil)
   :mode
   ("\\.tsx\\'" . tsx-mode)
+  :hook
+  (tsx-mode . prettier-js-mode)
+  (tsx-mode . flycheck-mode)
   )
