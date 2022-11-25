@@ -101,7 +101,10 @@
                                               "python3.*"
                                               "__pycache__"
                                               "_output"
-                                              "*bazel*"))
+                                              "*bazel*"
+                                              "dist"
+                                              "dest"
+                                              "target"))
                                (files ("*~" "*.jpg" "*.png" "*.gif" "*.zip" "*.DS_Store"))))))
 
 ;; リモートのファイルを手元のemacsからいじるtramp
