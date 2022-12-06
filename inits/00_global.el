@@ -68,12 +68,6 @@
   (setq undo-tree-auto-save-history nil)
   (global-undo-tree-mode))
 
-;; yasnippet
-(use-package yasnippet
-  :config
-  (yas-global-mode t)
-  )
-
 ;; fiplr
 (use-package fiplr
   :bind
@@ -337,6 +331,8 @@
           lsp-mode
           treemacs
           )
+  :mode
+  ("\\.go$" . dap-mode)
   :custom
   (dap-auto-configure-features '(sessions locals breakpoints expressions repl controls tooltip))
   :config
