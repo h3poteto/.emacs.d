@@ -134,28 +134,20 @@ $ gem install solargraph
 
 ## Rust
 
-```
-$ rustup update
-$ rustup component add rls rust-analysis rust-src rustfmt clippy
-```
+Install `rust-analyzer` on Emacs.
 
-And you need [rust-analyzer](https://rust-analyzer.github.io/).
 ```
-$ yay -S rust-analyzer
+M-x lsp-install-server
 ```
 
 
 ## Elixir
 
-```
-$ cd ~/.emacs.d
-$ wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.8.1/elixir-ls-1.12.zip -O elixir-ls.zip
-$ unzip elixir-ls.zip
-$ mv elixir-ls .elixir-ls
-```
+Install `elixir-ls` on Emacs.
 
-About more details, please refere official repository.
-https://github.com/elixir-lsp/elixir-ls#detailed-installation-instructions
+```
+M-x lsp-install-server
+```
 
 # DAP
 ## golang
