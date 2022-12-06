@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((graphql-mode :checksum "92136cf9b5a4dcd8c202c8dba9064b497776d2f7")
+      '((elisp-tree-sitter :checksum "c3fe96a103a766256ba62120eb638eef8e9a9802")
+        (graphql-mode :checksum "92136cf9b5a4dcd8c202c8dba9064b497776d2f7")
         (origami\.el :checksum "e558710a975e8511b9386edc81cd6bdd0a5bda74")
         (coverlay\.el :checksum "0beae208d0e7d746a94385428bd61aa5cd7ea828")
         (tsi\.el :checksum "eb26ee20437576eefc62a61616bfdc5bda25caae")
@@ -70,7 +71,6 @@
         (bui :checksum "f3a137628e112a91910fd33c0cff0948fa58d470")
         (tree-mode :checksum "56a765fe2023909b37d430ab1fc70963fb41c845")
         (posframe :checksum "3b1dc400d286b0a4bd42e518bf3e7eedb49fd1e6")
-        (jsonrpc :checksum "8220ae7e235134d007240ae8f6049ec89df965b2")
         (ht :checksum "c4c1be487d6ecb353d07881526db05d7fc90ea87")
         (spinner :checksum "bca794fa6f6b007292cdac9b0a850a3711986db5")
         (markdown-mode :checksum "c3c2f0d473a3f8ca8c4ffb2ecc094d5c3541769f")

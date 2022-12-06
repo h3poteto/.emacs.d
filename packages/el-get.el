@@ -72,7 +72,7 @@
 ;; Language server protocol
 (el-get-bundle emacs-lsp/lsp-mode)
 (el-get-bundle emacs-lsp/lsp-ui)
-(el-get-bundle emacsmirror/jsonrpc)
+(el-get-bundle jsonrpc)
 ;; DAP mode
 (el-get-bundle tumashu/posframe)
 (el-get-bundle emacs-lsp/dap-mode)
