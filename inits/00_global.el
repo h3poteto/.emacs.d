@@ -68,6 +68,13 @@
   (setq undo-tree-auto-save-history nil)
   (global-undo-tree-mode))
 
+;; yasnippet
+;; yas is required for company-mode
+(use-package yasnippet
+  :config
+  (yas-global-mode t)
+  )
+
 ;; fiplr
 (use-package fiplr
   :bind
