@@ -83,6 +83,7 @@
 (el-get-bundle Alexander-Miller/pfuture
   ;; It is required by treemacs
   )
+(el-get-bundle Alexander-Miller/treemacs)
 (el-get-bundle
   Alexander-Miller/treemacs
   ;; treemacs and lsp-treemacs is required by dap-mode
