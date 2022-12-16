@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((treemacs :checksum "b19060f25e55514f3d798d9f5af2dcd5b94a6026")
+      '((rust-mode :checksum "c6f2e8a800992b65d194590b72e3d4d135cba0aa")
+        (treemacs :checksum "b19060f25e55514f3d798d9f5af2dcd5b94a6026")
         (lsp-treemacs :checksum "a48763ba5d1c024426e237ce65926db849d3ae6f")
         (lsp-ui :checksum "fb1073013f745bce056811a38e2b0b8b2a4b5ebc")
         (lsp-mode :checksum "1ecfc50b15b0b9e44f2b4db173f66b158af2e6ef")
