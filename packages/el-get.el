@@ -33,11 +33,6 @@
 (el-get-bundle DarwinAwardWinner/amx)
 (el-get-bundle jschaf/esup)
 (el-get-bundle jacktasia/dumb-jump)
-(el-get-bundle magit
-  :branch "v3.3.0"
-  :info nil)
-(el-get-bundle magit/with-editor
-  :branch "v3.0.4")
 (el-get-bundle rmuslimov/browse-at-remote)
 (el-get-bundle emacs-dashboard/emacs-dashboard)
 (el-get-bundle magnars/multiple-cursors.el)
@@ -228,3 +223,12 @@
 (if (ignore-minor-mode 'ignore-elm-mode)
     (message "elm-mode is ignored")
   (el-get-bundle jcollard/elm-mode))
+
+;; magit
+(if (ignore-minor-mode 'ignore-magit-mode)
+    (message "magit-mode ignored")
+  (el-get-bundle magit
+    :branch "v3.3.0"
+    :info nil)
+  (el-get-bundle magit/with-editor
+    :branch "v3.0.4"))
