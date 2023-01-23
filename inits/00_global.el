@@ -261,6 +261,8 @@
   (emacs-lisp-mode . smartparens-mode)
   (js2-mode . smartparens-mode)
   (typescript-mode . smartparens-mode)
+  (rust-mode . smartparens-mode)
+  (tsx-mode . smartparens-mode)
   )
 
 ;;-------------------------------------------
