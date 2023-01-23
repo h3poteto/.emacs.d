@@ -487,10 +487,13 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; magit
 ;;-------------------------------------------
 (use-package magit
+  :if (eq (ignore-minor-mode 'ignore-magit-mode) nil)
   :after with-editor
   )
 
-(use-package with-editor)
+(use-package with-editor
+  :if (eq (ignore-minor-mode 'ignore-magit-mode) nil)
+  )
 
 ;;-------------------------------------------
 ;; dumb-jump

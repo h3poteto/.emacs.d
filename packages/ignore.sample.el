@@ -25,3 +25,4 @@
 ;; (setq ignore-web-mode t)
 ;; (setq ignore-ruby-mode t)
 ;; (setq ignore-coffee-mode t)
+;; (setq ignore-magit-mode t)

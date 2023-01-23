@@ -1,5 +1,7 @@
 (setq el-get-lock-package-versions
-      '((rust-mode :checksum "c6f2e8a800992b65d194590b72e3d4d135cba0aa")
+      '((mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
+        (mozc :checksum "a88274e3946256927dc08db90a5b9f51c7a932af")
+        (rust-mode :checksum "c6f2e8a800992b65d194590b72e3d4d135cba0aa")
         (treemacs :checksum "b19060f25e55514f3d798d9f5af2dcd5b94a6026")
         (lsp-treemacs :checksum "a48763ba5d1c024426e237ce65926db849d3ae6f")
         (lsp-ui :checksum "fb1073013f745bce056811a38e2b0b8b2a4b5ebc")
@@ -90,8 +92,6 @@
         (spacemacs-theme :checksum "e5ed346b9c31f0b43eb359614efd9aa439e1d18d")
         (monokai-emacs :checksum "c5a7978bfc2ad2aa90882e6b2583668dc7b3e1a5")
         (popup-el :checksum "cf899f8012f4189e76a009bebb589ff71631b1e9")
-        (mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
-        (mozc :checksum "98e6f556c0d29e6e96cc9d53df9a9e9227921bb5")
         (vlfi :checksum "cc02f2533782d6b9b628cec7e2dcf25b2d05a27c")
         (all-the-icons\.el :checksum "483dba65e897071c156cefec937edcf51aa333db")
         (neotree :checksum "5e1271655170f4cdc6849258e383c548a4e6e3d0")
