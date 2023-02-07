@@ -68,6 +68,7 @@
 ;; Language server protocol
 (el-get-bundle emacs-lsp/lsp-mode)
 (el-get-bundle emacs-lsp/lsp-ui)
+(el-get-bundle emacs-lsp/lsp-ivy)
 (el-get-bundle jsonrpc)
 ;; projectile
 (el-get-bundle bbatsov/projectile)
