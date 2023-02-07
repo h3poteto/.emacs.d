@@ -336,31 +336,6 @@
   )
 
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-(use-package lsp-treemacs
-  :mode
-  ("\\.go$" . lsp-treemacs)
-  :commands lsp-treemacs-errors-list)
-
-(use-package dap-mode
-  :after (
-          lsp-mode
-          treemacs
-          )
-  :mode
-  ("\\.go$" . dap-mode)
-  :custom
-  (dap-auto-configure-features '(sessions locals breakpoints expressions repl controls tooltip))
-  :config
-  ;; https://github.com/emacs-lsp/dap-mode/pull/326
-  (custom-set-variables '(dap-go-debug-program `("node"
-                                                 ,(f-join dap-go-debug-path "extension/dist/debugAdapter.js"))))
-  (custom-set-variables `(dap-output-window-max-height 50))
-  (dap-mode 1)
-  (dap-auto-configure-mode 1)
-  (require 'dap-hydra)
-  :bind
-  ("C-c d" . dap-hydra/body)
-  )
 
 ;;------------------------------------------
 ;; hydra

@@ -1,6 +1,8 @@
 (use-package go-mode
   :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
   :commands go-mode
+  :mode
+  ("\\.go\\'" . go-mode)
   :config
   (setq indent-tabs-mode nil)
   (setq c-basic-offset 4)
@@ -11,7 +13,6 @@
   (setq lsp-prefer-flymake nil)
   (eval-after-load 'flycheck
     '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
-  (require 'dap-go)
   (defhydra hydra-go-mode (:hint nil :exit t)
 "
 ^Main^
@@ -21,7 +22,7 @@ _gu_: go-remove-unused-imports          _gjo_: godef-jump-other-window[C-x 4 C-c
 _gga_: go-goto-arguments[C-c C-f a]     _gdd_: godef-describe[C-c C-d]
 _ggd_: go-goto-docstring[C-c C-f d]     _gr_: go-rename
 _ggf_: go-goto-function[C-c C-f f]      _gdc_: go-debug-config-generator
-_ggr_: go-goto-return-values[C-c C-f r] _dd_: dap-debug
+_ggr_: go-goto-return-values[C-c C-f r]
 "
 
 ("gf" gofmt)
@@ -36,7 +37,6 @@ _ggr_: go-goto-return-values[C-c C-f r] _dd_: dap-debug
 ("gdd" godef-describe)
 ("gr" go-rename)
 ("gdc" go-debug-config-generator)
-("dd" dap-debug)
 
 ("z" nil "leave"))
 
