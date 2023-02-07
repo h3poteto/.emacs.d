@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((with-editor :checksum "391e76a256aeec6b9e4cbd733088f30c677d965b")
+      '((lsp-ivy :checksum "9ecf4dd9b1207109802bd1882aa621eb1c385106")
+        (with-editor :checksum "391e76a256aeec6b9e4cbd733088f30c677d965b")
         (compat :checksum "d533692182c084bad623977b69f9dc298255eaab")
         (ruby-end :checksum "32f9c7bd500fa9f06e0ba95559a54a8e16b886cb")
         (mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
