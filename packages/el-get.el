@@ -7,7 +7,8 @@
 (el-get-bundle ag)
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle fiplr)
-;; (el-get-bundle tabbar)
+(el-get-bundle emacs-compat/compat
+  :branch "28.1.2.2") ;;  while installing compat: https://elpa.gnu.org/packages/compat-28.1.2.2.tar: Not found
 (el-get-bundle manateelazycat/awesome-tab)
 (el-get-bundle wgrep)
 (el-get-bundle ace-jump-mode)
@@ -68,22 +69,6 @@
 (el-get-bundle emacs-lsp/lsp-mode)
 (el-get-bundle emacs-lsp/lsp-ui)
 (el-get-bundle jsonrpc)
-;; DAP mode
-(el-get-bundle tumashu/posframe)
-(el-get-bundle emacs-lsp/dap-mode)
-(el-get-bundle alezost/bui.el)
-(el-get-bundle abo-abo/ace-window
-  ;; It is required by treemacs
-  )
-(el-get-bundle Alexander-Miller/pfuture
-  ;; It is required by treemacs
-  )
-(el-get-bundle Alexander-Miller/treemacs)
-(el-get-bundle
-  Alexander-Miller/treemacs
-  ;; treemacs and lsp-treemacs is required by dap-mode
-  )
-(el-get-bundle emacs-lsp/lsp-treemacs)
 ;; projectile
 (el-get-bundle bbatsov/projectile)
 
