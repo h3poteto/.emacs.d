@@ -143,11 +143,8 @@ M-x lsp-install-server
 
 ## Elixir
 
-Install `elixir-ls` on Emacs.
+Download elixir-ls release package and expand it in `~/.emacs.d/.elixir-ls` according to https://github.com/elixir-lsp/elixir-ls#detailed-installation-instructions
 
-```
-M-x lsp-install-server
-```
 
 # DAP
 ## golang
