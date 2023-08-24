@@ -7,8 +7,8 @@
 (el-get-bundle ag)
 (el-get-bundle exec-path-from-shell)
 (el-get-bundle fiplr)
-(el-get-bundle emacs-compat/compat
-  :branch "28.1.2.2") ;;  while installing compat: https://elpa.gnu.org/packages/compat-28.1.2.2.tar: Not found
+;;(el-get-bundle emacs-compat/compat
+;;  :branch "28.1.2.2") ;;  while installing compat: https://elpa.gnu.org/packages/compat-28.1.2.2.tar: Not found
 (el-get-bundle manateelazycat/awesome-tab)
 (el-get-bundle wgrep)
 (el-get-bundle ace-jump-mode)
@@ -183,13 +183,13 @@
 ;; tsx
 (if (ignore-minor-mode 'ignore-tsx-mode)
     (message "tsx-mode is ignored")
-  (el-get-bundle orzechowskid/tsx-mode.el)
-  (el-get-bundle orzechowskid/tsi.el)
-  (el-get-bundle twada/coverlay.el)
+  (el-get-bundle orzechowskid/tsx-mode.el
+    :branch "emacs29")
+  (el-get-bundle twada/coverlay.el
+    :branch "v3.0.2")
   (el-get-bundle gregsexton/origami.el)
-  (el-get-bundle tree-sitter)
-  (el-get-bundle tree-sitter-langs)
-  (el-get-bundle davazp/graphql-mode)
+  (el-get-bundle minad/corfu
+    :branch "0.33")
   )
 
 ;; web
