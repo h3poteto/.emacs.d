@@ -5,7 +5,8 @@
    ("\\.jsx\\'" . web-mode)
    ("\\.eex\\'" . web-mode)
    ("\\.scala.html\\'" . web-mode)
-   ("\\.html\\'" . web-mode))
+   ("\\.html\\'" . web-mode)
+   ("\\.ts\\'" . web-mode))
   :config
   (defun my-web-mode-hook ()
     "Hooks for Web mode."
@@ -24,6 +25,18 @@
               (when (string-equal "tsx" (file-name-extension buffer-file-name))
                 (setup-tide-mode)
                 (prettier-js-mode)
+                )
+              )
+            )
+  (web-mode .
+            (lambda ()
+              (when (string-equal "ts" (file-name-extension buffer-file-name))
+                (prettier-js-mode)
+                (lambda ()
+                  (hs-minor-mode 1))
+                (lsp-deferred)
+                (flycheck-mode)
+                (flycheck-add-mode 'typescript-tslint 'web-mode)
                 )
               )
             )
