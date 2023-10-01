@@ -119,6 +119,11 @@ Install `volar-api`, `volar-html`, `volar-doc`.
 M-x lsp-install-server
 ```
 
+## Svelte
+```
+$ npm install -g svelte-language-server
+```
+
 ## Python
 
 ```
