@@ -174,6 +174,12 @@
   (el-get-bundle Fanael/edit-indirect)
   (el-get-bundle AdamNiederer/vue-mode))
 
+;; svelte
+(if (ignore-minor-mode 'ignore-svelte-mode)
+    (message "svelte-mode is ignored")
+  (el-get-bundle leafOfTree/svelte-mode)
+  )
+
 ;; tsx
 (if (ignore-minor-mode 'ignore-tsx-mode)
     (message "tsx-mode is ignored")
