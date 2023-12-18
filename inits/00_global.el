@@ -525,3 +525,6 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   :config
   (which-function-mode 1)
   )
+
+
+(setq x-super-keysym 'meta)
