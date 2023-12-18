@@ -273,19 +273,21 @@
   (conf-mode . rainbow-mode)
   )
 
+;; Not compatible with emacs 29
+;; Refs: https://github.com/DarthFennec/highlight-indent-guides/issues/125
 ;; highlight-indent-guides
 ;; インデントを可視化する
-(use-package highlight-indent-guides
-  :config
-  (setq highlight-indent-guides-method 'character)
-  (setq highlight-indent-guides-auto-odd-face-perc 15)
-  (setq highlight-indent-guides-auto-even-face-perc 15)
-  (setq highlight-indent-guides-auto-character-face-perc 20)
-  :hook
-  (prog-mode . highlight-indent-guides-mode)
-  (yaml-mode . highlight-indent-guides-mode)
-  (json-mode . highlight-indent-guides-mode)
-  )
+;; (use-package highlight-indent-guides
+;;   :config
+;;   (setq highlight-indent-guides-method 'character)
+;;   (setq highlight-indent-guides-auto-odd-face-perc 15)
+;;   (setq highlight-indent-guides-auto-even-face-perc 15)
+;;   (setq highlight-indent-guides-auto-character-face-perc 20)
+;;   :hook
+;;   (prog-mode . highlight-indent-guides-mode)
+;;   (yaml-mode . highlight-indent-guides-mode)
+;;   (json-mode . highlight-indent-guides-mode)
+;;   )
 
 ;; highlight-indentation
 ;; 現在行をハイライトするためだけに入れている
