@@ -184,12 +184,12 @@
 (if (ignore-minor-mode 'ignore-tsx-mode)
     (message "tsx-mode is ignored")
   (el-get-bundle orzechowskid/tsx-mode.el
-    :branch "emacs29")
+    :branch "main")
   (el-get-bundle twada/coverlay.el
     :branch "v3.0.2")
   (el-get-bundle gregsexton/origami.el)
   (el-get-bundle minad/corfu
-    :branch "0.33")
+    :branch "1.0")
   )
 
 ;; web
