@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((svelte-mode :checksum "6a1d4274af7f4c0f271f77bd96678c3dd1fa68e1")
+      '((mozc-popup :checksum "f0684b875a7427ec08f8df13939a486e5d5cf420")
+        (svelte-mode :checksum "6a1d4274af7f4c0f271f77bd96678c3dd1fa68e1")
         (protobuf-mode :checksum "69574d57015e29638fdec68458c6b1790c0d11b3")
         (mozc :checksum "c978367ee88f951b527a4048bf1ab32c67448216")
         (lsp-ivy :checksum "9ecf4dd9b1207109802bd1882aa621eb1c385106")
