@@ -180,18 +180,6 @@
   (el-get-bundle leafOfTree/svelte-mode)
   )
 
-;; tsx
-(if (ignore-minor-mode 'ignore-tsx-mode)
-    (message "tsx-mode is ignored")
-  (el-get-bundle orzechowskid/tsx-mode.el
-    :branch "main")
-  (el-get-bundle twada/coverlay.el
-    :branch "v3.0.2")
-  (el-get-bundle gregsexton/origami.el)
-  (el-get-bundle minad/corfu
-    :branch "1.0")
-  )
-
 ;; web
 (if (ignore-minor-mode 'ignore-web-mode)
     (message "web-mode is ignored")
