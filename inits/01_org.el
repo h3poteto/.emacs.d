@@ -1,4 +1,5 @@
 (use-package org
+  :straight t
   :config
   (setq org-directory org-shared-directory)
   (setq org-notes-path (concat org-directory "/notes.org"))

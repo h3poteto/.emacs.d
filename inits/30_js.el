@@ -1,4 +1,5 @@
 (use-package js2-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   :mode
   ("\\.js.erb$" . js2-mode)
@@ -25,4 +26,15 @@
                 (hs-minor-mode 1)))
   (js2-mode . lsp-deferred)
   (js2-mode . flycheck-mode)
+  )
+
+(use-package prettier-js
+  :straight t
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
+  )
+
+;; Required for syntax hilighting for ts and tsx
+(use-package typescript-mode
+  :straight t
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   )

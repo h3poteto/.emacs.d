@@ -1,4 +1,5 @@
 (use-package web-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-web-mode) nil)
   :mode
   (("\\.html.tpl\\'" . web-mode)

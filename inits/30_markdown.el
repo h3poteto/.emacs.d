@@ -1,4 +1,5 @@
 (use-package markdown-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-markdown-mode) nil)
   :mode
   ("\\.text\\'" . markdown-mode)
@@ -14,6 +15,7 @@
   )
 
 (use-package markdown-preview-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-markdown-mode) nil)
   :config
   (setq markdown-preview-stylesheets

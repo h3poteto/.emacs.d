@@ -1,4 +1,5 @@
 (use-package protobuf-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-protobuf-mode) nil)
   :mode
   ("\\.proto$" . protobuf-mode)

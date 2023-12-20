@@ -1,6 +1,7 @@
 ;; This line is required before load css-mode
 (setq css-indent-offset 2)
 (use-package css-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-css-mode) nil)
   :mode
   ("\\.scss\\'" . css-mode)
