@@ -49,6 +49,7 @@
  ("highlight-symbol.el" . "7a789c779648c55b16e43278e51be5898c121b3a")
  ("ht.el" . "1c49aad1c820c86f7ee35bf9fff8429502f60fef")
  ("hydra" . "317e1de33086637579a7aeb60f77ed0405bf359b")
+ ("indent-guide" . "d388c3387781a370ca13233ff445d03f3c5cf12f")
  ("init-loader" . "ecab5a66b40227c4173992adfa5cfeae09f1657e")
  ("js2-mode" . "79bc78d77db0d2e8e43dc0f9e0504ad90bcbc26d")
  ("json-mode" . "481d5d9f4003fc14d116bf31d1bf71d14960d7d9")
