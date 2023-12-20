@@ -1,32 +1,31 @@
-;; el-get
-(when load-file-name
-  (setq user-emacs-directory (file-name-directory load-file-name)))
-
-(add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+;; straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
 (defun ignore-minor-mode (ignored-mode)
-  (and (eq (boundp ignored-mode) t) (eq (symbol-value ignored-mode) t))
-  )
+  (and (eq (boundp ignored-mode) t) (eq (symbol-value ignored-mode) t)))
 
-;; el-get packages
-(el-get-bundle tarao/el-get-lock
-  (el-get-lock)
-  (el-get-lock-unlock 'el-get-lock)
-  )
 (add-to-list 'load-path (locate-user-emacs-file "packages"))
 (load "ignore.el")
-(load "el-get.el")
 
-(require 'use-package)
+(straight-use-package 'use-package)
+
 
 (custom-set-variables
  '(init-loader-show-log-after-init 'error-only))
-(require 'init-loader)
+(straight-use-package 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 

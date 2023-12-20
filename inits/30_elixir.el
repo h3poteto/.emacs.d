@@ -1,4 +1,5 @@
 (use-package elixir-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-elixir-mode) nil)
   :init
   (add-to-list 'exec-path (locate-user-emacs-file ".elixir-ls"))
@@ -45,6 +46,7 @@ _ed_: elixir-mode-open-docs-master
   )
 
 (use-package flycheck-elixir
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-elixir-mode) nil)
   :after
   elixir-mode

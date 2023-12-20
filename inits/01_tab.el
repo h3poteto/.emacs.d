@@ -73,6 +73,7 @@
 ;; (global-set-key (kbd "M-4") 'tabbar-mode)
 
 (use-package awesome-tab
+  :straight t
   :config
   (awesome-tab-mode t)
   (setq awesome-tab-height 130)

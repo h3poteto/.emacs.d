@@ -1,4 +1,5 @@
 (use-package rust-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-rust-mode) nil)
   :custom rust-format-on-save t
   :config
@@ -13,6 +14,7 @@
   )
 
 (use-package cargo
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-rust-mode) nil)
   :hook
   (rust-mode . cargo-minor-mode)

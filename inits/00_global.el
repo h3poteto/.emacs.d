@@ -42,6 +42,7 @@
 
 ;; path
 (use-package exec-path-from-shell
+  :straight t
   :if (memq window-system '(mac ns x))
   :config
   (exec-path-from-shell-initialize)
@@ -50,20 +51,24 @@
 
 ;; ace-jump
 (use-package ace-jump-mode
+  :straight t
   :bind ("C-c SPC" . ace-jump-mode))
 
 ;; which-key
 (use-package which-key
+    :straight t
     :diminish which-key-mode
     :hook (after-init . which-key-mode))
 
 ;; amx
 (use-package amx
+  :straight t
   :config
   (amx-mode t))
 
 ;; undo-tree
 (use-package undo-tree
+  :straight t
   :config
   (setq undo-tree-auto-save-history nil)
   (global-undo-tree-mode))
@@ -71,12 +76,14 @@
 ;; yasnippet
 ;; yas is required for company-mode
 (use-package yasnippet
+  :straight t
   :config
   (yas-global-mode t)
   )
 
 ;; fiplr
 (use-package fiplr
+  :straight t
   :bind
   (("C-x f" . fiplr-find-file)
    ("C-x c" . fiplr-clear-cache))
@@ -126,21 +133,23 @@
 (setq auto-save-default nil)
 
 ;;; mozc
-(use-package mozc
-  :config
-  (set-language-environment "Japanese")           ; 言語環境を"japanese"に
-  (setq default-input-method "japanese-mozc")     ; IMEをjapanes-mozcに
-  (prefer-coding-system 'utf-8)                   ; デフォルトの文字コードをUTF-8
-  )
+;;; please use https://raw.githubusercontent.com/google/mozc/master/src/unix/emacs/mozc.el
+;; (use-package mozc
+;;  :config
+;;  (set-language-environment "Japanese")           ; 言語環境を"japanese"に
+;;  (setq default-input-method "japanese-mozc")     ; IMEをjapanes-mozcに
+;;  (prefer-coding-system 'utf-8)                   ; デフォルトの文字コードをUTF-8
+;;  )
 
-(use-package mozc-popup
-  :config
-  (setq mozc-candidate-style 'popup))
+;; (use-package mozc-popup
+;;  :config
+;;  (setq mozc-candidate-style 'popup))
 
 ;;-----------------------------------
 ;; company-mode
 ;;-----------------------------------
 (use-package company
+  :straight t
   :config
   (global-company-mode t)
   (setq company-idle-delay 0.5)
@@ -150,6 +159,7 @@
 ;; ag
 ;;-----------------------------------
 (use-package ag
+  :straight t
   :config
   ;; 検索結果のハイライト
   (setq ag-highlight-search t)
@@ -159,6 +169,7 @@
 
 ;; wgrep-ag
 (use-package wgrep-ag
+  :straight t
   :after ag
   :config
   (setq wgrep-auto-save-buffer t)  ; 編集完了と同時に保存
@@ -168,6 +179,7 @@
 ;; ivy/counsel
 ;;------------------------------------
 (use-package ivy
+  :straight t
   :config
    (when (setq enable-recursive-minibuffers t)
     (minibuffer-depth-indicate-mode 1))
@@ -177,6 +189,7 @@
   (ivy-mode))
 
 (use-package counsel
+  :straight t
   :after ivy
   :bind
   (("M-g ." . counsel-ag)
@@ -186,6 +199,7 @@
   :config (counsel-mode))
 
 (use-package all-the-icons-ivy
+  :straight t
   :after ivy
   :init (add-hook 'after-init-hook 'all-the-icons-ivy-setup))
 
@@ -219,6 +233,7 @@
          nil ))
 
 (use-package file-info
+  :straight t
   :bind
   (("C-c i" . file-info)))
 
@@ -226,10 +241,13 @@
 ;; neotree
 ;;-------------------------------------------
 ;; neotreeでiconsを使う場合に必須
-(use-package all-the-icons)
+(use-package all-the-icons
+  :straight t
+  )
 
 ;; neotree
 (use-package neotree
+  :straight t
   :bind
   (("<f8>" . neotree-toggle)
    ("C-c n" . neotree-hidden-file-toggle))
@@ -249,6 +267,7 @@
 ;; smartparens
 ;;-------------------------------------------
 (use-package smartparens
+  :straight t
   :config
   (require 'smartparens-config)
   :hook
@@ -271,6 +290,7 @@
 ;; lps-mode 7.0.1 moved clients under the directory, it is not root directory, so I have to add this directory to load path.
 (setq load-path (cons "~/.emacs.d/el-get/lsp-mode/clients/" load-path))
 (use-package lsp-mode
+  :straight t
   :init
   (setq lsp-keymap-prefix "C-l")
   (setq lsp-headerline-breadcrumb-enable nil)
@@ -321,6 +341,7 @@
   :commands (lsp lsp-deferred))
 
 (use-package lsp-ui
+  :straight t
   :after lsp-mode
   :custom
   (scroll-margin 0)
@@ -335,12 +356,15 @@
   :commands lsp-ui-mode
   )
 
-(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-ivy
+  :straight t
+  :commands lsp-ivy-workspace-symbol)
 
 ;;------------------------------------------
 ;; hydra
 ;;------------------------------------------
 (use-package hydra
+  :straight t
   :defer t
   :commands
   (hydra-main/body)
@@ -438,6 +462,7 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 (use-package vlf
+  :straight t
   :config
   (require 'vlf-setup)
   )
@@ -446,6 +471,7 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; dashboard
 ;;-------------------------------------------
 (use-package dashboard
+  :straight t
   :diminish
   (dashboard-mode page-break-lines-mode)
   :config
@@ -462,11 +488,13 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; magit
 ;;-------------------------------------------
 (use-package magit
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-magit-mode) nil)
   :after with-editor
   )
 
 (use-package with-editor
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-magit-mode) nil)
   )
 
@@ -474,6 +502,7 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; dumb-jump
 ;;-------------------------------------------
 (use-package dumb-jump
+  :straight t
   :config
   (dumb-jump-mode)
   )
@@ -481,12 +510,15 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;;-------------------------------------------
 ;; browse-at-remote
 ;;-------------------------------------------
-(use-package browse-at-remote)
+(use-package browse-at-remote
+  :straight t
+  )
 
 ;;-------------------------------------------
 ;; multi-cursor
 ;;------------------------------------------
 (use-package multiple-cursors
+  :straight t
   :bind
   (("C-c b" . mc/edit-beginnings-of-lines)
    ("C-c e" . mc/edit-ends-of-lines)
@@ -503,7 +535,9 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   (setq ispell-local-dictionary "en_US")
   (add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
 
-(use-package flycheck)
+(use-package flycheck
+  :straight t
+  )
 
 ;;-----------------------------------------
 ;; Split window
@@ -522,6 +556,10 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 ;; which function mode
 ;;-----------------------------------------
 (use-package which-func
+  :straight t
   :config
   (which-function-mode 1)
   )
+
+
+(setq x-super-keysym 'meta)

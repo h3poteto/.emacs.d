@@ -1,4 +1,5 @@
 (use-package js2-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   :mode
   ("\\.js.erb$" . js2-mode)
@@ -27,27 +28,13 @@
   (js2-mode . flycheck-mode)
   )
 
-;; (use-package typescript-mode
-;;   :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
-;;   :mode
-;;   ("\\.ts\\'" . typescript-mode)
-;;   :config
-;;   (setq typescript-indent-level 2)
-;;   ;; flycheck is better than flymake in lsp-mode, so disable flymake.
-;;   (setq lsp-prefer-flymake nil)
-;;   :hook
-;;   (typescript-mode . prettier-js-mode)
-;;   (typescript-mode . (lambda ()
-;;                        (hs-minor-mode 1)))
-;;   (typescript-mode . lsp-deferred)
-;;   (typescript-mode . flycheck-mode)
-;;   )
+(use-package prettier-js
+  :straight t
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
+  )
 
-(use-package tsx-mode
-  :if (eq (ignore-minor-mode 'ignore-tsx-mode) nil)
-  :mode
-  ("\\.tsx\\'" . tsx-mode)
-  :hook
-  (tsx-mode . prettier-js-mode)
-  (tsx-mode . flycheck-mode)
+;; Required for syntax hilighting for ts and tsx
+(use-package typescript-mode
+  :straight t
+  :if (eq (ignore-minor-mode 'ignore-js-mode) nil)
   )

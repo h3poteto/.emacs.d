@@ -1,4 +1,5 @@
 (use-package go-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
   :commands go-mode
   :mode
@@ -96,5 +97,6 @@ _ggr_: go-goto-return-values[C-c C-f r]
   )
 
 (use-package go-fill-struct
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
   )

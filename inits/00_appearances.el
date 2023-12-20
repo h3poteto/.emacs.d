@@ -1,17 +1,23 @@
 (use-package monokai-theme
+  :straight (monokai-theme :type git :host github :repo "oneKelvinSmith/monokai-emacs")
   :load-path "themes"
   :config
   (load-theme 'monokai t)
   (setq monokai-background     "#000000"
         monokai-comments       "#F19CA7"
         monokai-highlight      "#434da2"
-   )
+        )
   )
-(use-package spacemacs-common
-  :load-path "themes"
+(use-package spacemacs-theme
+  :straight (spacemacs-theme :type git :host github :repo "nashamri/spacemacs-theme")
+ :load-path "themes"
+ )
+(use-package aanila-theme
+  :straight (aanila-theme :type git :host github :repo "santoshs/aanila")
   )
-(use-package aanila-theme)
-(use-package atom-one-dark-theme)
+(use-package atom-one-dark-theme
+  :straight (atom-one-dark-theme :type git :host github :repo "jonathanchu/atom-one-dark-theme")
+  )
 ;; disable for company mode bg
 ;; (use-package atom-one-light-theme)
 
@@ -57,6 +63,7 @@
 
 ;; whitespace
 (use-package whitespace
+  :straight t
   :config
   (setq whitespace-style '(face           ; faceで可視化
                            trailing       ; 行末
@@ -165,7 +172,11 @@
                              (powerline-fill face2 (powerline-width rhs))
                              (powerline-render rhs)))))))
 
+(use-package projectile
+  :straight t)
+
 (use-package powerline
+  :straight t
   :init (powerline-customized-theme)
   :config
   (projectile-mode t)
@@ -199,7 +210,7 @@
 
 (defun clean-mode-line ()
   (interactive)
-  (loop for (mode . mode-str) in mode-line-cleaner-alist
+  (cl-loop for (mode . mode-str) in mode-line-cleaner-alist
         do
         (let ((old-mode-str (cdr (assq mode minor-mode-alist))))
           (when old-mode-str
@@ -211,7 +222,8 @@
 (add-hook 'after-change-major-mode-hook 'clean-mode-line)
 
 
-(use-package highlight-symbole
+(use-package highlight-symbol
+  :straight t
   :config
   (setq highlight-symbol-idle-delay 1.0)
   :hook
@@ -222,6 +234,7 @@
 
 ;; 括弧の色を強調する設定
 (use-package rainbow-delimiters
+  :straight t
   :config
   (require 'cl-lib)
   (require 'color)
@@ -253,13 +266,13 @@
 
 ;; タブ
 (setq-default tab-width 4)
-(setq default-tab-width 4)
 
 ;; Finderから開く際に新しいウィンドウを生成しない
 (setq ns-pop-up-frames nil)
 
 
 (use-package rainbow-mode
+  :straight t
   :config
   (setq rainbow-html-colors t)
   (setq rainbow-x-colors t)
@@ -273,23 +286,26 @@
   (conf-mode . rainbow-mode)
   )
 
+;; Not compatible with emacs 29
+;; Refs: https://github.com/DarthFennec/highlight-indent-guides/issues/125
 ;; highlight-indent-guides
 ;; インデントを可視化する
-(use-package highlight-indent-guides
-  :config
-  (setq highlight-indent-guides-method 'character)
-  (setq highlight-indent-guides-auto-odd-face-perc 15)
-  (setq highlight-indent-guides-auto-even-face-perc 15)
-  (setq highlight-indent-guides-auto-character-face-perc 20)
-  :hook
-  (prog-mode . highlight-indent-guides-mode)
-  (yaml-mode . highlight-indent-guides-mode)
-  (json-mode . highlight-indent-guides-mode)
-  )
+;; (use-package highlight-indent-guides
+;;   :config
+;;   (setq highlight-indent-guides-method 'character)
+;;   (setq highlight-indent-guides-auto-odd-face-perc 15)
+;;   (setq highlight-indent-guides-auto-even-face-perc 15)
+;;   (setq highlight-indent-guides-auto-character-face-perc 20)
+;;   :hook
+;;   (prog-mode . highlight-indent-guides-mode)
+;;   (yaml-mode . highlight-indent-guides-mode)
+;;   (json-mode . highlight-indent-guides-mode)
+;;   )
 
 ;; highlight-indentation
 ;; 現在行をハイライトするためだけに入れている
 (use-package highlight-indentation
+  :straight t
   :config
   (setq highlight-indentation-offset 2)
   ;; (set-face-background 'highlight-indentation-face "#202020")
@@ -303,6 +319,7 @@
 (menu-bar-mode -1)
 
 (use-package minimap
+  :straight t
   :config
   (setq minimap-window-location 'right)
   (setq minimap-update-delay 0.2)

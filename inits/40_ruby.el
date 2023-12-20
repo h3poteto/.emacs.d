@@ -1,4 +1,5 @@
 (use-package ruby-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :mode
   (("\\Capfile\\'" . ruby-mode)
@@ -37,6 +38,7 @@
 
 ;;; rhtml-mode
 (use-package rhtml-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :mode
   ("\\.ctp\\'" . rhtml-mode)
@@ -45,6 +47,7 @@
 
 ;; ruby-block
 (use-package ruby-block
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :config
   (setq ruby-block-highlight-toggle t)
@@ -54,14 +57,17 @@
 
 ;; ruby-electric
 (use-package ruby-electric
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   :hook
   (ruby-mode . (lambda () (ruby-electric-mode t))))
 
 (use-package ruby-end
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   )
 
 (use-package slim-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-ruby-mode) nil)
   )

@@ -1,4 +1,5 @@
 (use-package vue-mode
+  :straight t
   :if (eq (ignore-minor-mode 'ignore-vue-mode) nil)
   :after
   flycheck
