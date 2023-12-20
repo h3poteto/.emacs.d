@@ -85,6 +85,7 @@
  ("s.el" . "dda84d38fffdaf0c9b12837b504b402af910d01d")
  ("seq" . "4355cde01767911660f761cf874edb412d06bd7a")
  ("smartparens" . "0778a8a84064cf2bc3a9857bd0e7a4619cc1e5c3")
+ ("spacemacs-theme" . "319ad1cd6aa05dcb43e4edca50eca339892e0865")
  ("spinner" . "67681b8f1580a7cd7a1aa49d78eaa30d11f7c178")
  ("ssass-mode" . "96f557887ad97a0066a60c54f92b7234b8407016")
  ("straight.el" . "b3760f5829dba37e855add7323304561eb57a3d4")

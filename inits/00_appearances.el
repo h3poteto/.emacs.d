@@ -8,10 +8,10 @@
         monokai-highlight      "#434da2"
         )
   )
-;; (use-package spacemacs-common
-;;   :straight (spacemacs-common :type git :host github :repo "nashamri/spacemacs-theme")
-;;  :load-path "themes"
-;;  )
+(use-package spacemacs-theme
+  :straight (spacemacs-theme :type git :host github :repo "nashamri/spacemacs-theme")
+ :load-path "themes"
+ )
 (use-package aanila-theme
   :straight (aanila-theme :type git :host github :repo "santoshs/aanila")
   )
@@ -22,7 +22,7 @@
 ;; (use-package atom-one-light-theme)
 
 ;; theme switch
-(setq my-themes (list 'monokai 'aanila 'atom-one-dark))
+(setq my-themes (list 'monokai 'aanila 'atom-one-dark 'spacemacs-light))
 (setq curr-theme my-themes)
 (defun switch-theme ()
   "Cycle custom theme."
