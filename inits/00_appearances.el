@@ -230,8 +230,6 @@
   (prog-mode . highlight-symbol-mode)
   )
 
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
 ;; 括弧の色を強調する設定
 (use-package rainbow-delimiters
   :straight t
