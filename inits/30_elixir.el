@@ -1,3 +1,11 @@
+(use-package flycheck-credo
+  :straight (flycheck-credo :type git :host github :repo "aaronjensen/flycheck-credo")
+  :after
+  elixir-mode
+  :hook
+  (elixir-mode . flycheck-credo-setup)
+  )
+
 (use-package elixir-mode
   :straight t
   :if (eq (ignore-minor-mode 'ignore-elixir-mode) nil)
@@ -42,7 +50,6 @@ _ed_: elixir-mode-open-docs-master
                    (hs-minor-mode 1)))
   (elixir-mode . lsp)
   (elixir-mode . flycheck-mode)
-  (elixir-mode . flycheck-credo-setup)
   )
 
 (use-package flycheck-elixir
