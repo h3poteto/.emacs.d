@@ -571,6 +571,13 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
   :straight (:host github :repo "copilot-emacs/copilot.el" :files ("dist" "*.el"))
   :config
   (setq copilot-indent-offset-warning-disable t)
+  (defun copilot-tab ()
+    (interactive)
+    (or (copilot-accept-completion)
+        (company-indent-or-complete-common nil)))
+
+  (global-set-key (kbd "C-TAB") #'copilot-tab)
+  (global-set-key (kbd "C-<tab>") #'copilot-tab)
   :hook
   (prog-mode . copilot-mode)
   )
