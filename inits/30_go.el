@@ -100,3 +100,8 @@ _ggr_: go-goto-return-values[C-c C-f r]
   :straight t
   :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
   )
+
+(use-package flycheck-golangci-lint
+  :straight (flycheck-golangci-lint :type git :host github :repo "weijiangan/flycheck-golangci-lint")
+  :if (eq (ignore-minor-mode 'ignore-go-mode) nil)
+  )
