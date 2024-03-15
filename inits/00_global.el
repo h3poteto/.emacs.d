@@ -563,3 +563,14 @@ _l_: toggle-truncate-lines[C-c C-l]     _R_: counsel-buffer-or-recentf          
 
 
 (setq x-super-keysym 'meta)
+
+;;-----------------------------------------
+;; copilot
+;;-----------------------------------------
+(use-package copilot
+  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("dist" "*.el"))
+  :config
+  (setq copilot-indent-offset-warning-disable t)
+  :hook
+  (prog-mode . copilot-mode)
+  )
