@@ -49,6 +49,12 @@
   (let ((envs '("PATH" "GOPATH")))
     (exec-path-from-shell-copy-envs envs)))
 
+;; mise
+(use-package mise
+	     :straight (mise :type git :host github :repo "liuyinz/mise.el")
+	     :hook (after-init . global-mise-mode)
+	     )	
+
 ;; ace-jump
 (use-package ace-jump-mode
   :straight t
