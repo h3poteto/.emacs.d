@@ -130,12 +130,6 @@ $ npm install -g svelte-language-server
 $ pip install python-lsp-server
 ```
 
-## Ruby
-
-```
-$ gem install solargraph
-```
-
 
 ## Rust
 
