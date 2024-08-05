@@ -72,6 +72,8 @@
 ;; ;; タブモードのオン/オフをトグル
 ;; (global-set-key (kbd "M-4") 'tabbar-mode)
 
+;; 初回起動時は一度こいつをコメントアウトするとうまく行く場合がある
+;; 後で戻せば普通に動く
 (use-package awesome-tab
   :straight t
   :config
