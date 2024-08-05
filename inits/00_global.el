@@ -105,7 +105,6 @@
                                               "coverage"
                                               "_build"
                                               "deps"
-                                              "el-get"
                                               "python3.*"
                                               "__pycache__"
                                               "_output"
@@ -287,8 +286,6 @@
 ;;-------------------------------------------
 ;; language server protocol
 ;;-------------------------------------------
-;; lps-mode 7.0.1 moved clients under the directory, it is not root directory, so I have to add this directory to load path.
-(setq load-path (cons "~/.emacs.d/el-get/lsp-mode/clients/" load-path))
 (use-package lsp-mode
   :straight t
   :init
