@@ -288,6 +288,7 @@
   :straight t
   :config
   (indent-guide-global-mode)
+  (setq indent-guide-recursive t)
   )
 
 ;; highlight-indentation
