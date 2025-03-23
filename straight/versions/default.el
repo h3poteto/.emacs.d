@@ -12,7 +12,7 @@
  ("cargo.el" . "7f8466063381eed05d4e222ce822b1dd44e3bf17")
  ("coffee-mode" . "1c6adeae14f3795d3b1e44321189ed7c2c93c967")
  ("company-mode" . "8d599ebc8a9aca27c0a6157aeb31c5b7f05ed0a3")
- ("compat" . "605f224633eb28efbe62252605515ce3d557e19f")
+ ("compat" . "a0444eab265888bcc33c1ddaae8592e56e96e348")
  ("copilot.el" . "0d48e75dabef86b962b7a8bfcc7d3614a1201821")
  ("csv-mode" . "ec958a8f92c41726f91f188d75e176eb1bdf4252")
  ("dash.el" . "6db80c711ce947f6c6fa11e5c2257fff2c79d139")
