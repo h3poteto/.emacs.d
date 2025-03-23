@@ -11,7 +11,7 @@
  ("browse-at-remote" . "76aa27dfd469fcae75ed7031bb73830831aaccbf")
  ("cargo.el" . "7f8466063381eed05d4e222ce822b1dd44e3bf17")
  ("coffee-mode" . "1c6adeae14f3795d3b1e44321189ed7c2c93c967")
- ("company-mode" . "9c12b02620ed8a7ae5369fc90217f1c730e48fa6")
+ ("company-mode" . "8d599ebc8a9aca27c0a6157aeb31c5b7f05ed0a3")
  ("compat" . "605f224633eb28efbe62252605515ce3d557e19f")
  ("copilot.el" . "0d48e75dabef86b962b7a8bfcc7d3614a1201821")
  ("csv-mode" . "ec958a8f92c41726f91f188d75e176eb1bdf4252")
