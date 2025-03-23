@@ -9,7 +9,7 @@
  ("atom-one-dark-theme" . "b34b62e85593812b55ee552a1cb0eecfb04767bb")
  ("awesome-tab" . "d4b00b24232a689221b60564261b1477f5a3aa06")
  ("browse-at-remote" . "76aa27dfd469fcae75ed7031bb73830831aaccbf")
- ("cargo.el" . "225fdb846c702a193e58a98c1585bb3586a9aa86")
+ ("cargo.el" . "7f8466063381eed05d4e222ce822b1dd44e3bf17")
  ("coffee-mode" . "1c6adeae14f3795d3b1e44321189ed7c2c93c967")
  ("company-mode" . "9c12b02620ed8a7ae5369fc90217f1c730e48fa6")
  ("compat" . "605f224633eb28efbe62252605515ce3d557e19f")
