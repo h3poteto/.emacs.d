@@ -4,7 +4,7 @@
  ("ace-jump-mode" . "8351e2df4fbbeb2a4003f2fb39f46d33803f3dac")
  ("ag.el" . "ed7e32064f92f1315cecbfc43f120bbc7508672c")
  ("all-the-icons-ivy" . "a70cbfa1effe36efc946a823a580cec686d5e88d")
- ("all-the-icons.el" . "be9d5dcda9c892e8ca1535e288620eec075eb0be")
+ ("all-the-icons.el" . "39ef44f810c34e8900978788467cc675870bcd19")
  ("amx" . "5b3aa1aae84f4a225cb8d26ab79a32f97693f023")
  ("atom-one-dark-theme" . "b34b62e85593812b55ee552a1cb0eecfb04767bb")
  ("awesome-tab" . "d4b00b24232a689221b60564261b1477f5a3aa06")
