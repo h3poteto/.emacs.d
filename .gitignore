@@ -20,5 +20,6 @@ emacs-client
 packages/ignore.el
 straight/*
 .*
+eln-cache/
 
 !straight/versions
