@@ -13,7 +13,7 @@
  ("coffee-mode" . "1c6adeae14f3795d3b1e44321189ed7c2c93c967")
  ("company-mode" . "8d599ebc8a9aca27c0a6157aeb31c5b7f05ed0a3")
  ("compat" . "a0444eab265888bcc33c1ddaae8592e56e96e348")
- ("copilot.el" . "0d48e75dabef86b962b7a8bfcc7d3614a1201821")
+ ("copilot.el" . "7d105d708a23d16cdfd5240500be8bb02f95a46e")
  ("csv-mode" . "ec958a8f92c41726f91f188d75e176eb1bdf4252")
  ("dash.el" . "6db80c711ce947f6c6fa11e5c2257fff2c79d139")
  ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
