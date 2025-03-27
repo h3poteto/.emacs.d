@@ -17,7 +17,7 @@
  ("csv-mode" . "1695ee17521d55dbe94caacaef5a94dfa933cd9f")
  ("dash.el" . "fcb5d831fc08a43f984242c7509870f30983c27c")
  ("dockerfile-mode" . "8135740bfc6ad96ab82d39d9fe68dbce56180f4c")
- ("dumb-jump" . "d9503c157ab88f0ed2fa1301aeb57e95ac564760")
+ ("dumb-jump" . "737267a6139a988369cb95ecd365b2db95e05db0")
  ("edit-indirect" . "f80f63822ffae78de38dbe72cacaeb1aaa96c732")
  ("editorconfig-emacs" . "c3666c093f3a2a80fb42e513bf0a10d597497c18")
  ("el-get" . "a5ba5852648a90ee0cde9fb5d72e69497d260eec")
