@@ -15,7 +15,7 @@
  ("compat" . "a0444eab265888bcc33c1ddaae8592e56e96e348")
  ("copilot.el" . "7d105d708a23d16cdfd5240500be8bb02f95a46e")
  ("csv-mode" . "1695ee17521d55dbe94caacaef5a94dfa933cd9f")
- ("dash.el" . "6db80c711ce947f6c6fa11e5c2257fff2c79d139")
+ ("dash.el" . "fcb5d831fc08a43f984242c7509870f30983c27c")
  ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
  ("dumb-jump" . "d9503c157ab88f0ed2fa1301aeb57e95ac564760")
  ("edit-indirect" . "f80f63822ffae78de38dbe72cacaeb1aaa96c732")
